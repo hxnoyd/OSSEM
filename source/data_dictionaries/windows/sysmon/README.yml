@@ -1,0 +1,13 @@
+title: Sysmon Event Logs
+description: null
+images:
+  - title: Data model
+    source: /resources/images/SysmonDataModel.png
+    width: 900
+resources:
+  - text: sysmon9.0.1.tar.gz
+    link: ./sysmon9_0_1.tar.gz
+  - text: Sysmon Manifest Schema 4.22
+    link: ./sysmon_manifest_4.22.xml
+  - text: Sysmon DTD Schema
+    link: ./sysmon_dtd_10.0.dtd

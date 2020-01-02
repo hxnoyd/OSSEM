@@ -1,0 +1,43 @@
+title: 'Event ID 4713: Kerberos policy was changed.'
+operating system: windows
+data channel: security
+description: This event generates when Kerberos policy was changed.
+data fields:
+- standard name: user_sid
+  field name: SubjectUserSid
+  type: string
+  description: SID of account that made a change to Kerberos policy.
+  sample value: S-1-5-18
+- standard name: user_name
+  field name: SubjectUserName
+  type: string
+  description: the name of the account that made a change to Kerberos policy.
+  sample value: DC01$
+- standard name: user_domain
+  field name: SubjectDomainName
+  type: string
+  description: subject's domain or computer name.
+  sample value: CONTOSO
+- standard name: user_logon_id
+  field name: SubjectLogonId
+  type: integer
+  description: 'hexadecimal value that can help you correlate this event with recent
+    events that might contain the same Logon ID, for example, "4624: An account was
+    successfully logged on."'
+  sample value: '0x3e7'
+- standard name: keberos_policy_change
+  field name: KerberosPolicyChange
+  type: integer
+  description: '''--'' means no changes, otherwise each change is shown as: Parameter_Name:
+    new_value (old_value).'
+  sample value: 'KerMaxT: 0x10c388d000 (0x861c46800); KerMaxR: 0x19254d38000 (0xc92a69c000);'
+resources:
+- text: MS Source
+  link: https://github.com/MicrosoftDocs/windows-itpro-docs/blob/public/windows/security/threat-protection/auditing/event-4713.md
+- text: MS Security Auditing Category - Policy Change
+  link: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/advanced-security-audit-policy-settings#policy-change
+- text: MS Security Auditing Sub-category - Audit Authentication Policy Change
+  link: https://github.com/MicrosoftDocs/windows-itpro-docs/tree/master/windows/security/threat-protection/auditing/audit-authentication-policy-change.md
+tags:
+- Policy Change
+- Audit Authentication Policy Change

@@ -1,0 +1,71 @@
+title: 'Event ID 5152: The Windows Filtering Platform blocked a packet.'
+operating system: windows
+data channel: security
+description: This event generates when Windows Filtering Platform.
+data fields:
+- standard name: process_id
+  field name: ProcessId
+  type: string
+  description: hexadecimal Process ID of the process to which blocked network packet
+    was sent.
+  sample value: '4556'
+- standard name: process_path
+  field name: Application
+  type: string
+  description: full path and the name of the executable for the process.
+  sample value: \device\harddiskvolume2\documents\listener.exe
+- standard name: ''
+  field name: Direction
+  type: string
+  description: full path and the name of the executable for the process.
+  sample value: '%%14592'
+- standard name: src_ip_addr
+  field name: SourceAddress
+  type: string
+  description: local IP address on which application received the packet.
+  sample value: 10.0.0.100
+- standard name: src_port
+  field name: SourcePort
+  type: integer
+  description: port number on which application received the packet.
+  sample value: '49278'
+- standard name: dst_ip_addr
+  field name: DestAddress
+  type: string
+  description: IP address from which packet was received or initiated.
+  sample value: 10.0.0.10
+- standard name: dst_port
+  field name: DestPort
+  type: integer
+  description: port number which was used from remote machine to send the packet.
+  sample value: '3333'
+- standard name: network_protocol
+  field name: Protocol
+  type: integer
+  description: number of protocol which was used.
+  sample value: '6'
+- standard name: ''
+  field name: FilterRTID
+  type: integer
+  description: unique filter ID which blocked the packet.
+  sample value: '0'
+- standard name: ''
+  field name: LayerName
+  type: string
+  description: Application Layer Enforcement layer name.
+  sample value: '%%14610'
+- standard name: ''
+  field name: LayerRTID
+  type: integer
+  description: Windows Filtering Platform layer identifier.
+  sample value: '44'
+resources:
+- text: MS Source
+  link: https://github.com/MicrosoftDocs/windows-itpro-docs/blob/public/windows/security/threat-protection/auditing/event-5152.md
+- text: MS Security Auditing Category - Object Access
+  link: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/advanced-security-audit-policy-settings#object-access
+- text: MS Security Auditing Sub-category - Audit Filtering Platform Packet Drop
+  link: https://github.com/MicrosoftDocs/windows-itpro-docs/tree/master/windows/security/threat-protection/auditing/audit-filtering-platform-packet-drop.md
+tags:
+- Object Access
+- Audit Filtering Platform Packet Drop

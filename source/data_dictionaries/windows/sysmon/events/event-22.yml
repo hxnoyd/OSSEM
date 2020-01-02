@@ -1,0 +1,50 @@
+title: 'Event ID 22: DNSEvent (DNS query)'
+operating system: windows
+data channel: sysmon
+description: This event generates when a process executes a DNS query, whether the
+  result is successful or fails, cached or not.https://docs.microsoft.com/en-us/sysinternals/downloads/sysmon#event-id-22-dnsevent-dns-query
+data fields:
+- standard name: tag
+  field name: RuleName
+  type: string
+  description: custom tag mapped to event. i.e ATT&CK technique ID
+  sample value: T1114
+- standard name: event_date_creation
+  field name: UtcTime
+  type: date
+  description: Time in UTC when event was created
+  sample value: '2019-06-12 00:57:55.254'
+- standard name: process_guid
+  field name: ProcessGuid
+  type: string
+  description: Process Guid of the process that executed the DNS query
+  sample value: '{A98268C1-4DDF-5D00-0000-00102D794100}'
+- standard name: process_id
+  field name: ProcessId
+  type: string
+  description: Process id of the process that executed the DNS query
+  sample value: '416'
+- standard name: dst_host_name
+  field name: QueryName
+  type: string
+  description: DNS query name
+  sample value: chrome.google.com
+- standard name: dns_query_status
+  field name: QueryStatus
+  type: string
+  description: DNS query status
+  sample value: '0'
+- standard name: dns_query_results
+  field name: QueryResults
+  type: string
+  description: DNS query results
+  sample value: 'type: 5 www3.l.google.com;172.217.7.206;'
+- standard name: process_path
+  field name: Image
+  type: string
+  description: The full path related to the process that executed the DNS query
+  sample value: C:\Program Files (x86)\Google\Chrome\Application\chrome.exe
+resources:
+- text: Sysmon Source
+  link: https://docs.microsoft.com/en-us/sysinternals/downloads/sysmon#event-id-22-dnsevent-dns-query
+tags: null

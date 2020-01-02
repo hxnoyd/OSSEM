@@ -1,0 +1,98 @@
+title: 'Event ID 4688: A new process has been created'
+operating system: windows
+data channel: security
+description: This event generates every time a new process starts.
+data fields:
+- standard name: user_sid
+  field name: SubjectUserSid
+  type: string
+  description: SID of account that requested the "create process" operation.
+  sample value: S-1-5-18
+- standard name: user_name
+  field name: SubjectUserName
+  type: string
+  description: the name of the account that requested the "create process" operation.
+  sample value: WIN-GG82ULGC9GO$
+- standard name: user_domain
+  field name: SubjectDomainName
+  type: string
+  description: subject's domain or computer name.
+  sample value: CONTOSO
+- standard name: user_logon_id
+  field name: SubjectLogonId
+  type: integer
+  description: 'contains error code for Failure events. For Success events this parameter
+    has "0x0" value. hexadecimal value that can help you correlate this event with
+    recent events that might contain the same Logon ID, for example, "4624: An account
+    was successfully logged on."'
+  sample value: '0x3e7'
+- standard name: process_id
+  field name: NewProcessId
+  type: integer
+  description: hexadecimal Process ID of the new process.
+  sample value: '0x2bc'
+- standard name: process_name
+  field name: NewProcessName
+  type: string
+  description: full path and the name of the executable for the new process.
+  sample value: C:\Windows\System32\rundll32.exe
+- standard name: process_token_elevation_type
+  field name: TokenElevationType
+  type: string
+  description: Token elevation type. It can be Default(1), Full(2) or Limited(3)
+  sample value: '%%1938'
+- standard name: process_parent_id
+  field name: ProcessId
+  type: integer
+  description: hexadecimal Process ID of the process which ran the new process.
+  sample value: '0xe74'
+- standard name: process_command_line
+  field name: CommandLine
+  type: string
+  description: contains the name of executable and arguments which were passed to
+    it. You must enable "Administrative Templates\System\Audit Process Creation\Include
+    command line in process creation events" group policy to include command line
+    in process creation events
+  sample value: ''
+- standard name: target_user_sid
+  field name: TargetUserSid
+  type: string
+  description: SID of target account.
+  sample value: S-1-5-21-1377283216-344919071-3415362939-1104
+- standard name: target_user_name
+  field name: TargetUserName
+  type: string
+  description: the name of the target account
+  sample value: dadmin
+- standard name: target_user_domain
+  field name: TargetDomainName
+  type: string
+  description: target account's domain or computer name.
+  sample value: CONTOSO
+- standard name: target_user_logon_id
+  field name: TargetLogonId
+  type: sinteger
+  description: 'hexadecimal value that can help you correlate this event with recent
+    events that might contain the same Logon ID, for example, "4624: An account was
+    successfully logged on."'
+  sample value: '0x4a5af0'
+- standard name: process_parent_name
+  field name: ParentProcessName
+  type: string
+  description: full path and the name of the executable for the process.
+  sample value: C:\Windows\explorer.exe
+- standard name: process_mandatory_label
+  field name: MandatoryLabel
+  type: string
+  description: SID of integrity label which was assigned to the new process.
+  sample value: S-1-16-8192
+resources:
+- text: MS Source
+  link: https://github.com/MicrosoftDocs/windows-itpro-docs/blob/master/windows/security/threat-protection/auditing/event-4688.md
+- text: MS Security Auditing Category - Detailed Tracking
+  link: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/advanced-security-audit-policy-settings#detailed-tracking
+- text: MS Security Auditing Sub-category - Audit Process Creation
+  link: https://github.com/MicrosoftDocs/windows-itpro-docs/tree/master/windows/security/threat-protection/auditing/audit-process-creation.md
+tags:
+- Detailed Tracking
+- Audit Process Creation

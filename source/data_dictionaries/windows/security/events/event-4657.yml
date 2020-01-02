@@ -1,0 +1,90 @@
+title: Event ID 4657 A registry value was modified
+operating system: windows
+data channel: security
+description: This event generates when a registry key value was modified. It doesn't
+  generate when a registry key was modified. This event generates only if "Set Value"
+  auditing is set in registry key's SACL.
+data fields:
+- standard name: ''
+  field name: HandleId
+  type: integer
+  description: hexadecimal value of a handle to Object Name.
+  sample value: '0x54'
+- standard name: user_sid
+  field name: SubjectUserSid
+  type: string
+  description: SID of account that requested the "modify registry value" operation.
+  sample value: THEDOMAIN\TheUser
+- standard name: user_name
+  field name: SubjectUserName
+  type: string
+  description: the name of the account that requested the "modify registry value"
+    operation.
+  sample value: TheUser
+- standard name: user_domain
+  field name: SubjectDomainName
+  type: string
+  description: subject's domain or computer name.
+  sample value: THEDOMAIN
+- standard name: user_logon_id
+  field name: SubjectLogonId
+  type: integer
+  description: hexadecimal value that can help you correlate this event with recent
+    events that might contain the same Logon ID
+  sample value: '0x364ef'
+- standard name: registry_key_value_data
+  field name: NewValue
+  type: string
+  description: new value for changed registry key value.
+  sample value: Andreas
+- standard name: registry_key_value_type
+  field name: NewValueType
+  type: string
+  description: new type of changed registry key value.
+  sample value: REG_SZ
+- standard name: process_id
+  field name: ProcessId
+  type: integer
+  description: hexadecimal Process ID of the process through which the registry key
+    value was modified.
+  sample value: '0xec43'
+- standard name: process_path
+  field name: ProcessName
+  type: string
+  description: full path and the name of the executable for the process.
+  sample value: C:\Windows\regedit.exe
+- standard name: registry_key_path
+  field name: ObjectName
+  type: string
+  description: full path and name of the registry key which value was modified.
+  sample value: \REGISTRY\MACHINE
+- standard name: registry_key_value_name
+  field name: ObjectValueName
+  type: string
+  description: the name of modified registry key value.
+  sample value: New_Name
+- standard name: registry_value_old_data
+  field name: OldValue
+  type: string
+  description: old value for changed registry key value.
+  sample value: ''
+- standard name: ''
+  field name: OldValueType
+  type: string
+  description: old type of changed registry key value.
+  sample value: REG_SZ
+- standard name: ''
+  field name: OperationType
+  type: string
+  description: the type of performed operation with registry key value.
+  sample value: Existing registry value modified
+resources:
+- text: MS Source
+  link: https://github.com/MicrosoftDocs/windows-itpro-docs/blob/master/windows/security/threat-protection/auditing/event-4657.md
+- text: MS Security Auditing Category - Object Access
+  link: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/advanced-security-audit-policy-settings#object-access
+- text: MS Security Auditing Sub-category - Audit Registry
+  link: https://github.com/MicrosoftDocs/windows-itpro-docs/tree/master/windows/security/threat-protection/auditing/audit-registry.md
+tags:
+- Object Access
+- Audit Registry

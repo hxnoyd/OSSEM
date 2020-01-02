@@ -1,0 +1,52 @@
+title: 'Event ID 4782: The password hash an account was accessed'
+operating system: windows
+data channel: security
+description: This event generates on domain controllers during password migration
+  of an account using Active Directory Migration Toolkit. Typically "Subject\Security
+  ID" is the SYSTEM account.
+data fields:
+- standard name: target_user_name
+  field name: TargetUserName
+  type: string
+  description: 'the name of the account for which the password hash was migrated.
+    For example: ServiceDesk'
+  sample value: Andrei
+- standard name: target_user_domain
+  field name: TargetDomainName
+  type: string
+  description: domain name of the account for which the password hash was migrated.
+  sample value: CONTOSO
+- standard name: user_sid
+  field name: SubjectUserSid
+  type: string
+  description: SID of account that requested hash migration operation. Event Viewer
+    automatically tries to resolve SIDs and show the account name. If the SID cannot
+    be resolved, you will see the source data in the even
+  sample value: S-1-5-18
+- standard name: user_name
+  field name: SubjectUserName
+  type: string
+  description: the name of the account that requested hash migration operation.
+  sample value: DC01$
+- standard name: user_domain
+  field name: SubjectDomainName
+  type: string
+  description: subject's domain name.
+  sample value: CONTOSO
+- standard name: user_logon_id
+  field name: SubjectLogonId
+  type: integer
+  description: 'hexadecimal value that can help you correlate this event with recent
+    events that might contain the same Logon ID, for example, "4624: An account was
+    successfully logged on."'
+  sample value: '0x3e7'
+resources:
+- text: MS Source
+  link: https://github.com/MicrosoftDocs/windows-itpro-docs/blob/master/windows/security/threat-protection/auditing/event-4782.md
+- text: MS Security Auditing Category - Account Management
+  link: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/advanced-security-audit-policy-settings#account-management
+- text: MS Security Auditing Sub-category - Audit Other Account Management Events
+  link: https://github.com/MicrosoftDocs/windows-itpro-docs/tree/master/windows/security/threat-protection/auditing/audit-other-account-management-events.md
+tags:
+- Account Management
+- Audit Other Account Management Events

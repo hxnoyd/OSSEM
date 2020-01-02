@@ -1,0 +1,61 @@
+title: 'Event ID 4690: An attempt was made to duplicate a handle to an object.'
+operating system: windows
+data channel: security
+description: This event generates if an attempt was made to duplicate a handle to
+  an object.
+data fields:
+- standard name: user_sid
+  field name: SubjectUserSid
+  type: string
+  description: SID of account that made an attempt to duplicate a handle to an object.
+  sample value: S-1-5-18
+- standard name: user_name
+  field name: SubjectUserName
+  type: string
+  description: the name of the account that made an attempt to duplicate a handle
+    to an object.
+  sample value: DC01$
+- standard name: user_domain
+  field name: SubjectDomainName
+  type: string
+  description: subject's domain or computer name.
+  sample value: CONTOSO
+- standard name: user_logon_id
+  field name: SubjectLogonId
+  type: integer
+  description: 'hexadecimal value that can help you correlate this event with recent
+    events that might contain the same Logon ID, for example, "4624: An account was
+    successfully logged on."'
+  sample value: '0x3e7'
+- standard name: object_handle_id
+  field name: SourceHandleId
+  type: integer
+  description: hexadecimal value of a handle which was duplicated.
+  sample value: '0x438'
+- standard name: process_id
+  field name: SourceProcessId
+  type: integer
+  description: hexadecimal Process ID of the process which opened the Source Handle
+    ID before it was duplicated.
+  sample value: '0x674'
+- standard name: target_object_handle_id
+  field name: TargetHandleId
+  type: integer
+  description: hexadecimal value of the new handle (the copy of Source Handle ID).
+  sample value: '0xd9c'
+- standard name: target_process_id
+  field name: TargetProcessId
+  type: integer
+  description: hexadecimal Process ID of the process which opened the Target Handle
+    ID.
+  sample value: '0x4'
+resources:
+- text: MS SOURCE
+  link: https://github.com/MicrosoftDocs/windows-itpro-docs/blob/public/windows/security/threat-protection/auditing/event-4690.md
+- text: MS Security Auditing Category - Object Access
+  link: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/advanced-security-audit-policy-settings#object-access
+- text: MS Security Auditing Sub-category - Audit Handle Manipulation
+  link: https://github.com/MicrosoftDocs/windows-itpro-docs/tree/master/windows/security/threat-protection/auditing/audit-handle-manipulation.md
+tags:
+- Object Access
+- Audit Handle Manipulation

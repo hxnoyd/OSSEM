@@ -1,0 +1,86 @@
+title: ingress.event.childproc (Child Process)
+operating system: macos
+data channel: carbonblack
+description: A process has spawned another process on an endpoint monitored by Carbon
+  Black.
+data fields:
+- standard name: cb_server
+  field name: cb_server
+  type: TEXT
+  description: Used to distinguish between multiple Cb Response servers. Set this
+    in the "server_name" option of cb-event-forwarder.ini.
+  sample value: cbserver
+- standard name: child_proceess_id
+  field name: child_pid
+  type: INTEGER
+  description: Endpoint OS Process id of child process
+  sample value: '2865'
+- standard name: process_child_guid
+  field name: child_process_guid
+  type: TEXT
+  description: process guid of the child process
+  sample value: 00000001-0000-07b4-01d1-209a100bc217
+- standard name: host_name
+  field name: computer_name
+  type: TEXT
+  description: hostname of the sensor
+  sample value: JASON-MAC-VM
+- standard name: created
+  field name: created
+  type: BOOLEAN
+  description: Specifies whether this process_guid is the child or the parent
+  sample value: 'true'
+- standard name: event_type
+  field name: event_type
+  type: TEXT
+  description: The type of event
+  sample value: childproc
+- standard name: process_child_link
+  field name: link_child
+  type: TEXT
+  description: Deep link to Cb Response UI for child process
+  sample value: https://cbtests/#analyze/00000001-0000-07b4-01d1-209a100bc217/1
+- standard name: process_link
+  field name: link_process
+  type: TEXT
+  description: Deep link to Cb Response UI for parent process
+  sample value: https://cbtests/#analyze/00000001-0000-0af4-01d1-1e444bf4c3dd/1
+- standard name: sensor_link
+  field name: link_sensor
+  type: TEXT
+  description: Deep link to Cb Response UI for sensor
+  sample value: https://cbtests/#/host/1
+- standard name: hash
+  field name: md5
+  type: TEXT
+  description: md5 of the module
+  sample value: D6021013D7C4E248AEB8BED12D3DCC88
+- standard name: parent_process_id
+  field name: pid
+  type: INTEGER
+  description: Endpoint OS Process id of  parent process
+  sample value: '2804'
+- standard name: process_guid
+  field name: process_guid
+  type: TEXT
+  description: Cb Process GUID of parent process
+  sample value: 00000001-0000-0af4-01d1-1e444bf4c3dd
+- standard name: sensor_id
+  field name: sensor_id
+  type: INTEGER
+  description: sensor ID of associated sensor
+  sample value: '1'
+- standard name: event_date_creation
+  field name: timestamp
+  type: INTEGER
+  description: Endpoint timestamp of this event since epoch
+  sample value: '1447697423'
+- standard name: event_type_detailed
+  field name: type
+  type: TEXT
+  description: The full type of event
+  sample value: ingress.event.childproc
+resources:
+- text: Carbon Black Developer Docs
+  link: https://developer.carbonblack.com/reference/enterprise-response/event-forwarder/event-schema/#ingress-event-childproc-child-process
+tags: null

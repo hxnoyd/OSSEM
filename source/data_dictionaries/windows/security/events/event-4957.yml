@@ -1,0 +1,31 @@
+title: 'Event ID 4957: Windows Firewall did not apply the following rule.'
+operating system: windows
+data channel: security
+description: This event generates when Windows Firewall starts or apply new rule,
+  and the rule cannot be applied for some reason.
+data fields:
+- standard name: rule_id
+  field name: RuleId
+  type: string
+  description: the unique identifier for not applied firewall rule.
+  sample value: CoreNet-Teredo-In
+- standard name: rule_name
+  field name: RuleName
+  type: string
+  description: the name of the rule which was not applied.
+  sample value: Core Networking - Teredo (UDP-In)
+- standard name: rule_attr
+  field name: RuleAttr
+  type: string
+  description: the reason why the rule was not applied.
+  sample value: Local Port
+resources:
+- text: MS Source
+  link: https://github.com/MicrosoftDocs/windows-itpro-docs/blob/public/windows/security/threat-protection/auditing/event-4957.md
+- text: MS Security Auditing Category - Policy Change
+  link: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/advanced-security-audit-policy-settings#policy-change
+- text: MS Security Auditing Sub-category - Audit MPSSVC Rule-Level Policy Change
+  link: https://github.com/MicrosoftDocs/windows-itpro-docs/tree/master/windows/security/threat-protection/auditing/audit-mpssvc-rule-level-policy-change.md
+tags:
+- Policy Change
+- Audit MPSSVC Rule-Level Policy Change

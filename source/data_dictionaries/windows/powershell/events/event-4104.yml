@@ -1,0 +1,41 @@
+title: 'Event ID 4104: Script Block Logging'
+operating system: windows
+data channel: powershell
+description: Script block logging records blocks of code as they are executed by the
+  PowerShell engine, thereby capturing the full contents of code executed by an attacker,
+  including scripts and commands. Due to the nature of script block logging, it also
+  records de-obfuscated code as it is executed. For example, in addition to recording
+  the original obfuscated code, script block logging records the decoded commands
+  passed with PowerShell's -EncodedCommand argument, as well as those obfuscated with
+  XOR, Base64, ROT13, encryption, etc., in addition to the original obfuscated code.
+  Script block logging will not record output from the executed code. https://www.fireeye.com/blog/threat-research/2016/02/greater_visibilityt.html
+data fields:
+- standard name: powershell_message_number
+  field name: MessageNumber
+  type: integer
+  description: ''
+  sample value: '1'
+- standard name: powershell_parameter_binding
+  field name: MessageTotal
+  type: integer
+  description: ''
+  sample value: '1'
+- standard name: powershell_scriptblock_text
+  field name: ScriptBlockText
+  type: string
+  description: function Invoke-ATTACKAPI..
+  sample value: ''
+- standard name: powershell_scriptblock_id
+  field name: ScriptBlockId
+  type: string
+  description: ''
+  sample value: 1c97482f-51a2-4cf9-8abd-df9769b6e373
+- standard name: powershell_Path
+  field name: Path
+  type: string
+  description: ''
+  sample value: C:\Tools\Invoke-ATTACKAPI-master\Invoke-ATTACKAPI.ps1
+resources:
+- text: FireEye
+  link: https://www.fireeye.com/blog/threat-research/2016/02/greater_visibilityt.html
+tags: null

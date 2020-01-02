@@ -1,0 +1,56 @@
+title: 'Event ID 13: RegistryEvent (Value Set)'
+operating system: windows
+data channel: sysmon
+description: This Registry event type identifies Registry value modifications. The
+  event records the value written for Registry values of type DWORD and QWORD.https://docs.microsoft.com/en-us/sysinternals/downloads/sysmon#event-id-13-registryevent-value-set
+data fields:
+- standard name: tag
+  field name: RuleName
+  type: string
+  description: custom tag mapped to event. i.e ATT&CK technique ID
+  sample value: T1114
+- standard name: event_type
+  field name: EventType
+  type: string
+  description: registry event. Registry values modifications
+  sample value: SetValue
+- standard name: event_date_creation
+  field name: UtcTime
+  type: date
+  description: Time in UTC when event was created
+  sample value: 4/11/18 6:04
+- standard name: process_guid
+  field name: ProcessGuid
+  type: string
+  description: Process Guid of the process that modified a registry value
+  sample value: '{A98268C1-95F9-5ACD-0000-001025861000}'
+- standard name: process_id
+  field name: ProcessId
+  type: integer
+  description: Process ID used by the os to identify the process that that modified
+    a registry value
+  sample value: '4624'
+- standard name: process_name
+  field name: Image
+  type: string
+  description: File name of the process that that modified a registry value
+  sample value: Explorer.EXE
+- standard name: process_path
+  field name: Image
+  type: string
+  description: File path of the process that that modified a registry value
+  sample value: C:\WINDOWS\Explorer.EXE
+- standard name: registry_key_path
+  field name: TargetObject
+  type: string
+  description: complete path of the registry key
+  sample value: HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Notifications\Data\418A073AA3BC3475
+- standard name: registry_key_details
+  field name: Details
+  type: string
+  description: Details added to the registry key
+  sample value: Binary Data
+resources:
+- text: Sysmon Source
+  link: https://docs.microsoft.com/en-us/sysinternals/downloads/sysmon#event-id-13-registryevent-value-set
+tags: null

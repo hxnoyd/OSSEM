@@ -1,11 +1,9 @@
 # Event ID 4716: Trusted domain information was modified.
 
 ## Description
-
 This event generates when the trust was modified.
 
 ## Data Dictionary
-
 |Standard Name|Field Name|Type|Description|Sample Value|
 |---|---|---|---|---|
 |user_sid|SubjectUserSid|string|SID of account that requested the "modify domain trust settings" operation.|S-1-5-21-3457937927-2839227994-823803824-1104|
@@ -19,6 +17,11 @@ This event generates when the trust was modified.
 |trust_attributes|TdoAttributes|integer|the decimal value of attributes for new trust.|32|
 |trust_filtering|SidFilteringEnabled|string|SID Filtering state for the new trust.|-|
 
-## Reference
-
+## Resources
 [MS Source](https://github.com/MicrosoftDocs/windows-itpro-docs/blob/public/windows/security/threat-protection/auditing/event-4716.md)
+[MS Security Auditing Category - Policy Change](https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/advanced-security-audit-policy-settings#policy-change)
+[MS Security Auditing Sub-category - Audit Authentication Policy Change](https://github.com/MicrosoftDocs/windows-itpro-docs/tree/master/windows/security/threat-protection/auditing/audit-authentication-policy-change.md)
+
+## Tags
+* Policy Change
+* Audit Authentication Policy Change

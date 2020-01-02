@@ -1,0 +1,21 @@
+title: Module Schema
+description: Event fields used to define metadata about modules in an endpoint.
+data fields:
+- standard name: module_loaded
+  type: string
+  description: full path of a module loaded
+  sample value: C:\Windows\System32\msvcrt.dll
+- standard name: module_is_signed
+  type: boolean
+  description: is the module loaded signed?
+  sample value: 'TRUE'
+- standard name: module_signature
+  type: string
+  description: The signer
+  sample value: Microsoft Corporation
+- standard name: module_signature_status
+  type: string
+  description: status of the signature
+  sample value: Valid
+resources: []
+tags: null

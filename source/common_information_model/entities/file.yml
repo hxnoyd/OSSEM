@@ -1,0 +1,70 @@
+title: File Schema
+description: Event fields used to define metadata about files either locally or over
+  the wire.
+data fields:
+- standard name: file_name
+  type: string
+  description: name of a file without its full path
+  sample value: a.exe
+- standard name: file_path
+  type: string
+  description: full path of a file including the name of the file
+  sample value: C:\users\wardog\z.exe
+- standard name: file_extension
+  type: string
+  description: The file extension of a file (.txt, .exe, etc)
+  sample value: zip
+- standard name: file_mime_type
+  type: string
+  description: Specifies the MIME type name specified for a file
+  sample value: application/msword
+- standard name: file_size
+  type: string
+  description: Specifies the size of a file, in bytes
+  sample value: '45'
+- standard name: file_system_block_size
+  type: integer
+  description: Block size of filesystem
+  sample value: ''
+- standard name: file_version
+  type: string
+  description: Version of the image loaded
+  sample value: 10.0.16299.15 (WinBuild.160101.0800)
+- standard name: file_description
+  type: string
+  description: Description of a file
+  sample value: Console Window Host
+- standard name: file_product
+  type: string
+  description: The file's product name
+  sample value: "Microsoft\xAE Windows\xAE Operating System"
+- standard name: file_company
+  type: string
+  description: Company name a file belongs to
+  sample value: Microsoft Corporation
+- standard name: file_directory
+  type: string
+  description: Directory of file(s). It does not include the file name
+  sample value: C:\users\wardog\
+- standard name: file_inode
+  type: integer
+  description: Filesystem inode number
+  sample value: ''
+- standard name: file_hard_links
+  type: integer
+  description: Number of hard links
+  sample value: '3'
+- standard name: file_symlink
+  type: integer
+  description: 1 if the path is a symlink, otherwise 0
+  sample value: '0'
+- standard name: file_timestamp_creation
+  type: integer
+  description: The file's current creation Timestamp on the disk
+  sample value: '2016-11-25 18:21:47'
+- standard name: file_timestamp_previous_creation
+  type: integer
+  description: The file's previous creation timestamp
+  sample value: '2017-07-30 23:26:47'
+resources: []
+tags: null

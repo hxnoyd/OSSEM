@@ -1,0 +1,113 @@
+title: ingress.event.netconn (Network Connection)
+operating system: macos
+data channel: carbonblack
+description: A network connection has been received or initiated by an endpoint monitored
+  by Carbon Black.
+data fields:
+- standard name: cb_server
+  field name: cb_server
+  type: TEXT
+  description: Used to distinguish between multiple Cb Response servers. Set this
+    in the "server_name" option of cb-event-forwarder.ini.
+  sample value: cbserver
+- standard name: host_name
+  field name: computer_name
+  type: TEXT
+  description: hostname of the sensor
+  sample value: test-mac
+- standard name: direction
+  field name: direction
+  type: TEXT
+  description: 'Direction of the netconn event: inbound or outbound'
+  sample value: outbound
+- standard name: domain
+  field name: domain
+  type: TEXT
+  description: The DNS name of the network peer, if available.
+  sample value: carbonblack.com
+- standard name: event_type
+  field name: event_type
+  type: TEXT
+  description: The type of event
+  sample value: netconn
+- standard name: ipv4
+  field name: ipv4
+  type: TEXT
+  description: remote ipv4 address of network connection. Maintained for backward
+    compatibility for earlier versions of the event forwarder. See local_ip and remote_ip.
+  sample value: 23.4.187.27
+- standard name: process_link
+  field name: link_process
+  type: TEXT
+  description: Deep link to Cb Response UI for process
+  sample value: https://cbtests/#analyze/00000007-0000-090c-01d1-2099b8f18a82/1
+- standard name: sensor_link
+  field name: link_sensor
+  type: TEXT
+  description: Deep link to Cb Response UI for sensor
+  sample value: https://cbtests/#/host/7
+- standard name: src_ip
+  field name: local_ip
+  type: TEXT
+  description: Local IP address of network connection (network interface on the endpoint)
+  sample value: 172.31.30.0
+- standard name: src_port
+  field name: local_port
+  type: INTEGER
+  description: Local port of the network connection
+  sample value: '49352'
+- standard name: hash
+  field name: md5
+  type: TEXT
+  description: md5 of process executable
+  sample value: C10A66189DC8C090E7C84873EDCEBC88
+- standard name: process_id
+  field name: pid
+  type: INTEGER
+  description: Endpoint OS Process id of process
+  sample value: '2316'
+- standard name: dst_port
+  field name: port
+  type: INTEGER
+  description: remote port of the network connection. Maintained for backward compatibility
+    for earlier versions of the event forwarder. See local_port and remote_port.
+  sample value: '80'
+- standard name: process_guid
+  field name: process_guid
+  type: TEXT
+  description: Cb Process GUID of process
+  sample value: 00000007-0000-090c-01d1-2099b8f18a82
+- standard name: network_protocol
+  field name: protocol
+  type: INTEGER
+  description: 6=TCP, 17=UDP
+  sample value: '6'
+- standard name: dst_ip
+  field name: remote_ip
+  type: TEXT
+  description: IP address of the remote system (peer)
+  sample value: 23.4.187.27
+- standard name: dst_port
+  field name: remote_port
+  type: INTEGER
+  description: Remote port of the network connection
+  sample value: '80'
+- standard name: sensor_id
+  field name: sensor_id
+  type: INTEGER
+  description: sensor ID of associated sensor
+  sample value: '7'
+- standard name: event_date_creation
+  field name: timestamp
+  type: INTEGER
+  description: Endpoint timestamp of this event since epoch
+  sample value: '1447697666'
+- standard name: event_type_detailed
+  field name: type
+  type: TEXT
+  description: The full type of event
+  sample value: ingress.event.netconn
+resources:
+- text: Carbon Black Developer Docs
+  link: https://developer.carbonblack.com/reference/enterprise-response/event-forwarder/event-schema/#ingress-event-netconn-network-connection
+tags: null

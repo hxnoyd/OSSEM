@@ -1,17 +1,15 @@
 # Event ID 4657 A registry value was modified
 
 ## Description
-
-This event generates when a registry key value was modified. It doesn’t generate when a registry key was modified. This event generates only if “Set Value" auditing is set in registry key’s SACL.
+This event generates when a registry key value was modified. It doesn't generate when a registry key was modified. This event generates only if "Set Value" auditing is set in registry key's SACL.
 
 ## Data Dictionary
-
 |Standard Name|Field Name|Type|Description|Sample Value|
-|----------------|----------------|----------------|----------------|----------------|
+|---|---|---|---|---|
 ||HandleId|integer|hexadecimal value of a handle to Object Name.|0x54|
-|user_sid|SubjectUserSid|string|SID of account that requested the “modify registry value” operation.|THEDOMAIN\TheUser|
-|user_name|SubjectUserName|string|the name of the account that requested the “modify registry value” operation.|TheUser|
-|user_domain|SubjectDomainName|string|subject’s domain or computer name.|THEDOMAIN|
+|user_sid|SubjectUserSid|string|SID of account that requested the "modify registry value" operation.|THEDOMAIN\TheUser|
+|user_name|SubjectUserName|string|the name of the account that requested the "modify registry value" operation.|TheUser|
+|user_domain|SubjectDomainName|string|subject's domain or computer name.|THEDOMAIN|
 |user_logon_id|SubjectLogonId|integer|hexadecimal value that can help you correlate this event with recent events that might contain the same Logon ID|0x364ef|
 |registry_key_value_data|NewValue|string|new value for changed registry key value.|Andreas|
 |registry_key_value_type|NewValueType|string|new type of changed registry key value.|REG_SZ|
@@ -23,6 +21,11 @@ This event generates when a registry key value was modified. It doesn’t genera
 ||OldValueType|string|old type of changed registry key value.|REG_SZ|
 ||OperationType|string|the type of performed operation with registry key value.|Existing registry value modified|
 
-## Reference
-
+## Resources
 [MS Source](https://github.com/MicrosoftDocs/windows-itpro-docs/blob/master/windows/security/threat-protection/auditing/event-4657.md)
+[MS Security Auditing Category - Object Access](https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/advanced-security-audit-policy-settings#object-access)
+[MS Security Auditing Sub-category - Audit Registry](https://github.com/MicrosoftDocs/windows-itpro-docs/tree/master/windows/security/threat-protection/auditing/audit-registry.md)
+
+## Tags
+* Object Access
+* Audit Registry

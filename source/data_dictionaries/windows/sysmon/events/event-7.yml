@@ -1,0 +1,96 @@
+title: 'Event ID 7: Image loaded'
+operating system: windows
+data channel: sysmon
+description: The image loaded event logs when a module is loaded in a specific process.
+  This event is disabled by default and needs to be configured with the -l option.
+  It indicates the process in which the module is loaded, hashes and signature information.
+  The signature is created asynchronously for performance reasons and indicates if
+  the file was removed after loading. This event should be configured carefully, as
+  monitoring all image load events will generate a large number of events.https://docs.microsoft.com/en-us/sysinternals/downloads/sysmon#event-id-7-image-loaded
+data fields:
+- standard name: tag
+  field name: RuleName
+  type: string
+  description: custom tag mapped to event. i.e ATT&CK technique ID
+  sample value: T1114
+- standard name: event_date_creation
+  field name: UtcTime
+  type: date
+  description: Time in UTC when event was created
+  sample value: 4/11/18 5:46
+- standard name: process_guid
+  field name: ProcessGuid
+  type: string
+  description: Process Guid of the process that loaded the image
+  sample value: '{A98268C1-A12A-5ACD-0000-0010E4C8B300}'
+- standard name: process_id
+  field name: ProcessId
+  type: integer
+  description: Process ID used by the os to identify the process that loaded the image
+  sample value: '3532'
+- standard name: process_name
+  field name: Image
+  type: string
+  description: File name of the process that loaded the image
+  sample value: cmd.exe
+- standard name: process_path
+  field name: Image
+  type: string
+  description: File path of the process that loaded the image
+  sample value: C:\Windows\System32\cmd.exe
+- standard name: module_loaded
+  field name: ImageLoaded
+  type: string
+  description: full path of the image loaded
+  sample value: C:\Windows\System32\msvcrt.dll
+- standard name: file_version
+  field name: FileVersion
+  type: string
+  description: Version of the image loaded
+  sample value: 7.0.16299.125 (WinBuild.160101.0800)
+- standard name: file_description
+  field name: Description
+  type: string
+  description: Description of the image loaded
+  sample value: Windows NT CRT DLL
+- standard name: file_product
+  field name: Product
+  type: string
+  description: Product name the image loaded belongs to
+  sample value: "Microsoft\xAE Windows\xAE Operating System"
+- standard name: file_company
+  field name: Company
+  type: string
+  description: Company name the image loaded belongs to
+  sample value: Microsoft Corporation
+- standard name: file_name_original
+  field name: OriginalFileName
+  type: string
+  description: original file name
+  sample value: '?'
+- standard name: hash
+  field name: Hashes
+  type: string
+  description: hash is a full hash of the file with the algorithms in the HashType
+    field
+  sample value: SHA1=AEB9839D02C99A3E7EED1F12671C3F827221EDF8, MD5=68195105C7D9A2B5DF5BB82ECA521092,
+    SHA256=556FF2B03495E2117223E5697B54253F30BD10ED3C67468947D79945168A624A, IMPHASH=C16CC99941EF5E18707133A2532B7D0C
+- standard name: module_is_signed
+  field name: Signed
+  type: boolean
+  description: is the image loaded signed
+  sample value: 'TRUE'
+- standard name: module_signature
+  field name: Signature
+  type: string
+  description: The signer
+  sample value: Microsoft Corporation
+- standard name: module_signature_status
+  field name: SignatureStatus
+  type: string
+  description: status of the signature (i.e valid)
+  sample value: Valid
+resources:
+- text: Sysmon Source
+  link: https://docs.microsoft.com/en-us/sysinternals/downloads/sysmon#event-id-7-image-loaded
+tags: null

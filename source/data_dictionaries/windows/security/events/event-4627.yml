@@ -1,0 +1,90 @@
+title: 'Event ID 4627: Group membership information'
+operating system: windows
+data channel: security
+description: 'This event generates with "4624(S): An account was successfully logged
+  on" and shows the list of groups that the logged-on account belongs to.'
+data fields:
+- standard name: user_reporter_sid
+  field name: SubjectUserSid
+  type: string
+  description: SID of account that reported information about claims.
+  sample value: S-1-0-0
+- standard name: user_reporter_name
+  field name: SubjectUserName
+  type: string
+  description: the name of the account that reported information about claims.
+  sample value: '-'
+- standard name: user_reporter_domain
+  field name: SubjectDomainName
+  type: string
+  description: subject's domain or computer name
+  sample value: '-'
+- standard name: user_reporter_id
+  field name: SubjectLogonId
+  type: integer
+  description: hexadecimal value that can help you correlate this event with recent
+    events that might contain the same Logon ID
+  sample value: '0x0'
+- standard name: user_sid
+  field name: TargetUserSid
+  type: string
+  description: SID of account for which logon was performed.
+  sample value: S-1-5-21-3457937927-2839227994-823803824-1104
+- standard name: user_name
+  field name: TargetUserName
+  type: string
+  description: the name of the account for which logon was performed
+  sample value: dadmin
+- standard name: user_domain
+  field name: TargetDomainName
+  type: string
+  description: subject's domain or computer name.
+  sample value: CONTOSO
+- standard name: user_logon_id
+  field name: TargetLogonId
+  type: integer
+  description: hexadecimal value that can help you correlate this event with recent
+    events that might contain the same Logon ID
+  sample value: '0x136f7b'
+- standard name: logon_type
+  field name: LogonType
+  type: integer
+  description: the type of logon which was performed.
+  sample value: '3'
+- standard name: event_sequence_id
+  field name: EventIdx
+  type: integer
+  description: If is there is not enough space in one event to put all claims, you
+    will see "1 of N" in this field and additional events will be generated. Typically
+    this field has "1 of 1" value.
+  sample value: '1'
+- standard name: event_count_total
+  field name: EventCountTotal
+  type: integer
+  description: The name of the authentication package which was used for the logon
+    authentication process. Default packages loaded on LSA startup are located in
+    "HKLM\SYSTEM\CurrentControlSet\Control\Lsa\OSConfig" registry key.
+  sample value: '1'
+- standard name: logon_user_claims
+  field name: UserClaims
+  type: string
+  description: list of user claims for new logon session. This field contains user
+    claims if user account was logged in and device claims if computer account was
+    logged in
+  sample value: 'ad://ext/cn:88d2b96fdb2b4c49 <%%1818> : "dadmin" ad://ext/Department:88d16a8edaa8c66b
+    <%%1818> : "IT"'
+- standard name: logon_device_claims
+  field name: DeviceClaims
+  type: string
+  description: list of device claims for new logon session
+  sample value: '-'
+resources:
+- text: MS Source
+  link: https://github.com/MicrosoftDocs/windows-itpro-docs/blob/master/windows/security/threat-protection/auditing/event-4627.md
+- text: MS Security Auditing Category - Logon/Logoff
+  link: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/advanced-security-audit-policy-settings#logonlogoff
+- text: MS Security Auditing Sub-category - Audit Group Membership
+  link: https://github.com/MicrosoftDocs/windows-itpro-docs/tree/master/windows/security/threat-protection/auditing/audit-group-membership.md
+tags:
+- Logon/Logoff
+- Audit Group Membership

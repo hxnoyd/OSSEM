@@ -1,0 +1,235 @@
+title: 'Event ID 4738: A user account was changed'
+operating system: windows
+data channel: security
+description: This event generates every time user object is changed.
+data fields:
+- standard name: dumny
+  field name: Dummy
+  type: string
+  description: ''
+  sample value: '-'
+- standard name: target_user_name
+  field name: TargetUserName
+  type: string
+  description: the name of the account that was changed.
+  sample value: ksmith
+- standard name: target_user_domain
+  field name: TargetDomainName
+  type: string
+  description: target account's domain or computer name.
+  sample value: CONTOSO
+- standard name: target_user_sid
+  field name: TargetSid
+  type: string
+  description: SID of account that was changed. Event Viewer automatically tries to
+    resolve SIDs and show the account name. If the SID cannot be resolved, you will
+    see the source data in the event.
+  sample value: S-1-5-21-3457937927-2839227994-823803824-6609
+- standard name: user_sid
+  field name: SubjectUserSid
+  type: string
+  description: SID of account that requested the "change user account" operation.
+    Event Viewer automatically tries to resolve SIDs and show the account name. If
+    the SID cannot be resolved, you will see the source data in the event.
+  sample value: S-1-5-21-3457937927-2839227994-823803824-1104
+- standard name: user_name
+  field name: SubjectUserName
+  type: string
+  description: the name of the account that requested the "change user account" operation.
+  sample value: dadmin
+- standard name: user_domain
+  field name: SubjectDomainName
+  type: string
+  description: subject's domain or computer name.
+  sample value: CONTOSO
+- standard name: user_logon_id
+  field name: SubjectLogonId
+  type: integer
+  description: 'hexadecimal value that can help you correlate this event with recent
+    events that might contain the same Logon ID, for example, "4624: An account was
+    successfully logged on."'
+  sample value: '0x30dc2'
+- standard name: user_privilege_list
+  field name: PrivilegeList
+  type: string
+  description: the list of user privileges which were used during the operation, for
+    example, SeBackupPrivilege. This parameter might not be captured in the event,
+    and in that case appears as "-". See full list of user privileges in "Table 8.
+    User Privileges.".
+  sample value: '-'
+- standard name: target_user_sam_name
+  field name: SamAccountName
+  type: string
+  description: 'logon name for account used to support clients and servers from previous
+    versions of Windows (pre-Windows 2000 logon name). If the value of sAMAccountName
+    attribute of user object was changed, you will see the new value here. For example:
+    ladmin. For local accounts, this field always has some value-if the account''s
+    attribute was not changed it will contain the current value of the attribute.'
+  sample value: '-'
+- standard name: target_user_display
+  field name: DisplayName
+  type: string
+  description: it is a name, displayed in the address book for a particular account.
+    This is usually the combination of the user's first name, middle initial, and
+    last name. You can change this attribute by using Active Directory Users and Computers,
+    or through a script, for example. If the value of displayName attribute of user
+    object was changed, you will see the new value here. For local accounts, this
+    field always has some value-if the account's attribute was not changed it will
+    contain the current value of the attribute.
+  sample value: '-'
+- standard name: target_user_principal_name
+  field name: UserPrincipalName
+  type: string
+  description: internet-style login name for the account, based on the Internet standard
+    RFC 822. By convention this should map to the account's email name. If the value
+    of userPrincipalName attribute of user object was changed, you will see the new
+    value here. You can change this attribute by using Active Directory Users and
+    Computers, or through a script, for example. For local accounts, this field is
+    not applicable and always has "-" value.
+  sample value: '-'
+- standard name: target_user_home_directory
+  field name: HomeDirectory
+  type: string
+  description: user's home directory. If homeDrive attribute is set and specifies
+    a drive letter, homeDirectory should be a UNC path. The path must be a network
+    UNC of the form \Server\Share\Directory. If the value of homeDirectory attribute
+    of user object was changed, you will see the new value here. You can change this
+    attribute by using Active Directory Users and Computers, or through a script,
+    for example. For local accounts, this field always has some value-if the account's
+    attribute was not changed it will contain the current value of the attribute.
+  sample value: '-'
+- standard name: target_user_home_path
+  field name: HomePath
+  type: string
+  description: specifies the drive letter to which to map the UNC path specified by
+    homeDirectory account's attribute. The drive letter must be specified in the form
+    "DRIVE_LETTER:". For example - "H:". If the value of homeDrive attribute of user
+    object was changed, you will see the new value here. You can change this attribute
+    by using Active Directory Users and Computers, or through a script, for example.
+    For local accounts, this field always has some value-if the account's attribute
+    was not changed it will contain the current value of the attribute.
+  sample value: '-'
+- standard name: target_user_script_path
+  field name: ScriptPath
+  type: string
+  description: specifies the path of the account's logon script. If the value of scriptPath
+    attribute of user object was changed, you will see the new value here. You can
+    change this attribute by using Active Directory Users and Computers, or through
+    a script, for example. For local accounts, this field always has some value-if
+    the account's attribute was not changed it will contain the current value of the
+    attribute.
+  sample value: '-'
+- standard name: target_user_profile_path
+  field name: ProfilePath
+  type: string
+  description: specifies a path to the account's profile. This value can be a null
+    string, a local absolute path, or a UNC path. If the value of profilePath attribute
+    of user object was changed, you will see the new value here. You can change this
+    attribute by using Active Directory Users and Computers, or through a script,
+    for example. For local accounts, this field always has some value-if the account's
+    attribute was not changed it will contain the current value of the attribute.
+  sample value: '-'
+- standard name: target_user_workstations
+  field name: UserWorkstations
+  type: string
+  description: contains the list of NetBIOS or DNS names of the computers from which
+    the user can logon. Each computer name is separated by a comma. The name of a
+    computer is the sAMAccountName property of a computer object. If the value of
+    userWorkstations attribute of user object was changed, you will see the new value
+    here. You can change this attribute by using Active Directory Users and Computers,
+    or through a script, for example. For local accounts, this field is not applicable
+    and always appears as "\<value not set>."
+  sample value: '-'
+- standard name: target_user_password_last_set
+  field name: PasswordLastSet
+  type: date
+  description: 'last time the account''s password was modified. If the value of pwdLastSet
+    attribute of user object was changed, you will see the new value here. For example:
+    8/12/2015 11:41:39 AM. This value will be changed, for example, after manual user
+    account password reset. For local accounts, this field always has some value-if
+    the account''s attribute was not changed it will contain the current value of
+    the attribute.'
+  sample value: '-'
+- standard name: target_user_account_expires
+  field name: AccountExpires
+  type: date
+  description: the date when the account expires. If the value of accountExpires attribute
+    of user object was changed, you will see the new value here. . For example, "9/21/2015
+    12:00:00 AM". You can change this attribute by using Active Directory Users and
+    Computers, or through a script, for example. For local accounts, this field always
+    has some value-if the account's attribute was not changed it will contain the
+    current value of the attribute.
+  sample value: '-'
+- standard name: user_primary_group_id
+  field name: PrimaryGroupId
+  type: string
+  description: Relative Identifier (RID) of user's object primary group.
+  sample value: '-'
+- standard name: target_user_allowed_to_delegate
+  field name: AllowedToDelegateTo
+  type: string
+  description: the list of SPNs to which this account can present delegated credentials.
+    Can be changed using Active Directory Users and Computers management console in
+    Delegation tab of user account, if at least one SPN is registered for user account.
+    If the SPNs list on Delegation tab of a user account was changed, you will see
+    the new SPNs list in AllowedToDelegateTo field (note that you will see the new
+    list instead of changes) of this event.
+  sample value: '-'
+- standard name: target_user_old_uac_value
+  field name: OldUacValue
+  type: string
+  description: specifies flags that control password, lockout, disable/enable, script,
+    and other behavior for the user account. This parameter contains the previous
+    value of userAccountControl attribute of user object.
+  sample value: '0x15'
+- standard name: target_user_new_uac_value
+  field name: NewUacValue
+  type: string
+  description: specifies flags that control password, lockout, disable/enable, script,
+    and other behavior for the user account. If the value of userAccountControl attribute
+    of user object was changed, you will see the new value here.
+  sample value: '0x211'
+- standard name: target_user_account_control
+  field name: UserAccountControl
+  type: string
+  description: 'shows the list of changes in userAccountControl attribute. You will
+    see a line of text for each change. See possible values in here: "Table 7. User''s
+    or Computer''s account UAC flags.". In the "User Account Control field text" column,
+    you can see the text that will be displayed in the User Account Control field
+    in 4738 event.'
+  sample value: '%%2050 %%2089'
+- standard name: target_user_parameters
+  field name: UserParameters
+  type: string
+  description: if you change any setting using Active Directory Users and Computers
+    management console in Dial-in tab of user's account properties, then you will
+    see \<value changed, but not displayed> in this field. For local accounts, this
+    field is not applicable and always has "\<value not set>" value.
+  sample value: '-'
+- standard name: target_user_sid_history
+  field name: SidHistory
+  type: string
+  description: contains previous SIDs used for the object if the object was moved
+    from another domain. Whenever an object is moved from one domain to another, a
+    new SID is created and becomes the objectSID. The previous SID is added to the
+    sIDHistory property. If the value of sIDHistory attribute of user object was changed,
+    you will see the new value here.
+  sample value: '-'
+- standard name: target_user_logon_hours
+  field name: LogonHours
+  type: string
+  description: hours that the account is allowed to logon to the domain. If the value
+    of logonHours attribute of user object was changed, you will see the new value
+    here. You can change this attribute by using Active Directory Users and Computers,
+    or through a script, for example.
+  sample value: '-'
+resources:
+- text: MS Source
+  link: https://github.com/MicrosoftDocs/windows-itpro-docs/blob/master/windows/security/threat-protection/auditing/event-4738.md
+- text: MS Security Auditing Category - Account Management
+  link: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/advanced-security-audit-policy-settings#account-management
+- text: MS Security Auditing Sub-category - Audit User Account Management
+  link: https://github.com/MicrosoftDocs/windows-itpro-docs/tree/master/windows/security/threat-protection/auditing/audit-user-account-management.md
+tags:
+- Account Management
+- Audit User Account Management

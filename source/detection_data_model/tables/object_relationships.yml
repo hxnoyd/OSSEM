@@ -1,0 +1,401 @@
+title: Data Object Relationships
+description: null
+data fields:
+- sub data sources: process creation
+  data objects (origin): process
+  relationship: created
+  data objects (destination): process
+- sub data sources: process termination
+  data objects (origin): process
+  relationship: terminated
+  data objects (destination): ''
+- sub data sources: process write to process
+  data objects (origin): process
+  relationship: wrote_to
+  data objects (destination): process
+- sub data sources: process access
+  data objects (origin): process
+  relationship: opened
+  data objects (destination): process
+- sub data sources: module load
+  data objects (origin): process
+  relationship: loaded
+  data objects (destination): module
+- sub data sources: file creation
+  data objects (origin): process
+  relationship: created
+  data objects (destination): file
+- sub data sources: file modification
+  data objects (origin): process
+  relationship: modified
+  data objects (destination): file
+- sub data sources: file download
+  data objects (origin): process
+  relationship: downloaded
+  data objects (destination): file
+- sub data sources: win registry key creation
+  data objects (origin): process
+  relationship: created
+  data objects (destination): win registry
+- sub data sources: win registry key deletion
+  data objects (origin): process
+  relationship: deleted
+  data objects (destination): win registry
+- sub data sources: win registry key modification
+  data objects (origin): process
+  relationship: modified
+  data objects (destination): win registry
+- sub data sources: win pipe creation
+  data objects (origin): process
+  relationship: created
+  data objects (destination): pipe
+- sub data sources: win pipe connection
+  data objects (origin): process
+  relationship: connected_to
+  data objects (destination): pipe
+- sub data sources: process network connection allow
+  data objects (origin): process
+  relationship: connected_to
+  data objects (destination): ip
+- sub data sources: process network connection allow
+  data objects (origin): user
+  relationship: connected_to
+  data objects (destination): ip
+- sub data sources: NTLM Credentials Validation
+  data objects (origin): host
+  relationship: authenticated
+  data objects (destination): user
+- sub data sources: kerberos TGT request
+  data objects (origin): user
+  relationship: requested
+  data objects (destination): ticket granting ticket
+- sub data sources: kerberos TGT authentication failure
+  data objects (origin): user
+  relationship: authenticated_with
+  data objects (destination): ticket granting ticket
+- sub data sources: kerberos service ticket request
+  data objects (origin): user
+  relationship: requested
+  data objects (destination): service ticket
+- sub data sources: kerberos service ticket renewal
+  data objects (origin): user
+  relationship: renewed
+  data objects (destination): service ticket
+- sub data sources: kerberos service ticket failure
+  data objects (origin): user
+  relationship: requested
+  data objects (destination): service ticket
+- sub data sources: user rdp session
+  data objects (origin): user
+  relationship: disconnected_from
+  data objects (destination): host
+- sub data sources: user rdp session
+  data objects (origin): user
+  relationship: connected_to
+  data objects (destination): host
+- sub data sources: user lock operation
+  data objects (origin): user
+  relationship: locked
+  data objects (destination): host
+- sub data sources: user unlock operation
+  data objects (origin): user
+  relationship: unlocked
+  data objects (destination): host
+- sub data sources: computer account creation
+  data objects (origin): user
+  relationship: created
+  data objects (destination): computer
+- sub data sources: computer account change
+  data objects (origin): user
+  relationship: changed
+  data objects (destination): computer
+- sub data sources: computer account deletion
+  data objects (origin): user
+  relationship: deleted
+  data objects (destination): computer
+- sub data sources: distribution group creation
+  data objects (origin): user
+  relationship: created
+  data objects (destination): group
+- sub data sources: distribution group change
+  data objects (origin): user
+  relationship: changed
+  data objects (destination): group
+- sub data sources: distribution group member addition
+  data objects (origin): user
+  relationship: added
+  data objects (destination): user
+- sub data sources: distribution group member removal
+  data objects (origin): user
+  relationship: removed
+  data objects (destination): user
+- sub data sources: distribution group deletion
+  data objects (origin): user
+  relationship: deleted
+  data objects (destination): group
+- sub data sources: security group creation
+  data objects (origin): user
+  relationship: created
+  data objects (destination): group
+- sub data sources: security group member addition
+  data objects (origin): user
+  relationship: added
+  data objects (destination): user
+- sub data sources: security group member removal
+  data objects (origin): user
+  relationship: removed
+  data objects (destination): user
+- sub data sources: security group deletion
+  data objects (origin): user
+  relationship: deleted
+  data objects (destination): group
+- sub data sources: security group change
+  data objects (origin): user
+  relationship: changed
+  data objects (destination): group
+- sub data sources: security group type change
+  data objects (origin): user
+  relationship: changed_type
+  data objects (destination): group
+- sub data sources: security group enumeration
+  data objects (origin): user
+  relationship: enumerated
+  data objects (destination): group members
+- sub data sources: user account creation
+  data objects (origin): user
+  relationship: created
+  data objects (destination): user
+- sub data sources: user account enable
+  data objects (origin): user
+  relationship: enabled
+  data objects (destination): user
+- sub data sources: user account password change
+  data objects (origin): user
+  relationship: changed_password
+  data objects (destination): user
+- sub data sources: user account password reset
+  data objects (origin): user
+  relationship: reset_password
+  data objects (destination): user
+- sub data sources: user account disable
+  data objects (origin): user
+  relationship: disabled
+  data objects (destination): user
+- sub data sources: user account deletion
+  data objects (origin): user
+  relationship: deleted
+  data objects (destination): user
+- sub data sources: user account change
+  data objects (origin): user
+  relationship: changed
+  data objects (destination): user
+- sub data sources: user account lock
+  data objects (origin): user
+  relationship: locked
+  data objects (destination): user
+- sub data sources: user account unlock
+  data objects (origin): user
+  relationship: unlocked
+  data objects (destination): user
+- sub data sources: user account name change
+  data objects (origin): user
+  relationship: changed_name
+  data objects (destination): user
+- sub data sources: user account group enumeration
+  data objects (origin): user
+  relationship: enumerated
+  data objects (destination): group
+- sub data sources: directory service object access
+  data objects (origin): user
+  relationship: accessed
+  data objects (destination): ad object
+- sub data sources: directoy service object handle request
+  data objects (origin): user
+  relationship: requested_a_handle
+  data objects (destination): ad object
+- sub data sources: directory service object modification
+  data objects (origin): user
+  relationship: modified
+  data objects (destination): ad object
+- sub data sources: directory service object creation
+  data objects (origin): user
+  relationship: created
+  data objects (destination): ad object
+- sub data sources: directory service object restoration
+  data objects (origin): user
+  relationship: restored
+  data objects (destination): ad object
+- sub data sources: directory service object move
+  data objects (origin): user
+  relationship: moved
+  data objects (destination): ad object
+- sub data sources: directory service object deletion
+  data objects (origin): user
+  relationship: deleted
+  data objects (destination): ad object
+- sub data sources: user account successful authentication
+  data objects (origin): user
+  relationship: authenticated
+  data objects (destination): host
+- sub data sources: user account authentication with explicit credential
+  data objects (origin): user
+  relationship: authenticated
+  data objects (destination): host
+- sub data sources: file access
+  data objects (origin): user
+  relationship: accessed
+  data objects (destination): file
+- sub data sources: network share access
+  data objects (origin): user
+  relationship: accessed
+  data objects (destination): network share
+- sub data sources: network share addition
+  data objects (origin): user
+  relationship: added
+  data objects (destination): network share
+- sub data sources: network share modification
+  data objects (origin): user
+  relationship: modified
+  data objects (destination): network share
+- sub data sources: network share deletion
+  data objects (origin): user
+  relationship: deleted
+  data objects (destination): network share
+- sub data sources: file access request
+  data objects (origin): user
+  relationship: requested_a_handle
+  data objects (destination): file
+- sub data sources: registry access request
+  data objects (origin): user
+  relationship: requested_a_handle
+  data objects (destination): registry
+- sub data sources: file deletion request
+  data objects (origin): user
+  relationship: requested_a_handle
+  data objects (destination): file
+- sub data sources: registry deletion request
+  data objects (origin): user
+  relationship: requested_a_handle
+  data objects (destination): registry
+- sub data sources: file deletion
+  data objects (origin): user
+  relationship: deleted
+  data objects (destination): file
+- sub data sources: symbolic link creation
+  data objects (origin): user
+  relationship: created
+  data objects (destination): symbolic link
+- sub data sources: file permissions change
+  data objects (origin): user
+  relationship: changed_permissions
+  data objects (destination): file
+- sub data sources: process network service connection block
+  data objects (origin): host
+  relationship: blocked_service_connection_to
+  data objects (destination): process
+- sub data sources: process network listener allow
+  data objects (origin): host
+  relationship: permitted_listener_on
+  data objects (destination): process
+- sub data sources: process network listener block
+  data objects (origin): host
+  relationship: blocked_listener_on
+  data objects (destination): process
+- sub data sources: process network connection allow
+  data objects (origin): host
+  relationship: permitted_inbound_connection_on
+  data objects (destination): process
+- sub data sources: process network connection allow
+  data objects (origin): process
+  relationship: connected_from
+  data objects (destination): ip
+- sub data sources: process network connection allow
+  data objects (origin): host
+  relationship: permitted_outbound_connection_on
+  data objects (destination): process
+- sub data sources: process network connection block
+  data objects (origin): host
+  relationship: blocked_inbound_connection_on
+  data objects (destination): process
+- sub data sources: process network connection block
+  data objects (origin): host
+  relationship: blocked_outbound_connection_on
+  data objects (destination): process
+- sub data sources: process network local port bind allow
+  data objects (origin): host
+  relationship: permitted_local_port_bind_on
+  data objects (destination): process
+- sub data sources: process network local port bind allow
+  data objects (origin): process
+  relationship: bound _to
+  data objects (destination): port
+- sub data sources: process network local port bind blocked
+  data objects (origin): host
+  relationship: blocked_local_port_bind_on
+  data objects (destination): process
+- sub data sources: scheduled task creation
+  data objects (origin): user
+  relationship: created
+  data objects (destination): scheduled task
+- sub data sources: scheduled task deletion
+  data objects (origin): user
+  relationship: deleted
+  data objects (destination): scheduled task
+- sub data sources: scheduled task enable
+  data objects (origin): user
+  relationship: enabled
+  data objects (destination): scheduled task
+- sub data sources: scheduled tast disable
+  data objects (origin): user
+  relationship: disabled
+  data objects (destination): scheduled task
+- sub data sources: scheduled task update
+  data objects (origin): user
+  relationship: updated
+  data objects (destination): scheduled task
+- sub data sources: win registry key access
+  data objects (origin): user
+  relationship: accessed
+  data objects (destination): win registry
+- sub data sources: win registry key deletion
+  data objects (origin): user
+  relationship: deleted
+  data objects (destination): win registry
+- sub data sources: win registry key permissions change
+  data objects (origin): user
+  relationship: changed_permissions
+  data objects (destination): win registry
+- sub data sources: win registry key value modification
+  data objects (origin): user
+  relationship: modified
+  data objects (destination): win registry
+- sub data sources: win registry key value modification
+  data objects (origin): process
+  relationship: modified
+  data objects (destination): win registry
+- sub data sources: sam service object handle request
+  data objects (origin): user
+  relationship: requested_a_handle
+  data objects (destination): sam object
+- sub data sources: user account access addition
+  data objects (origin): user
+  relationship: granted_access
+  data objects (destination): user
+- sub data sources: user account access removal
+  data objects (origin): user
+  relationship: removed_access
+  data objects (destination): user
+- sub data sources: non-sensitive privileged service operation
+  data objects (origin): process
+  relationship: called
+  data objects (destination): service
+- sub data sources: sensitive privileged service operation
+  data objects (origin): process
+  relationship: called
+  data objects (destination): service
+- sub data sources: win service installation
+  data objects (origin): user
+  relationship: installed
+  data objects (destination): service
+resources: []
+tags: null

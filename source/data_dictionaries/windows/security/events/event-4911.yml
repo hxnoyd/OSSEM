@@ -1,0 +1,88 @@
+title: 'Event ID 4911: Resource attributes of the object were changed.'
+operating system: windows
+data channel: security
+description: This event generates when resource attributes of the file system object
+  were changed.
+data fields:
+- standard name: user_sid
+  field name: SubjectUserSid
+  type: string
+  description: SID of account that changed the resource attributes of the file system
+    object.
+  sample value: S-1-5-21-3457937927-2839227994-823803824-1104
+- standard name: user_name
+  field name: SubjectUserName
+  type: string
+  description: the name of the account that changed the resource attributes of the
+    file system object.
+  sample value: dadmin
+- standard name: user_domain
+  field name: SubjectDomainName
+  type: string
+  description: subject's domain or computer name.
+  sample value: CONTOSO
+- standard name: user_logon_id
+  field name: SubjectLogonId
+  type: integer
+  description: 'hexadecimal value that can help you correlate this event with recent
+    events that might contain the same Logon ID, for example, "4624: An account was
+    successfully logged on."'
+  sample value: '0x37925'
+- standard name: object_server
+  field name: ObjectServer
+  type: string
+  description: has "Security" value for this event.
+  sample value: Security
+- standard name: object_type
+  field name: ObjectType
+  type: string
+  description: he type of an object that was accessed during the operation. Always
+    "File" for this event.
+  sample value: File
+- standard name: file_path
+  field name: ObjectName
+  type: string
+  description: full path and/or name of the object for which resource attributes were
+    changed.
+  sample value: C:\Audit Files\HBI Data.txt
+- standard name: object_handle_id
+  field name: HandleId
+  type: integer
+  description: 'hexadecimal value of a handle to Object Name. This field can help
+    you correlate this event with other events that might contain the same Handle
+    ID, for example, "4663(S): An attempt was made to access an object." This parameter
+    might not be captured in the event, and in that case appears as "0x0".'
+  sample value: '0x49c'
+- standard name: object_old_sd
+  field name: OldSd
+  type: string
+  description: the Security Descriptor Definition Language (SDDL) value for the old
+    resource attributes.
+  sample value: S:AI
+- standard name: object_new_sd
+  field name: NewSd
+  type: string
+  description: the Security Descriptor Definition Language (SDDL) value for the new
+    resource attributes.
+  sample value: S:ARAI(RA;ID;;;;WD;("Impact_MS",TI,0x10020,3000))
+- standard name: process_id
+  field name: ProcessId
+  type: integer
+  description: hexadecimal Process ID of the process through which the resource attributes
+    of the file system object were changed.
+  sample value: '0x67c'
+- standard name: process_path
+  field name: ProcessName
+  type: string
+  description: full path and the name of the executable for the process.
+  sample value: C:\Windows\System32\svchost.exe
+resources:
+- text: MS Source
+  link: https://github.com/MicrosoftDocs/windows-itpro-docs/blob/public/windows/security/threat-protection/auditing/event-4911.md
+- text: MS Security Auditing Category - Policy Change
+  link: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/advanced-security-audit-policy-settings#policy-change
+- text: MS Security Auditing Sub-category - Audit Authorization Policy Change
+  link: https://github.com/MicrosoftDocs/windows-itpro-docs/tree/master/windows/security/threat-protection/auditing/audit-authorization-policy-change.md
+tags:
+- Policy Change
+- Audit Authorization Policy Change

@@ -1,0 +1,100 @@
+title: ingress.event.filemod (File Modification)
+operating system: windows
+data channel: carbonblack
+description: A file on the filesystem has been created, deleted, or modified on an
+  endpoint monitored by Carbon Black.
+data fields:
+- standard name: action
+  field name: action
+  type: TEXT
+  description: 'Type of file modification: create, write, delete, lastwrite'
+  sample value: create
+- standard name: actiontype
+  field name: actiontype
+  type: INTEGER
+  description: 'Enum value of the file modification: 1=create, 2=write, 4=delete,
+    8=lastwrite'
+  sample value: '1'
+- standard name: cb_server
+  field name: cb_server
+  type: TEXT
+  description: Used to distinguish between multiple Cb Response servers. Set this
+    in the "server_name" option of cb-event-forwarder.ini.
+  sample value: cbserver
+- standard name: host_name
+  field name: computer_name
+  type: TEXT
+  description: hostname of the sensor
+  sample value: JASON-WIN81-VM
+- standard name: event_type
+  field name: event_type
+  type: TEXT
+  description: The type of event
+  sample value: filemod
+- standard name: filetype
+  field name: filetype
+  type: INTEGER
+  description: Enum value of the detected file type of this file. Only valid for "lastwrite"
+    actions. See the CbFileType protobuf definition for the available values.
+  sample value: '0'
+- standard name: filetype_name
+  field name: filetype_name
+  type: TEXT
+  description: 'The detected file type of this file. Only valid for "lastwrite" actions.
+    Currently supported file types: PE, ELF, UniversalBin, Eicar, OfficeLegacy, OfficeOpenXml,
+    PDF, PKZIP, LZH, LZW, RAR, TAR, and 7zip.'
+  sample value: Unknown
+- standard name: process_link
+  field name: link_process
+  type: TEXT
+  description: Deep link to Cb Response UI for process
+  sample value: https://cbtests/#analyze/00000001-0000-0c70-01d1-1e951aae7e2f/1
+- standard name: sensor_link
+  field name: link_sensor
+  type: TEXT
+  description: Deep link to Cb Response UI for sensor
+  sample value: https://cbtests/#/host/1
+- standard name: hash
+  field name: md5
+  type: TEXT
+  description: md5 of process executable
+  sample value: 7A2870C2A8283B3630BF7670D0362B94
+- standard name: file_path
+  field name: path
+  type: TEXT
+  description: Full file path
+  sample value: c:\users\admin\desktop\test.txt
+- standard name: process_id
+  field name: pid
+  type: INTEGER
+  description: Endpoint OS Process id of process
+  sample value: '3184'
+- standard name: process_guid
+  field name: process_guid
+  type: TEXT
+  description: Cb Process GUID of process
+  sample value: 00000001-0000-0c70-01d1-1e951aae7e2f
+- standard name: process_path
+  field name: process_path
+  type: TEXT
+  description: Path of the process that created the file
+  sample value: c:\windows\system32\notepad.exe
+- standard name: sensor_id
+  field name: sensor_id
+  type: INTEGER
+  description: sensor ID of associated sensor
+  sample value: '1'
+- standard name: event_date_creation
+  field name: timestamp
+  type: INTEGER
+  description: Endpoint timestamp of this event since epoch
+  sample value: '1447696804'
+- standard name: event_type_detailed
+  field name: type
+  type: TEXT
+  description: The full type of event
+  sample value: ingress.event.filemod
+resources:
+- text: Carbon Black Developer Docs
+  link: https://developer.carbonblack.com/reference/enterprise-response/event-forwarder/event-schema/#ingress-event-filemod-file-modification
+tags: null

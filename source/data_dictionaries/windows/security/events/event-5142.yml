@@ -1,0 +1,48 @@
+title: 'Event ID 5142: A network share object was added'
+operating system: windows
+data channel: security
+description: This event generates every time network share object was accessed.
+data fields:
+- standard name: user_sid
+  field name: SubjectUserSid
+  type: string
+  description: SID of account that requested the "add network share object" operation.
+  sample value: S-1-5-21-3457937927-2839227994-823803824-1104
+- standard name: user_name
+  field name: SubjectUserName
+  type: string
+  description: the name of the account that requested the "add network share object"
+    operation.
+  sample value: dadmin
+- standard name: user_domain
+  field name: SubjectDomainName
+  type: string
+  description: subject's domain or computer name.
+  sample value: CONTOSO
+- standard name: user_logon_id
+  field name: SubjectLogonId
+  type: integer
+  description: hexadecimal value that can help you correlate this event with recent
+    events that might contain the same Logon ID
+  sample value: '0x38d12'
+- standard name: share_name
+  field name: ShareName
+  type: string
+  description: 'the name of the added share object. The format is: \*\SHARE_NAME'
+  sample value: \\*\Documents
+- standard name: share_local_path
+  field name: ShareLocalPath
+  type: string
+  description: 'the full system (NTFS) path for the added share object. The format
+    is: \??\PATH.'
+  sample value: C:\Documents
+resources:
+- text: MS Source
+  link: https://github.com/MicrosoftDocs/windows-itpro-docs/blob/master/windows/security/threat-protection/auditing/event-5142.md
+- text: MS Security Auditing Category - Object Access
+  link: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/advanced-security-audit-policy-settings#object-access
+- text: MS Security Auditing Sub-category - Audit File Share
+  link: https://github.com/MicrosoftDocs/windows-itpro-docs/tree/master/windows/security/threat-protection/auditing/audit-file-share.md
+tags:
+- Object Access
+- Audit File Share

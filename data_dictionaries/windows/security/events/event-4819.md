@@ -1,11 +1,9 @@
 # Event ID 4819: Central Access Policies on the machine have been changed.
 
 ## Description
-
 This event generates when Central Access Policy on the machine have been changed.
 
 ## Data Dictionary
-
 |Standard Name|Field Name|Type|Description|Sample Value|
 |---|---|---|---|---|
 |user_sid|SubjectUserSid|string|SID of account that changed the Central Access Policies on the machine.|S-1-5-18|
@@ -19,6 +17,11 @@ This event generates when Central Access Policy on the machine have been changed
 |cap_modified|ModifiedCAPs|string|the list of modified Central Access Policies. Empty if no Central Access Policies were modified.|None|
 |cap_unmodified|AsIsCAPs|string|the list of non-modified Central Access Policies.|None|
 
-## Reference
-
+## Resources
 [MS Source](https://github.com/MicrosoftDocs/windows-itpro-docs/blob/public/windows/security/threat-protection/auditing/event-4819.md)
+[MS Security Auditing Category - Policy Change](https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/advanced-security-audit-policy-settings#policy-change)
+[MS Security Auditing Sub-category - Audit Other Policy Change Events](https://github.com/MicrosoftDocs/windows-itpro-docs/tree/master/windows/security/threat-protection/auditing/audit-other-policy-change-events.md)
+
+## Tags
+* Policy Change
+* Audit Other Policy Change Events

@@ -1,0 +1,11 @@
+title: TLS Schema
+description: 'Event fields used to define metadata about a TLS(SSL) record.<br>
+
+  Work in progress...'
+data fields:
+- standard name: FieldNamePlaceholderTODO:REPLACEME
+  type: ValuePlaceHolder
+  description: DescriptionPlaceHolder
+  sample value: '``'
+resources: []
+tags: null

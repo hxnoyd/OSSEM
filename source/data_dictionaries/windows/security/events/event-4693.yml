@@ -1,0 +1,64 @@
+title: 'Event ID 4693: Recovery of data protection master key was attempted.'
+operating system: windows
+data channel: security
+description: This event generates every time that recovery is attempted for a DPAPI
+  Master Key.
+data fields:
+- standard name: user_sid
+  field name: SubjectUserSid
+  type: string
+  description: SID of account that requested the "recover" operation.
+  sample value: S-1-5-21-3457937927-2839227994-823803824-1104
+- standard name: user_name
+  field name: SubjectUserName
+  type: string
+  description: the name of the account that requested the "recover" operation.
+  sample value: dadmin
+- standard name: user_domain
+  field name: SubjectDomainName
+  type: string
+  description: subject's domain or computer name.
+  sample value: CONTOSO
+- standard name: user_logon_id
+  field name: SubjectLogonId
+  type: integer
+  description: 'hexadecimal value that can help you correlate this event with recent
+    events that might contain the same Logon ID, for example, "4624: An account was
+    successfully logged on."'
+  sample value: '0x30d7c'
+- standard name: master_key_id
+  field name: MasterKeyId
+  type: string
+  description: unique identifier of a master key which was recovered.
+  sample value: 0445c766-75f0-4de7-82ad-d9d97aad59f6
+- standard name: recovery_key_reason
+  field name: RecoveryReason
+  type: integer
+  description: hexadecimal code of recovery reason.
+  sample value: '0x5c005c'
+- standard name: recovery_key_hostname
+  field name: RecoveryServer
+  type: string
+  description: the name (typically - DNS name) of the computer that you contacted
+    to recover your Master Key.
+  sample value: DC01.contoso.local
+- standard name: recovery_key_id
+  field name: RecoveryKeyId
+  type: string
+  description: unique identifier of a recovery key.
+  sample value: None
+- standard name: event_failure_reason
+  field name: FailureId
+  type: integer
+  description: hexadecimal unique status code.
+  sample value: '0x380000'
+resources:
+- text: MS SOURCE
+  link: https://github.com/MicrosoftDocs/windows-itpro-docs/blob/public/windows/security/threat-protection/auditing/event-4693.md
+- text: MS Security Auditing Category - Detailed Tracking
+  link: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/advanced-security-audit-policy-settings#detailed-tracking
+- text: MS Security Auditing Sub-category - Audit DPAPI Activity
+  link: https://github.com/MicrosoftDocs/windows-itpro-docs/tree/master/windows/security/threat-protection/auditing/audit-dpapi-activity.md
+tags:
+- Detailed Tracking
+- Audit DPAPI Activity

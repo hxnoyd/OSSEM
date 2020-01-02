@@ -1,0 +1,78 @@
+title: 'Event ID 4985: The state of a transaction has changed'
+operating system: windows
+data channel: security
+description: This is an informational event from file system Transaction Manager.
+data fields:
+- standard name: user_sid
+  field name: SubjectUserSid
+  type: string
+  description: SID of account through which the state of the transaction was changed.
+  sample value: S-1-5-18
+- standard name: user_name
+  field name: SubjectUserName
+  type: string
+  description: the name of the account that changed the state of the transaction.
+  sample value: DC01$
+- standard name: user_domain
+  field name: SubjectDomainName
+  type: string
+  description: domain or computer name.
+  sample value: CONTOSO
+- standard name: user_logon_id
+  field name: SubjectLogonId
+  type: integer
+  description: hexadecimal value that can help you correlate this event with recent
+    events that might contain the same Logon ID
+  sample value: '0x3e7'
+- standard name: transaction_id
+  field name: TransactionId
+  type: string
+  description: 'unique GUID of the transaction. This field can help you correlate
+    this event with other events that might contain the same Transaction ID, such
+    as "4656(S, F): A handle to an object was requested."'
+  sample value: '{17EF5E21-5E2C-11E5-810F-00155D987005}'
+- standard name: transaction_new_state
+  field name: NewState
+  type: string
+  description: identifier of the new state of the transaction.
+  sample value: '52'
+- standard name: transaction_resource_manager
+  field name: ResourceManager
+  type: string
+  description: unique GUID-Identifier of the Resource Manager which associated with
+    this transaction.
+  sample value: '{5F5ED427-FCCA-11E3-BD73-B54AB417B853}'
+- standard name: process_id
+  field name: ProcessId
+  type: integer
+  description: hexadecimal Process ID of the process through which the state of the
+    transaction was changed. Process ID (PID) is a number used by the operating system
+    to uniquely identify an active process
+  sample value: '0x370'
+- standard name: process_name
+  field name: ProcessName
+  type: string
+  description: full path and the name of the executable for the process.
+  sample value: C:\Windows\System32\svchost.exe
+resources:
+- text: MS Source
+  link: https://github.com/MicrosoftDocs/windows-itpro-docs/blob/master/windows/security/threat-protection/auditing/event-4964.md
+- text: MS Security Auditing Category - Object Access
+  link: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/advanced-security-audit-policy-settings#object-access
+- text: MS Security Auditing Category - Privilege Use
+  link: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/advanced-security-audit-policy-settings#privilege-use
+- text: MS Security Auditing Sub-category - Audit File System
+  link: https://github.com/MicrosoftDocs/windows-itpro-docs/tree/master/windows/security/threat-protection/auditing/audit-file-system.md
+- text: MS Security Auditing Sub-category - Audit Non Sensitive Privilege Use
+  link: https://github.com/MicrosoftDocs/windows-itpro-docs/tree/master/windows/security/threat-protection/auditing/audit-non-sensitive-privilege-use.md
+- text: MS Security Auditing Sub-category - Audit Other Privilege Use Events
+  link: https://github.com/MicrosoftDocs/windows-itpro-docs/tree/master/windows/security/threat-protection/auditing/audit-other-privilege-use-events.md
+- text: MS Security Auditing Sub-category - Audit Sensitive Privilege Use
+  link: https://github.com/MicrosoftDocs/windows-itpro-docs/tree/master/windows/security/threat-protection/auditing/audit-sensitive-privilege-use.md
+tags:
+- Object Access
+- Privilege Use
+- Audit File System
+- Audit Non Sensitive Privilege Use
+- Audit Other Privilege Use Events
+- Audit Sensitive Privilege Use

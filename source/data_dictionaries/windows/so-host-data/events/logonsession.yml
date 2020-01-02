@@ -1,0 +1,138 @@
+title: SO Host Data - Logon Session Table
+operating system: windows
+data channel: so-host-data
+description: Get-SOHostData uses the LsaEnumerateLogonSessions and LsaGetLogonSessionData
+  APIs to enumerate active Logon Sessions running on the target system.
+data fields:
+- standard name: source_type
+  field name: SourceType
+  type: TEXT
+  description: Type of data represented
+  sample value: WinEvent-LogonSession
+- standard name: id
+  field name: Id
+  type: TEXT
+  description: SO Host Data's unique identifier of this instance
+  sample value: EC0AC744FFFBE3228F9E73EC60FA74F3BAB8330DFBCA51B269FC8A3B3B5DD7CD
+- standard name: logon_id
+  field name: LogonId
+  type: LONG
+  description: Unique identifier for Logon Session
+  sample value: '351709'
+- standard name: username
+  field name: UserName
+  type: TEXT
+  description: Account name that owns the logon session
+  sample value: tester
+- standard name: logon_domain
+  field name: LogonDomain
+  type: TEXT
+  description: Domain name used to authenticate
+  sample value: ''
+- standard name: authentication_package
+  field name: AuthenticationPackage
+  type: TEXT
+  description: Authentication package used to authenticate
+  sample value: NTLM
+- standard name: logon_type
+  field name: LogonType
+  type: TEXT
+  description: Logon method
+  sample value: Interactive
+- standard name: session
+  field name: Session
+  type: LONG
+  description: Terminal services session identifier
+  sample value: '1'
+- standard name: sid
+  field name: Sid
+  type: TEXT
+  description: User's security identifier
+  sample value: S-1-5-21-386661145-2656271985-3844047388-1001
+- standard name: logon_time
+  field name: LogonTime
+  type: DATE
+  description: Time the session owner logged on
+  sample value: 2/20/2018 6:05:46 PM
+- standard name: logon_server
+  field name: LogonServer
+  type: TEXT
+  description: Server used to authenticate
+  sample value: DESKTOP-HMTGQ0R
+- standard name: dns_domain_name
+  field name: DnsDomainName
+  type: TEXT
+  description: DNS name of the logon session owner
+  sample value: ''
+- standard name: upn
+  field name: Upn
+  type: TEXT
+  description: User principal name of the logon session owner
+  sample value: ''
+- standard name: user_flags
+  field name: UserFlags
+  type: INTEGER
+  description: User flags for logon session
+  sample value: '33056'
+- standard name: last_successful_logon
+  field name: LastSuccessfulLogon
+  type: INTEGER
+  description: Information about the last logon
+  sample value: '0'
+- standard name: last_failed_logon
+  field name: LastFailedLogon
+  type: ''
+  description: ''
+  sample value: '0'
+- standard name: failed_attempt_count_since_last_successful_logon
+  field name: FailedAttemptCountSinceLastSuccessfulLogon
+  type: ''
+  description: ''
+  sample value: '0'
+- standard name: logon_script
+  field name: LogonScript
+  type: TEXT
+  description: Script user for logging on
+  sample value: ''
+- standard name: profile_path
+  field name: ProfilePath
+  type: TEXT
+  description: Path of the user's profile
+  sample value: ''
+- standard name: home_directory
+  field name: HomeDirectory
+  type: TEXT
+  description: Home directory for the user's logon session
+  sample value: ''
+- standard name: home_directory_drive
+  field name: HomeDirectoryDrive
+  type: TEXT
+  description: Drive location of the home directory
+  sample value: ''
+- standard name: logoff_time
+  field name: LogoffTime
+  type: DATE
+  description: Time when session user logged off
+  sample value: 1/1/1970 1:00:00 AM
+- standard name: kickoff_time
+  field name: KickoffTime
+  type: DATE
+  description: Time that the session must end
+  sample value: 1/1/1970 1:00:00 AM
+- standard name: password_last_set
+  field name: PasswordLastSet
+  type: DATE
+  description: Time when the user last set their password
+  sample value: 8/13/2015 5:43:32 PM
+- standard name: password_can_change
+  field name: PasswordCanChange
+  type: DATE
+  description: Time when password can change
+  sample value: 8/14/2015 5:43:32 PM
+- standard name: password_must_change
+  field name: PasswordMustChange
+  type: DATE
+  description: Time when password must change
+  sample value: 1/1/1970 1:00:00 AM
+resources: []
+tags: null

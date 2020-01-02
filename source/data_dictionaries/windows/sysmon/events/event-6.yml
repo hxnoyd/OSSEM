@@ -1,0 +1,48 @@
+title: 'Event ID 6: Driver loaded'
+operating system: windows
+data channel: sysmon
+description: The driver loaded events provides information about a driver being loaded
+  on the system. The configured hashes are provided as well as signature information.
+  The signature is created asynchronously for performance reasons and indicates if
+  the file was removed after loading.https://docs.microsoft.com/en-us/sysinternals/downloads/sysmon#event-id-6-driver-loaded
+data fields:
+- standard name: tag
+  field name: RuleName
+  type: string
+  description: custom tag mapped to event. i.e ATT&CK technique ID
+  sample value: T1114
+- standard name: event_date_creation
+  field name: UtcTime
+  type: date
+  description: Time in UTC when event was created
+  sample value: 4/11/18 5:21
+- standard name: driver_loaded
+  field name: ImageLoaded
+  type: string
+  description: full path of the driver loaded
+  sample value: C:\ProgramData\Microsoft\Windows Defender\Definition Updates{741285CC-BF49-492C-90BE-E84BD6CADD73}\MpKsl4d223a5a.sys
+- standard name: hash
+  field name: Hashes
+  type: string
+  description: Hashes captured by sysmon driver
+  sample value: SHA1=38310AD6805DC31D5AA61BE182689D63060ACE94, MD5=BF2513029E231BE96D82F7C3ABFF87F4,
+    SHA256=F6DB64112CC50EEE495E2D7C61B8BDBE757A31B03144B0396615FD38C312824E, IMPHASH=06D4A412CF7F5363C49E629BF34446B3
+- standard name: driver_is_signed
+  field name: Signed
+  type: boolean
+  description: is the driver loaded signed
+  sample value: 'TRUE'
+- standard name: driver_signature
+  field name: Signature
+  type: string
+  description: The signer
+  sample value: Microsoft Corporation
+- standard name: driver_signature_status
+  field name: SignatureStatus
+  type: string
+  description: status of the signature (i.e valid)
+  sample value: Valid
+resources:
+- text: Sysmon Source
+  link: https://docs.microsoft.com/en-us/sysinternals/downloads/sysmon#event-id-6-driver-loaded
+tags: null

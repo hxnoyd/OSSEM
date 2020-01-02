@@ -1,0 +1,52 @@
+title: 'Event ID 19: WmiEvent (WmiEventFilter activity detected)'
+operating system: windows
+data channel: sysmon
+description: When a WMI event filter is registered, which is a method used by malware
+  to execute, this event logs the WMI namespace, filter name and filter expression.https://docs.microsoft.com/en-us/sysinternals/downloads/sysmon#event-id-19-wmievent-wmieventfilter-activity-detected
+data fields:
+- standard name: tag
+  field name: RuleName
+  type: string
+  description: custom tag mapped to event. i.e ATT&CK technique ID
+  sample value: T1114
+- standard name: event_type
+  field name: EventType
+  type: string
+  description: wmievent type
+  sample value: WmiFilterEvent
+- standard name: event_date_creation
+  field name: UtcTime
+  type: date
+  description: Time in UTC when event was created
+  sample value: '2018-09-11 23:12:46.606'
+- standard name: wmi_operation
+  field name: Operation
+  type: string
+  description: wmievent filter operation
+  sample value: Created
+- standard name: user_name
+  field name: User
+  type: string
+  description: user that created the wmi filter
+  sample value: DESKTOP-LFD11QP\pedro
+- standard name: wmi_namespace
+  field name: EventNamespace
+  type: string
+  description: event namespace where the wmi clas
+  sample value: root\CimV2
+- standard name: wmi_filter_name
+  field name: Name
+  type: string
+  description: Wmi filter name being created
+  sample value: Updater
+- standard name: wmi_query
+  field name: Query
+  type: string
+  description: wmi filter query
+  sample value: '"SELECT * FROM __InstanceModificationEvent WITHIN 60 WHERE TargetInstance
+    ISA ''Win32_PerfFormattedData_PerfOS_System'' AND TargetInstance.SystemUpTime
+    >= 240 AND TargetInstance.SystemUpTime < 325"'
+resources:
+- text: Sysmon Source
+  link: https://docs.microsoft.com/en-us/sysinternals/downloads/sysmon#event-id-19-wmievent-wmieventfilter-activity-detected
+tags: null

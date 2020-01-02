@@ -1,0 +1,48 @@
+title: 'Event ID 4705: A user right was removed.'
+operating system: windows
+data channel: security
+description: This event generates every time local user right policy is changed and
+  user right was removed from an account.
+data fields:
+- standard name: user_sid
+  field name: SubjectUserSid
+  type: string
+  description: SID of account that made a change to local user right policy.
+  sample value: S-1-5-18
+- standard name: user_name
+  field name: SubjectUserName
+  type: string
+  description: the name of the account that made a change to local user right policy.
+  sample value: DC01$
+- standard name: user_domain
+  field name: SubjectDomainName
+  type: string
+  description: Subject's domain or computer name.
+  sample value: CONTOSO
+- standard name: user_logon_id
+  field name: SubjectLogonId
+  type: integer
+  description: 'hexadecimal value that can help you correlate this event with recent
+    events that might contain the same Logon ID, for example, "4624: An account was
+    successfully logged on."'
+  sample value: '0x3e7'
+- standard name: target_user_sid
+  field name: TargetSid
+  type: string
+  description: the SID of security principal for which user rights were removed.
+  sample value: S-1-5-21-3457937927-2839227994-823803824-1104
+- standard name: user_privilege_list
+  field name: PrivilegeList
+  type: string
+  description: the list of removed user rights.
+  sample value: SeTimeZonePrivilege
+resources:
+- text: MS Source
+  link: https://github.com/MicrosoftDocs/windows-itpro-docs/blob/public/windows/security/threat-protection/auditing/event-4705.md
+- text: MS Security Auditing Category - Policy Change
+  link: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/advanced-security-audit-policy-settings#policy-change
+- text: MS Security Auditing Sub-category - Audit Authorization Policy Change
+  link: https://github.com/MicrosoftDocs/windows-itpro-docs/tree/master/windows/security/threat-protection/auditing/audit-authorization-policy-change.md
+tags:
+- Policy Change
+- Audit Authorization Policy Change

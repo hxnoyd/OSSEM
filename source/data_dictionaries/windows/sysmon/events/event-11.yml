@@ -1,0 +1,53 @@
+title: 'Event ID 11: FileCreate'
+operating system: windows
+data channel: sysmon
+description: File create operations are logged when a file is created or overwritten.
+  This event is useful for monitoring autostart locations, like the Startup folder,
+  as well as temporary and download directories, which are common places malware drops
+  during initial infection.https://docs.microsoft.com/en-us/sysinternals/downloads/sysmon#event-id-11-filecreate
+data fields:
+- standard name: tag
+  field name: RuleName
+  type: string
+  description: custom tag mapped to event. i.e ATT&CK technique ID
+  sample value: T1114
+- standard name: event_date_creation
+  field name: UtcTime
+  type: date
+  description: Time in UTC when event was created
+  sample value: 4/11/18 6:01
+- standard name: process_guid
+  field name: ProcessGuid
+  type: string
+  description: Process Guid of the process that created the file
+  sample value: '{A98268C1-958A-5ACD-0000-0010C62F0100}'
+- standard name: process_id
+  field name: ProcessId
+  type: integer
+  description: Process ID used by the os to identify the process that created the
+    file (child)
+  sample value: '1044'
+- standard name: process_name
+  field name: Image
+  type: string
+  description: File name of the process that created the file
+  sample value: svchost.exe
+- standard name: process_path
+  field name: Image
+  type: string
+  description: File path of the process that created the file
+  sample value: C:\WINDOWS\System32\svchost.exe
+- standard name: file_name
+  field name: TargetFilename
+  type: string
+  description: Name of the file
+  sample value: C:\Windows\Prefetch\CONHOST.EXE-1F3E9D7E.pf
+- standard name: file_date_creation
+  field name: CreationUtcTime
+  type: date
+  description: File creation time
+  sample value: 12/4/17 17:38
+resources:
+- text: Sysmon Source
+  link: https://docs.microsoft.com/en-us/sysinternals/downloads/sysmon#event-id-11-filecreate
+tags: null

@@ -1,0 +1,67 @@
+title: 'Event ID 4673: A privileged service was called'
+operating system: windows
+data channel: security
+description: This event generates when an attempt was made to perform privileged system
+  service operations. This event generates, for example, when SeSystemtimePrivilege,
+  SeCreateGlobalPrivilege, or SeTcbPrivilege privilege was used.
+data fields:
+- standard name: user_sid
+  field name: SubjectUserSid
+  type: string
+  description: SID of account that requested privileged operation.
+  sample value: ORG\UserA
+- standard name: user_name
+  field name: SubjectUserName
+  type: strin
+  description: the name of the account that requested privileged operation.
+  sample value: UserA
+- standard name: user_domain
+  field name: SubjectDomainName
+  type: string
+  description: subject's domain or computer name.
+  sample value: ORG
+- standard name: user_logon_id
+  field name: SubjectLogonId
+  type: integer
+  description: hexadecimal value that can help you correlate this event with recent
+    events that might contain the same Logon ID
+  sample value: '0x432344'
+- standard name: process_id
+  field name: ProcessId
+  type: integer
+  description: hexadecimal Process ID of the process that attempted to call the privileged
+    service.
+  sample value: '0x1f0'
+- standard name: process_path
+  field name: ProcessName
+  type: string
+  description: full path and the name of the executable for the process.
+  sample value: C:\Windows\System32\lsass.exe
+- standard name: object_server
+  field name: ObjectServer
+  type: string
+  description: contains the name of the Windows subsystem calling the routine.
+  sample value: NT Local Security Authority / Authentication Service
+- standard name: user_privilege_list
+  field name: PrivilegeList
+  type: string
+  description: the list of user privileges which were requested.
+  sample value: SeCreateGlobalPrivilege
+- standard name: ''
+  field name: Service
+  type: string
+  description: supplies a name of the privileged subsystem service or function.
+  sample value: LsaRegisterLogonProcess()
+resources:
+- text: MS Source
+  link: https://github.com/MicrosoftDocs/windows-itpro-docs/blob/master/windows/security/threat-protection/auditing/event-4673.md
+- text: MS Security Auditing Category - Privilege Use
+  link: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/advanced-security-audit-policy-settings#privilege-use
+- text: MS Security Auditing Sub-category - Audit Sensitive Privilege Use
+  link: https://github.com/MicrosoftDocs/windows-itpro-docs/tree/master/windows/security/threat-protection/auditing/audit-sensitive-privilege-use.md
+- text: MS Security Auditing Sub-category - Audit Non Sensitive Privilege Use
+  link: https://github.com/MicrosoftDocs/windows-itpro-docs/tree/master/windows/security/threat-protection/auditing/audit-non-sensitive-privilege-use.md
+tags:
+- Privilege Use
+- Audit Sensitive Privilege Use
+- Audit Non Sensitive Privilege Use

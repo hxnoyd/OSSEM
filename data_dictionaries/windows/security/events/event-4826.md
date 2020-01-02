@@ -1,11 +1,9 @@
 # Event ID 4826: Boot Configuration Data loaded.
 
 ## Description
-
 This event generates every time system starts and load current Boot Configuration Data.
 
 ## Data Dictionary
-
 |Standard Name|Field Name|Type|Description|Sample Value|
 |---|---|---|---|---|
 |user_sid|SubjectUserSid|string|SID of account that reported this event.|S-1-5-18|
@@ -22,9 +20,14 @@ This event generates every time system starts and load current Boot Configuratio
 |flight_signing|FlightSigning|string|shows whether Windows flight signing (which allows flight-signed code signing certificates) is enabled or not (Yes or No). You can disable flight signing using "bcdedit /set flightsigning off" command.|%%1843|
 |disable_integrity_checks|DisableIntegrityChecks|string|shows whether Windows integrity check is disabled or not (Yes or No). You can disable integrity checks using "bcdedit /set nointegritychecks on" command.|%%1843|
 |hypervisor_load_options|HypervisorLoadOptions|string|shows hypervisor loadoptions.|-|
-|hypervisor_launch_type|HypervisorLaunchType|string|shows the hypervisor launch options (Off or Auto). If you are setting up a debugger to debug Hyper-V on a target computer, set this option to Auto on the target computer. |%%1848|
+|hypervisor_launch_type|HypervisorLaunchType|string|shows the hypervisor launch options (Off or Auto). If you are setting up a debugger to debug Hyper-V on a target computer, set this option to Auto on the target computer.|%%1848|
 |hypervisor_debug|HypervisorDebug|string|shows the hypervisor launch options (Off or Auto). If you are setting up a debugger to debug Hyper-V on a target computer, set this option to Auto on the target computer.|%%1843|
 
-## Reference
-
+## Resources
 [MS Source](https://github.com/MicrosoftDocs/windows-itpro-docs/blob/public/windows/security/threat-protection/auditing/event-4826.md)
+[MS Security Auditing Category - Policy Change](https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/advanced-security-audit-policy-settings#policy-change)
+[MS Security Auditing Sub-category - Audit Other Policy Change Events](https://github.com/MicrosoftDocs/windows-itpro-docs/tree/master/windows/security/threat-protection/auditing/audit-other-policy-change-events.md)
+
+## Tags
+* Policy Change
+* Audit Other Policy Change Events

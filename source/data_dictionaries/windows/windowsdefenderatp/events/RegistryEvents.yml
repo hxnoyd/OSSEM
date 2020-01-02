@@ -1,0 +1,153 @@
+title: RegistryEvents
+operating system: windows
+data channel: windowsdefenderatp
+description: Creation and modification of registry entries
+data fields:
+- standard name: event_date_creation
+  field name: EventTime
+  type: date
+  description: Date and time when the event was recorded
+  sample value: ''
+- standard name: machine_id
+  field name: MachineId
+  type: string
+  description: Unique identifier for the machine in the service
+  sample value: ''
+- standard name: computer_name
+  field name: ComputerName
+  type: string
+  description: Fully qualified domain name (FQDN) of the machine
+  sample value: ''
+- standard name: action_type
+  field name: ActionType
+  type: string
+  description: Type of activity that triggered the event
+  sample value: ''
+- standard name: registry_key_path
+  field name: RegistryKey
+  type: string
+  description: Registry key that the recorded action was applied to
+  sample value: ''
+- standard name: registry_value_type
+  field name: RegistryValueType
+  type: string
+  description: Data type, such as binary or string, of the registry value that the
+    recorded action was applied to
+  sample value: ''
+- standard name: registry_value_name
+  field name: RegistryValueName
+  type: string
+  description: Name of the registry value that the recorded action was applied to
+  sample value: ''
+- standard name: registry_value_data
+  field name: RegistryValueData
+  type: string
+  description: Data of the registry value that the recorded action was applied to
+  sample value: ''
+- standard name: previous_registry_value_name
+  field name: PreviousRegistryValueName
+  type: string
+  description: Original name of the registry value before it was modified
+  sample value: ''
+- standard name: previous_registry_value_data
+  field name: PreviousRegistryValueData
+  type: string
+  description: Original data of the registry value before it was modified
+  sample value: ''
+- standard name: user_domain
+  field name: InitiatingProcessAccountDomain
+  type: string
+  description: Domain of the account that ran the process responsible for the event
+  sample value: ''
+- standard name: user_name
+  field name: InitiatingProcessAccountName
+  type: string
+  description: User name of the account that ran the process responsible for the event
+  sample value: ''
+- standard name: user_sid
+  field name: InitiatingProcessAccountSid
+  type: string
+  description: Security Identifier (SID) of the account that ran the process responsible
+    for the event
+  sample value: ''
+- standard name: hash_sha1
+  field name: InitiatingProcessSHA1
+  type: string
+  description: SHA-1 of the process (image file) that initiated the event
+  sample value: ''
+- standard name: hash_md5
+  field name: InitiatingProcessMD5
+  type: string
+  description: MD5 hash of the process (image file) that initiated the event
+  sample value: ''
+- standard name: process_name
+  field name: InitiatingProcessFileName
+  type: string
+  description: Name of the process that initiated the event
+  sample value: ''
+- standard name: process_id
+  field name: InitiatingProcessId
+  type: int
+  description: Process ID (PID) of the process that initiated the event
+  sample value: ''
+- standard name: process_command_line
+  field name: InitiatingProcessCommandLine
+  type: string
+  description: Command line used to run the process that initiated the event
+  sample value: ''
+- standard name: process_creation_time
+  field name: InitiatingProcessCreationTime
+  type: date
+  description: Date and time when the process that initiated the event was started
+  sample value: ''
+- standard name: process_path
+  field name: InitiatingProcessFolderPath
+  type: string
+  description: Folder containing the process (image file) that initiated the event
+  sample value: ''
+- standard name: process_parent_id
+  field name: InitiatingProcessParentId
+  type: int
+  description: Process ID (PID) of the parent process that spawned the process responsible
+    for the event
+  sample value: ''
+- standard name: process_parent_name
+  field name: InitiatingProcessParentFileName
+  type: string
+  description: Name of the parent process that spawned the process responsible for
+    the event
+  sample value: ''
+- standard name: process_parent_creation_time
+  field name: InitiatingProcessParentCreationTime
+  type: date
+  description: Date and time when the parent of the process responsible for the event
+    was started
+  sample value: ''
+- standard name: process_integrity_level
+  field name: InitiatingProcessIntegrityLevel
+  type: string
+  description: Integrity level of the process that initiated the event. Windows assigns
+    integrity levels to processes based on certain characteristics, such as if they
+    were launched from an internet download. These integrity levels influence permissions
+    to resources.
+  sample value: ''
+- standard name: process_token_elevation
+  field name: InitiatingProcessTokenElevation
+  type: string
+  description: Token type indicating the presence or absence of User Access Control
+    (UAC) privilege elevation applied to the process that initiated the event
+  sample value: ''
+- standard name: report_id
+  field name: ReportId
+  type: long
+  description: Event identifier based on a repeating counter. To identify unique events,
+    this column must be used in conjunction with the ComputerName and EventTime columns.
+  sample value: ''
+- standard name: app_guard_container_id
+  field name: AppGuardContainerId
+  type: string
+  description: Identifier for the virtualized container used by Application Guard
+    to isolate browser activity
+  sample value: ''
+resources: []
+tags: null

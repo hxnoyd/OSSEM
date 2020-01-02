@@ -1,0 +1,106 @@
+title: 'Event ID 5447: A Windows Filtering Platform filter has been changed.'
+operating system: windows
+data channel: security
+description: This event generates every time a Windows Filtering Platform.
+data fields:
+- standard name: process_id
+  field name: ProcessId
+  type: integer
+  description: ''
+  sample value: '284'
+- standard name: user_sid
+  field name: UserSid
+  type: string
+  description: ''
+  sample value: S-1-5-19
+- standard name: user_name
+  field name: UserName
+  type: string
+  description: ''
+  sample value: NT AUTHORITY\LOCAL SERVICE
+- standard name: provider_key
+  field name: ProviderKey
+  type: string
+  description: ''
+  sample value: '{DECC16CA-3F33-4346-BE1E-8FB4AE0F3D62}'
+- standard name: provider_name
+  field name: ProviderName
+  type: string
+  description: ''
+  sample value: Microsoft Corporation
+- standard name: change_type
+  field name: ChangeType
+  type: string
+  description: ''
+  sample value: '%%16385'
+- standard name: filter_key
+  field name: FilterKey
+  type: string
+  description: ''
+  sample value: '{91334E6D-FFAB-40F1-8C43-5554965C228D}'
+- standard name: filter_name
+  field name: FilterName
+  type: string
+  description: ''
+  sample value: Port Scanning Prevention Filter
+- standard name: filter_type
+  field name: FilterType
+  type: string
+  description: ''
+  sample value: '%%16388'
+- standard name: filter_id
+  field name: FilterId
+  type: integer
+  description: ''
+  sample value: '100100'
+- standard name: layer_key
+  field name: LayerKey
+  type: string
+  description: ''
+  sample value: '{AC4A9833-F69D-4648-B261-6DC84835EF39}'
+- standard name: layer_name
+  field name: LayerName
+  type: string
+  description: ''
+  sample value: Inbound Transport v4 Discard Layer
+- standard name: layer_id
+  field name: LayerId
+  type: integer
+  description: ''
+  sample value: '13'
+- standard name: weight
+  field name: Weight
+  type: integer
+  description: ''
+  sample value: '13835058055315718144'
+- standard name: conditions
+  field name: Conditions
+  type: string
+  description: ''
+  sample value: 'Condition ID: {632ce23b-5167-435c-86d7-e903684aa80c} Match value:
+    No flags set Condition value: 0x00000003'
+- standard name: action
+  field name: Action
+  type: string
+  description: ''
+  sample value: '%%16391'
+- standard name: callout_key
+  field name: CalloutKey
+  type: string
+  description: ''
+  sample value: '{EDA08606-2494-4D78-89BC-67837C03B969}'
+- standard name: callout_name
+  field name: CalloutName
+  type: string
+  description: ''
+  sample value: WFP Built-in Silent Drop Transport v4 Discard Layer Callout
+resources:
+- text: MS Source
+  link: https://github.com/MicrosoftDocs/windows-itpro-docs/blob/public/windows/security/threat-protection/auditing/event-5447.md
+- text: MS Security Auditing Category - Policy Change
+  link: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/advanced-security-audit-policy-settings#policy-change
+- text: MS Security Auditing Sub-category - Audit Other Policy Change Events
+  link: https://github.com/MicrosoftDocs/windows-itpro-docs/tree/master/windows/security/threat-protection/auditing/audit-other-policy-change-events.md
+tags:
+- Policy Change
+- Audit Other Policy Change Events

@@ -1,0 +1,74 @@
+title: 'Event ID 6416: A new external device was recognized by the System.'
+operating system: windows
+data channel: security
+description: This event generates every time a new external device is recognized by
+  a system.
+data fields:
+- standard name: user_sid
+  field name: SubjectUserSid
+  type: string
+  description: SID of account that registered the new device.
+  sample value: S-1-5-18
+- standard name: user_name
+  field name: SubjectUserName
+  type: string
+  description: the name of the account that registered the new device.
+  sample value: DESKTOP-NFC0HVN$
+- standard name: user_domain
+  field name: SubjectDomainName
+  type: string
+  description: subject's domain or computer name.
+  sample value: WORKGROUP
+- standard name: user_logon_id
+  field name: SubjectLogonId
+  type: integer
+  description: 'hexadecimal value that can help you correlate this event with recent
+    events that might contain the same Logon ID, for example, "4624: An account was
+    successfully logged on."'
+  sample value: '0x3e7'
+- standard name: device_id
+  field name: DeviceId
+  type: string
+  description: '"Device instance path" attribute of device.'
+  sample value: SCSI\Disk&Ven_Seagate&Prod_Expansion\000000
+- standard name: device_description
+  field name: DeviceDescription
+  type: string
+  description: '"Device description" attribute of device.'
+  sample value: Seagate Expansion SCSI Disk Device
+- standard name: class_id
+  field name: ClassId
+  type: string
+  description: '"Class Guid" attribute of device.'
+  sample value: '{4D36E967-E325-11CE-BFC1-08002BE10318}'
+- standard name: class_name
+  field name: ClassName
+  type: string
+  description: '"Class" attribute of device.'
+  sample value: DiskDrive
+- standard name: vendor_ids
+  field name: VendorIds
+  type: string
+  description: '"Hardware Ids" attribute of device.'
+  sample value: SCSI\DiskSeagate_Expansion_______0636 SCSI\DiskSeagate_Expansion_______
+    SCSI\DiskSeagate_ SCSI\Seagate_Expansion_______0 Seagate_Expansion_______0 GenDisk
+- standard name: compatible_ids
+  field name: CompatibleIds
+  type: string
+  description: '"Compatible Ids" attribute of device.'
+  sample value: SCSI\Disk SCSI\RAW
+- standard name: location_information
+  field name: LocationInformation
+  type: string
+  description: '"Location information" attribute of device.'
+  sample value: Bus Number 0, Target Id 0, LUN 0
+resources:
+- text: MS Source
+  link: https://github.com/MicrosoftDocs/windows-itpro-docs/blob/public/windows/security/threat-protection/auditing/event-6416.md
+- text: MS Security Auditing Category - Detailed Tracking
+  link: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/advanced-security-audit-policy-settings#detailed-tracking
+- text: MS Security Auditing Sub-category - Audit PNP Activity
+  link: https://github.com/MicrosoftDocs/windows-itpro-docs/tree/master/windows/security/threat-protection/auditing/audit-pnp-activity.md
+tags:
+- Detailed Tracking
+- Audit PNP Activity

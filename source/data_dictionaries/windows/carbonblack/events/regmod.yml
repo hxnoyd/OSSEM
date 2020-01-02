@@ -1,0 +1,83 @@
+title: ingress.event.regmod (Registry Modification)
+operating system: windows
+data channel: carbonblack
+description: A registry key has been created, deleted, or modified on an endpoint
+  monitored by Carbon Black.
+data fields:
+- standard name: action
+  field name: action
+  type: TEXT
+  description: 'Type of registry modification. This can be one of: createkey, writeval,
+    delkey, or delval'
+  sample value: writeval
+- standard name: actiontype
+  field name: actiontype
+  type: INTEGER
+  description: 'Enum value of the registry modification: 1=createkey, 2=writeval,
+    4=delkey, 8=delval'
+  sample value: '2'
+- standard name: cb_server
+  field name: cb_server
+  type: TEXT
+  description: Used to distinguish between multiple Cb Response servers. Set this
+    in the "server_name" option of cb-event-forwarder.ini.
+  sample value: cbserver
+- standard name: host_name
+  field name: computer_name
+  type: TEXT
+  description: hostname of the sensor
+  sample value: JASON-WIN81-VM
+- standard name: event_type
+  field name: event_type
+  type: TEXT
+  description: The type of event
+  sample value: regmod
+- standard name: process_link
+  field name: link_process
+  type: TEXT
+  description: Deep link to Cb Response UI for process
+  sample value: https://cbtests/#analyze/00000001-0000-0484-01d1-1e951b7c000b/1
+- standard name: sensor_link
+  field name: link_sensor
+  type: TEXT
+  description: Deep link to Cb Response UI for sensor
+  sample value: https://cbtests/#/host/1
+- standard name: hash
+  field name: md5
+  type: TEXT
+  description: md5 of process executable
+  sample value: 0E7196981EDE614F1F54FFF2C3843ADF
+- standard name: process_path
+  field name: path
+  type: TEXT
+  description: Full registry path
+  sample value: \registry\user\s-1-5-21-2709706146-4189370754-997381202-1001\software\microsoft\vscommon\12.0\sqm\pids\1156\stillalive
+- standard name: process_id
+  field name: pid
+  type: INTEGER
+  description: Endpoint OS Process id of process
+  sample value: '1156'
+- standard name: process_guid
+  field name: process_guid
+  type: TEXT
+  description: Cb Process GUID of process
+  sample value: 00000001-0000-0484-01d1-1e951b7c000b
+- standard name: sensor_id
+  field name: sensor_id
+  type: INTEGER
+  description: Sensor ID of associated sensor
+  sample value: '1'
+- standard name: event_date_creation
+  field name: timestamp
+  type: BIGINT
+  description: Endpoint timestamp of this event since epoch
+  sample value: '1447696798'
+- standard name: event_type_detailed
+  field name: type
+  type: TEXT
+  description: The full type of event
+  sample value: ingress.event.regmod
+resources:
+- text: Carbon Black Developer Docs
+  link: https://developer.carbonblack.com/reference/enterprise-response/event-forwarder/event-schema/#ingress-event-regmod-registry-modification
+tags: null

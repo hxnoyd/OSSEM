@@ -1,0 +1,47 @@
+title: 'Event ID 4930: An Active Directory replica source naming context was modified.'
+operating system: windows
+data channel: security
+description: This event generates every time Active Directory replica source naming
+  context was modified.
+data fields:
+- standard name: destination_dra
+  field name: DestinationDRA
+  type: string
+  description: destination directory replication agent distinguished name.
+  sample value: CN=NTDS Settings,CN=WIN2012R2,CN=Servers,CN=Default-First-Site-Name,CN=Sites,CN=Configuration,DC=contoso,DC=local
+- standard name: source_dra
+  field name: SourceDRA
+  type: integer
+  description: source directory replication agent distinguished name. Typically equals
+    "-" for this event.
+  sample value: '-'
+- standard name: source_addr
+  field name: SourceAddr
+  type: string
+  description: DNS record of computer from which the modification request was received.
+  sample value: edf0bef9-1f73-4df3-8991-f6ec2d4ef3ae
+- standard name: naming_context
+  field name: NamingContext
+  type: string
+  description: naming context which was modified.
+  sample value: CN=Schema,CN=Configuration,DC=contoso,DC=local
+- standard name: options
+  field name: Options
+  type: integer
+  description: decimal value of DRS Options.
+  sample value: '0'
+- standard name: status_code
+  field name: StatusCode
+  type: integer
+  description: if there are no issues or errors, the status code will be 0.
+  sample value: '0'
+resources:
+- text: MS Source
+  link: https://github.com/MicrosoftDocs/windows-itpro-docs/blob/public/windows/security/threat-protection/auditing/event-4930.md
+- text: MS Security Auditing Category - DS Access
+  link: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/advanced-security-audit-policy-settings#ds-access
+- text: MS Security Auditing Sub-category - Audit Detailed Directory Service Replication
+  link: https://github.com/MicrosoftDocs/windows-itpro-docs/tree/master/windows/security/threat-protection/auditing/audit-detailed-directory-service-replication.md
+tags:
+- DS Access
+- Audit Detailed Directory Service Replication

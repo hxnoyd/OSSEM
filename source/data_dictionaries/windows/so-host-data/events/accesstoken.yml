@@ -1,0 +1,99 @@
+title: SO Host Data - Access Token Table
+operating system: windows
+data channel: so-host-data
+description: Get-SOHostData collects Access Tokens from every running Process and
+  Thread. Threads only have their own Access Token if they are using impersonation,
+  otherwise they inherit the token from their containing process.
+data fields:
+- standard name: source_type
+  field name: SourceType
+  type: TEXT
+  description: Type of data represented
+  sample value: WinEvent-Token
+- standard name: id
+  field name: Id
+  type: TEXT
+  description: SO Host Data's unique identifier of this instance
+  sample value: 8C3C0F18E053F361BF80D7BD126F67A5B7BE8241388802ABA430D751F60CD7D3
+- standard name: logon_session_key
+  field name: LogonSessionKey
+  type: TEXT
+  description: SO Host Data's unique identifier of associated logon session
+  sample value: EC0AC744FFFBE3228F9E73EC60FA74F3BAB8330DFBCA51B269FC8A3B3B5DD7CD
+- standard name: primary_token_key
+  field name: PrimaryTokenKey
+  type: TEXT
+  description: SO Host Data's unique identifier of containing process's primary token
+  sample value: 8C3C0F18E053F361BF80D7BD126F67A5B7BE8241388802ABA430D751F60CD7D3
+- standard name: token_id
+  field name: TokenId
+  type: LONG
+  description: Unique identifier of the token
+  sample value: '26235631'
+- standard name: authentication_id
+  field name: AuthenticationId
+  type: LONG
+  description: Unique identifier of the logon session this token represents
+  sample value: '351709'
+- standard name: modified_id
+  field name: ModifiedId
+  type: LONG
+  description: A value that changes each time the token is modified
+  sample value: '26239987'
+- standard name: user_sid
+  field name: UserSid
+  type: TEXT
+  description: Security identifier of token's user
+  sample value: S-1-5-21-386661145-2656271985-3844047388-1001
+- standard name: username
+  field name: UserName
+  type: TEXT
+  description: Name of token's user
+  sample value: DESKTOP-HMTGQ0R\tester
+- standard name: owner_sid
+  field name: OwnerSid
+  type: TEXT
+  description: Default owner's security identifier
+  sample value: S-1-5-32-544
+- standard name: owner_name
+  field name: OwnerName
+  type: TEXT
+  description: Default owner's name
+  sample value: BUILTIN\Administrators
+- standard name: integrity_level
+  field name: IntegrityLevel
+  type: TEXT
+  description: Integrity level of token
+  sample value: HIGH_MANDATORY_LEVEL
+- standard name: type
+  field name: Type
+  type: TEXT
+  description: Indicates whether the token is a primary or impersonation token
+  sample value: TokenPrimary
+- standard name: session_id
+  field name: SessionId
+  type: INTEGER
+  description: Token's terminal services session
+  sample value: '1'
+- standard name: origin
+  field name: Origin
+  type: LONG
+  description: Originating logon session
+  sample value: '999'
+- standard name: privileges
+  field name: Privileges
+  type: TEXT
+  description: Token's enabled privileges
+  sample value: SeDebugPrivilege;SeChangeNotifyPrivilege;SeImpersonatePrivilege;SeCreateGlobalPrivilege
+- standard name: is_elevated
+  field name: IsElevated
+  type: BOOLEAN
+  description: Specifies if the token is elevated
+  sample value: 'True'
+- standard name: elevation_type
+  field name: ElevationType
+  type: TEXT
+  description: Token's elevation level
+  sample value: TokenElevationTypeFull
+resources: []
+tags: null

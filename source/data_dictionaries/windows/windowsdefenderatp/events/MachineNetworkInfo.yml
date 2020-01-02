@@ -1,0 +1,89 @@
+title: MachineNetworkInfo
+operating system: windows
+data channel: windowsdefenderatp
+description: Network properties of machines, including adapters, IP and MAC addresses,
+  as well as connected networks and domains
+data fields:
+- standard name: event_date_creation
+  field name: EventTime
+  type: date
+  description: Date and time when the event was recorded
+  sample value: ''
+- standard name: machine_id
+  field name: MachineId
+  type: string
+  description: Unique identifier for the machine in the service
+  sample value: ''
+- standard name: computer_name
+  field name: ComputerName
+  type: string
+  description: Fully qualified domain name (FQDN) of the machine
+  sample value: ''
+- standard name: report_id
+  field name: ReportId
+  type: long
+  description: Event identifier based on a repeating counter. To identify unique events,
+    this column must be used in conjunction with the ComputerName and EventTime columns.
+  sample value: ''
+- standard name: network_adapter_name
+  field name: NetworkAdapterName
+  type: string
+  description: Name of the network adapter
+  sample value: ''
+- standard name: mac_address
+  field name: MacAddress
+  type: ''
+  description: string
+  sample value: MAC address of the network adapter
+- standard name: network_adapter_type
+  field name: NetworkAdapterType
+  type: string
+  description: Network adapter type
+  sample value: ''
+- standard name: network_adapter_status
+  field name: NetworkAdapterStatus
+  type: string
+  description: Operational status of the network adapter
+  sample value: ''
+- standard name: tunnel_type
+  field name: TunnelType
+  type: string
+  description: Tunneling protocol, if the interface is used for this purpose, for
+    example 6to4, Teredo, ISATAP, PPTP, SSTP, and SSH
+  sample value: ''
+- standard name: connected_network
+  field name: ConnectedNetwork
+  type: string
+  description: Networks that the adapter is connected to. Each JSON array contains
+    the network name, category (public, private or domain), a description, and a flag
+    indicating if it's connected publicly to the internet.
+  sample value: ''
+- standard name: dns_address
+  field name: DnsAddress
+  type: string
+  description: DNS server addresses in JSON array format
+  sample value: ''
+- standard name: ipv4_dhcp
+  field name: IPv4Dhcp
+  type: string
+  description: IPv4 address of DHCP server
+  sample value: ''
+- standard name: ipv6_dhcp
+  field name: IPv6Dhcp
+  type: string
+  description: IPv6 address of DHCP server
+  sample value: ''
+- standard name: default_gateways
+  field name: DefaultGateways
+  type: string
+  description: Default gateway addresses in JSON array format
+  sample value: ''
+- standard name: ip_address
+  field name: IPAddresses
+  type: string
+  description: JSON array containing all the IP addresses assigned to the adapter,
+    along with their respective subnet prefix and IP address space, such as public,
+    private, or link-local
+  sample value: ''
+resources: []
+tags: null

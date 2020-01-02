@@ -1,0 +1,93 @@
+title: 'Event ID 5632: A request was made to authenticate to a wireless network'
+operating system: windows
+data channel: security
+description: This event generates when 802.1x authentication attempt was made for
+  wireless network.
+data fields:
+- standard name: wireless_ssid
+  field name: SSID
+  type: string
+  description: SSID of the wireless network to which authentication request was sent.
+  sample value: Nokia
+- standard name: user_identity
+  field name: Identity
+  type: string
+  description: User Principal Name (UPN) or another type of account identifier for
+    which 802.1x authentication request was made.
+  sample value: host/XXXXXXXX.redmond.corp.microsoft.com
+- standard name: user_name
+  field name: SubjectUserName
+  type: string
+  description: the name of the account for which 802.1x authentication request was
+    made.
+  sample value: '-'
+- standard name: user_domain
+  field name: SubjectDomainName
+  type: string
+  description: subject's domain or computer name
+  sample value: '-'
+- standard name: user_logon_id
+  field name: SubjectLogonId
+  type: integer
+  description: hexadecimal value that can help you correlate this event with recent
+    events that might contain the same Logon ID
+  sample value: '0x0'
+- standard name: host_local_mac
+  field name: PeerMac
+  type: string
+  description: peer's (typically - access point) MAC-address
+  sample value: 18:64:72:F3:33:91
+- standard name: host_peer_mac
+  field name: LocalMac
+  type: string
+  description: local interface's MAC-address
+  sample value: 02:1A:C5:14:59:C9
+- standard name: host_interface_guid
+  field name: IntfGuid
+  type: string
+  description: GUID of the network interface which was used for authentication request.
+  sample value: '{2BB33827-6BB6-48DB-8DE6-DB9E0B9F9C9B}'
+- standard name: event_reason_code
+  field name: ReasonCode
+  type: integer
+  description: Reason Code for wired authentication results.
+  sample value: '0x0'
+- standard name: event_reason_text
+  field name: ReasonText
+  type: string
+  description: contains Reason Text (explanation of Reason Code) and Reason Code for
+    wireless authentication results.
+  sample value: The operation was successful.
+- standard name: event_error_code
+  field name: ErrorCode
+  type: string
+  description: there is no information about this field in this document.
+  sample value: '0x0'
+- standard name: event_reason_code_eap
+  field name: EAPReasonCode
+  type: string
+  description: there is no information about this field in this document
+  sample value: '0x0'
+- standard name: event_route_cause_string_eap
+  field name: EapRootCauseString
+  type: string
+  description: there is no information about this field in this document
+  sample value: '-'
+- standard name: event_error_code_eap
+  field name: EAPErrorCode
+  type: string
+  description: there is no information about this field in this document
+  sample value: '0x0'
+resources:
+- text: MS Source
+  link: https://github.com/MicrosoftDocs/windows-itpro-docs/blob/master/windows/security/threat-protection/auditing/event-5632.md
+- text: MS Security Auditing Category - Account Logon
+  link: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/advanced-security-audit-policy-settings#account-logon
+- text: MS Security Auditing Category - Logon/Logoff
+  link: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/advanced-security-audit-policy-settings#logonlogoff
+- text: MS Security Auditing Sub-category - Audit Other Logon/Logoff Events
+  link: https://github.com/MicrosoftDocs/windows-itpro-docs/tree/master/windows/security/threat-protection/auditing/audit-other-logon/logoff-events.md
+tags:
+- Account Logon
+- Logon/Logoff
+- Audit Other Logon/Logoff Events

@@ -1,0 +1,108 @@
+title: 'Event ID 4103: Module Logging'
+operating system: windows
+data channel: powershell
+description: Beginning in Windows PowerShell 3.0, you can record execution events
+  for the cmdlets and functions in Windows PowerShell modules. This feature can provide
+  detailed logging of all PowerShell command input and output, https://www.defcon.org/images/defcon-22/dc-22-presentations/Kazanciyan-Hastings/DEFCON-22-Ryan-Kazanciyan-Matt-Hastings-Investigating-Powershell-Attacks.pdf
+data fields:
+- standard name: powershell_command_invocation
+  field name: CommandInvocation
+  type: string
+  description: ''
+  sample value: Get-ChildItem
+- standard name: powershell_parameter_binding
+  field name: ParameterBinding
+  type: string
+  description: ''
+  sample value: Filter
+- standard name: powershell_severity
+  field name: Severity
+  type: string
+  description: ''
+  sample value: Informational
+- standard name: powershell_host_name
+  field name: HostName
+  type: string
+  description: ''
+  sample value: ConsoleHost
+- standard name: powershell_host_version
+  field name: HostVersion
+  type: string
+  description: ''
+  sample value: 5.1.16299.431
+- standard name: powershell_host_id
+  field name: HostId
+  type: string
+  description: ''
+  sample value: 312b26a7-53d3-45db-8b45-b79cae3afba9
+- standard name: powershell_host_application
+  field name: HostApplication
+  type: string
+  description: ''
+  sample value: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+- standard name: powershell_engine_version
+  field name: EngineVersion
+  type: string
+  description: ''
+  sample value: 5.1.16299.431
+- standard name: powershell_runspace_id
+  field name: RunspaceId
+  type: string
+  description: ''
+  sample value: 0252cd51-52b5-4825-8029-a4f81a93cef6
+- standard name: powershell_pipeline_id
+  field name: PipelineId
+  type: integer
+  description: ''
+  sample value: '35'
+- standard name: powershell_command_name
+  field name: CommandName
+  type: string
+  description: ''
+  sample value: Get-ChildItem
+- standard name: powershell_command_type
+  field name: CommandType
+  type: string
+  description: ''
+  sample value: Cmdlet
+- standard name: powershell_script_name
+  field name: ScriptName
+  type: string
+  description: ''
+  sample value: ''
+- standard name: powershell_command_path
+  field name: CommandPath
+  type: string
+  description: ''
+  sample value: ''
+- standard name: powershell_sequence_number
+  field name: Sequence Number
+  type: string
+  description: ''
+  sample value: '88'
+- standard name: user_name
+  field name: User
+  type: string
+  description: ''
+  sample value: wardog
+- standard name: user_domain
+  field name: User
+  type: string
+  description: ''
+  sample value: DESKTOP-WARDOG
+- standard name: powershell_connected_user
+  field name: Connected User
+  type: string
+  description: ''
+  sample value: ''
+- standard name: powershell_shell_id
+  field name: Shell ID
+  type: string
+  description: ''
+  sample value: Microsoft.PowerShell
+resources:
+- text: Investigating PowerShell Attacks - Mandiant
+  link: https://www.defcon.org/images/defcon-22/dc-22-presentations/Kazanciyan-Hastings/DEFCON-22-Ryan-Kazanciyan-Matt-Hastings-Investigating-Powershell-Attacks.pdf
+- text: FireEye
+  link: https://www.fireeye.com/blog/threat-research/2016/02/greater_visibilityt.html
+tags: null

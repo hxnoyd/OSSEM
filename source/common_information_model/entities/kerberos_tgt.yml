@@ -1,0 +1,43 @@
+title: Kerberos TGT Schema
+description: Event fields used to define Kerberos Ticket Granting Tickets.
+data fields:
+- standard name: service_name
+  type: string
+  description: 'the name of the service in the Kerberos Realm to which TGT request
+    was sent. Typically has value "krbtgt" for TGT requests, which means Ticket Granting
+    Ticket issuing service. For Failure events Service Name typically has the following
+    format: krbtgt/REALM_NAME. For example: krbtgt/CONTOSO.'
+  sample value: krbtgt
+- standard name: ticket_options
+  type: string
+  description: this is a set of different ticket flags in hexadecimal format.
+  sample value: '0x40810010'
+- standard name: ticket_status
+  type: string
+  description: hexadecimal result code of TGT issue operation.
+  sample value: '0x0'
+- standard name: ticket_encryption_type
+  type: string
+  description: the cryptographic suite that was used for issued TGT
+  sample value: '0x12'
+- standard name: ticket_pre_auth_type
+  type: integer
+  description: the code number of pre-Authentication type which was used in TGT request.
+  sample value: '15'
+- standard name: certificate_issuer_name
+  type: string
+  description: the name of the Certification Authority that issued the smart card
+    certificate. Populated in Issued by field in certificate.
+  sample value: contoso-DC01-CA-1
+- standard name: certificate_serial_number
+  type: string
+  description: smart card certificates serial number. Can be found in Serial number
+    field in the certificate.
+  sample value: 1D0000000D292FBE3C6CDDAFA200020000000D
+- standard name: certificate_thumbprint
+  type: string
+  description: smart card certificates thumbprint. Can be found in Thumbprint field
+    in the certificate.
+  sample value: 564DFAEE99C71D62ABC553E695BD8DBC46669413
+resources: []
+tags: null

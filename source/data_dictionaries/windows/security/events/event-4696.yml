@@ -1,0 +1,90 @@
+title: 'Event ID 4696: A primary token was assigned to process'
+operating system: windows
+data channel: security
+description: This event generates every time a process runs using the non-current
+  access token, for example, UAC elevated token, RUN AS different user actions, scheduled
+  task with defined user, services, and so on.
+data fields:
+- standard name: user_sid
+  field name: SubjectUserSid
+  type: string
+  description: SID of account that requested the "assign token to process" operation.
+  sample value: S-1-5-18
+- standard name: user_name
+  field name: SubjectUserName
+  type: string
+  description: the name of the account that requested the "assign token to process"
+    operation.
+  sample value: WIN2008$
+- standard name: user_domain
+  field name: SubjectDomainName
+  type: string
+  description: subject's domain or computer name.
+  sample value: CONTOSO
+- standard name: user_logon_id
+  field name: SubjectLogonId
+  type: integer
+  description: 'hexadecimal value that can help you correlate this event with recent
+    events that might contain the same Logon ID, for example, "4624: An account was
+    successfully logged on."'
+  sample value: '0x3e7'
+- standard name: target_user_sid
+  field name: TargetUserSid
+  type: string
+  description: SID of account through which the security token will be assigned to
+    the new process. Event Viewer automatically tries to resolve SIDs and show the
+    account name. If the SID cannot be resolved, you will see the source data in the
+    event.
+  sample value: S-1-5-18
+- standard name: target_user_name
+  field name: TargetUserName
+  type: string
+  description: the name of the account through which the security token will be assigned
+    to the new process.
+  sample value: dadmin
+- standard name: target_user_domain
+  field name: TargetDomainName
+  type: string
+  description: subject's domain or computer name.
+  sample value: CONTOSO
+- standard name: target_user_logon_id
+  field name: TargetLogonId
+  type: integer
+  description: 'hexadecimal value that can help you correlate this event with recent
+    events that might contain the same Logon ID, for example, "4624: An account was
+    successfully logged on."'
+  sample value: '0x1c8c5'
+- standard name: target_process_id
+  field name: TargetProcessId
+  type: integer
+  description: hexadecimal Process ID of the new process with new security token.
+    If you convert the hexadecimal value to decimal, you can compare it to the values
+    in Task Manager.
+  sample value: '0xf40'
+- standard name: target_process_name
+  field name: TargetProcessName
+  type: string
+  description: full path and the name of the executable for the new process.
+  sample value: C:\Windows\System32\WerFault.exe
+- standard name: process_id
+  field name: ProcessId
+  type: integer
+  description: hexadecimal Process ID of the process which started the new process
+    with the new security token.
+  sample value: '0x698'
+- standard name: process_name
+  field name: ProcessName
+  type: string
+  description: full path and the name of the executable for the process which ran
+    the new process with new security token.
+  sample value: C:\Windows\System32\svchost.exe
+resources:
+- text: MS Source
+  link: https://github.com/MicrosoftDocs/windows-itpro-docs/blob/master/windows/security/threat-protection/auditing/event-4696.md
+- text: MS Security Auditing Category - Detailed Tracking
+  link: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/advanced-security-audit-policy-settings#detailed-tracking
+- text: MS Security Auditing Sub-category - Audit Process Creation
+  link: https://github.com/MicrosoftDocs/windows-itpro-docs/tree/master/windows/security/threat-protection/auditing/audit-process-creation.md
+tags:
+- Detailed Tracking
+- Audit Process Creation

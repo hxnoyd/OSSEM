@@ -1,0 +1,76 @@
+title: 'Event ID 4658: The handle to an object was closed'
+operating system: windows
+data channel: security
+description: This event generates when the handle to an object is closed. The object
+  could be a file system, kernel, or registry object, or a file system object on removable
+  storage or a device.
+data fields:
+- standard name: user_sid
+  field name: SubjectUserSid
+  type: string
+  description: SID of account that requested the "close object's handle" operation.
+    Event Viewer automatically tries to resolve SIDs and show the account name.
+  sample value: S-1-5-21-3457937927-2839227994-823803824-1104
+- standard name: user_name
+  field name: SubjectUserName
+  type: string
+  description: the name of the account that requested the "close object's handle"
+    operation.
+  sample value: dadmin
+- standard name: user_domain
+  field name: SubjectDomainName
+  type: string
+  description: subject's domain or computer name.
+  sample value: CONTOSO
+- standard name: user_logon_id
+  field name: SubjectLogonId
+  type: integer
+  description: hexadecimal value that can help you correlate this event with recent
+    events that might contain the same Logon ID
+  sample value: '0x4367b'
+- standard name: object_server
+  field name: ObjectServer
+  type: string
+  description: has "Security" value for this event.
+  sample value: Security
+- standard name: object_handle_id
+  field name: HandleId
+  type: integer
+  description: 'hexadecimal value of a handle to Object Name. This field can help
+    you correlate this event with other events that might contain the same Handle
+    ID, for example, "4663(S): An attempt was made to access an object."'
+  sample value: '0x18a8'
+- standard name: process_id
+  field name: ProcessId
+  type: integer
+  description: hexadecimal Process ID of the process that requested that the handle
+    be closed. Process ID (PID) is a number used by the operating system to uniquely
+    identify an active process.
+  sample value: '0xef0'
+- standard name: process_path
+  field name: ProcessName
+  type: string
+  description: full path and the name of the executable for the process.
+  sample value: C:\Windows\explorer.exe
+resources:
+- text: MS Source
+  link: https://github.com/MicrosoftDocs/windows-itpro-docs/blob/master/windows/security/threat-protection/auditing/event-4658.md
+- text: MS Security Auditing Category - Object Access
+  link: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/advanced-security-audit-policy-settings#object-access
+- text: MS Security Auditing Sub-category - Audit File System
+  link: https://github.com/MicrosoftDocs/windows-itpro-docs/tree/master/windows/security/threat-protection/auditing/audit-file-system.md
+- text: MS Security Auditing Sub-category - Audit Handle Manipulation
+  link: https://github.com/MicrosoftDocs/windows-itpro-docs/tree/master/windows/security/threat-protection/auditing/audit-handle-manipulation.md
+- text: MS Security Auditing Sub-category - Audit Kernel Object
+  link: https://github.com/MicrosoftDocs/windows-itpro-docs/tree/master/windows/security/threat-protection/auditing/audit-kernel-object.md
+- text: MS Security Auditing Sub-category - Audit Registry
+  link: https://github.com/MicrosoftDocs/windows-itpro-docs/tree/master/windows/security/threat-protection/auditing/audit-registry.md
+- text: MS Security Auditing Sub-category - Audit Removable Storage
+  link: https://github.com/MicrosoftDocs/windows-itpro-docs/tree/master/windows/security/threat-protection/auditing/audit-removable-storage.md
+tags:
+- Object Access
+- Audit File System
+- Audit Handle Manipulation
+- Audit Kernel Object
+- Audit Registry
+- Audit Removable Storage

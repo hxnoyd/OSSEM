@@ -1,0 +1,16 @@
+title: 'Event ID 4773: A Kerberos service ticket request failed'
+operating system: windows
+data channel: security
+description: Currently this event doesn't generate. It is a defined event, but it
+  is never invoked by the operating system. 4769 failure event is generated instead.
+data fields: []
+resources:
+- text: MS Source
+  link: https://github.com/MicrosoftDocs/windows-itpro-docs/blob/master/windows/security/threat-protection/auditing/event-4773.md
+- text: MS Security Auditing Category - Account Logon
+  link: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/advanced-security-audit-policy-settings#account-logon
+- text: MS Security Auditing Sub-category - Audit Kerberos Service Ticket Operations
+  link: https://github.com/MicrosoftDocs/windows-itpro-docs/tree/master/windows/security/threat-protection/auditing/audit-kerberos-service-ticket-operations.md
+tags:
+- Account Logon
+- Audit Kerberos Service Ticket Operations

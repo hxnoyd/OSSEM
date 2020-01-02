@@ -1,0 +1,27 @@
+title: Destination NAT Schema
+description: Event fields used to define the destination NAT (network address translation)
+  in a network connection event.
+data fields:
+- standard name: dst_nat_ip_addr
+  type: ip
+  description: the IP value that the original Destination MAC was translated into
+    during NAT
+  sample value: 8.8.8.8
+- standard name: dst_nat_mac
+  type: mac
+  description: the MAC value that the original Destination MAC was translated into
+    during NAT
+  sample value: a9:68:82:28:c4:6d
+- standard name: dst_nat_port
+  type: integer
+  description: the port value that the original Destination port was translated into
+    during NAT
+  sample value: '138'
+- standard name: dst_nat_port_name
+  type: string
+  description: Destination NAT port name. This is usually determined by IANA common
+    port assignment. Therefore, this means its a guess and NOT the actual the application
+    used
+  sample value: netbios-dgm
+resources: []
+tags: null

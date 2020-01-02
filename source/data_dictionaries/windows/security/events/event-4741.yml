@@ -1,0 +1,215 @@
+title: 'Event ID 4741: A computer account was created'
+operating system: windows
+data channel: security
+description: This event generates every time a new computer object is created. This
+  event generates only on domain controllers.
+data fields:
+- standard name: target_host_name
+  field name: TargetUserName
+  type: string
+  description: 'the name of the computer account that was created. For example: WIN81$'
+  sample value: WIN81$
+- standard name: target_host_domain
+  field name: TargetDomainName
+  type: string
+  description: domain name of created computer account.
+  sample value: CONTOSO
+- standard name: target_host_sid
+  field name: TargetSid
+  type: string
+  description: SID of created computer account. Event Viewer automatically tries to
+    resolve SIDs and show the account name. If the SID cannot be resolved, you will
+    see the source data in the event.
+  sample value: S-1-5-21-3457937927-2839227994-823803824-6116
+- standard name: user_sid
+  field name: SubjectUserSid
+  type: string
+  description: SID of account that requested the "create Computer object" operation.
+    Event Viewer automatically tries to resolve SIDs and show the account name. If
+    the SID cannot be resolved, you will see the source data in the event.
+  sample value: S-1-5-21-3457937927-2839227994-823803824-1104
+- standard name: user_name
+  field name: SubjectUserName
+  type: string
+  description: the name of the account that requested the "create Computer object"
+    operation.
+  sample value: dadmin
+- standard name: user_domain
+  field name: SubjectDomainName
+  type: string
+  description: subject's domain name.
+  sample value: CONTOSO
+- standard name: user_logon_id
+  field name: SubjectLogonId
+  type: integer
+  description: 'hexadecimal value that can help you correlate this event with recent
+    events that might contain the same Logon ID, for example, "4624: An account was
+    successfully logged on."'
+  sample value: '0xc88b2'
+- standard name: user_privilege_list
+  field name: PrivilegeList
+  type: string
+  description: the list of user privileges which were used during the operation, for
+    example, SeBackupPrivilege. This parameter might not be captured in the event,
+    and in that case appears as "-".
+  sample value: '-'
+- standard name: target_host_sam_name
+  field name: SamAccountName
+  type: string
+  description: 'logon name for account used to support clients and servers from previous
+    versions of Windows (pre-Windows 2000 logon name). The value of sAMAccountName
+    attribute of new computer object. For example: WIN81$.'
+  sample value: WIN81$
+- standard name: target_host_display_name
+  field name: DisplayName
+  type: string
+  description: the value of displayName attribute of new computer object. It is a
+    name displayed in the address book for a particular account (typically - user
+    account). This is usually the combination of the user's first name, middle initial,
+    and last name. For computer objects, it is optional, and typically is not set.
+  sample value: '-'
+- standard name: target_host_principal_name
+  field name: UserPrincipalName
+  type: string
+  description: internet-style login name for the account, based on the Internet standard
+    RFC 822. By convention this should map to the account's email name. This parameter
+    contains the value of userPrincipalName attribute of new computer object.
+  sample value: '-'
+- standard name: target_host_home_directory
+  field name: HomeDirectory
+  type: string
+  description: user's home directory. If homeDrive attribute is set and specifies
+    a drive letter, homeDirectory should be a UNC path. The path must be a network
+    UNC of the form \Server\Share\Directory. This parameter contains the value of
+    homeDirectory attribute of new computer object.
+  sample value: '-'
+- standard name: target_host_home_path
+  field name: HomePath
+  type: string
+  description: specifies the drive letter to which to map the UNC path specified by
+    homeDirectory account's attribute. The drive letter must be specified in the form
+    "DRIVE_LETTER:".
+  sample value: '-'
+- standard name: target_host_script_path
+  field name: ScriptPath
+  type: string
+  description: specifies the path of the account's logon script. This parameter contains
+    the value of scriptPath attribute of new computer object. For computer objects,
+    it is optional, and typically is not set.
+  sample value: '-'
+- standard name: target_host_profile_path
+  field name: ProfilePath
+  type: string
+  description: specifies a path to the account's profile. This value can be a null
+    string, a local absolute path, or a UNC path. This parameter contains the value
+    of profilePath attribute of new computer object. For computer objects, it is optional,
+    and typically is not set.
+  sample value: '-'
+- standard name: target_host_workstations
+  field name: UserWorkstations
+  type: string
+  description: contains the list of NetBIOS or DNS names of the computers from which
+    the user can logon. Each computer name is separated by a comma. The name of a
+    computer is the sAMAccountName property of a computer object. This parameter contains
+    the value of userWorkstations attribute of new computer object.
+  sample value: '-'
+- standard name: target_host_password_last_set
+  field name: PasswordLastSet
+  type: date
+  description: last time the account's password was modified. For manually created
+    computer account, using Active Directory Users and Computers snap-in, this field
+    typically has value "\<never>".
+  sample value: 8/12/2015 11:41:39 AM
+- standard name: target_host_account_expires
+  field name: AccountExpires
+  type: date
+  description: the date when the account expires. This parameter contains the value
+    of accountExpires attribute of new computer object.
+  sample value: '%%1794'
+- standard name: target_host_primary_group_id
+  field name: PrimaryGroupId
+  type: integer
+  description: Relative Identifier (RID) of computer's object primary group.
+  sample value: '515'
+- standard name: target_host_allowed_to_delegate
+  field name: AllowedToDelegateTo
+  type: string
+  description: the list of SPNs to which this account can present delegated credentials.
+    Can be changed using Active Directory Users and Computers management console in
+    Delegation tab of computer account.
+  sample value: '-'
+- standard name: target_host_old_uac_value
+  field name: OldUacValue
+  type: integer
+  description: specifies flags that control password, lockout, disable/enable, script,
+    and other behavior for the user or computer account. Old UAC value always "0x0"
+    for new computer accounts. This parameter contains the previous value of userAccountControl
+    attribute of computer object.
+  sample value: '0x0'
+- standard name: target_host_new_uac_value
+  field name: NewUacValue
+  type: integer
+  description: specifies flags that control password, lockout, disable/enable, script,
+    and other behavior for the user or computer account. This parameter contains the
+    value of userAccountControl attribute of new computer object.
+  sample value: '0x80'
+- standard name: target_host_user_account_control
+  field name: UserAccountControl
+  type: string
+  description: shows the list of changes in userAccountControl attribute. You will
+    see a line of text for each change. For new computer accounts, when the object
+    for this account was created, the userAccountControl value was considered to be
+    "0x0", and then it was changed from "0x0" to the real value for the account's
+    userAccountControl attribute.
+  sample value: '%%2087'
+- standard name: target_host_user_paremeters
+  field name: UserParameters
+  type: string
+  description: 'if you change any setting using Active Directory Users and Computers
+    management console in Dial-in tab of computer''s account properties, then you
+    will see \<value changed, but not displayed> in this field in "4742(S): A computer
+    account was changed."'
+  sample value: '-'
+- standard name: target_host_sid_history
+  field name: SidHistory
+  type: string
+  description: contains previous SIDs used for the object if the object was moved
+    from another domain. Whenever an object is moved from one domain to another, a
+    new SID is created and becomes the objectSID.
+  sample value: '-'
+- standard name: target_host_logon_hours
+  field name: LogonHours
+  type: integer
+  description: hours that the account is allowed to logon to the domain. The value
+    of logonHours attribute of new computer object. For computer objects, it is optional,
+    and typically is not set. You can change this attribute by using Active Directory
+    Users and Computers, or through a script, for example. You will see \<value not
+    set> value for new created computer accounts in event 4741.
+  sample value: '%%1793'
+- standard name: target_host_dns_host_name
+  field name: DnsHostName
+  type: string
+  description: name of computer account as registered in DNS. The value of dNSHostName
+    attribute of new computer object. For manually created computer account objects
+    this field has value "-".
+  sample value: Win81.contoso.local
+- standard name: target_host_service_principal_names
+  field name: ServicePrincipalNames
+  type: string
+  description: 'The list of SPNs, registered for computer account. For new computer
+    accounts it will typically contain HOST SPNs and RestrictedKrbHost SPNs. The value
+    of servicePrincipalName attribute of new computer object. For manually created
+    computer objects it is typically equals "-". This is an example of Service Principal
+    Names field for new domain joined workstation:'
+  sample value: HOST/Win81.contoso.local RestrictedKrbHost/Win81.contoso.local HOST/WIN81
+    RestrictedKrbHost/WIN81
+resources:
+- text: MS Source
+  link: https://github.com/MicrosoftDocs/windows-itpro-docs/blob/master/windows/security/threat-protection/auditing/event-4741.md
+- text: MS Security Auditing Category - Account Management
+  link: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/advanced-security-audit-policy-settings#account-management
+- text: MS Security Auditing Sub-category - Audit Computer Account Management
+  link: https://github.com/MicrosoftDocs/windows-itpro-docs/tree/master/windows/security/threat-protection/auditing/audit-computer-account-management.md
+tags:
+- Account Management
+- Audit Computer Account Management

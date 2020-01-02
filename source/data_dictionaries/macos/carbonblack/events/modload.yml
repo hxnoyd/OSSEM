@@ -1,0 +1,71 @@
+title: ingress.event.moduleload (Module Load)
+operating system: macos
+data channel: carbonblack
+description: This event contains the information for modules loaded by processes on
+  endpoints monitored by Carbon Black.
+data fields:
+- standard name: cb_sensor
+  field name: cb_server
+  type: TEXT
+  description: Used to distinguish between multiple Cb Response servers. Set this
+    in the "server_name" option of cb-event-forwarder.ini.
+  sample value: cbserver
+- standard name: host_name
+  field name: computer_name
+  type: TEXT
+  description: hostname of the sensor
+  sample value: JASON-MAC-VM
+- standard name: event_type
+  field name: event_type
+  type: TEXT
+  description: The type of event
+  sample value: modload
+- standard name: process_link
+  field name: link_process
+  type: TEXT
+  description: Deep link to Cb Response UI for process
+  sample value: https://cbtests/#analyze/00000001-0000-07b4-01d1-209a100bc217/1
+- standard name: sensor_link
+  field name: link_sensor
+  type: TEXT
+  description: Deep link to Cb Response UI for sensor
+  sample value: https://cbtests/#/host/1
+- standard name: hash
+  field name: md5
+  type: TEXT
+  description: md5 of the module
+  sample value: 3D136E8D4C0407D9C40FD8BDD649B587
+- standard name: file_path
+  field name: path
+  type: TEXT
+  description: Path of the module loaded into the current process
+  sample value: /System/Library/Frameworks/Security.framework/Versions/A/PlugIns/csparser.bundle/Contents/MacOS/csparser
+- standard name: process_id
+  field name: pid
+  type: INTEGER
+  description: Endpoint OS Process id of process
+  sample value: '1972'
+- standard name: process_guid
+  field name: process_guid
+  type: TEXT
+  description: Cb Process GUID of process
+  sample value: 00000001-0000-07b4-01d1-209a100bc217
+- standard name: sensor_id
+  field name: sensor_id
+  type: INTEGER
+  description: sensor ID of associated sensor
+  sample value: '1'
+- standard name: event_date_creation
+  field name: timestamp
+  type: INTEGER
+  description: Endpoint timestamp of this event since epoch
+  sample value: '1447697423'
+- standard name: event_type_detailed
+  field name: type
+  type: TEXT
+  description: The full type of event
+  sample value: ingress.event.moduleload
+resources:
+- text: Carbon Black Developer Docs
+  link: https://developer.carbonblack.com/reference/enterprise-response/event-forwarder/event-schema/#ingress-event-moduleload-module-load
+tags: null

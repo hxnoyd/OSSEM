@@ -1,0 +1,21 @@
+title: Kerberos TGS Schema
+description: Event fields used to define Kerberos Ticket Granting Service.
+data fields:
+- standard name: service_name
+  type: string
+  description: the name of the account or computer for which the TGS ticket was requested
+  sample value: WIN2008R2$
+- standard name: ticket_options
+  type: string
+  description: this is a set of different ticket flags in hexadecimal format.
+  sample value: '0x40810010'
+- standard name: ticket_status
+  type: string
+  description: hexadecimal result code of TGS issue operation.
+  sample value: '0x0'
+- standard name: ticket_encryption_type
+  type: string
+  description: the cryptographic suite that was used for issued TGS.
+  sample value: '0x12'
+resources: []
+tags: null

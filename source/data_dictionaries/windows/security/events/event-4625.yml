@@ -1,0 +1,143 @@
+title: 'Event ID 4625: An account failed to log on'
+operating system: windows
+data channel: security
+description: This event generates if an account logon attempt failed when the account
+  was already locked out. It also generates for a logon attempt after which the account
+  was locked out.
+data fields:
+- standard name: user_reporter_sid
+  field name: SubjectUserSid
+  type: string
+  description: SID of account that reported information about logon failure.
+  sample value: S-1-5-18
+- standard name: user_reporter_name
+  field name: SubjectUserName
+  type: string
+  description: the name of the account that reported information about logon failure.
+  sample value: DC01$
+- standard name: user_reporter_domain
+  field name: SubjectDomainName
+  type: string
+  description: subject's domain or computer name
+  sample value: CONTOSO
+- standard name: user_reporter_id
+  field name: SubjectLogonId
+  type: integer
+  description: hexadecimal value that can help you correlate this event with recent
+    events that might contain the same Logon ID
+  sample value: '0x3e7'
+- standard name: user_sid
+  field name: TargetUserSid
+  type: string
+  description: SID of the account that was specified in the logon attempt
+  sample value: S-1-0-0
+- standard name: user_name
+  field name: TargetUserName
+  type: string
+  description: the name of the account that was specified in the logon attempt
+  sample value: Auditor
+- standard name: user_domain
+  field name: TargetDomainName
+  type: string
+  description: subject's domain or computer name
+  sample value: CONTOSO
+- standard name: event_status
+  field name: Status
+  type: integer
+  description: the reason why logon failed. For this event it typically has "0xC0000234"
+    value
+  sample value: '0xc0000234'
+- standard name: event_failure_reason
+  field name: FailureReason
+  type: integer
+  description: textual explanation of Status field value
+  sample value: '%%2307'
+- standard name: event_sub_status
+  field name: SubStatus
+  type: string
+  description: additional information about logon failure.
+  sample value: '0x0'
+- standard name: logon_type
+  field name: LogonType
+  type: string
+  description: the type of logon which was performed
+  sample value: '2'
+- standard name: logon_process_name
+  field name: LogonProcessName
+  type: string
+  description: 'the name of the trusted logon process that was used for the logon
+    attempt. See event "4611: A trusted logon process has been registered with the
+    Local Security Authority" description for more information.'
+  sample value: User32
+- standard name: logon_authentication_package_name
+  field name: AuthenticationPackageName
+  type: string
+  description: The name of the authentication package which was used for the logon
+    authentication process. Default packages loaded on LSA startup are located in
+    "HKLM\SYSTEM\CurrentControlSet\Control\Lsa\OSConfig" registry key.
+  sample value: Negotiate
+- standard name: src_host_name
+  field name: WorkstationName
+  type: string
+  description: machine name from which logon attempt was performed.
+  sample value: DC01
+- standard name: logon_trasmitted_services
+  field name: TransmittedServices
+  type: string
+  description: the list of transmitted services. Transmitted services are populated
+    if the logon was a result of a S4U (Service For User) logon process. S4U is a
+    Microsoft extension to the Kerberos Protocol to allow an application service to
+    obtain a Kerberos service ticket on behalf of a user - most commonly done by a
+    front-end website to access an internal resource on behalf of a user.
+  sample value: '-'
+- standard name: logon_authentication_lan_package_name
+  field name: LmPackageName
+  type: integer
+  description: 'The name of the LAN Manager sub-package (NTLM-family protocol name)
+    that was used during logon. Possible values are: NTLM V1, NTLM V2, LM. Only populated
+    if Authentication Package = NTLM.'
+  sample value: '-'
+- standard name: logon_key_length
+  field name: KeyLength
+  type: integer
+  description: the length of NTLM Session Security key. Typically it has 128 bit or
+    56 bit length. This parameter is always 0 if "Authentication Package" = "Kerberos",
+    because it is not applicable for Kerberos protocol. This field will also have
+    "0" value if Kerberos was negotiated using Negotiate authentication package.
+  sample value: '0'
+- standard name: process_id
+  field name: ProcessId
+  type: string
+  description: hexadecimal Process ID of the process that attempted the logon. Process
+    ID (PID) is a number used by the operating system to uniquely identify an active
+    process.
+  sample value: '0x1bc'
+- standard name: process_name
+  field name: ProcessName
+  type: ip
+  description: full path and the name of the executable for the process.
+  sample value: C:\Windows\System32\winlogon.exe
+- standard name: src_ip
+  field name: IpAddress
+  type: integer
+  description: IP address of machine from which logon attempt was performed
+  sample value: 127.0.0.1
+- standard name: src_port
+  field name: IpPort
+  type: string
+  description: source port which was used for logon attempt from remote machine. 0
+    for interactive logons
+  sample value: '0'
+resources:
+- text: MS Source
+  link: https://github.com/MicrosoftDocs/windows-itpro-docs/blob/master/windows/security/threat-protection/auditing/event-4625.md
+- text: MS Security Auditing Category - Logon/Logoff
+  link: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/advanced-security-audit-policy-settings#logonlogoff
+- text: MS Security Auditing Sub-category - Audit Account Lockout
+  link: https://github.com/MicrosoftDocs/windows-itpro-docs/tree/master/windows/security/threat-protection/auditing/audit-account-lockout.md
+- text: MS Security Auditing Sub-category - Audit Logon
+  link: https://github.com/MicrosoftDocs/windows-itpro-docs/tree/master/windows/security/threat-protection/auditing/audit-logon.md
+tags:
+- Logon/Logoff
+- Audit Account Lockout
+- Audit Logon

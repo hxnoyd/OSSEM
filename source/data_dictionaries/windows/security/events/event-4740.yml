@@ -1,0 +1,54 @@
+title: 'Event ID 4740: A user account was locked out'
+operating system: windows
+data channel: security
+description: This event generates every time a user account is locked out. For user
+  accounts, this event generates on domain controllers, member servers, and workstations.
+data fields:
+- standard name: user_name
+  field name: TargetUserName
+  type: string
+  description: the name of the account that was locked out.
+  sample value: Auditor
+- standard name: user_domain
+  field name: TargetDomainName
+  type: string
+  description: the name of computer account from which logon attempt was received
+    and after which target account was locked out.
+  sample value: WIN81
+- standard name: user_sid
+  field name: TargetSid
+  type: string
+  description: SID of account that was locked out.
+  sample value: S-1-5-21-3457937927-2839227994-823803824-2104
+- standard name: user_reporter_sid
+  field name: SubjectUserSid
+  type: string
+  description: SID of account that performed the lockout operation.
+  sample value: S-1-5-18
+- standard name: user_reporter_name
+  field name: SubjectUserName
+  type: string
+  description: the name of the account that performed the lockout operation.
+  sample value: DC01$
+- standard name: user_reporter_domain
+  field name: SubjectDomainName
+  type: string
+  description: domain or computer name.
+  sample value: CONTOSO
+- standard name: user_reporter_logon_id
+  field name: SubjectLogonId
+  type: integer
+  description: 'hexadecimal value that can help you correlate this event with recent
+    events that might contain the same Logon ID, for example, "4624: An account was
+    successfully logged'
+  sample value: '0x3e7'
+resources:
+- text: MS Source
+  link: https://github.com/MicrosoftDocs/windows-itpro-docs/blob/master/windows/security/threat-protection/auditing/event-4740.md
+- text: MS Security Auditing Category - Account Management
+  link: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/advanced-security-audit-policy-settings#account-management
+- text: MS Security Auditing Sub-category - Audit User Account Management
+  link: https://github.com/MicrosoftDocs/windows-itpro-docs/tree/master/windows/security/threat-protection/auditing/audit-user-account-management.md
+tags:
+- Account Management
+- Audit User Account Management

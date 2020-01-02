@@ -1,0 +1,60 @@
+title: 'Event ID 4904: An attempt was made to register a security event source.'
+operating system: windows
+data channel: security
+description: This event generates every time a new security event source.
+data fields:
+- standard name: user_sid
+  field name: SubjectUserSid
+  type: string
+  description: SID of account that made an attempt to register a security event source.
+  sample value: S-1-5-18
+- standard name: user_name
+  field name: SubjectUserName
+  type: string
+  description: the name of the account that made an attempt to register a security
+    event source.
+  sample value: DC01$
+- standard name: user_domain
+  field name: SubjectDomainName
+  type: string
+  description: subject's domain or computer name.
+  sample value: CONTOSO
+- standard name: user_logon_id
+  field name: SubjectLogonId
+  type: integer
+  description: 'hexadecimal value that can help you correlate this event with recent
+    events that might contain the same Logon ID, for example, "4624: An account was
+    successfully logged on."'
+  sample value: '0x3e7'
+- standard name: event_source_name
+  field name: AuditSourceName
+  type: string
+  description: 'the name of registered security event source. You can see all registered
+    security event source names in this registry path: "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\EventLog\Security".'
+  sample value: FSRM Audit
+- standard name: event_source_id
+  field name: EventSourceId
+  type: integer
+  description: the unique hexadecimal identifier of registered security event source.
+  sample value: '0x1cc4e'
+- standard name: process_id
+  field name: ProcessId
+  type: integer
+  description: hexadecimal Process ID of the process that attempted to register the
+    security event source.
+  sample value: '0x688'
+- standard name: process_path
+  field name: ProcessName
+  type: ''
+  description: ''
+  sample value: C:\Windows\System32\svchost.exe
+resources:
+- text: MS Source
+  link: https://github.com/MicrosoftDocs/windows-itpro-docs/blob/public/windows/security/threat-protection/auditing/event-4904.md
+- text: MS Security Auditing Category - Policy Change
+  link: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/advanced-security-audit-policy-settings#policy-change
+- text: MS Security Auditing Sub-category - Audit Policy Change
+  link: https://github.com/MicrosoftDocs/windows-itpro-docs/tree/master/windows/security/threat-protection/auditing/audit-policy-change.md
+tags:
+- Policy Change
+- Audit Policy Change

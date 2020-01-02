@@ -1,0 +1,53 @@
+title: 'Event ID 5888: An object in the COM+ Catalog was modified.'
+operating system: windows
+data channel: security
+description: This event generates when the object in COM+ Catalog.
+data fields:
+- standard name: user_sid
+  field name: SubjectUserSid
+  type: string
+  description: SID of account that requested the "modify/change object" operation.
+  sample value: S-1-5-21-3457937927-2839227994-823803824-1104
+- standard name: user_name
+  field name: SubjectUserName
+  type: string
+  description: the name of the account that requested the "modify/change object" operation.
+  sample value: dadmin
+- standard name: user_domain
+  field name: SubjectUserDomainName
+  type: string
+  description: subject's domain or computer name.
+  sample value: CONTOSO
+- standard name: user_logon_id
+  field name: SubjectLogonId
+  type: integer
+  description: 'hexadecimal value that can help you correlate this event with recent
+    events that might contain the same Logon ID, for example, "4624: An account was
+    successfully logged on."'
+  sample value: '222443'
+- standard name: object_collection_name
+  field name: ObjectCollectionName
+  type: string
+  description: the name of COM+ collection in which the object was modified.
+  sample value: Applications
+- standard name: object_identifying_properties
+  field name: ObjectIdentifyingProperties
+  type: string
+  description: object-specific fields with the names and identifiers for the modified
+    object.
+  sample value: ID = {1D34B2DC-0E43-4040-BA7B-2F1C181FD86A} AppPartitionID = {41E90F3E-56C1-4633-81C3-6E8BAC8BDD70}
+- standard name: object_modified_properties
+  field name: ModifiedObjectProperties
+  type: string
+  description: the list of object's (Object Name) properties which were modified.
+  sample value: Name = 'COMApp' -> 'COMApp-New' cCOL_SecurityDescriptor = '' -> ''
+resources:
+- text: MS Source
+  link: https://github.com/MicrosoftDocs/windows-itpro-docs/blob/public/windows/security/threat-protection/auditing/event-5888.md
+- text: MS Security Auditing Category - Object Access
+  link: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/advanced-security-audit-policy-settings#object-access
+- text: MS Security Auditing Sub-category - Audit Other Object Access Events
+  link: https://github.com/MicrosoftDocs/windows-itpro-docs/tree/master/windows/security/threat-protection/auditing/audit-other-object-access-events.md
+tags:
+- Object Access
+- Audit Other Object Access Events

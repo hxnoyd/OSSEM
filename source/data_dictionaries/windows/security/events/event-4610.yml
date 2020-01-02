@@ -1,0 +1,22 @@
+title: 'Event ID 4610: An authentication package has been loaded by the Local Security
+  Authority.'
+operating system: windows
+data channel: security
+description: This event generates every time Authentication Package.
+data fields:
+- standard name: logon_authentication_package_name
+  field name: AuthenticationPackageName
+  type: string
+  description: 'the name of loaded Authentication Package. The format is: DLL_PATH_AND_NAME:
+    AUTHENTICATION_PACKAGE_NAME.'
+  sample value: 'C:\Windows\system32\msv1_0.DLL : MICROSOFT_AUTHENTICATION_PACKAGE_V1_0'
+resources:
+- text: MS SOURCE
+  link: https://github.com/MicrosoftDocs/windows-itpro-docs/blob/public/windows/security/threat-protection/auditing/event-4610.md
+- text: MS Security Auditing Category - System
+  link: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/advanced-security-audit-policy-settings#system
+- text: MS Security Auditing Sub-category - Audit Security System Extension
+  link: https://github.com/MicrosoftDocs/windows-itpro-docs/tree/master/windows/security/threat-protection/auditing/audit-security-system-extension.md
+tags:
+- System
+- Audit Security System Extension

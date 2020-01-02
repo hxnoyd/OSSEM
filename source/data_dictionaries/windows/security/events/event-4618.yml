@@ -1,0 +1,57 @@
+title: 'Event ID 4618: A monitored security event pattern has occurred.'
+operating system: windows
+data channel: security
+description: This event is generated when Windows is configured to generate alerts
+  in accordance with the Common Criteria Security Audit Analysis requirements (FAU_SAA)
+  and an auditable event pattern occurs.
+data fields:
+- standard name: event_id
+  field name: EventId
+  type: integer
+  description: ''
+  sample value: '4624'
+- standard name: computer_name
+  field name: ComputerName
+  type: string
+  description: ''
+  sample value: DC01.contoso.local
+- standard name: user_sid
+  field name: TargetUserSid
+  type: string
+  description: ''
+  sample value: S-1-5-21-3457937927-2839227994-823803824-1104
+- standard name: user_name
+  field name: TargetUserName
+  type: string
+  description: ''
+  sample value: dadmin
+- standard name: user_domain
+  field name: TargetUserDomain
+  type: string
+  description: ''
+  sample value: CONTOSO
+- standard name: user_logon_id
+  field name: TargetLogonId
+  type: integer
+  description: ''
+  sample value: '0x1'
+- standard name: ''
+  field name: EventCount
+  type: integer
+  description: ''
+  sample value: '10'
+- standard name: ''
+  field name: Duration
+  type: string
+  description: ''
+  sample value: '"Hour"'
+resources:
+- text: MS SOURCE
+  link: https://github.com/MicrosoftDocs/windows-itpro-docs/blob/public/windows/security/threat-protection/auditing/event-4618.md
+- text: MS Security Auditing Category - System
+  link: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/advanced-security-audit-policy-settings#system
+- text: MS Security Auditing Sub-category - Audit System Integrity
+  link: https://github.com/MicrosoftDocs/windows-itpro-docs/tree/master/windows/security/threat-protection/auditing/audit-system-integrity.md
+tags:
+- System
+- Audit System Integrity

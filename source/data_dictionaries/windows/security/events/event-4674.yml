@@ -1,0 +1,86 @@
+title: 'Event ID 4674: An operation was attempted on a privileged object.'
+operating system: windows
+data channel: security
+description: This event generates when an attempt is made to perform privileged operations
+  on a protected subsystem object after the object is already opened.
+data fields:
+- standard name: user_sid
+  field name: SubjectUserSid
+  type: string
+  description: SID of account that requested privileged operation.
+  sample value: S-1-5-19
+- standard name: user_name
+  field name: SubjectUserName
+  type: string
+  description: the name of the account that requested privileged operation.
+  sample value: LOCAL SERVICE
+- standard name: user_domain
+  field name: SubjectDomainName
+  type: string
+  description: subject's domain or computer name.
+  sample value: NT AUTHORITY
+- standard name: user_logon_id
+  field name: SubjectLogonId
+  type: integer
+  description: 'hexadecimal value that can help you correlate this event with recent
+    events that might contain the same Logon ID, for example, "4624: An account was
+    successfully logged on."'
+  sample value: '0x3e5'
+- standard name: object_server
+  field name: ObjectServer
+  type: string
+  description: Contains the name of the Windows subsystem calling the routine.
+  sample value: LSA
+- standard name: object_type
+  field name: ObjectType
+  type: string
+  description: Contains the name of the Windows subsystem calling the routine.
+  sample value: '-'
+- standard name: object_name
+  field name: ObjectName
+  type: string
+  description: the name of the object that was accessed during the operation.
+  sample value: '-'
+- standard name: object_handle_id
+  field name: HandleId
+  type: integer
+  description: 'hexadecimal value of a handle to Object Name. This field can help
+    you correlate this event with other events that might contain the same Handle
+    ID, for example, "4656: A handle to an object was requested" event in appropriate/other
+    subcategory.'
+  sample value: '0x0'
+- standard name: object_access_mask
+  field name: AccessMask
+  type: integer
+  description: The desired access mask. This mask depends on Object Server and Object
+    Type parameters values.
+  sample value: '16777216'
+- standard name: object_privilege_list
+  field name: PrivilegeList
+  type: string
+  description: the list of user privileges which were requested.
+  sample value: SeSecurityPrivilege
+- standard name: process_id
+  field name: ProcessId
+  type: integer
+  description: hexadecimal Process ID of the process that attempted the operation
+    on the privileged object.
+  sample value: '0x1f0'
+- standard name: process_path
+  field name: ProcessName
+  type: string
+  description: full path and the name of the executable for the process.
+  sample value: C:\Windows\System32\lsass.exe
+resources:
+- text: MS SOURCE
+  link: https://github.com/MicrosoftDocs/windows-itpro-docs/blob/public/windows/security/threat-protection/auditing/event-4674.md
+- text: MS Security Auditing Category - Privilege Use
+  link: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/advanced-security-audit-policy-settings#privilege-use
+- text: MS Security Auditing Sub-category - Audit Sensitive Privilege Use
+  link: https://github.com/MicrosoftDocs/windows-itpro-docs/tree/master/windows/security/threat-protection/auditing/audit-sensitive-privilege-use.md
+- text: MS Security Auditing Sub-category - Audit Non Sensitive Privilege Use
+  link: https://github.com/MicrosoftDocs/windows-itpro-docs/tree/master/windows/security/threat-protection/auditing/audit-non-sensitive-privilege-use.md
+tags:
+- Privilege Use
+- Audit Sensitive Privilege Use
+- Audit Non Sensitive Privilege Use

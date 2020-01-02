@@ -1,0 +1,92 @@
+title: 'Event ID 400: Engine Lifecycle'
+operating system: windows
+data channel: powershell
+description: 'Logs the start and stop of PowerShell. Each time that PowerShell executes
+  - either upon the execution of a single command, the start of a local session, or
+  the start of a remoting session - this log records an Event ID (EID) 400 message:
+  "Engine state is changed from None to Available." At the completion of the session,
+  the log records an EID 403 event: "Engine state is changed from Available to Stopped".
+
+  The message details for both EID 400 and EID 403 events include a HostName field.
+  If executed locally, this field will be logged as HostName=ConsoleHost. If PowerShell
+  remoting is in use, the accessed system will record these events with HostName=ServerRemoteHost."https://www.blackhat.com/docs/us-14/materials/us-14-Kazanciyan-Investigating-Powershell-Attacks-WP.pdf'
+data fields:
+- standard name: powershell_new_engine_state
+  field name: NewEngineState
+  type: string
+  description: ''
+  sample value: Available
+- standard name: powershell_previous_engine_state
+  field name: PreviousEngineState
+  type: string
+  description: ''
+  sample value: None
+- standard name: powershell_sequence_number
+  field name: SequenceNumber
+  type: integer
+  description: ''
+  sample value: '13'
+- standard name: powershell_host_name
+  field name: HostName
+  type: string
+  description: ''
+  sample value: ConsoleHost
+- standard name: powershell_host_version
+  field name: HostVersion
+  type: string
+  description: ''
+  sample value: 5.1.16299.251
+- standard name: powershell_host_id
+  field name: HostId
+  type: string
+  description: ''
+  sample value: f90b931a-dc4d-488a-b1b8-e0b7dbcdc0c7
+- standard name: powershell_host_application
+  field name: HostApplication
+  type: string
+  description: ''
+  sample value: powershell.exe
+- standard name: powershell_engine_version
+  field name: EngineVersion
+  type: string
+  description: ''
+  sample value: 5.1.16299.251
+- standard name: powershell_runspace_id
+  field name: RunspaceId
+  type: string
+  description: ''
+  sample value: 0dfc1f10-3bce-4885-8dbf-58ed28eba179
+- standard name: powershell_pipeline_id
+  field name: PipelineId
+  type: string
+  description: ''
+  sample value: ''
+- standard name: powershell_command_name
+  field name: CommandName
+  type: string
+  description: ''
+  sample value: ''
+- standard name: powershell_command_type
+  field name: CommandType
+  type: string
+  description: ''
+  sample value: ''
+- standard name: powershell_script_name
+  field name: ScriptName
+  type: string
+  description: ''
+  sample value: ''
+- standard name: powershell_command_path
+  field name: CommandPath
+  type: string
+  description: ''
+  sample value: ''
+- standard name: powershell_command_line
+  field name: CommandLine
+  type: string
+  description: ''
+  sample value: ''
+resources:
+- text: Investigating PowerShell Attacks - Mandiant
+  link: https://www.blackhat.com/docs/us-14/materials/us-14-Kazanciyan-Investigating-Powershell-Attacks-WP.pdf
+tags: null

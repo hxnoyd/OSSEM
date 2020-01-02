@@ -1,0 +1,59 @@
+title: 'Event ID 4692: Backup of data protection master key was attempted.'
+operating system: windows
+data channel: security
+description: This event generates every time that a backup is attempted for the DPAPI
+  Master Key.
+data fields:
+- standard name: user_sid
+  field name: SubjectUserSid
+  type: string
+  description: SID of account that requested backup operation.
+  sample value: S-1-5-21-3457937927-2839227994-823803824-500
+- standard name: user_name
+  field name: SubjectUserName
+  type: string
+  description: the name of the account that requested backup operation.
+  sample value: ladmin
+- standard name: user_domain
+  field name: SubjectDomainName
+  type: string
+  description: subject's domain or computer name.
+  sample value: CONTOSO
+- standard name: user_logon_id
+  field name: SubjectLogonId
+  type: integer
+  description: 'hexadecimal value that can help you correlate this event with recent
+    events that might contain the same Logon ID, for example, "4624: An account was
+    successfully logged on."'
+  sample value: '0x30c08'
+- standard name: master_key_id
+  field name: MasterKeyId
+  type: string
+  description: unique identifier of a master key which backup was created.
+  sample value: 16cfaea0-dbe3-4d92-9523-d494edb546bc
+- standard name: recovery_key_hostname
+  field name: RecoveryServer
+  type: string
+  description: the name (typically - DNS name) of the computer that you contacted
+    to back up your Master Key.
+  sample value: None
+- standard name: recovery_key_id
+  field name: RecoveryKeyId
+  type: string
+  description: unique identifier of a recovery key.
+  sample value: 806a0350-aeb1-4c56-91f9-ef16cf759291
+- standard name: event_failure_reason
+  field name: FailureReason
+  type: integer
+  description: hexadecimal unique status code of performed operation.
+  sample value: '0x0'
+resources:
+- text: MS SOURCE
+  link: https://github.com/MicrosoftDocs/windows-itpro-docs/blob/public/windows/security/threat-protection/auditing/event-4692.md
+- text: MS Security Auditing Category - Detailed Tracking
+  link: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/advanced-security-audit-policy-settings#detailed-tracking
+- text: MS Security Auditing Sub-category - Audit DPAPI Activity
+  link: https://github.com/MicrosoftDocs/windows-itpro-docs/tree/master/windows/security/threat-protection/auditing/audit-dpapi-activity.md
+tags:
+- Detailed Tracking
+- Audit DPAPI Activity

@@ -1,0 +1,30 @@
+title: 'Event ID 4: Sysmon service state changed'
+operating system: windows
+data channel: sysmon
+description: The service state change event reports the state of the Sysmon service
+  (started or stopped).https://docs.microsoft.com/en-us/sysinternals/downloads/sysmon#event-id-4-sysmon-service-state-changed
+data fields:
+- standard name: event_date_creation
+  field name: UtcTime
+  type: date
+  description: Time in UTC when event was created
+  sample value: 4/11/18 5:36
+- standard name: service_state
+  field name: State
+  type: string
+  description: sysmon service state (i.e. stopped)
+  sample value: Stopped
+- standard name: file_version
+  field name: Version
+  type: string
+  description: sysmon version
+  sample value: '7.01'
+- standard name: sysmon_schema_version
+  field name: SchemaVersion
+  type: string
+  description: sysmon config schema version
+  sample value: '4'
+resources:
+- text: Sysmon Source
+  link: https://docs.microsoft.com/en-us/sysinternals/downloads/sysmon#event-id-4-sysmon-service-state-changed
+tags: null

@@ -1,0 +1,58 @@
+title: 'Event ID 5159: The Windows Filtering Platform has blocked a bind to a local
+  port.'
+operating system: windows
+data channel: security
+description: This event is logged if the Windows Filtering Platform has blocked a
+  bind to a local port.
+data fields:
+- standard name: process_id
+  field name: ProcessId
+  type: integer
+  description: Hexadecimal Process ID of the process which was permitted to bind to
+    the local port.
+  sample value: '7924'
+- standard name: process_path
+  field name: Application
+  type: string
+  description: Full path and the name of the executable for the process.
+  sample value: \device\harddiskvolume2\users\test\desktop\netcat\nc.exe
+- standard name: src_ip_addr
+  field name: SourceAddress
+  type: ip
+  description: The local IP address of the computer running the application.
+  sample value: 0.0.0.0
+- standard name: src_port
+  field name: SourcePort
+  type: integer
+  description: The port number used by the application.
+  sample value: '5555'
+- standard name: network_protocol
+  field name: Protocol
+  type: integer
+  description: Protocol number.
+  sample value: '6'
+- standard name: ''
+  field name: FilterRTID
+  type: integer
+  description: Unique filter ID which blocks the application from binding to the port.
+  sample value: '84614'
+- standard name: ''
+  field name: LayerName
+  type: string
+  description: Application Layer Enforcement layer name.
+  sample value: '%%14608'
+- standard name: ''
+  field name: LayerRTID
+  type: integer
+  description: Windows Filtering Platform layer identifier.
+  sample value: '36'
+resources:
+- text: MS Source
+  link: https://github.com/MicrosoftDocs/windows-itpro-docs/blob/master/windows/security/threat-protection/auditing/event-5159.md
+- text: MS Security Auditing Category - Object Access
+  link: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/advanced-security-audit-policy-settings#object-access
+- text: MS Security Auditing Sub-category - Audit Filtering Platform Connection
+  link: https://github.com/MicrosoftDocs/windows-itpro-docs/tree/master/windows/security/threat-protection/auditing/audit-filtering-platform-connection.md
+tags:
+- Object Access
+- Audit Filtering Platform Connection

@@ -1,0 +1,81 @@
+title: 'Event ID 5157: The Windows Filtering Platform has permitted a connection'
+operating system: windows
+data channel: security
+description: This event generates when Windows Filtering Platform has blocked a connection.
+data fields:
+- standard name: process_id
+  field name: ProcessId
+  type: integer
+  description: Hexadecimal Process ID of the process that attempted to create the
+    connection.
+  sample value: '4556'
+- standard name: process_path
+  field name: Application
+  type: string
+  description: Full path and the name of the executable for the process.
+  sample value: \device\harddiskvolume2\documents\listener.exe
+- standard name: ''
+  field name: Direction
+  type: string
+  description: Direction of blocked connection.
+  sample value: Inbound
+- standard name: src_ip_addr
+  field name: SourceAddress
+  type: ip
+  description: Local IP address on which application received the connection.
+  sample value: 10.0.0.10
+- standard name: src_port
+  field name: SourcePort
+  type: integer
+  description: Port number on which application received the connection.
+  sample value: '3333'
+- standard name: dst_ip_addr
+  field name: DestAddress
+  type: ip
+  description: IP address from which connection was received or initiated.
+  sample value: 10.0.0.100
+- standard name: dst_port
+  field name: DestPort
+  type: integer
+  description: Port number which was used from remote machine to initiate connection.
+  sample value: '49218'
+- standard name: network_protocol
+  field name: Protocol
+  type: integer
+  description: Protocol number.
+  sample value: '6'
+- standard name: ''
+  field name: FilterRTID
+  type: integer
+  description: Unique filter ID which blocked the connection.
+  sample value: '110398'
+- standard name: ''
+  field name: LayerName
+  type: string
+  description: Application Layer Enforcement layer name.
+  sample value: '%%14610'
+- standard name: ''
+  field name: LayerRTID
+  type: integer
+  description: Windows Filtering Platform layer identifier.
+  sample value: '44'
+- standard name: ''
+  field name: RemoteUserID
+  type: ''
+  description: ''
+  sample value: S-1-0-0
+- standard name: ''
+  field name: RemoteMachineID
+  type: ''
+  description: ''
+  sample value: S-1-0-0
+resources:
+- text: MS Source
+  link: https://github.com/MicrosoftDocs/windows-itpro-docs/blob/master/windows/security/threat-protection/auditing/event-5157.md
+- text: MS Security Auditing Category - Object Access
+  link: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/advanced-security-audit-policy-settings#object-access
+- text: MS Security Auditing Sub-category - Audit Filtering Platform Connection
+  link: https://github.com/MicrosoftDocs/windows-itpro-docs/tree/master/windows/security/threat-protection/auditing/audit-filtering-platform-connection.md
+tags:
+- Object Access
+- Audit Filtering Platform Connection

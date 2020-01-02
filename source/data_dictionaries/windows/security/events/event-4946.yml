@@ -1,0 +1,31 @@
+title: 'Event ID 4946: A change has been made to Windows Firewall exception list.
+  A rule was added.'
+operating system: windows
+data channel: security
+description: This event generates when new rule was locally added to Windows Firewall.
+data fields:
+- standard name: profile_changed
+  field name: ProfileChanged
+  type: string
+  description: the list of profiles to which new rule was applied.
+  sample value: All
+- standard name: rule_id
+  field name: RuleId
+  type: string
+  description: the unique new firewall rule identifier.
+  sample value: '{F2649D59-1355-4E3C-B886-CDD08B683199}'
+- standard name: rule_name
+  field name: RuleName
+  type: string
+  description: the name of the rule which was added.
+  sample value: Allow All Rule
+resources:
+- text: MS Source
+  link: https://github.com/MicrosoftDocs/windows-itpro-docs/blob/public/windows/security/threat-protection/auditing/event-4946.md
+- text: MS Security Auditing Category - Policy Change
+  link: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/advanced-security-audit-policy-settings#policy-change
+- text: MS Security Auditing Sub-category - Audit MPSSVC Rule-Level Policy Change
+  link: https://github.com/MicrosoftDocs/windows-itpro-docs/tree/master/windows/security/threat-protection/auditing/audit-mpssvc-rule-level-policy-change.md
+tags:
+- Policy Change
+- Audit MPSSVC Rule-Level Policy Change
