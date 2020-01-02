@@ -64,7 +64,7 @@ class mdRenderer(mistune.Renderer):
     def table_to_dict(self, header, rows):
         """ takes the header and rows list and returns a list of dictionaries"""
         table = []
-        headers = [i.text.lower() for i in header]
+        headers = [i.text.lower().replace(' ','_') for i in header]
         for row in rows:
             columns = [self.clean_text(i.text) for i in row.find_all('td')]
             table.append(dict(zip(headers, columns)))
@@ -118,9 +118,8 @@ class mdRenderer(mistune.Renderer):
     def image(self, src, title, text):
         """ returns images """
         self.images.append({
-            'title': title,
-            'link': src,
-            'text': text})
+            'title': text,
+            'source': src})
         return src
 
     def list_item(self, text):
@@ -177,7 +176,7 @@ class ossemParser():
                                 'filename': filename,
                                 'title': md.renderer.get_title(),
                                 'description': md.renderer.get_description(),
-                                'data fields': md.renderer.get_data_fields(),
+                                'data_fields': md.renderer.get_data_fields(),
                                 'resources': md.renderer.get_resources(),
                                 'tags': md.renderer.get_tags()})
 
@@ -197,10 +196,10 @@ class ossemParser():
                                 'rootpath': '/'.join(dd_root),
                                 'filename': filename,
                                 'title': md.renderer.get_title(),
-                                'operating system': os_name, #only for DD
-                                'data channel': data_channel, #ondly for DD
+                                'operating_system': os_name, #only for DD
+                                'data_channel': data_channel, #ondly for DD
                                 'description': md.renderer.get_description(),
-                                'data fields': md.renderer.get_data_fields(),
+                                'data_fields': md.renderer.get_data_fields(),
                                 'resources': md.renderer.get_resources(),
                                 'tags': md.renderer.get_tags()})
 
@@ -219,7 +218,7 @@ class ossemParser():
                                 'filename': filename,
                                 'title': md.renderer.get_title(),
                                 'description': md.renderer.get_description(),
-                                'data fields': md.renderer.get_data_fields(),
+                                'data_fields': md.renderer.get_data_fields(),
                                 'resources': md.renderer.get_resources(),
                                 'tags': md.renderer.get_tags()})
 
@@ -238,7 +237,7 @@ class ossemParser():
                                 'filename': filename,
                                 'title': md.renderer.get_title(),
                                 'description': md.renderer.get_description(),
-                                'data fields': md.renderer.get_data_fields(),
+                                'data_fields': md.renderer.get_data_fields(),
                                 'resources': md.renderer.get_resources(),
                                 'tags': md.renderer.get_tags()})
 

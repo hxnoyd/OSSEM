@@ -4,9 +4,9 @@
 ## Data Fields
 |Data Source|Description|
 |---|---|
-{%- if entry['data fields'] %}
-{%- for row in entry['data fields'] %}
-|{{row['data source']}}|{{row['description']}}|
+{%- if entry['data_fields'] %}
+{%- for row in entry['data_fields'] %}
+|{{row['data_source']}}|{{row['description']}}|
 {%- endfor %}
 {% endif %}
 

@@ -6,8 +6,8 @@
 ## Data Dictionary
 |Standard Name|Field Name|Type|Description|Sample Value|
 |---|---|---|---|---|
-{%- for row in entry['data fields'] %}
-|{{row['standard name']}}|{{row['field name']}}|{{row['type']}}|{{row['description']}}|{{row['sample value']}}|
+{%- for row in entry['data_fields'] %}
+|{{row['standard_name']}}|{{row['field_name']}}|{{row['type']}}|{{row['description']}}|{{row['sample_value']}}|
 {%- endfor %}
 {% if entry['resources'] %}
 ## Resources

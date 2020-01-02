@@ -5,14 +5,14 @@
 {% if entry['title'] == 'Data Object Relationships' %}
 |Sub Data Sources|Data Objects (Origin)|Relationship|Data Objects (Destination)|
 |---|---|---|---|
-{%- for row in entry['data fields'] %}
-|{{row['sub data sources']}}|{{row['data objects (origin)']}}|{{row['relationship']}}|{{row['data objects (destination)']}}|
+{%- for row in entry['data_fields'] %}
+|{{row['sub_data_sources']}}|{{row['data_objects_(origin)']}}|{{row['relationship']}}|{{row['data_objects_(destination)']}}|
 {%- endfor %}
 {% else %}
 |ATT&CK Data Source|Sub Data Source|Source Data Object|Relationship|Destination Data Object|EventID|
 |---|---|---|---|---|---|
-{%- for row in entry['data fields'] %}
-|{{row['att&ck data source']}}|{{row['sub data source']}}|{{row['source data object']}}|{{row['relationship']}}|{{row['destination data object']}}|{{row['eventid']}}|
+{%- for row in entry['data_fields'] %}
+|{{row['att&ck_data_source']}}|{{row['sub_data_source']}}|{{row['source_data_object']}}|{{row['relationship']}}|{{row['destination_data_object']}}|{{row['eventid']}}|
 {%- endfor %}
 {% endif %}
 
