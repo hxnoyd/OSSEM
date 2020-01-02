@@ -15,4 +15,4 @@ When a consumer binds to a filter, this event logs the consumer name and filter 
 |wmi_filter_path|Filter|string|Filter created to bind|__EventFilter.Name=\"Updater\"|
 
 ## Resources
-[Sysmon Source](https://docs.microsoft.com/en-us/sysinternals/downloads/sysmon#event-id-21-wmievent-wmieventconsumertofilter-activity-detected)
+* [Sysmon Source](https://docs.microsoft.com/en-us/sysinternals/downloads/sysmon#event-id-21-wmievent-wmieventconsumertofilter-activity-detected)

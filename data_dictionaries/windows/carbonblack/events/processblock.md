@@ -22,4 +22,4 @@ A process was blocked from executing on an endpoint monitored by Carbon Black be
 |user_name|username|TEXT|Username that initiated the process creation|DANWIN764\dan|
 
 ## Resources
-[Carbon Black Developer Docs](https://developer.carbonblack.com/reference/enterprise-response/event-forwarder/event-schema/#ingress-event-processblock-process-block)
+* [Carbon Black Developer Docs](https://developer.carbonblack.com/reference/enterprise-response/event-forwarder/event-schema/#ingress-event-processblock-process-block)

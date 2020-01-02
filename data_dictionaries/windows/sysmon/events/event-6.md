@@ -15,4 +15,4 @@ The driver loaded events provides information about a driver being loaded on the
 |driver_signature_status|SignatureStatus|string|status of the signature (i.e valid)|Valid|
 
 ## Resources
-[Sysmon Source](https://docs.microsoft.com/en-us/sysinternals/downloads/sysmon#event-id-6-driver-loaded)
+* [Sysmon Source](https://docs.microsoft.com/en-us/sysinternals/downloads/sysmon#event-id-6-driver-loaded)

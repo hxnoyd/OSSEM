@@ -17,4 +17,4 @@ This Registry event type identifies Registry value modifications. The event reco
 |registry_key_details|Details|string|Details added to the registry key|Binary Data|
 
 ## Resources
-[Sysmon Source](https://docs.microsoft.com/en-us/sysinternals/downloads/sysmon#event-id-13-registryevent-value-set)
+* [Sysmon Source](https://docs.microsoft.com/en-us/sysinternals/downloads/sysmon#event-id-13-registryevent-value-set)

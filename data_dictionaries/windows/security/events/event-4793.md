@@ -15,9 +15,9 @@ This event generates each time the Password Policy Checking API is called.
 |event_status|Status|string|typically has "0x0" value. Status code is "0x0", no matter meets password domain Password Policy or not.|0x0|
 
 ## Resources
-[MS Source](https://github.com/MicrosoftDocs/windows-itpro-docs/blob/master/windows/security/threat-protection/auditing/event-4793.md)
-[MS Security Auditing Category - Account Management](https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/advanced-security-audit-policy-settings#account-management)
-[MS Security Auditing Sub-category - Audit Other Account Management Events](https://github.com/MicrosoftDocs/windows-itpro-docs/tree/master/windows/security/threat-protection/auditing/audit-other-account-management-events.md)
+* [MS Source](https://github.com/MicrosoftDocs/windows-itpro-docs/blob/master/windows/security/threat-protection/auditing/event-4793.md)
+* [MS Security Auditing Category - Account Management](https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/advanced-security-audit-policy-settings#account-management)
+* [MS Security Auditing Sub-category - Audit Other Account Management Events](https://github.com/MicrosoftDocs/windows-itpro-docs/tree/master/windows/security/threat-protection/auditing/audit-other-account-management-events.md)
 
 ## Tags
 * Account Management

@@ -6,7 +6,7 @@
 {%- if entry['images'] %}
 {% for image in entry['images'] %}
 ## {{image['title']}}
-![{{image['title']}}]({{image['source']}}|width={{image['width']}}))
+![{{image['title']}}]({{image['source']}})
 {%- endfor %}
 {%- endif %}
 
@@ -21,6 +21,6 @@
 {% if entry['resources'] %}
 ## Resources
 {%- for resource in entry['resources'] %}
-[{{resource['text']}}]({{resource['link']}})
+* [{{resource['text']}}]({{resource['link']}})
 {%- endfor %}
 {%- endif %}

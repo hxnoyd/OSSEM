@@ -19,9 +19,9 @@ This event generates every time the Key Distribution Center fails to issue a Ker
 |certificate_thumbprint|CertThumbprint|string|smart card certificate's thumbprint. Can be found in Thumbprint field in the certificate.||
 
 ## Resources
-[MS Source](https://github.com/MicrosoftDocs/windows-itpro-docs/blob/master/windows/security/threat-protection/auditing/event-4771.md)
-[MS Security Auditing Category - Account Logon](https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/advanced-security-audit-policy-settings#account-logon)
-[MS Security Auditing Sub-category - Audit Kerberos Authentication Service](https://github.com/MicrosoftDocs/windows-itpro-docs/tree/master/windows/security/threat-protection/auditing/audit-kerberos-authentication-service.md)
+* [MS Source](https://github.com/MicrosoftDocs/windows-itpro-docs/blob/master/windows/security/threat-protection/auditing/event-4771.md)
+* [MS Security Auditing Category - Account Logon](https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/advanced-security-audit-policy-settings#account-logon)
+* [MS Security Auditing Sub-category - Audit Kerberos Authentication Service](https://github.com/MicrosoftDocs/windows-itpro-docs/tree/master/windows/security/threat-protection/auditing/audit-kerberos-authentication-service.md)
 
 ## Tags
 * Account Logon

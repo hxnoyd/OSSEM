@@ -15,4 +15,4 @@ The RawAccessRead event detects when a process conducts reading operations from 
 |target_device|Device|string|Target device|\Device\HarddiskVolume2|
 
 ## Resources
-[Sysmon Source](https://docs.microsoft.com/en-us/sysinternals/downloads/sysmon#event-id-9-rawaccessread)
+* [Sysmon Source](https://docs.microsoft.com/en-us/sysinternals/downloads/sysmon#event-id-9-rawaccessread)

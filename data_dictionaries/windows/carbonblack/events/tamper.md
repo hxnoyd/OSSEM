@@ -15,4 +15,4 @@ A process tampered with a critical Carbon Black userspace process or kernel driv
 |event_type_detailed|type|TEXT|The full type of event|ingress.event.tamper|
 
 ## Resources
-[Carbon Black Developer Docs](https://developer.carbonblack.com/reference/enterprise-response/event-forwarder/event-schema/#ingress-event-tamper-cb-response-tamper)
+* [Carbon Black Developer Docs](https://developer.carbonblack.com/reference/enterprise-response/event-forwarder/event-schema/#ingress-event-tamper-cb-response-tamper)

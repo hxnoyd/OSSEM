@@ -16,4 +16,4 @@ File create operations are logged when a file is created or overwritten. This ev
 |file_date_creation|CreationUtcTime|date|File creation time|12/4/17 17:38|
 
 ## Resources
-[Sysmon Source](https://docs.microsoft.com/en-us/sysinternals/downloads/sysmon#event-id-11-filecreate)
+* [Sysmon Source](https://docs.microsoft.com/en-us/sysinternals/downloads/sysmon#event-id-11-filecreate)

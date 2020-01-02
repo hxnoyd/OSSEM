@@ -16,9 +16,9 @@ This event generates for every Ticket Granting Service (TGS) ticket renewal. Thi
 |src_port|IpPort|integer|source port number of client network connection (TGS renewal request connection).|49964|
 
 ## Resources
-[MS Source](https://github.com/MicrosoftDocs/windows-itpro-docs/blob/master/windows/security/threat-protection/auditing/event-4770.md)
-[MS Security Auditing Category - Account Logon](https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/advanced-security-audit-policy-settings#account-logon)
-[MS Security Auditing Sub-category - Audit Kerberos Service Ticket Operations](https://github.com/MicrosoftDocs/windows-itpro-docs/tree/master/windows/security/threat-protection/auditing/audit-kerberos-service-ticket-operations.md)
+* [MS Source](https://github.com/MicrosoftDocs/windows-itpro-docs/blob/master/windows/security/threat-protection/auditing/event-4770.md)
+* [MS Security Auditing Category - Account Logon](https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/advanced-security-audit-policy-settings#account-logon)
+* [MS Security Auditing Sub-category - Audit Kerberos Service Ticket Operations](https://github.com/MicrosoftDocs/windows-itpro-docs/tree/master/windows/security/threat-protection/auditing/audit-kerberos-service-ticket-operations.md)
 
 ## Tags
 * Account Logon

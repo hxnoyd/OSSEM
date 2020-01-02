@@ -13,4 +13,4 @@ Filesystem hash data.
 |hadh_sha256|sha256|TEXT|SHA256 hash of provided filesystem data||
 
 ## Resources
-[osquery GitHub](https://github.com/facebook/osquery/blob/master/specs/hash.table)
+* [osquery GitHub](https://github.com/facebook/osquery/blob/master/specs/hash.table)

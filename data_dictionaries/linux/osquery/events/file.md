@@ -25,4 +25,4 @@ Interactive filesystem attributes and metadata.
 |file_type|type|TEXT|File status||
 
 ## Resources
-[osquery GitHub](https://github.com/facebook/osquery/blob/master/specs/utility/file.table)
+* [osquery GitHub](https://github.com/facebook/osquery/blob/master/specs/utility/file.table)

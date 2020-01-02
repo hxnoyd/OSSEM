@@ -13,4 +13,4 @@ Script block logging records blocks of code as they are executed by the PowerShe
 |powershell_Path|Path|string||C:\Tools\Invoke-ATTACKAPI-master\Invoke-ATTACKAPI.ps1|
 
 ## Resources
-[FireEye](https://www.fireeye.com/blog/threat-research/2016/02/greater_visibilityt.html)
+* [FireEye](https://www.fireeye.com/blog/threat-research/2016/02/greater_visibilityt.html)

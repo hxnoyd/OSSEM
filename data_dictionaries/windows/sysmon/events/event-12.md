@@ -16,4 +16,4 @@ Registry key and value create and delete operations map to this event type, whic
 |registry_key_path|TargetObject|string|complete path of the registry key|HKU.DEFAULT\Software\Microsoft\Office\16.0\Common|
 
 ## Resources
-[Sysmon Source](https://docs.microsoft.com/en-us/sysinternals/downloads/sysmon#event-id-12-registryevent-object-create-and-delete)
+* [Sysmon Source](https://docs.microsoft.com/en-us/sysinternals/downloads/sysmon#event-id-12-registryevent-object-create-and-delete)

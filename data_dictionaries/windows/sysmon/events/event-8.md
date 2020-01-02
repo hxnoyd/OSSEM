@@ -22,4 +22,4 @@ The CreateRemoteThread event detects when a process creates a thread in another 
 |thread_start_function|StartFunction|string|Start function is reported if exact match to function in image export table|CtrlRoutine|
 
 ## Resources
-[Sysmon Source](https://docs.microsoft.com/en-us/sysinternals/downloads/sysmon#event-id-8-createremotethread)
+* [Sysmon Source](https://docs.microsoft.com/en-us/sysinternals/downloads/sysmon#event-id-8-createremotethread)

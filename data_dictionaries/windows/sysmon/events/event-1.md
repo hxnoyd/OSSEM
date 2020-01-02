@@ -32,4 +32,4 @@ The process creation event provides extended information about a newly created p
 |process_parent_command_line|ParentCommandLine|string|Arguments which were passed to the executable associated with the parent process|C:\WINDOWS\system32\cmd.exe|
 
 ## Resources
-[Sysmon Source](https://docs.microsoft.com/en-us/sysinternals/downloads/sysmon#event-id-1-process-creation)
+* [Sysmon Source](https://docs.microsoft.com/en-us/sysinternals/downloads/sysmon#event-id-1-process-creation)

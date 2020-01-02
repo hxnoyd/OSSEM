@@ -27,4 +27,4 @@ The network connection event logs TCP/UDP connections on the machine. It is disa
 |dst_port_name|DestinationPortName|string|name of the destination port|netbios-dgm|
 
 ## Resources
-[Sysmon Source](https://docs.microsoft.com/en-us/sysinternals/downloads/sysmon#event-id-3-network-connection)
+* [Sysmon Source](https://docs.microsoft.com/en-us/sysinternals/downloads/sysmon#event-id-3-network-connection)

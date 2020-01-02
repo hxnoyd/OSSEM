@@ -22,4 +22,4 @@ A process has spawned another process on an endpoint monitored by Carbon Black.
 |event_type_detailed|type|TEXT|The full type of event|ingress.event.childproc|
 
 ## Resources
-[Carbon Black Developer Docs](https://developer.carbonblack.com/reference/enterprise-response/event-forwarder/event-schema/#ingress-event-childproc-child-process)
+* [Carbon Black Developer Docs](https://developer.carbonblack.com/reference/enterprise-response/event-forwarder/event-schema/#ingress-event-childproc-child-process)

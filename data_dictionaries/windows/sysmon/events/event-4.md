@@ -12,4 +12,4 @@ The service state change event reports the state of the Sysmon service (started 
 |sysmon_schema_version|SchemaVersion|string|sysmon config schema version|4|
 
 ## Resources
-[Sysmon Source](https://docs.microsoft.com/en-us/sysinternals/downloads/sysmon#event-id-4-sysmon-service-state-changed)
+* [Sysmon Source](https://docs.microsoft.com/en-us/sysinternals/downloads/sysmon#event-id-4-sysmon-service-state-changed)

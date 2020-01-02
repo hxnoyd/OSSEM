@@ -24,4 +24,4 @@ Microsoft EMET has killed a process on an endpoint monitored by Carbon Black.
 |event_type_detailed|type|TEXT|The full type of event|ingress.event.emetmitigation|
 
 ## Resources
-[Carbon Black Developer Docs](https://developer.carbonblack.com/reference/enterprise-response/event-forwarder/event-schema/#ingress-event-emetmitigation-emet-mitigation)
+* [Carbon Black Developer Docs](https://developer.carbonblack.com/reference/enterprise-response/event-forwarder/event-schema/#ingress-event-emetmitigation-emet-mitigation)

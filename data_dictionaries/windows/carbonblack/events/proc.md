@@ -29,4 +29,4 @@ A new process has started (or exited) on an endpoint monitored by Carbon Black.
 |user_name|username|TEXT|Username used to create child process|SYSTEM|
 
 ## Resources
-[Carbon Black Developer Docs](https://developer.carbonblack.com/reference/enterprise-response/event-forwarder/event-schema/#ingress-event-procstart-process-start)
+* [Carbon Black Developer Docs](https://developer.carbonblack.com/reference/enterprise-response/event-forwarder/event-schema/#ingress-event-procstart-process-start)

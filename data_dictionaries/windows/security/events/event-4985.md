@@ -17,13 +17,13 @@ This is an informational event from file system Transaction Manager.
 |process_name|ProcessName|string|full path and the name of the executable for the process.|C:\Windows\System32\svchost.exe|
 
 ## Resources
-[MS Source](https://github.com/MicrosoftDocs/windows-itpro-docs/blob/master/windows/security/threat-protection/auditing/event-4964.md)
-[MS Security Auditing Category - Object Access](https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/advanced-security-audit-policy-settings#object-access)
-[MS Security Auditing Category - Privilege Use](https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/advanced-security-audit-policy-settings#privilege-use)
-[MS Security Auditing Sub-category - Audit File System](https://github.com/MicrosoftDocs/windows-itpro-docs/tree/master/windows/security/threat-protection/auditing/audit-file-system.md)
-[MS Security Auditing Sub-category - Audit Non Sensitive Privilege Use](https://github.com/MicrosoftDocs/windows-itpro-docs/tree/master/windows/security/threat-protection/auditing/audit-non-sensitive-privilege-use.md)
-[MS Security Auditing Sub-category - Audit Other Privilege Use Events](https://github.com/MicrosoftDocs/windows-itpro-docs/tree/master/windows/security/threat-protection/auditing/audit-other-privilege-use-events.md)
-[MS Security Auditing Sub-category - Audit Sensitive Privilege Use](https://github.com/MicrosoftDocs/windows-itpro-docs/tree/master/windows/security/threat-protection/auditing/audit-sensitive-privilege-use.md)
+* [MS Source](https://github.com/MicrosoftDocs/windows-itpro-docs/blob/master/windows/security/threat-protection/auditing/event-4964.md)
+* [MS Security Auditing Category - Object Access](https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/advanced-security-audit-policy-settings#object-access)
+* [MS Security Auditing Category - Privilege Use](https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/advanced-security-audit-policy-settings#privilege-use)
+* [MS Security Auditing Sub-category - Audit File System](https://github.com/MicrosoftDocs/windows-itpro-docs/tree/master/windows/security/threat-protection/auditing/audit-file-system.md)
+* [MS Security Auditing Sub-category - Audit Non Sensitive Privilege Use](https://github.com/MicrosoftDocs/windows-itpro-docs/tree/master/windows/security/threat-protection/auditing/audit-non-sensitive-privilege-use.md)
+* [MS Security Auditing Sub-category - Audit Other Privilege Use Events](https://github.com/MicrosoftDocs/windows-itpro-docs/tree/master/windows/security/threat-protection/auditing/audit-other-privilege-use-events.md)
+* [MS Security Auditing Sub-category - Audit Sensitive Privilege Use](https://github.com/MicrosoftDocs/windows-itpro-docs/tree/master/windows/security/threat-protection/auditing/audit-sensitive-privilege-use.md)
 
 ## Tags
 * Object Access

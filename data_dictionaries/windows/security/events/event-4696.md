@@ -20,9 +20,9 @@ This event generates every time a process runs using the non-current access toke
 |process_name|ProcessName|string|full path and the name of the executable for the process which ran the new process with new security token.|C:\Windows\System32\svchost.exe|
 
 ## Resources
-[MS Source](https://github.com/MicrosoftDocs/windows-itpro-docs/blob/master/windows/security/threat-protection/auditing/event-4696.md)
-[MS Security Auditing Category - Detailed Tracking](https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/advanced-security-audit-policy-settings#detailed-tracking)
-[MS Security Auditing Sub-category - Audit Process Creation](https://github.com/MicrosoftDocs/windows-itpro-docs/tree/master/windows/security/threat-protection/auditing/audit-process-creation.md)
+* [MS Source](https://github.com/MicrosoftDocs/windows-itpro-docs/blob/master/windows/security/threat-protection/auditing/event-4696.md)
+* [MS Security Auditing Category - Detailed Tracking](https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/advanced-security-audit-policy-settings#detailed-tracking)
+* [MS Security Auditing Sub-category - Audit Process Creation](https://github.com/MicrosoftDocs/windows-itpro-docs/tree/master/windows/security/threat-protection/auditing/audit-process-creation.md)
 
 ## Tags
 * Detailed Tracking

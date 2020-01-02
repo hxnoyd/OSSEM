@@ -24,4 +24,4 @@ The message details for both EID 400 and EID 403 events include a HostName field
 |powershell_command_line|CommandLine|string|||
 
 ## Resources
-[Investigating PowerShell Attacks - Mandiant](https://www.blackhat.com/docs/us-14/materials/us-14-Kazanciyan-Investigating-Powershell-Attacks-WP.pdf)
+* [Investigating PowerShell Attacks - Mandiant](https://www.blackhat.com/docs/us-14/materials/us-14-Kazanciyan-Investigating-Powershell-Attacks-WP.pdf)

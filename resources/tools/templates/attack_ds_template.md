@@ -13,7 +13,7 @@
 {% if entry['resources'] %}
 ## Resources
 {%- for resource in entry['resources'] %}
-[{{resource['text']}}]({{resource['link']}})
+* [{{resource['text']}}]({{resource['link']}})
 {%- endfor %}
 {% endif %}
 {% if entry['tags'] %}

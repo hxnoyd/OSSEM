@@ -15,4 +15,4 @@ This event logs when a named pipe connection is made between a client and a serv
 |process_path|Image|string|File path of the process that connected the pipe|C:\WINDOWS\system32\wbem\wmiprvse.exe|
 
 ## Resources
-[Sysmon Source](https://docs.microsoft.com/en-us/sysinternals/downloads/sysmon#event-id-18-pipeevent-pipe-connected)
+* [Sysmon Source](https://docs.microsoft.com/en-us/sysinternals/downloads/sysmon#event-id-18-pipeevent-pipe-connected)

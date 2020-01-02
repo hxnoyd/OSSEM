@@ -11,14 +11,14 @@ The methodology follows the next steps:
 * Map event logs to ATT&CK data sources
 
 ## Data source (Process Monitoring) mapped to specific event logs example
-![Data source (Process Monitoring) mapped to specific event logs example](/resources/images/attck_datasource_eventlogs_example.png|width=900))
+![Data source (Process Monitoring) mapped to specific event logs example](/resources/images/attck_datasource_eventlogs_example.png)
 
 ## Sub Data Sets
 |tables|Description|Tags|
 |---|---|---|
-|[Data Sources](tables/README.md)|None||
+|[Data Sources](tables/Data_Sources.md)|None||
 
 ## Resources
-[Jupyter notebook to explore ATT&CK data sources](https://github.com/Cyb3rWard0g/ATTACK-Python-Client/blob/master/notebooks/ATT%26CK_DataSources.ipynb)
-[ATT&CKcon 2018 - Slides and demos documents](https://github.com/Cyb3rWard0g/presentations/tree/master/ATTACKcon)
-[ATT&CK Data Sources mapped to Event Logs](https://docs.google.com/spreadsheets/d/1ow7YRDEDJs67kcKMZZ66_5z1ipJry9QrsDQkjQvizJM/edit?usp=sharing))
+* [Jupyter notebook to explore ATT&CK data sources](https://github.com/Cyb3rWard0g/ATTACK-Python-Client/blob/master/notebooks/ATT%26CK_DataSources.ipynb)
+* [ATT&CKcon 2018 - Slides and demos documents](https://github.com/Cyb3rWard0g/presentations/tree/master/ATTACKcon)
+* [ATT&CK Data Sources mapped to Event Logs](https://docs.google.com/spreadsheets/d/1ow7YRDEDJs67kcKMZZ66_5z1ipJry9QrsDQkjQvizJM/edit?usp=sharing))

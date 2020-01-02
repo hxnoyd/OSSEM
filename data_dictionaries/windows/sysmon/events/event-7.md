@@ -24,4 +24,4 @@ The image loaded event logs when a module is loaded in a specific process. This 
 |module_signature_status|SignatureStatus|string|status of the signature (i.e valid)|Valid|
 
 ## Resources
-[Sysmon Source](https://docs.microsoft.com/en-us/sysinternals/downloads/sysmon#event-id-7-image-loaded)
+* [Sysmon Source](https://docs.microsoft.com/en-us/sysinternals/downloads/sysmon#event-id-7-image-loaded)

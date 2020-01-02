@@ -16,4 +16,4 @@ The change file creation time event is registered when a file creation time is e
 |file_previous_date_creation|PreviousCreationUtcTime|date|previous creation time of the file|4/11/18 5:04|
 
 ## Resources
-[Sysmon Source](https://docs.microsoft.com/en-us/sysinternals/downloads/sysmon#event-id-2-a-process-changed-a-file-creation-time)
+* [Sysmon Source](https://docs.microsoft.com/en-us/sysinternals/downloads/sysmon#event-id-2-a-process-changed-a-file-creation-time)

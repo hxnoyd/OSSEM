@@ -477,7 +477,7 @@ class ossemParser():
                                 if readme:
                                     sub_data_sets.append({
                                         'title': readme['title'],
-                                        'link': '{}/{}.md'.format(item, entry['filename']),
+                                        'link': '{}/{}.md'.format(item, event.split('.')[0]),
                                         'description': self.remove_new_lines(readme['description']),
                                         'tags': readme['tags']})
 

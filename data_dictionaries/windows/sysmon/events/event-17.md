@@ -15,4 +15,4 @@ This event generates when a named pipe is created. Malware often uses named pipe
 |process_path|Image|string|File path of the process that created the pipe|C:\WINDOWS\system32\cmd.exe|
 
 ## Resources
-[Sysmon Source](https://docs.microsoft.com/en-us/sysinternals/downloads/sysmon#event-id-17-pipeevent-pipe-created)
+* [Sysmon Source](https://docs.microsoft.com/en-us/sysinternals/downloads/sysmon#event-id-17-pipeevent-pipe-created)

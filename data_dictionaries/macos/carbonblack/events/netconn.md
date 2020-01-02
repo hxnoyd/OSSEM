@@ -28,4 +28,4 @@ A network connection has been received or initiated by an endpoint monitored by 
 |event_type_detailed|type|TEXT|The full type of event|ingress.event.netconn|
 
 ## Resources
-[Carbon Black Developer Docs](https://developer.carbonblack.com/reference/enterprise-response/event-forwarder/event-schema/#ingress-event-netconn-network-connection)
+* [Carbon Black Developer Docs](https://developer.carbonblack.com/reference/enterprise-response/event-forwarder/event-schema/#ingress-event-netconn-network-connection)

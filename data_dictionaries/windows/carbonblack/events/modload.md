@@ -20,4 +20,4 @@ This event contains the information for modules loaded by processes on endpoints
 |event_type_detailed|type|TEXT|The full type of event|ingress.event.moduleload|
 
 ## Resources
-[Carbon Black Developer Docs](https://developer.carbonblack.com/reference/enterprise-response/event-forwarder/event-schema/#ingress-event-moduleload-module-load)
+* [Carbon Black Developer Docs](https://developer.carbonblack.com/reference/enterprise-response/event-forwarder/event-schema/#ingress-event-moduleload-module-load)

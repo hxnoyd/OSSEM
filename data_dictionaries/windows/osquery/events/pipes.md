@@ -13,4 +13,4 @@ Named and Anonymous pipes.
 |pipe_flags|flags|TEXT|The flags indicating whether this pipe connection is a server or client end, and if the pipe for sending messages or bytes||
 
 ## Resources
-[osquery GitHub](https://github.com/facebook/osquery/blob/master/specs/windows/pipes.table)
+* [osquery GitHub](https://github.com/facebook/osquery/blob/master/specs/windows/pipes.table)

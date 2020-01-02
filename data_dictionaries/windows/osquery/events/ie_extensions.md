@@ -12,4 +12,4 @@ Internet Explorer browser extensions.
 |process_path|path|TEXT|Path to executable||
 
 ## Resources
-[osquery GitHub](https://github.com/facebook/osquery/blob/master/specs/windows/ie_extensions.table)
+* [osquery GitHub](https://github.com/facebook/osquery/blob/master/specs/windows/ie_extensions.table)

@@ -35,9 +35,9 @@ This event generates when a logon session is created (on destination machine). I
 |logon_elevated_token|ElevatedToken|string|a "Yes" or "No" flag. If "Yes" then the session this event represents is elevated and has administrator privileges.|%%1842|
 
 ## Resources
-[MS Source](https://github.com/MicrosoftDocs/windows-itpro-docs/blob/master/windows/security/threat-protection/auditing/event-4624.md)
-[MS Security Auditing Category - Logon/Logoff](https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/advanced-security-audit-policy-settings#logonlogoff)
-[MS Security Auditing Sub-category - Audit Logon](https://github.com/MicrosoftDocs/windows-itpro-docs/tree/master/windows/security/threat-protection/auditing/audit-logon.md)
+* [MS Source](https://github.com/MicrosoftDocs/windows-itpro-docs/blob/master/windows/security/threat-protection/auditing/event-4624.md)
+* [MS Security Auditing Category - Logon/Logoff](https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/advanced-security-audit-policy-settings#logonlogoff)
+* [MS Security Auditing Sub-category - Audit Logon](https://github.com/MicrosoftDocs/windows-itpro-docs/tree/master/windows/security/threat-protection/auditing/audit-logon.md)
 
 ## Tags
 * Logon/Logoff
