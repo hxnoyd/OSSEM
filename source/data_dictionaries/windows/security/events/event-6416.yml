@@ -1,67 +1,67 @@
 title: 'Event ID 6416: A new external device was recognized by the System.'
-operating system: windows
-data channel: security
+operating_system: windows
+data_channel: security
 description: This event generates every time a new external device is recognized by
   a system.
-data fields:
-- standard name: user_sid
-  field name: SubjectUserSid
+data_fields:
+- standard_name: user_sid
+  field_name: SubjectUserSid
   type: string
   description: SID of account that registered the new device.
-  sample value: S-1-5-18
-- standard name: user_name
-  field name: SubjectUserName
+  sample_value: S-1-5-18
+- standard_name: user_name
+  field_name: SubjectUserName
   type: string
   description: the name of the account that registered the new device.
-  sample value: DESKTOP-NFC0HVN$
-- standard name: user_domain
-  field name: SubjectDomainName
+  sample_value: DESKTOP-NFC0HVN$
+- standard_name: user_domain
+  field_name: SubjectDomainName
   type: string
   description: subject's domain or computer name.
-  sample value: WORKGROUP
-- standard name: user_logon_id
-  field name: SubjectLogonId
+  sample_value: WORKGROUP
+- standard_name: user_logon_id
+  field_name: SubjectLogonId
   type: integer
   description: 'hexadecimal value that can help you correlate this event with recent
     events that might contain the same Logon ID, for example, "4624: An account was
     successfully logged on."'
-  sample value: '0x3e7'
-- standard name: device_id
-  field name: DeviceId
+  sample_value: '0x3e7'
+- standard_name: device_id
+  field_name: DeviceId
   type: string
   description: '"Device instance path" attribute of device.'
-  sample value: SCSI\Disk&Ven_Seagate&Prod_Expansion\000000
-- standard name: device_description
-  field name: DeviceDescription
+  sample_value: SCSI\Disk&Ven_Seagate&Prod_Expansion\000000
+- standard_name: device_description
+  field_name: DeviceDescription
   type: string
   description: '"Device description" attribute of device.'
-  sample value: Seagate Expansion SCSI Disk Device
-- standard name: class_id
-  field name: ClassId
+  sample_value: Seagate Expansion SCSI Disk Device
+- standard_name: class_id
+  field_name: ClassId
   type: string
   description: '"Class Guid" attribute of device.'
-  sample value: '{4D36E967-E325-11CE-BFC1-08002BE10318}'
-- standard name: class_name
-  field name: ClassName
+  sample_value: '{4D36E967-E325-11CE-BFC1-08002BE10318}'
+- standard_name: class_name
+  field_name: ClassName
   type: string
   description: '"Class" attribute of device.'
-  sample value: DiskDrive
-- standard name: vendor_ids
-  field name: VendorIds
+  sample_value: DiskDrive
+- standard_name: vendor_ids
+  field_name: VendorIds
   type: string
   description: '"Hardware Ids" attribute of device.'
-  sample value: SCSI\DiskSeagate_Expansion_______0636 SCSI\DiskSeagate_Expansion_______
-    SCSI\DiskSeagate_ SCSI\Seagate_Expansion_______0 Seagate_Expansion_______0 GenDisk
-- standard name: compatible_ids
-  field name: CompatibleIds
+  sample_value: SCSI\DiskSeagate_Expansion___0636 SCSI\DiskSeagateExpansion__ SCSI\DiskSeagate_
+    SCSI\Seagate_Expansion___0 Seagate_Expansion___0 GenDisk
+- standard_name: compatible_ids
+  field_name: CompatibleIds
   type: string
   description: '"Compatible Ids" attribute of device.'
-  sample value: SCSI\Disk SCSI\RAW
-- standard name: location_information
-  field name: LocationInformation
+  sample_value: SCSI\Disk SCSI\RAW
+- standard_name: location_information
+  field_name: LocationInformation
   type: string
   description: '"Location information" attribute of device.'
-  sample value: Bus Number 0, Target Id 0, LUN 0
+  sample_value: Bus Number 0, Target Id 0, LUN 0
 resources:
 - text: MS Source
   link: https://github.com/MicrosoftDocs/windows-itpro-docs/blob/public/windows/security/threat-protection/auditing/event-6416.md

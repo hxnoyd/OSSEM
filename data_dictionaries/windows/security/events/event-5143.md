@@ -11,7 +11,7 @@ This event generates every time network share object was modified.
 |user_domain|SubjectDomainName|string|subject's domain or computer name|CONTOSO|
 |user_logon_id|SubjectLogonId|integer|hexadecimal value that can help you correlate this event with recent events that might contain the same Logon ID|0x38d12|
 |object_type|ObjectType|string|The type of an object that was modified. Always "Directory" for this event.|Directory|
-|share_name|ShareName|string|the name of the modified share object. The format is: \*\SHARE_NAME|\\*\Documents|
+|share_name|ShareName|string|the name of the modified share object. The format is: *\SHARE_NAME|\*\Documents|
 |share_local_path|ShareLocalPath|string|the full system (NTFS) path for the added share object.|C:\Documents|
 |share_old_remark|OldRemark|string|the old value of network share "Comments:" field. Has "N/A" value if it is not set.|N/A|
 |share_new_remak|NewRemark|string|the new value of network share "Comments:" field. Has "N/A" value if it is not set.|N/A|

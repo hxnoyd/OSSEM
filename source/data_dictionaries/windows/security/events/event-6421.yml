@@ -1,66 +1,66 @@
 title: 'Event ID 6421: A request was made to enable a device.'
-operating system: windows
-data channel: security
+operating_system: windows
+data_channel: security
 description: This event generates every time when someone made a request to enable
   a device.
-data fields:
-- standard name: user_sid
-  field name: SubjectUserSid
+data_fields:
+- standard_name: user_sid
+  field_name: SubjectUserSid
   type: string
   description: '"Location information" attribute of device.'
-  sample value: S-1-5-21-2695983153-1310895815-1903476278-1001
-- standard name: user_name
-  field name: SubjectUserName
+  sample_value: S-1-5-21-2695983153-1310895815-1903476278-1001
+- standard_name: user_name
+  field_name: SubjectUserName
   type: string
   description: the name of the account that made the request.
-  sample value: ladmin
-- standard name: user_domain
-  field name: SubjectDomainName
+  sample_value: ladmin
+- standard_name: user_domain
+  field_name: SubjectDomainName
   type: string
   description: subject's domain or computer name.
-  sample value: DESKTOP-NFC0HVN
-- standard name: user_logon_id
-  field name: SubjectLogonId
+  sample_value: DESKTOP-NFC0HVN
+- standard_name: user_logon_id
+  field_name: SubjectLogonId
   type: integer
   description: 'hexadecimal value that can help you correlate this event with recent
     events that might contain the same Logon ID, for example, "4624: An account was
     successfully logged on."'
-  sample value: '0x3fcc7'
-- standard name: device_id
-  field name: DeviceId
+  sample_value: '0x3fcc7'
+- standard_name: device_id
+  field_name: DeviceId
   type: string
   description: '"Device instance path" attribute of device.'
-  sample value: USB\VID_138A&PID_0017\FFBC12C950A0
-- standard name: device_description
-  field name: DeviceDescription
+  sample_value: USB\VID_138A&PID_0017\FFBC12C950A0
+- standard_name: device_description
+  field_name: DeviceDescription
   type: string
   description: '"Device description" attribute of device.'
-  sample value: Synaptics FP Sensors (WBF) (PID=0017)
-- standard name: class_id
-  field name: ClassId
+  sample_value: Synaptics FP Sensors (WBF) (PID=0017)
+- standard_name: class_id
+  field_name: ClassId
   type: string
   description: '"Class Guid" attribute of device.'
-  sample value: '{53D29EF7-377C-4D14-864B-EB3A85769359}'
-- standard name: class_name
-  field name: ClassName
+  sample_value: '{53D29EF7-377C-4D14-864B-EB3A85769359}'
+- standard_name: class_name
+  field_name: ClassName
   type: string
   description: '"Class" attribute of device.'
-  sample value: Biometric
-- standard name: hardware_ids
-  field name: HardwareIds
+  sample_value: Biometric
+- standard_name: hardware_ids
+  field_name: HardwareIds
   type: string
   description: '"Hardware Ids" attribute of device.'
-  sample value: USB\VID_138A&PID_0017&REV_0078 USB\VID_138A&PID_0017
-- standard name: compatible_ids
-  field name: CompatibleIds
+  sample_value: USB\VID_138A&PID_0017&REV_0078 USB\VID_138A&PID_0017
+- standard_name: compatible_ids
+  field_name: CompatibleIds
   type: string
   description: '"Compatible Ids" attribute of device.'
-  sample value: USB\Class_FF&SubClass_00&Prot_00 USB\Class_FF&SubClass_00 USB\Class_FF
-- standard name: location_information
-  field name: LocationInformation
+  sample_value: USB\Class_FF&SubClass_00&Prot_00 USB\Class_FF&SubClass_00 USB\Class_FF
+- standard_name: location_information
+  field_name: LocationInformation
   type: string
   description: '"Location information" attribute of device.'
-  sample value: Port_#0002.Hub_#0004
+  sample_value: Port#0002.Hub#0004
 resources:
 - text: MS Source
   link: https://github.com/MicrosoftDocs/windows-itpro-docs/blob/public/windows/security/threat-protection/auditing/event-6421.md

@@ -1,14 +1,14 @@
 title: 'Event ID 4906: The CrashOnAuditFail value has changed.'
-operating system: windows
-data channel: security
+operating_system: windows
+data_channel: security
 description: This event generates every time CrashOnAuditFail audit flag value was
   modified.
-data fields:
-- standard name: crash_on_audit_fail_value
-  field name: CrashOnAuditFailValue
+data_fields:
+- standard_name: crash_on_audit_fail_value
+  field_name: CrashOnAuditFailValue
   type: integer
   description: contains new value of CrashOnAuditFail flag.
-  sample value: '1'
+  sample_value: '1'
 resources:
 - text: MS Source
   link: https://github.com/MicrosoftDocs/windows-itpro-docs/blob/public/windows/security/threat-protection/auditing/event-4906.md

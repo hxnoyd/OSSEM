@@ -1,20 +1,20 @@
 title: 'Event ID 4902: The Per-user audit policy table was created.'
-operating system: windows
-data channel: security
+operating_system: windows
+data_channel: security
 description: This event generates during system startup if Per-user audit policy is
   defined on the computer.
-data fields:
-- standard name: pua_count
-  field name: PuaCount
+data_fields:
+- standard_name: pua_count
+  field_name: PuaCount
   type: integer
   description: number of users for which Per-user policies were defined (number of
     unique users).
-  sample value: '1'
-- standard name: pua_policy_id
-  field name: PuaPolicyId
+  sample_value: '1'
+- standard_name: pua_policy_id
+  field_name: PuaPolicyId
   type: integer
   description: unique per-User Audit Policy hexadecimal identifier.
-  sample value: '0x703e'
+  sample_value: '0x703e'
 resources:
 - text: MS Source
   link: https://github.com/MicrosoftDocs/windows-itpro-docs/blob/public/windows/security/threat-protection/auditing/event-4902.md

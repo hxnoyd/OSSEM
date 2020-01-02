@@ -8,18 +8,20 @@ description: 'Event fields used to define metadata about HTTP information. This 
 
   Also, if the HTTP connection is from a decrypted/MITM HTTPS/TLS session then portions
   of that information, where applicable, would go in here.'
-data fields:
-- standard name: http_request_header_names
+data_fields:
+- standard_name: http_request_header_names
+  field_name: ''
   type: string
   description: List of any additional (or all) HTTP headers. Because a client can
     use any HTTP header they want and there are already hundreds of (common HTTP headers)[https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers]
     it would be impossible to define a specfic field for each one.
-  sample value: '"X-Forwarded-For"'
-- standard name: http_response_header_names
+  sample_value: '"X-Forwarded-For"'
+- standard_name: http_response_header_names
+  field_name: ''
   type: string
   description: List of any additional (or all) HTTP headers. Because a server can
     use any HTTP header they want and there are already hundreds of (common HTTP headers)[https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers]
     it would be impossible to define a specfic field for each one.
-  sample value: '"X-Forwarded-For"'
+  sample_value: '"X-Forwarded-For"'
 resources: []
-tags: null
+tags: []

@@ -1,47 +1,47 @@
 title: ingress.event.tamper (Cb Response Tamper)
-operating system: windows
-data channel: carbonblack
+operating_system: windows
+data_channel: carbonblack
 description: A process tampered with a critical Carbon Black userspace process or
   kernel driver.
-data fields:
-- standard name: cb_server
-  field name: cb_server
+data_fields:
+- standard_name: cb_server
+  field_name: cb_server
   type: TEXT
   description: Used to distinguish between multiple Cb Response servers. Set this
     in the "server_name" option of cb-event-forwarder.ini.
-  sample value: cbserver
-- standard name: host_name
-  field name: computer_name
+  sample_value: cbserver
+- standard_name: host_name
+  field_name: computer_name
   type: TEXT
   description: hostname of the sensor
-  sample value: JASON-WIN81-VM
-- standard name: event_type
-  field name: event_type
+  sample_value: JASON-WIN81-VM
+- standard_name: event_type
+  field_name: event_type
   type: TEXT
   description: The type of event
-  sample value: tamper
-- standard name: sensor_id
-  field name: sensor_id
+  sample_value: tamper
+- standard_name: sensor_id
+  field_name: sensor_id
   type: INTEGER
   description: Sensor ID of associated sensor
-  sample value: '1'
-- standard name: tamper_type
-  field name: tamper_type
+  sample_value: '1'
+- standard_name: tamper_type
+  field_name: tamper_type
   type: TEXT
   description: 'The activity which triggered this tamper event: CoreDriverUnloaded,
     NetworkDriverUnloaded, CbServiceStopped, CbProcessTerminated, or CbCodeInjection'
-  sample value: CbProcessTerminated
-- standard name: event_date_creation
-  field name: timestamp
+  sample_value: CbProcessTerminated
+- standard_name: event_date_creation
+  field_name: timestamp
   type: INTEGER
   description: Endpoint timestamp of this event since epoch
-  sample value: '1450470603'
-- standard name: event_type_detailed
-  field name: type
+  sample_value: '1450470603'
+- standard_name: event_type_detailed
+  field_name: type
   type: TEXT
   description: The full type of event
-  sample value: ingress.event.tamper
+  sample_value: ingress.event.tamper
 resources:
 - text: Carbon Black Developer Docs
   link: https://developer.carbonblack.com/reference/enterprise-response/event-forwarder/event-schema/#ingress-event-tamper-cb-response-tamper
-tags: null
+tags: []

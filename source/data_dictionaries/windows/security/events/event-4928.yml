@@ -1,39 +1,39 @@
 title: 'Event ID 4928: An Active Directory replica source naming context was established.'
-operating system: windows
-data channel: security
+operating_system: windows
+data_channel: security
 description: This event generates every time a new Active Directory replica source
   naming context is established.
-data fields:
-- standard name: destinaton_dra
-  field name: DestinationDRA
+data_fields:
+- standard_name: destinaton_dra
+  field_name: DestinationDRA
   type: string
   description: destination directory replication agent distinguished name.
-  sample value: CN=NTDS Settings,CN=DC01,CN=Servers,CN=Default-First-Site-Name,CN=Sites,CN=Configuration,DC=contoso,DC=local
-- standard name: source_dra
-  field name: SourceDRA
+  sample_value: CN=NTDS Settings,CN=DC01,CN=Servers,CN=Default-First-Site-Name,CN=Sites,CN=Configuration,DC=contoso,DC=local
+- standard_name: source_dra
+  field_name: SourceDRA
   type: string
   description: source directory replication agent distinguished name.
-  sample value: CN=NTDS Settings,CN=WIN2012R2,CN=Servers,CN=Default-First-Site-Name,CN=Sites,CN=Configuration,DC=contoso,DC=local
-- standard name: source_addr
-  field name: SourceAddr
+  sample_value: CN=NTDS Settings,CN=WIN2012R2,CN=Servers,CN=Default-First-Site-Name,CN=Sites,CN=Configuration,DC=contoso,DC=local
+- standard_name: source_addr
+  field_name: SourceAddr
   type: string
   description: DNS record of the server from which information or an update was received.
-  sample value: ddec0cff-6ceb-4a59-b13f-1724c38a0970._msdcs.contoso.local
-- standard name: naming_context
-  field name: NamingContext
+  sample_value: ddec0cff-6ceb-4a59-b13f-1724c38a0970._msdcs.contoso.local
+- standard_name: naming_context
+  field_name: NamingContext
   type: string
   description: naming context to replicate.
-  sample value: DC=ForestDnsZones,DC=contoso,DC=local
-- standard name: options
-  field name: Options
+  sample_value: DC=ForestDnsZones,DC=contoso,DC=local
+- standard_name: options
+  field_name: Options
   type: integer
   description: decimal value of DRS Options.
-  sample value: '368'
-- standard name: status_code
-  field name: StatusCode
+  sample_value: '368'
+- standard_name: status_code
+  field_name: StatusCode
   type: integer
   description: if there are no issues or errors, the status code will be 0.
-  sample value: '0'
+  sample_value: '0'
 resources:
 - text: MS Source
   link: https://github.com/MicrosoftDocs/windows-itpro-docs/blob/public/windows/security/threat-protection/auditing/event-4928.md

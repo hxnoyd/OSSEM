@@ -1,6 +1,6 @@
 title: 'Event ID 403: Engine Lifecycle'
-operating system: windows
-data channel: powershell
+operating_system: windows
+data_channel: powershell
 description: 'Logs the start and stop of PowerShell. Each time that PowerShell executes
   - either upon the execution of a single command, the start of a local session, or
   the start of a remoting session - this log records an Event ID (EID) 400 message:
@@ -9,84 +9,84 @@ description: 'Logs the start and stop of PowerShell. Each time that PowerShell e
 
   The message details for both EID 400 and EID 403 events include a HostName field.
   If executed locally, this field will be logged as HostName=ConsoleHost. If PowerShell
-  remoting is in use, the accessed system will record these events with HostName=ServerRemoteHost."https://www.blackhat.com/docs/us-14/materials/us-14-Kazanciyan-Investigating-Powershell-Attacks-WP.pdf'
-data fields:
-- standard name: powershell_new_engine_state
-  field name: NewEngineState
+  remoting is in use, the accessed system will record these events with HostName=ServerRemoteHost."<a
+  href="https://www.blackhat.com/docs/us-14/materials/us-14-Kazanciyan-Investigating-Powershell-Attacks-WP.pdf">https://www.blackhat.com/docs/us-14/materials/us-14-Kazanciyan-Investigating-Powershell-Attacks-WP.pdf</a>'
+data_fields:
+- standard_name: powershell_new_engine_state
+  field_name: NewEngineState
   type: string
   description: ''
-  sample value: Stopped
-- standard name: powershell_previous_engine_state
-  field name: PreviousEngineState
+  sample_value: Stopped
+- standard_name: powershell_previous_engine_state
+  field_name: PreviousEngineState
   type: string
   description: ''
-  sample value: Available
-- standard name: powershell_sequence_number
-  field name: SequenceNumber
+  sample_value: Available
+- standard_name: powershell_sequence_number
+  field_name: SequenceNumber
   type: integer
   description: ''
-  sample value: '13'
-- standard name: powershell_host_name
-  field name: HostName
+  sample_value: '13'
+- standard_name: powershell_host_name
+  field_name: HostName
   type: string
   description: ''
-  sample value: Windows PowerShell ISE
-- standard name: powershell_host_version
-  field name: HostVersion
+  sample_value: Windows PowerShell ISE
+- standard_name: powershell_host_version
+  field_name: HostVersion
   type: string
   description: ''
-  sample value: 5.1.16299.64
-- standard name: powershell_host_id
-  field name: HostId
+  sample_value: 5.1.16299.64
+- standard_name: powershell_host_id
+  field_name: HostId
   type: string
   description: ''
-  sample value: 26572281-9dcd-4297-ae4b-d6bb52bdaff6
-- standard name: powershell_host_application
-  field name: HostApplication
+  sample_value: 26572281-9dcd-4297-ae4b-d6bb52bdaff6
+- standard_name: powershell_host_application
+  field_name: HostApplication
   type: string
   description: ''
-  sample value: C:\WINDOWS\system32\WindowsPowerShell\v1.0\PowerShell_ISE.exe
-- standard name: powershell_engine_version
-  field name: EngineVersion
+  sample_value: C:\WINDOWS\system32\WindowsPowerShell\v1.0\PowerShell_ISE.exe
+- standard_name: powershell_engine_version
+  field_name: EngineVersion
   type: string
   description: ''
-  sample value: 5.1.16299.64
-- standard name: powershell_runspace_id
-  field name: RunspaceId
+  sample_value: 5.1.16299.64
+- standard_name: powershell_runspace_id
+  field_name: RunspaceId
   type: string
   description: ''
-  sample value: aba09534-39f7-4ec3-aa46-8c709c39cf5a
-- standard name: powershell_pipeline_id
-  field name: PipelineId
+  sample_value: aba09534-39f7-4ec3-aa46-8c709c39cf5a
+- standard_name: powershell_pipeline_id
+  field_name: PipelineId
   type: string
   description: ''
-  sample value: ''
-- standard name: powershell_command_name
-  field name: CommandName
+  sample_value: ''
+- standard_name: powershell_command_name
+  field_name: CommandName
   type: string
   description: ''
-  sample value: ''
-- standard name: powershell_command_type
-  field name: CommandType
+  sample_value: ''
+- standard_name: powershell_command_type
+  field_name: CommandType
   type: string
   description: ''
-  sample value: ''
-- standard name: powershell_script_name
-  field name: ScriptName
+  sample_value: ''
+- standard_name: powershell_script_name
+  field_name: ScriptName
   type: string
   description: ''
-  sample value: ''
-- standard name: powershell_command_path
-  field name: CommandPath
+  sample_value: ''
+- standard_name: powershell_command_path
+  field_name: CommandPath
   type: string
   description: ''
-  sample value: ''
-- standard name: powershell_command_line
-  field name: CommandLine
+  sample_value: ''
+- standard_name: powershell_command_line
+  field_name: CommandLine
   type: string
   description: ''
-  sample value: ''
 resources:
 - text: Investigating PowerShell Attacks - Mandiant
   link: https://www.blackhat.com/docs/us-14/materials/us-14-Kazanciyan-Investigating-Powershell-Attacks-WP.pdf
-tags: null
+tags: []

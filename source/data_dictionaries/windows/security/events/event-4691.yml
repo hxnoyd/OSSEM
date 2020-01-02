@@ -1,56 +1,56 @@
 title: 'Event ID 4691: Indirect access to an object was requested.'
-operating system: windows
-data channel: security
+operating_system: windows
+data_channel: security
 description: This event indicates that indirect access to an object was requested.
-data fields:
-- standard name: user_sid
-  field name: SubjectUserSid
+data_fields:
+- standard_name: user_sid
+  field_name: SubjectUserSid
   type: string
   description: SID of account that requested an access to the object.
-  sample value: S-1-5-21-3457937927-2839227994-823803824-1104
-- standard name: user_name
-  field name: SubjectUserName
+  sample_value: S-1-5-21-3457937927-2839227994-823803824-1104
+- standard_name: user_name
+  field_name: SubjectUserName
   type: string
   description: the name of the account that requested an access to the object.
-  sample value: dadmin
-- standard name: user_domain
-  field name: SubjectDomainName
+  sample_value: dadmin
+- standard_name: user_domain
+  field_name: SubjectDomainName
   type: string
   description: subject's domain or computer name.
-  sample value: CONTOSO
-- standard name: user_logon_id
-  field name: SubjectLogonId
+  sample_value: CONTOSO
+- standard_name: user_logon_id
+  field_name: SubjectLogonId
   type: integer
   description: 'hexadecimal value that can help you correlate this event with recent
     events that might contain the same Logon ID, for example, "4624: An account was
     successfully logged on."'
-  sample value: '0x36509'
-- standard name: object_type
-  field name: ObjectType
+  sample_value: '0x36509'
+- standard_name: object_type
+  field_name: ObjectType
   type: string
   description: The type of an object for which access was requested.
-  sample value: ALPC Port
-- standard name: object_name
-  field name: ObjectName
+  sample_value: ALPC Port
+- standard_name: object_name
+  field_name: ObjectName
   type: string
   description: full path and name of the object for which access was requested.
-  sample value: \Sessions\2\Windows\DwmApiPort
-- standard name: object_access_list
-  field name: AccessList
+  sample_value: \Sessions\2\Windows\DwmApiPort
+- standard_name: object_access_list
+  field_name: AccessList
   type: integer
   description: ''
-  sample value: '%%4464'
-- standard name: object_access_mask
-  field name: AccessMask
+  sample_value: '%%4464'
+- standard_name: object_access_mask
+  field_name: AccessMask
   type: ''
   description: ''
-  sample value: '0x1'
-- standard name: process_id
-  field name: ProcessId
+  sample_value: '0x1'
+- standard_name: process_id
+  field_name: ProcessId
   type: integer
   description: hexadecimal Process ID of the process through which the access was
     requested.
-  sample value: '0xe60'
+  sample_value: '0xe60'
 resources:
 - text: MS SOURCE
   link: https://github.com/MicrosoftDocs/windows-itpro-docs/blob/public/windows/security/threat-protection/auditing/event-4691.md

@@ -7,50 +7,59 @@ description: 'Fields used to define metadata for a single field to include data 
   fields (key/values). This is because certain values are not desirable to copy/duplicate.
   However, because of a common schema we can still find are values for a specific
   common type, without duplicating or copying everything to one field!  '
-data fields:
-- standard name: '*host_name'
+data_fields:
+- standard_name: '*host_name'
+  field_name: ''
   type: search
   description: Allows searching a single field for all domains.
-  sample value: N/A
-- standard name: any_ip_geo.asn
+  sample_value: N/A
+- standard_name: any_ip_geo.asn
+  field_name: ''
   type: string
   description: Allows searching a single field for all BGP AS Numbers. All AS number
     fields copied/duplicated to a single field as an array.
-  sample value: '``'
-- standard name: any_ip_geo.as_org
+  sample_value: '``'
+- standard_name: any_ip_geo.as_org
+  field_name: ''
   type: string
   description: Allows searching a single field for all BGP AS Organization Names.
     All AS name fields copied/duplicated to a single field as an array.
-  sample value: '``'
-- standard name: any_hash
+  sample_value: '``'
+- standard_name: any_hash
+  field_name: ''
   type: string
   description: Allows searching a single field for all hashes. All hash fields copied/duplicated
     to a single field as an array.
-  sample value: '``'
-- standard name: any_ip_addr
+  sample_value: '``'
+- standard_name: any_ip_addr
+  field_name: ''
   type: string
   description: Allows searching a single field for all IPs. All IP fields copied/duplicated
     to a single field as an array.
-  sample value: '``'
-- standard name: any_log_id
+  sample_value: '``'
+- standard_name: any_log_id
+  field_name: ''
   type: string
   description: Allows searching a single field for all log IDs. All log ID fields
     copied/duplicated to a single field as an array.
-  sample value: '``'
-- standard name: any_mac_addr
+  sample_value: '``'
+- standard_name: any_mac_addr
+  field_name: ''
   type: string
   description: Allows searching a single field for all MAC addresses. All MAC address
     fields copied/duplicated to a single field as an array.
-  sample value: '``'
-- standard name: any_user
+  sample_value: '``'
+- standard_name: any_user
+  field_name: ''
   type: string
   description: Allows searching a single field for all users. All user fields copied/duplicated
     to a single field as an array.
-  sample value: '``'
-- standard name: any_vlan_id
+  sample_value: '``'
+- standard_name: any_vlan_id
+  field_name: ''
   type: integer
   description: Allows searching a single field for all VLAN IDs. All VLAN ID fields
     copied/duplicated to a single field as an array.
-  sample value: '``'
+  sample_value: '``'
 resources: []
-tags: null
+tags: []

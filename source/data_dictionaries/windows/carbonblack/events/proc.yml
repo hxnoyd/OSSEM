@@ -1,117 +1,117 @@
 title: ingress.event.procstart (Process Start)
-operating system: windows
-data channel: carbonblack
+operating_system: windows
+data_channel: carbonblack
 description: A new process has started (or exited) on an endpoint monitored by Carbon
   Black.
-data fields:
-- standard name: cb_server
-  field name: cb_server
+data_fields:
+- standard_name: cb_server
+  field_name: cb_server
   type: TEXT
   description: Used to distinguish between multiple Cb Response servers. Set this
     in the "server_name" option of cb-event-forwarder.ini.
-  sample value: cbserver
-- standard name: process_command_line
-  field name: command_line
+  sample_value: cbserver
+- standard_name: process_command_line
+  field_name: command_line
   type: TEXT
   description: Command Line of the new process
-  sample value: C:\Windows\system32\notepad.exe
-- standard name: host_name
-  field name: computer_name
+  sample_value: C:\Windows\system32\notepad.exe
+- standard_name: host_name
+  field_name: computer_name
   type: TEXT
   description: hostname of the sensor
-  sample value: JASON-WIN81-VM
-- standard name: event_type
-  field name: event_type
+  sample_value: JASON-WIN81-VM
+- standard_name: event_type
+  field_name: event_type
   type: TEXT
   description: type of event
-  sample value: proc
-- standard name: expect_followon_w_md5
-  field name: expect_followon_w_md5
+  sample_value: proc
+- standard_name: expect_followon_w_md5
+  field_name: expect_followon_w_md5
   type: BOOLEAN
   description: If the md5 could not be calculated in time then Cb Response will send
     another procstart with the process md5
-  sample value: 'false'
-- standard name: process_parent_link
-  field name: link_parent
+  sample_value: 'false'
+- standard_name: process_parent_link
+  field_name: link_parent
   type: TEXT
   description: Deep link to Cb Response UI for parent process
-  sample value: https://cbtests/#analyze/00000001-0000-0af4-01d1-1e444bf4c3dd/1
-- standard name: process_link
-  field name: link_process
+  sample_value: https://cbtests/#analyze/00000001-0000-0af4-01d1-1e444bf4c3dd/1
+- standard_name: process_link
+  field_name: link_process
   type: TEXT
   description: Deep link to Cb Response UI for this process
-  sample value: https://cbtests/#analyze/00000001-0000-07b4-01d1-209a100bc217/1
-- standard name: sensor_link
-  field name: link_sensor
+  sample_value: https://cbtests/#analyze/00000001-0000-07b4-01d1-209a100bc217/1
+- standard_name: sensor_link
+  field_name: link_sensor
   type: TEXT
   description: Deep link to Cb Response UI for sensor
-  sample value: https://cbtests/#/host/1
-- standard name: hash
-  field name: md5
+  sample_value: https://cbtests/#/host/1
+- standard_name: hash
+  field_name: md5
   type: TEXT
   description: MD5 of the executable binary associated with this process
-  sample value: D6021013D7C4E248AEB8BED12D3DCC88
-- standard name: process_process_creation_time
-  field name: parent_create_time
+  sample_value: D6021013D7C4E248AEB8BED12D3DCC88
+- standard_name: process_process_creation_time
+  field_name: parent_create_time
   type: INTEGER
   description: seconds since epoch of parent process create time
-  sample value: '1447440685'
-- standard name: process_parent_hash
-  field name: parent_md5
+  sample_value: '1447440685'
+- standard_name: process_parent_hash
+  field_name: parent_md5
   type: TEXT
   description: MD5 of parent's executable image
-  sample value: 79227C1E2225DE455F365B607A6D46FB
-- standard name: process_parent_file_path
-  field name: parent_path
+  sample_value: 79227C1E2225DE455F365B607A6D46FB
+- standard_name: process_parent_file_path
+  field_name: parent_path
   type: TEXT
   description: file path of parent's executable image
-  sample value: c:\windows\system32\explorer.exe
-- standard name: parent_process_id
-  field name: parent_pid
+  sample_value: c:\windows\system32\explorer.exe
+- standard_name: parent_process_id
+  field_name: parent_pid
   type: INTEGER
   description: OS Process id of parent process
-  sample value: '2846'
-- standard name: process_parent_guid
-  field name: parent_process_guid
+  sample_value: '2846'
+- standard_name: process_parent_guid
+  field_name: parent_process_guid
   type: TEXT
   description: Cb Process GUID of parent process
-  sample value: 00000001-0000-0af4-01d1-1e444bf4c3dd
-- standard name: file_path
-  field name: path
+  sample_value: 00000001-0000-0af4-01d1-1e444bf4c3dd
+- standard_name: file_path
+  field_name: path
   type: TEXT
   description: file path of the child processes' executable image
-  sample value: C:\Windows\system32\notepad.exe
-- standard name: process_id
-  field name: pid
+  sample_value: C:\Windows\system32\notepad.exe
+- standard_name: process_id
+  field_name: pid
   type: INTEGER
   description: OS Process id of child process
-  sample value: '1972'
-- standard name: process_guid
-  field name: process_guid
+  sample_value: '1972'
+- standard_name: process_guid
+  field_name: process_guid
   type: TEXT
   description: Cb Process GUID of child process
-  sample value: 00000001-0000-07b4-01d1-209a100bc217
-- standard name: sensor_id
-  field name: sensor_id
+  sample_value: 00000001-0000-07b4-01d1-209a100bc217
+- standard_name: sensor_id
+  field_name: sensor_id
   type: INTEGER
   description: sensor ID of associated sensor
-  sample value: '1'
-- standard name: event_date_creation
-  field name: timestamp
+  sample_value: '1'
+- standard_name: event_date_creation
+  field_name: timestamp
   type: INTEGER
   description: Endpoint timestamp of this event since epoch
-  sample value: '1447697423'
-- standard name: event_type_detailed
-  field name: type
+  sample_value: '1447697423'
+- standard_name: event_type_detailed
+  field_name: type
   type: TEXT
   description: The full type of event
-  sample value: ingress.event.procstart
-- standard name: user_name
-  field name: username
+  sample_value: ingress.event.procstart
+- standard_name: user_name
+  field_name: username
   type: TEXT
   description: Username used to create child process
-  sample value: SYSTEM
+  sample_value: SYSTEM
 resources:
 - text: Carbon Black Developer Docs
   link: https://developer.carbonblack.com/reference/enterprise-response/event-forwarder/event-schema/#ingress-event-procstart-process-start
-tags: null
+tags: []

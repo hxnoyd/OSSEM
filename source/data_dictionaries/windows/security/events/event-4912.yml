@@ -1,55 +1,55 @@
 title: 'Event ID 4912: Per User Audit Policy was changed.'
-operating system: windows
-data channel: security
+operating_system: windows
+data_channel: security
 description: This event generates every time Per User Audit Policy was changed.
-data fields:
-- standard name: user_sid
-  field name: SubjectUserSid
+data_fields:
+- standard_name: user_sid
+  field_name: SubjectUserSid
   type: string
   description: SID of account that made a change to per-user audit policy.
-  sample value: S-1-5-21-3457937927-2839227994-823803824-1104
-- standard name: user_name
-  field name: SubjectUserName
+  sample_value: S-1-5-21-3457937927-2839227994-823803824-1104
+- standard_name: user_name
+  field_name: SubjectUserName
   type: string
   description: the name of the account that made a change to per-user audit policy.
-  sample value: dadmin
-- standard name: user_domain
-  field name: SubjectDomainName
+  sample_value: dadmin
+- standard_name: user_domain
+  field_name: SubjectDomainName
   type: string
   description: subject's domain or computer name.
-  sample value: CONTOSO
-- standard name: user_logon_id
-  field name: SubjectLogonId
+  sample_value: CONTOSO
+- standard_name: user_logon_id
+  field_name: SubjectLogonId
   type: integer
   description: 'hexadecimal value that can help you correlate this event with recent
     events that might contain the same Logon ID, for example, "4624: An account was
     successfully logged on."'
-  sample value: '0x11ae30'
-- standard name: target_user_sid
-  field name: TargetUserSid
+  sample_value: '0x11ae30'
+- standard_name: target_user_sid
+  field_name: TargetUserSid
   type: string
   description: SID of account for which the Per User Audit Policy was changed.
-  sample value: S-1-5-21-3457937927-2839227994-823803824-2104
-- standard name: category_id
-  field name: CategoryId
+  sample_value: S-1-5-21-3457937927-2839227994-823803824-2104
+- standard_name: category_id
+  field_name: CategoryId
   type: integer
   description: the name of auditing category which subcategory state was changed.
-  sample value: '%%8276'
-- standard name: subcategory_id
-  field name: SubcategoryId
+  sample_value: '%%8276'
+- standard_name: subcategory_id
+  field_name: SubcategoryId
   type: integer
   description: the name of auditing subcategory which state was changed.
-  sample value: '%%13312'
-- standard name: subcategory_guid
-  field name: SubcategoryGuid
+  sample_value: '%%13312'
+- standard_name: subcategory_guid
+  field_name: SubcategoryGuid
   type: string
   description: the unique GUID of changed subcategory.
-  sample value: '{0CCE922B-69AE-11D9-BED3-505054503030}'
-- standard name: subcategory_policy_changes
-  field name: AuditPolicyChanges
+  sample_value: '{0CCE922B-69AE-11D9-BED3-505054503030}'
+- standard_name: subcategory_policy_changes
+  field_name: AuditPolicyChanges
   type: string
   description: changes which were made for the subcategory.
-  sample value: '%%8452'
+  sample_value: '%%8452'
 resources:
 - text: MS Source
   link: https://github.com/MicrosoftDocs/windows-itpro-docs/blob/public/windows/security/threat-protection/auditing/event-4912.md

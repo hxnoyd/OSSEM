@@ -1,246 +1,246 @@
 title: MiscEvents
-operating system: windows
-data channel: windowsdefenderatp
+operating_system: windows
+data_channel: windowsdefenderatp
 description: Multiple event types, such as process injection, creation of scheduled
   tasks, and LSASS access attempts
-data fields:
-- standard name: event_date_creation
-  field name: EventTime
+data_fields:
+- standard_name: event_date_creation
+  field_name: EventTime
   type: date
   description: Date and time when the event was recorded
-  sample value: ''
-- standard name: machine_id
-  field name: MachineId
+  sample_value: ''
+- standard_name: machine_id
+  field_name: MachineId
   type: string
   description: Unique identifier for the machine in the service
-  sample value: ''
-- standard name: computer_name
-  field name: ComputerName
+  sample_value: ''
+- standard_name: computer_name
+  field_name: ComputerName
   type: string
   description: Fully qualified domain name (FQDN) of the machine
-  sample value: ''
-- standard name: action_type
-  field name: ActionType
+  sample_value: ''
+- standard_name: action_type
+  field_name: ActionType
   type: string
   description: Type of activity that triggered the event
-  sample value: ''
-- standard name: file_name
-  field name: FileName
+  sample_value: ''
+- standard_name: file_name
+  field_name: FileName
   type: string
   description: Name of the file that the recorded action was applied to
-  sample value: ''
-- standard name: folder_path
-  field name: FolderPath
+  sample_value: ''
+- standard_name: folder_path
+  field_name: FolderPath
   type: string
   description: Folder containing the file that the recorded action was applied to
-  sample value: ''
-- standard name: hash_sha1
-  field name: SHA1
+  sample_value: ''
+- standard_name: hash_sha1
+  field_name: SHA1
   type: string
   description: SHA-1 of the file that the recorded action was applied to
-  sample value: ''
-- standard name: hash_md5
-  field name: MD5
+  sample_value: ''
+- standard_name: hash_md5
+  field_name: MD5
   type: string
   description: MD5 hash of the file that the recorded action was applied to
-  sample value: ''
-- standard name: user_domain
-  field name: AccountDomain
+  sample_value: ''
+- standard_name: user_domain
+  field_name: AccountDomain
   type: string
   description: Domain of the account
-  sample value: ''
-- standard name: user_name
-  field name: AccountName
+  sample_value: ''
+- standard_name: user_name
+  field_name: AccountName
   type: string
   description: User name of the account
-  sample value: ''
-- standard name: user_sid
-  field name: AccountSid
+  sample_value: ''
+- standard_name: user_sid
+  field_name: AccountSid
   type: string
   description: Security Identifier (SID) of the account
-  sample value: ''
-- standard name: remote_url
-  field name: RemoteUrl
+  sample_value: ''
+- standard_name: remote_url
+  field_name: RemoteUrl
   type: string
   description: URL or fully qualified domain name (FQDN) that was being connected
     to
-  sample value: ''
-- standard name: remote_computer_name
-  field name: RemoteComputerName
+  sample_value: ''
+- standard_name: remote_computer_name
+  field_name: RemoteComputerName
   type: string
   description: Name of the machine that performed a remote operation on the affected
     machine. Depending on the event being reported, this name could be a fully-qualified
     domain name (FQDN), a NetBIOS name, or a host name without domain information.
-  sample value: ''
-- standard name: process_id
-  field name: ProcessId
+  sample_value: ''
+- standard_name: process_id
+  field_name: ProcessId
   type: int
   description: Process ID (PID) of the newly created process
-  sample value: ''
-- standard name: process_command_line
-  field name: ProcessCommandLine
+  sample_value: ''
+- standard_name: process_command_line
+  field_name: ProcessCommandLine
   type: string
   description: Command line used to create the new process
-  sample value: ''
-- standard name: process_creation_time
-  field name: ProcessCreationTime
+  sample_value: ''
+- standard_name: process_creation_time
+  field_name: ProcessCreationTime
   type: date
   description: Date and time the process was created
-  sample value: ''
-- standard name: process_token_elevation
-  field name: ProcessTokenElevation
+  sample_value: ''
+- standard_name: process_token_elevation
+  field_name: ProcessTokenElevation
   type: string
   description: Token type indicating the presence or absence of User Access Control
     (UAC) privilege elevation applied to the newly created process
-  sample value: ''
-- standard name: logon_id
-  field name: LogonId
+  sample_value: ''
+- standard_name: logon_id
+  field_name: LogonId
   type: string
   description: Identifier for a logon session. This identifier is unique on the same
     machine only between restarts.
-  sample value: ''
-- standard name: registry_key
-  field name: RegistryKey
+  sample_value: ''
+- standard_name: registry_key
+  field_name: RegistryKey
   type: string
   description: Registry key that the recorded action was applied to
-  sample value: ''
-- standard name: registry_value_name
-  field name: RegistryValueName
+  sample_value: ''
+- standard_name: registry_value_name
+  field_name: RegistryValueName
   type: string
   description: Name of the registry value that the recorded action was applied to
-  sample value: ''
-- standard name: registry_value_data
-  field name: RegistryValueData
+  sample_value: ''
+- standard_name: registry_value_data
+  field_name: RegistryValueData
   type: string
   description: Data of the registry value that the recorded action was applied to
-  sample value: ''
-- standard name: remote_ip
-  field name: RemoteIP
+  sample_value: ''
+- standard_name: remote_ip
+  field_name: RemoteIP
   type: string
   description: IP address that was being connected to
-  sample value: ''
-- standard name: remote_port
-  field name: RemotePort
+  sample_value: ''
+- standard_name: remote_port
+  field_name: RemotePort
   type: int
   description: TCP port on the remote device that was being connected to
-  sample value: ''
-- standard name: local_ip
-  field name: LocalIP
+  sample_value: ''
+- standard_name: local_ip
+  field_name: LocalIP
   type: string
   description: IP address assigned to the local machine used during communication
-  sample value: ''
-- standard name: local_port
-  field name: LocalPort
+  sample_value: ''
+- standard_name: local_port
+  field_name: LocalPort
   type: int
   description: TCP port on the local machine used during communication
-  sample value: ''
-- standard name: file_origin_url
-  field name: FileOriginUrl
+  sample_value: ''
+- standard_name: file_origin_url
+  field_name: FileOriginUrl
   type: string
   description: URL where the file was downloaded from
-  sample value: ''
-- standard name: file_origin_ip
-  field name: FileOriginIP
+  sample_value: ''
+- standard_name: file_origin_ip
+  field_name: FileOriginIP
   type: string
   description: IP address where the file was downloaded from
-  sample value: ''
-- standard name: additional_fields
-  field name: AdditionalFields
+  sample_value: ''
+- standard_name: additional_fields
+  field_name: AdditionalFields
   type: string
   description: Additional information about the event in JSON array format
-  sample value: ''
-- standard name: iniating_process_sha1
-  field name: InitiatingProcessSHA1
+  sample_value: ''
+- standard_name: iniating_process_sha1
+  field_name: InitiatingProcessSHA1
   type: string
   description: SHA-1 of the process (image file) that initiated the event
-  sample value: ''
-- standard name: iniating_process_sha256
-  field name: InitiatingProcessSHA256
+  sample_value: ''
+- standard_name: iniating_process_sha256
+  field_name: InitiatingProcessSHA256
   type: string
   description: SHA-256 of the process (image file) that initiated the event. This
     field is usually not populated-use the SHA1 column when available.
-  sample value: ''
-- standard name: initiating_process_file_name
-  field name: InitiatingProcessFileName
+  sample_value: ''
+- standard_name: initiating_process_file_name
+  field_name: InitiatingProcessFileName
   type: string
   description: Name of the process that initiated the event
-  sample value: ''
-- standard name: initiating_process_folder_path
-  field name: InitiatingProcessFolderPath
+  sample_value: ''
+- standard_name: initiating_process_folder_path
+  field_name: InitiatingProcessFolderPath
   type: string
   description: Folder containing the process (image file) that initiated the event
-  sample value: ''
-- standard name: initiating_process_id
-  field name: InitiatingProcessId
+  sample_value: ''
+- standard_name: initiating_process_id
+  field_name: InitiatingProcessId
   type: int
   description: Process ID (PID) of the process that initiated the event
-  sample value: ''
-- standard name: initiating_process_command_line
-  field name: InitiatingProcessCommandLine
+  sample_value: ''
+- standard_name: initiating_process_command_line
+  field_name: InitiatingProcessCommandLine
   type: string
   description: Command line used to run the process that initiated the event
-  sample value: ''
-- standard name: initiating_process_creation_time
-  field name: InitiatingProcessCreationTime
+  sample_value: ''
+- standard_name: initiating_process_creation_time
+  field_name: InitiatingProcessCreationTime
   type: date
   description: Date and time when the process that initiated the event was started
-  sample value: ''
-- standard name: initiating_process_parent_id
-  field name: InitiatingProcessParentId
+  sample_value: ''
+- standard_name: initiating_process_parent_id
+  field_name: InitiatingProcessParentId
   type: int
   description: Process ID (PID) of the parent process that spawned the process responsible
     for the event
-  sample value: ''
-- standard name: initiating_process_parent_file_name
-  field name: InitiatingProcessParentFileName
+  sample_value: ''
+- standard_name: initiating_process_parent_file_name
+  field_name: InitiatingProcessParentFileName
   type: string
   description: Name of the parent process that spawned the process responsible for
     the event
-  sample value: ''
-- standard name: initiating_process_parent_creation_time
-  field name: InitiatingProcessParentCreationTime
+  sample_value: ''
+- standard_name: initiating_process_parent_creation_time
+  field_name: InitiatingProcessParentCreationTime
   type: date
   description: Date and time when the parent of the process responsible for the event
     was started
-  sample value: ''
-- standard name: initiating_process_md5
-  field name: InitiatingProcessMD5
+  sample_value: ''
+- standard_name: initiating_process_md5
+  field_name: InitiatingProcessMD5
   type: string
   description: MD5 hash of the process (image file) that initiated the event
-  sample value: ''
-- standard name: initiating_process_account_domain
-  field name: InitiatingProcessAccountDomain
+  sample_value: ''
+- standard_name: initiating_process_account_domain
+  field_name: InitiatingProcessAccountDomain
   type: string
   description: Domain of the account that ran the process responsible for the event
-  sample value: ''
-- standard name: initiating_process_account_name
-  field name: InitiatingProcessAccountName
+  sample_value: ''
+- standard_name: initiating_process_account_name
+  field_name: InitiatingProcessAccountName
   type: string
   description: User name of the account that ran the process responsible for the event
-  sample value: ''
-- standard name: initiating_process_account_sid
-  field name: InitiatingProcessAccountSid
+  sample_value: ''
+- standard_name: initiating_process_account_sid
+  field_name: InitiatingProcessAccountSid
   type: string
   description: Security Identifier (SID) of the account that ran the process responsible
     for the event
-  sample value: ''
-- standard name: initiating_process_logon_id
-  field name: InitiatingProcessLogonId
+  sample_value: ''
+- standard_name: initiating_process_logon_id
+  field_name: InitiatingProcessLogonId
   type: string
   description: Identifier for a logon session of the process that initiated the event.
     This identifier is unique on the same machine only between restarts.
-  sample value: ''
-- standard name: report_id
-  field name: ReportId
+  sample_value: ''
+- standard_name: report_id
+  field_name: ReportId
   type: long
   description: Event identifier based on a repeating counter. To identify unique events,
     this column must be used in conjunction with the ComputerName and EventTime columns.
-  sample value: ''
-- standard name: app_guard_container_id
-  field name: AppGuardContainerId
+  sample_value: ''
+- standard_name: app_guard_container_id
+  field_name: AppGuardContainerId
   type: string
   description: Identifier for the virtualized container used by Application Guard
     to isolate browser activity
-  sample value: ''
+  sample_value: ''
 resources: []
-tags: null
+tags: []

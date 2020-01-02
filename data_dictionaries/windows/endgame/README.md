@@ -10,6 +10,3 @@ Endgame's event types according to "User Guide 3.10"
 |events|Description|Tags|
 |---|---|---|
 |[Endgame Schema](events/schema.md)|None||
-
-## Resources
-* [Endgame User Guide 3.10](None)

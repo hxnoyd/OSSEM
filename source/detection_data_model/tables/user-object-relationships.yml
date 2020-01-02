@@ -1,437 +1,437 @@
-title: null
+title: User Object Relationships
 description: null
-data fields:
-- att&ck data source: Process use of network
-  sub data source: process network connection allow
-  source data object: user
+data_fields:
+- att&ck_data_source: Process use of network
+  sub_data_source: process network connection allow
+  source_data_object: user
   relationship: connected_to
-  destination data object: ip
+  destination_data_object: ip
   eventid: '3'
-- att&ck data source: Windows event logs
-  sub data source: kerberos TGT request
-  source data object: user
+- att&ck_data_source: Windows event logs
+  sub_data_source: kerberos TGT request
+  source_data_object: user
   relationship: requested
-  destination data object: kerberos_tgt
+  destination_data_object: kerberos_tgt
   eventid: '4768'
-- att&ck data source: Windows event logs
-  sub data source: kerberos TGT request
-  source data object: user
+- att&ck_data_source: Windows event logs
+  sub_data_source: kerberos TGT request
+  source_data_object: user
   relationship: requested
-  destination data object: kerberos_tgt
+  destination_data_object: kerberos_tgt
   eventid: '4768'
-- att&ck data source: Windows event logs, Authentication logs
-  sub data source: kerberos TGT authentication failure
-  source data object: user
+- att&ck_data_source: Windows event logs, Authentication logs
+  sub_data_source: kerberos TGT authentication failure
+  source_data_object: user
   relationship: authenticated_with
-  destination data object: kerberos_tgt
+  destination_data_object: kerberos_tgt
   eventid: '4771'
-- att&ck data source: Windows event logs
-  sub data source: kerberos service ticket request
-  source data object: user
+- att&ck_data_source: Windows event logs
+  sub_data_source: kerberos service ticket request
+  source_data_object: user
   relationship: requested
-  destination data object: kerberos_tgs
+  destination_data_object: kerberos_tgs
   eventid: '4769'
-- att&ck data source: Windows event logs
-  sub data source: kerberos service ticket renewal
-  source data object: user
+- att&ck_data_source: Windows event logs
+  sub_data_source: kerberos service ticket renewal
+  source_data_object: user
   relationship: renewed
-  destination data object: kerberos_tgs
+  destination_data_object: kerberos_tgs
   eventid: '4770'
-- att&ck data source: Windows event logs
-  sub data source: kerberos service ticket failure
-  source data object: user
+- att&ck_data_source: Windows event logs
+  sub_data_source: kerberos service ticket failure
+  source_data_object: user
   relationship: requested
-  destination data object: kerberos_tgs
+  destination_data_object: kerberos_tgs
   eventid: '4773'
-- att&ck data source: Windows event logs
-  sub data source: user rdp session
-  source data object: user
+- att&ck_data_source: Windows event logs
+  sub_data_source: user rdp session
+  source_data_object: user
   relationship: disconnected_from
-  destination data object: host
+  destination_data_object: host
   eventid: '4779'
-- att&ck data source: Windows event logs
-  sub data source: user rdp session
-  source data object: user
+- att&ck_data_source: Windows event logs
+  sub_data_source: user rdp session
+  source_data_object: user
   relationship: connected_to
-  destination data object: host
+  destination_data_object: host
   eventid: '4778'
-- att&ck data source: Windows event logs
-  sub data source: user lock operation
-  source data object: user
+- att&ck_data_source: Windows event logs
+  sub_data_source: user lock operation
+  source_data_object: user
   relationship: locked
-  destination data object: host
+  destination_data_object: host
   eventid: '4800'
-- att&ck data source: Windows event logs
-  sub data source: user unlock operation
-  source data object: user
+- att&ck_data_source: Windows event logs
+  sub_data_source: user unlock operation
+  source_data_object: user
   relationship: unlocked
-  destination data object: host
+  destination_data_object: host
   eventid: '4801'
-- att&ck data source: Windows event logs
-  sub data source: computer account creation
-  source data object: user
+- att&ck_data_source: Windows event logs
+  sub_data_source: computer account creation
+  source_data_object: user
   relationship: created
-  destination data object: computer
+  destination_data_object: computer
   eventid: '4741'
-- att&ck data source: Windows event logs
-  sub data source: computer account change
-  source data object: user
+- att&ck_data_source: Windows event logs
+  sub_data_source: computer account change
+  source_data_object: user
   relationship: changed
-  destination data object: computer
+  destination_data_object: computer
   eventid: '4742'
-- att&ck data source: Windows event logs
-  sub data source: computer account deletion
-  source data object: user
+- att&ck_data_source: Windows event logs
+  sub_data_source: computer account deletion
+  source_data_object: user
   relationship: deleted
-  destination data object: computer
+  destination_data_object: computer
   eventid: '4743'
-- att&ck data source: Windows event logs
-  sub data source: distribution group creation
-  source data object: user
+- att&ck_data_source: Windows event logs
+  sub_data_source: distribution group creation
+  source_data_object: user
   relationship: created
-  destination data object: group
+  destination_data_object: group
   eventid: '4749'
-- att&ck data source: Windows event logs
-  sub data source: distribution group change
-  source data object: user
+- att&ck_data_source: Windows event logs
+  sub_data_source: distribution group change
+  source_data_object: user
   relationship: changed
-  destination data object: group
+  destination_data_object: group
   eventid: '4750'
-- att&ck data source: Windows event logs
-  sub data source: distribution group member addition
-  source data object: user
+- att&ck_data_source: Windows event logs
+  sub_data_source: distribution group member addition
+  source_data_object: user
   relationship: added
-  destination data object: user
+  destination_data_object: user
   eventid: '4751'
-- att&ck data source: Windows event logs
-  sub data source: distribution group member removal
-  source data object: user
+- att&ck_data_source: Windows event logs
+  sub_data_source: distribution group member removal
+  source_data_object: user
   relationship: removed
-  destination data object: user
+  destination_data_object: user
   eventid: '4752'
-- att&ck data source: Windows event logs
-  sub data source: distribution group deletion
-  source data object: user
+- att&ck_data_source: Windows event logs
+  sub_data_source: distribution group deletion
+  source_data_object: user
   relationship: deleted
-  destination data object: group
+  destination_data_object: group
   eventid: '4753'
-- att&ck data source: Windows event logs
-  sub data source: security group creation
-  source data object: user
+- att&ck_data_source: Windows event logs
+  sub_data_source: security group creation
+  source_data_object: user
   relationship: created
-  destination data object: group
+  destination_data_object: group
   eventid: '4731'
-- att&ck data source: Windows event logs
-  sub data source: security group member addition
-  source data object: user
+- att&ck_data_source: Windows event logs
+  sub_data_source: security group member addition
+  source_data_object: user
   relationship: added
-  destination data object: user
+  destination_data_object: user
   eventid: '4732'
-- att&ck data source: Windows event logs
-  sub data source: security group member removal
-  source data object: user
+- att&ck_data_source: Windows event logs
+  sub_data_source: security group member removal
+  source_data_object: user
   relationship: removed
-  destination data object: user
+  destination_data_object: user
   eventid: '4733'
-- att&ck data source: Windows event logs
-  sub data source: security group deletion
-  source data object: user
+- att&ck_data_source: Windows event logs
+  sub_data_source: security group deletion
+  source_data_object: user
   relationship: deleted
-  destination data object: group
+  destination_data_object: group
   eventid: '4734'
-- att&ck data source: Windows event logs
-  sub data source: security group change
-  source data object: user
+- att&ck_data_source: Windows event logs
+  sub_data_source: security group change
+  source_data_object: user
   relationship: changed
-  destination data object: group
+  destination_data_object: group
   eventid: '4735'
-- att&ck data source: Windows event logs
-  sub data source: security group type change
-  source data object: user
+- att&ck_data_source: Windows event logs
+  sub_data_source: security group type change
+  source_data_object: user
   relationship: changed_type
-  destination data object: group
+  destination_data_object: group
   eventid: '4764'
-- att&ck data source: Windows event logs
-  sub data source: security group enumeration
-  source data object: user
+- att&ck_data_source: Windows event logs
+  sub_data_source: security group enumeration
+  source_data_object: user
   relationship: enumerated
-  destination data object: group members
+  destination_data_object: group members
   eventid: '4799'
-- att&ck data source: Windows event logs
-  sub data source: user account creation
-  source data object: user
+- att&ck_data_source: Windows event logs
+  sub_data_source: user account creation
+  source_data_object: user
   relationship: created
-  destination data object: user
+  destination_data_object: user
   eventid: '4720'
-- att&ck data source: Windows event logs
-  sub data source: user account enable
-  source data object: user
+- att&ck_data_source: Windows event logs
+  sub_data_source: user account enable
+  source_data_object: user
   relationship: enabled
-  destination data object: user
+  destination_data_object: user
   eventid: '4722'
-- att&ck data source: Windows event logs
-  sub data source: user account password change
-  source data object: user
+- att&ck_data_source: Windows event logs
+  sub_data_source: user account password change
+  source_data_object: user
   relationship: changed_password
-  destination data object: user
+  destination_data_object: user
   eventid: '4723'
-- att&ck data source: Windows event logs
-  sub data source: user account password reset
-  source data object: user
+- att&ck_data_source: Windows event logs
+  sub_data_source: user account password reset
+  source_data_object: user
   relationship: reset_password
-  destination data object: user
+  destination_data_object: user
   eventid: '4724'
-- att&ck data source: Windows event logs
-  sub data source: user account disable
-  source data object: user
+- att&ck_data_source: Windows event logs
+  sub_data_source: user account disable
+  source_data_object: user
   relationship: disabled
-  destination data object: user
+  destination_data_object: user
   eventid: '4725'
-- att&ck data source: Windows event logs
-  sub data source: user account deletion
-  source data object: user
+- att&ck_data_source: Windows event logs
+  sub_data_source: user account deletion
+  source_data_object: user
   relationship: deleted
-  destination data object: user
+  destination_data_object: user
   eventid: '4726'
-- att&ck data source: Windows event logs
-  sub data source: user account change
-  source data object: user
+- att&ck_data_source: Windows event logs
+  sub_data_source: user account change
+  source_data_object: user
   relationship: changed
-  destination data object: user
+  destination_data_object: user
   eventid: '4738'
-- att&ck data source: Windows event logs
-  sub data source: user account lock
-  source data object: user
+- att&ck_data_source: Windows event logs
+  sub_data_source: user account lock
+  source_data_object: user
   relationship: locked
-  destination data object: user
+  destination_data_object: user
   eventid: '4740'
-- att&ck data source: Windows event logs
-  sub data source: user account unlock
-  source data object: user
+- att&ck_data_source: Windows event logs
+  sub_data_source: user account unlock
+  source_data_object: user
   relationship: unlocked
-  destination data object: user
+  destination_data_object: user
   eventid: '4767'
-- att&ck data source: Windows event logs
-  sub data source: user account name change
-  source data object: user
+- att&ck_data_source: Windows event logs
+  sub_data_source: user account name change
+  source_data_object: user
   relationship: changed_name
-  destination data object: user
+  destination_data_object: user
   eventid: '4781'
-- att&ck data source: Windows event logs
-  sub data source: user account group enumeration
-  source data object: user
+- att&ck_data_source: Windows event logs
+  sub_data_source: user account group enumeration
+  source_data_object: user
   relationship: enumerated
-  destination data object: group
+  destination_data_object: group
   eventid: '4798'
-- att&ck data source: Windows event logs
-  sub data source: directory service object access
-  source data object: user
+- att&ck_data_source: Windows event logs
+  sub_data_source: directory service object access
+  source_data_object: user
   relationship: accessed
-  destination data object: ad object
+  destination_data_object: ad object
   eventid: '4662'
-- att&ck data source: Windows event logs
-  sub data source: directoy service object handle request
-  source data object: user
+- att&ck_data_source: Windows event logs
+  sub_data_source: directoy service object handle request
+  source_data_object: user
   relationship: requested_a_handle
-  destination data object: ad object
+  destination_data_object: ad object
   eventid: '4661'
-- att&ck data source: Windows event logs
-  sub data source: directory service object modification
-  source data object: user
+- att&ck_data_source: Windows event logs
+  sub_data_source: directory service object modification
+  source_data_object: user
   relationship: modified
-  destination data object: ad object
+  destination_data_object: ad object
   eventid: '5136'
-- att&ck data source: Windows event logs
-  sub data source: directory service object creation
-  source data object: user
+- att&ck_data_source: Windows event logs
+  sub_data_source: directory service object creation
+  source_data_object: user
   relationship: created
-  destination data object: ad object
+  destination_data_object: ad object
   eventid: '5137'
-- att&ck data source: Windows event logs
-  sub data source: directory service object restoration
-  source data object: user
+- att&ck_data_source: Windows event logs
+  sub_data_source: directory service object restoration
+  source_data_object: user
   relationship: restored
-  destination data object: ad object
+  destination_data_object: ad object
   eventid: '5138'
-- att&ck data source: Windows event logs
-  sub data source: directory service object move
-  source data object: user
+- att&ck_data_source: Windows event logs
+  sub_data_source: directory service object move
+  source_data_object: user
   relationship: moved
-  destination data object: ad object
+  destination_data_object: ad object
   eventid: '5139'
-- att&ck data source: Windows event logs
-  sub data source: directory service object deletion
-  source data object: user
+- att&ck_data_source: Windows event logs
+  sub_data_source: directory service object deletion
+  source_data_object: user
   relationship: deleted
-  destination data object: ad object
+  destination_data_object: ad object
   eventid: '5141'
-- att&ck data source: Windows event logs, Authentication logs
-  sub data source: user account successful authentication
-  source data object: user
+- att&ck_data_source: Windows event logs, Authentication logs
+  sub_data_source: user account successful authentication
+  source_data_object: user
   relationship: authenticated
-  destination data object: host
+  destination_data_object: host
   eventid: '4624'
-- att&ck data source: Windows event logs, Authentication logs
-  sub data source: user account authentication with explicit credential
-  source data object: user
+- att&ck_data_source: Windows event logs, Authentication logs
+  sub_data_source: user account authentication with explicit credential
+  source_data_object: user
   relationship: authenticated
-  destination data object: host
+  destination_data_object: host
   eventid: '4648'
-- att&ck data source: File monitoring
-  sub data source: file access
-  source data object: user
+- att&ck_data_source: File monitoring
+  sub_data_source: file access
+  source_data_object: user
   relationship: accessed
-  destination data object: file
+  destination_data_object: file
   eventid: '5145'
-- att&ck data source: Windows event logs
-  sub data source: network share access
-  source data object: user
+- att&ck_data_source: Windows event logs
+  sub_data_source: network share access
+  source_data_object: user
   relationship: accessed
-  destination data object: network share
+  destination_data_object: network share
   eventid: '5140'
-- att&ck data source: Windows event logs
-  sub data source: network share addition
-  source data object: user
+- att&ck_data_source: Windows event logs
+  sub_data_source: network share addition
+  source_data_object: user
   relationship: added
-  destination data object: network share
+  destination_data_object: network share
   eventid: '5142'
-- att&ck data source: Windows event logs
-  sub data source: network share modification
-  source data object: user
+- att&ck_data_source: Windows event logs
+  sub_data_source: network share modification
+  source_data_object: user
   relationship: modified
-  destination data object: network share
+  destination_data_object: network share
   eventid: '5143'
-- att&ck data source: Windows event logs
-  sub data source: network share deletion
-  source data object: user
+- att&ck_data_source: Windows event logs
+  sub_data_source: network share deletion
+  source_data_object: user
   relationship: deleted
-  destination data object: network share
+  destination_data_object: network share
   eventid: '5144'
-- att&ck data source: File monitoring
-  sub data source: file access request
-  source data object: user
+- att&ck_data_source: File monitoring
+  sub_data_source: file access request
+  source_data_object: user
   relationship: requested_a_handle
-  destination data object: file
+  destination_data_object: file
   eventid: '4656'
-- att&ck data source: Windows event logs
-  sub data source: registry access request
-  source data object: user
+- att&ck_data_source: Windows event logs
+  sub_data_source: registry access request
+  source_data_object: user
   relationship: requested_a_handle
-  destination data object: registry
+  destination_data_object: registry
   eventid: '4656'
-- att&ck data source: File monitoring
-  sub data source: file deletion request
-  source data object: user
+- att&ck_data_source: File monitoring
+  sub_data_source: file deletion request
+  source_data_object: user
   relationship: requested_a_handle
-  destination data object: file
+  destination_data_object: file
   eventid: '4656'
-- att&ck data source: Windows event logs
-  sub data source: registry deletion request
-  source data object: user
+- att&ck_data_source: Windows event logs
+  sub_data_source: registry deletion request
+  source_data_object: user
   relationship: requested_a_handle
-  destination data object: registry
+  destination_data_object: registry
   eventid: '4656'
-- att&ck data source: File monitoring
-  sub data source: file access
-  source data object: user
+- att&ck_data_source: File monitoring
+  sub_data_source: file access
+  source_data_object: user
   relationship: accessed
-  destination data object: file
+  destination_data_object: file
   eventid: '4663'
-- att&ck data source: File monitoring
-  sub data source: file deletion
-  source data object: user
+- att&ck_data_source: File monitoring
+  sub_data_source: file deletion
+  source_data_object: user
   relationship: deleted
-  destination data object: file
+  destination_data_object: file
   eventid: '4663'
-- att&ck data source: Windows event logs
-  sub data source: symbolic link creation
-  source data object: user
+- att&ck_data_source: Windows event logs
+  sub_data_source: symbolic link creation
+  source_data_object: user
   relationship: created
-  destination data object: symbolic link
+  destination_data_object: symbolic link
   eventid: '4664'
-- att&ck data source: File monitoring
-  sub data source: file permissions change
-  source data object: user
+- att&ck_data_source: File monitoring
+  sub_data_source: file permissions change
+  source_data_object: user
   relationship: changed_permissions
-  destination data object: file
+  destination_data_object: file
   eventid: '4670'
-- att&ck data source: Windows event logs
-  sub data source: scheduled task creation
-  source data object: user
+- att&ck_data_source: Windows event logs
+  sub_data_source: scheduled task creation
+  source_data_object: user
   relationship: created
-  destination data object: scheduled task
+  destination_data_object: scheduled task
   eventid: '4698'
-- att&ck data source: Windows event logs
-  sub data source: scheduled task deletion
-  source data object: user
+- att&ck_data_source: Windows event logs
+  sub_data_source: scheduled task deletion
+  source_data_object: user
   relationship: deleted
-  destination data object: scheduled task
+  destination_data_object: scheduled task
   eventid: '4699'
-- att&ck data source: Windows event logs
-  sub data source: scheduled task enable
-  source data object: user
+- att&ck_data_source: Windows event logs
+  sub_data_source: scheduled task enable
+  source_data_object: user
   relationship: enabled
-  destination data object: scheduled task
+  destination_data_object: scheduled task
   eventid: '4700'
-- att&ck data source: Windows event logs
-  sub data source: scheduled tast disable
-  source data object: user
+- att&ck_data_source: Windows event logs
+  sub_data_source: scheduled tast disable
+  source_data_object: user
   relationship: disabled
-  destination data object: scheduled task
+  destination_data_object: scheduled task
   eventid: '4701'
-- att&ck data source: Windows event logs
-  sub data source: scheduled task update
-  source data object: user
+- att&ck_data_source: Windows event logs
+  sub_data_source: scheduled task update
+  source_data_object: user
   relationship: updated
-  destination data object: scheduled task
+  destination_data_object: scheduled task
   eventid: '4702'
-- att&ck data source: Windows event logs
-  sub data source: win registry key access
-  source data object: user
+- att&ck_data_source: Windows event logs
+  sub_data_source: win registry key access
+  source_data_object: user
   relationship: accessed
-  destination data object: registry
+  destination_data_object: registry
   eventid: '4663'
-- att&ck data source: Windows event logs
-  sub data source: win registry key deletion
-  source data object: user
+- att&ck_data_source: Windows event logs
+  sub_data_source: win registry key deletion
+  source_data_object: user
   relationship: deleted
-  destination data object: registry
+  destination_data_object: registry
   eventid: '4663'
-- att&ck data source: Windows event logs
-  sub data source: win registry key permissions change
-  source data object: user
+- att&ck_data_source: Windows event logs
+  sub_data_source: win registry key permissions change
+  source_data_object: user
   relationship: changed_permissions
-  destination data object: registry
+  destination_data_object: registry
   eventid: '4670'
-- att&ck data source: Windows event logs
-  sub data source: win registry key value modification
-  source data object: user
+- att&ck_data_source: Windows event logs
+  sub_data_source: win registry key value modification
+  source_data_object: user
   relationship: modified
-  destination data object: registry
+  destination_data_object: registry
   eventid: '4657'
-- att&ck data source: Windows event logs
-  sub data source: sam service object handle request
-  source data object: user
+- att&ck_data_source: Windows event logs
+  sub_data_source: sam service object handle request
+  source_data_object: user
   relationship: requested_a_handle
-  destination data object: sam object
+  destination_data_object: sam object
   eventid: '4661'
-- att&ck data source: Windows event logs
-  sub data source: user account access addition
-  source data object: user
+- att&ck_data_source: Windows event logs
+  sub_data_source: user account access addition
+  source_data_object: user
   relationship: granted_access
-  destination data object: user
+  destination_data_object: user
   eventid: '4717'
-- att&ck data source: Windows event logs
-  sub data source: user account access removal
-  source data object: user
+- att&ck_data_source: Windows event logs
+  sub_data_source: user account access removal
+  source_data_object: user
   relationship: removed_access
-  destination data object: user
+  destination_data_object: user
   eventid: '4718'
-- att&ck data source: Windows event logs
-  sub data source: win service installation
-  source data object: user
+- att&ck_data_source: Windows event logs
+  sub_data_source: win service installation
+  source_data_object: user
   relationship: installed
-  destination data object: service
+  destination_data_object: service
   eventid: '4697'
 resources: []
-tags: null
+tags: []

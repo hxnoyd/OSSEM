@@ -1,52 +1,52 @@
 title: 'Event ID 12: RegistryEvent (Object create and delete)'
-operating system: windows
-data channel: sysmon
+operating_system: windows
+data_channel: sysmon
 description: Registry key and value create and delete operations map to this event
   type, which can be useful for monitoring for changes to Registry autostart locations,
-  or specific malware registry modifications.https://docs.microsoft.com/en-us/sysinternals/downloads/sysmon#event-id-12-registryevent-object-create-and-delete
-data fields:
-- standard name: tag
-  field name: RuleName
+  or specific malware registry modifications.<a href="https://docs.microsoft.com/en-us/sysinternals/downloads/sysmon#event-id-12-registryevent-object-create-and-delete">https://docs.microsoft.com/en-us/sysinternals/downloads/sysmon#event-id-12-registryevent-object-create-and-delete</a>
+data_fields:
+- standard_name: tag
+  field_name: RuleName
   type: string
   description: custom tag mapped to event. i.e ATT&CK technique ID
-  sample value: T1114
-- standard name: event_type
-  field name: EventType
+  sample_value: T1114
+- standard_name: event_type
+  field_name: EventType
   type: string
   description: registry event. Either Create or Delete
-  sample value: CreateKey
-- standard name: event_date_creation
-  field name: UtcTime
+  sample_value: CreateKey
+- standard_name: event_date_creation
+  field_name: UtcTime
   type: date
   description: Time in UTC when event was created
-  sample value: 4/11/18 5:25
-- standard name: process_guid
-  field name: ProcessGuid
+  sample_value: 4/11/18 5:25
+- standard_name: process_guid
+  field_name: ProcessGuid
   type: string
   description: Process Guid of the process that created or deleted a registry key
-  sample value: '{A98268C1-9595-5ACD-0000-0010C2380200}'
-- standard name: process_id
-  field name: ProcessId
+  sample_value: '{A98268C1-9595-5ACD-0000-0010C2380200}'
+- standard_name: process_id
+  field_name: ProcessId
   type: integer
   description: Process ID used by the os to identify the process that created or deleted
     a registry key
-  sample value: '2052'
-- standard name: process_name
-  field name: Image
+  sample_value: '2052'
+- standard_name: process_name
+  field_name: Image
   type: string
   description: File name of the process that created or deleted a registry key
-  sample value: OfficeClickToRun.exe
-- standard name: process_path
-  field name: Image
+  sample_value: OfficeClickToRun.exe
+- standard_name: process_path
+  field_name: Image
   type: string
   description: File path of the process that created or deleted a registry key
-  sample value: C:\Program Files\Common Files\Microsoft Shared\ClickToRun\OfficeClickToRun.exe
-- standard name: registry_key_path
-  field name: TargetObject
+  sample_value: C:\Program Files\Common Files\Microsoft Shared\ClickToRun\OfficeClickToRun.exe
+- standard_name: registry_key_path
+  field_name: TargetObject
   type: string
   description: complete path of the registry key
-  sample value: HKU.DEFAULT\Software\Microsoft\Office\16.0\Common
+  sample_value: HKU.DEFAULT\Software\Microsoft\Office\16.0\Common
 resources:
 - text: Sysmon Source
   link: https://docs.microsoft.com/en-us/sysinternals/downloads/sysmon#event-id-12-registryevent-object-create-and-delete
-tags: null
+tags: []

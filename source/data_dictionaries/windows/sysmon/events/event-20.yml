@@ -1,51 +1,51 @@
 title: 'Event ID 20: WmiEvent (WmiEventConsumer activity detected)'
-operating system: windows
-data channel: sysmon
+operating_system: windows
+data_channel: sysmon
 description: This event logs the registration of WMI consumers, recording the consumer
-  name, log, and destination.https://docs.microsoft.com/en-us/sysinternals/downloads/sysmon#event-id-20-wmievent-wmieventconsumer-activity-detected
-data fields:
-- standard name: tag
-  field name: RuleName
+  name, log, and destination.<a href="https://docs.microsoft.com/en-us/sysinternals/downloads/sysmon#event-id-20-wmievent-wmieventconsumer-activity-detected">https://docs.microsoft.com/en-us/sysinternals/downloads/sysmon#event-id-20-wmievent-wmieventconsumer-activity-detected</a>
+data_fields:
+- standard_name: tag
+  field_name: RuleName
   type: string
   description: custom tag mapped to event. i.e ATT&CK technique ID
-  sample value: T1114
-- standard name: event_type
-  field name: EventType
+  sample_value: T1114
+- standard_name: event_type
+  field_name: EventType
   type: string
   description: wmievent type
-  sample value: WmiConsumerEvent
-- standard name: event_date_creation
-  field name: UtcTime
+  sample_value: WmiConsumerEvent
+- standard_name: event_date_creation
+  field_name: UtcTime
   type: date
   description: Time in UTC when event was created
-  sample value: '2018-09-11 23:12:46.606'
-- standard name: wmi_operation
-  field name: Operation
+  sample_value: '2018-09-11 23:12:46.606'
+- standard_name: wmi_operation
+  field_name: Operation
   type: string
   description: wmievent filter operation
-  sample value: Created
-- standard name: user_name
-  field name: User
+  sample_value: Created
+- standard_name: user_name
+  field_name: User
   type: string
   description: user that created the wmi  consumer
-  sample value: DESKTOP-LFD11QP\pedro
-- standard name: wmi_consumer_name
-  field name: Name
+  sample_value: DESKTOP-LFD11QP\pedro
+- standard_name: wmi_consumer_name
+  field_name: Name
   type: string
   description: name of the consumer created
-  sample value: Updater
-- standard name: wmi_consumer_type
-  field name: Type
+  sample_value: Updater
+- standard_name: wmi_consumer_type
+  field_name: Type
   type: string
   description: Type of wmi consumer
-  sample value: Command Line
-- standard name: wmi_consumer_destination
-  field name: Destination
+  sample_value: Command Line
+- standard_name: wmi_consumer_destination
+  field_name: Destination
   type: string
   description: command of consumer
-  sample value: C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -nop -exec
+  sample_value: C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -nop -exec
     bypass -win hidden -noni -enc bm90ZXBhZC5leGU=
 resources:
 - text: Sysmon Source
   link: https://docs.microsoft.com/en-us/sysinternals/downloads/sysmon#event-id-20-wmievent-wmieventconsumer-activity-detected
-tags: null
+tags: []

@@ -1,74 +1,74 @@
 title: 'Event ID 5141: A directory service object was deleted'
-operating system: windows
-data channel: security
+operating_system: windows
+data_channel: security
 description: This event generates every time an Active Directory object is deleted.
-data fields:
-- standard name: ''
-  field name: AppCorrelationID
+data_fields:
+- standard_name: ''
+  field_name: AppCorrelationID
   type: string
   description: always has "-" value. Not in use.
-  sample value: '-'
-- standard name: host_domain
-  field name: DSName
+  sample_value: '-'
+- standard_name: host_domain
+  field_name: DSName
   type: string
   description: the name of an Active Directory domain, where the object was deleted.
-  sample value: contoso.local
-- standard name: ''
-  field name: DSType
+  sample_value: contoso.local
+- standard_name: ''
+  field_name: DSType
   type: string
   description: has "Active Directory Domain Services" value for this event.
-  sample value: '%%14676'
-- standard name: user_sid
-  field name: SubjectUserSid
+  sample_value: '%%14676'
+- standard_name: user_sid
+  field_name: SubjectUserSid
   type: string
   description: SID of account that requested the "delete object" operation.
-  sample value: S-1-5-21-3457937927-2839227994-823803824-1104
-- standard name: user_name
-  field name: SubjectUserName
+  sample_value: S-1-5-21-3457937927-2839227994-823803824-1104
+- standard_name: user_name
+  field_name: SubjectUserName
   type: string
   description: the name of the account that requested the "delete object" operation.
-  sample value: dadmin
-- standard name: user_domain
-  field name: SubjectDomainName
+  sample_value: dadmin
+- standard_name: user_domain
+  field_name: SubjectDomainName
   type: string
   description: subject's domain or computer name.
-  sample value: CONTOSO
-- standard name: user_logon_id
-  field name: SubjectLogonId
+  sample_value: CONTOSO
+- standard_name: user_logon_id
+  field_name: SubjectLogonId
   type: integer
   description: hexadecimal value that can help you correlate this event with recent
     events that might contain the same Logon ID
-  sample value: '0x32004'
-- standard name: ''
-  field name: ObjectClass
+  sample_value: '0x32004'
+- standard_name: ''
+  field_name: ObjectClass
   type: string
   description: class of the object that was deleted.
-  sample value: computer
-- standard name: ''
-  field name: ObjectDN
+  sample_value: computer
+- standard_name: ''
+  field_name: ObjectDN
   type: string
   description: distinguished name of the object that was deleted.
-  sample value: CN=WIN2003,CN=Users,DC=contoso,DC=local
-- standard name: ''
-  field name: ObjectGUID
+  sample_value: CN=WIN2003,CN=Users,DC=contoso,DC=local
+- standard_name: ''
+  field_name: ObjectGUID
   type: string
   description: each Active Directory object has globally unique identifier (GUID),
     which is a 128-bit value that is unique not only in the enterprise but also across
     the world.
-  sample value: '{CA15B875-AFB1-4E5A-86B2-96E61DE09110}'
-- standard name: ''
-  field name: OpCorrelationID
+  sample_value: '{CA15B875-AFB1-4E5A-86B2-96E61DE09110}'
+- standard_name: ''
+  field_name: OpCorrelationID
   type: string
   description: multiple modifications are often executed as one operation via LDAP.
-  sample value: '{C8A9000C-C618-4EE9-87FF-F852C0564F18}'
-- standard name: ''
-  field name: TreeDelete
+  sample_value: '{C8A9000C-C618-4EE9-87FF-F852C0564F18}'
+- standard_name: ''
+  field_name: TreeDelete
   type: string
   description: Yes - "Delete Subtree" operation was performed. It happens, for example,
     if "Use Delete Subtree server control" check box was checked during delete operation
     using Active Directory Users and Computers management console. No - delete operation
     was performed without "Delete Subtree" server control.
-  sample value: '%%14679'
+  sample_value: '%%14679'
 resources:
 - text: MS Source
   link: https://github.com/MicrosoftDocs/windows-itpro-docs/blob/master/windows/security/threat-protection/auditing/event-5141.md

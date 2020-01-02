@@ -1,57 +1,57 @@
 title: 'Event ID 4693: Recovery of data protection master key was attempted.'
-operating system: windows
-data channel: security
+operating_system: windows
+data_channel: security
 description: This event generates every time that recovery is attempted for a DPAPI
   Master Key.
-data fields:
-- standard name: user_sid
-  field name: SubjectUserSid
+data_fields:
+- standard_name: user_sid
+  field_name: SubjectUserSid
   type: string
   description: SID of account that requested the "recover" operation.
-  sample value: S-1-5-21-3457937927-2839227994-823803824-1104
-- standard name: user_name
-  field name: SubjectUserName
+  sample_value: S-1-5-21-3457937927-2839227994-823803824-1104
+- standard_name: user_name
+  field_name: SubjectUserName
   type: string
   description: the name of the account that requested the "recover" operation.
-  sample value: dadmin
-- standard name: user_domain
-  field name: SubjectDomainName
+  sample_value: dadmin
+- standard_name: user_domain
+  field_name: SubjectDomainName
   type: string
   description: subject's domain or computer name.
-  sample value: CONTOSO
-- standard name: user_logon_id
-  field name: SubjectLogonId
+  sample_value: CONTOSO
+- standard_name: user_logon_id
+  field_name: SubjectLogonId
   type: integer
   description: 'hexadecimal value that can help you correlate this event with recent
     events that might contain the same Logon ID, for example, "4624: An account was
     successfully logged on."'
-  sample value: '0x30d7c'
-- standard name: master_key_id
-  field name: MasterKeyId
+  sample_value: '0x30d7c'
+- standard_name: master_key_id
+  field_name: MasterKeyId
   type: string
   description: unique identifier of a master key which was recovered.
-  sample value: 0445c766-75f0-4de7-82ad-d9d97aad59f6
-- standard name: recovery_key_reason
-  field name: RecoveryReason
+  sample_value: 0445c766-75f0-4de7-82ad-d9d97aad59f6
+- standard_name: recovery_key_reason
+  field_name: RecoveryReason
   type: integer
   description: hexadecimal code of recovery reason.
-  sample value: '0x5c005c'
-- standard name: recovery_key_hostname
-  field name: RecoveryServer
+  sample_value: '0x5c005c'
+- standard_name: recovery_key_hostname
+  field_name: RecoveryServer
   type: string
   description: the name (typically - DNS name) of the computer that you contacted
     to recover your Master Key.
-  sample value: DC01.contoso.local
-- standard name: recovery_key_id
-  field name: RecoveryKeyId
+  sample_value: DC01.contoso.local
+- standard_name: recovery_key_id
+  field_name: RecoveryKeyId
   type: string
   description: unique identifier of a recovery key.
-  sample value: None
-- standard name: event_failure_reason
-  field name: FailureId
+  sample_value: None
+- standard_name: event_failure_reason
+  field_name: FailureId
   type: integer
   description: hexadecimal unique status code.
-  sample value: '0x380000'
+  sample_value: '0x380000'
 resources:
 - text: MS SOURCE
   link: https://github.com/MicrosoftDocs/windows-itpro-docs/blob/public/windows/security/threat-protection/auditing/event-4693.md

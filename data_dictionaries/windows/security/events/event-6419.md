@@ -16,7 +16,7 @@ This event generates every time when someone made a request to disable a device.
 |class_name|ClassName|string|"Class" attribute of device.|Biometric|
 |hardware_ids|HardwareIds|string|"Hardware Ids" attribute of device.|USB\VID_138A&PID_0017&REV_0078 USB\VID_138A&PID_0017|
 |compatible_ids|CompatibleIds|string|"Compatible Ids" attribute of device.|USB\Class_FF&SubClass_00&Prot_00 USB\Class_FF&SubClass_00 USB\Class_FF|
-|location_information|LocationInformation|string|"Location information" attribute of device.|Port_#0002.Hub_#0004|
+|location_information|LocationInformation|string|"Location information" attribute of device.|Port#0002.Hub#0004|
 
 ## Resources
 * [MS Source](https://github.com/MicrosoftDocs/windows-itpro-docs/blob/public/windows/security/threat-protection/auditing/event-6419.md)

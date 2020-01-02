@@ -1,10 +1,6 @@
 title: Windows Endgame Event Logs
-description: |-
-  Endgame's event types according to "User Guide 3.10"
+description: Endgame's event types according to "User Guide 3.10"
 images:
-  - title: Data model
-    source: /resources/images/EndgameDataModel.png
-    width: 900
-resources:
-  - text: Endgame User Guide 3.10
-    link: #
+- title: Data model
+  source: /resources/images/EndgameDataModel.png
+resources: []

@@ -1,142 +1,142 @@
 title: ImageLoadEvents
-operating system: windows
-data channel: windowsdefenderatp
+operating_system: windows
+data_channel: windowsdefenderatp
 description: DLL loading events
-data fields:
-- standard name: event_date_creation
-  field name: EventTime
+data_fields:
+- standard_name: event_date_creation
+  field_name: EventTime
   type: date
   description: Date and time when the event was recorded
-  sample value: ''
-- standard name: machine_id
-  field name: MachineId
+  sample_value: ''
+- standard_name: machine_id
+  field_name: MachineId
   type: string
   description: Unique identifier for the machine in the service
-  sample value: ''
-- standard name: computer_name
-  field name: ComputerName
+  sample_value: ''
+- standard_name: computer_name
+  field_name: ComputerName
   type: string
   description: Fully qualified domain name (FQDN) of the machine
-  sample value: ''
-- standard name: action_type
-  field name: ActionType
+  sample_value: ''
+- standard_name: action_type
+  field_name: ActionType
   type: string
   description: Type of activity that triggered the event
-  sample value: ''
-- standard name: file_name
-  field name: FileName
+  sample_value: ''
+- standard_name: file_name
+  field_name: FileName
   type: string
   description: Name of the file that the recorded action was applied to
-  sample value: ''
-- standard name: file_path
-  field name: FolderPath
+  sample_value: ''
+- standard_name: file_path
+  field_name: FolderPath
   type: string
   description: Folder containing the file that the recorded action was applied to
-  sample value: ''
-- standard name: hash_sha1
-  field name: SHA1
+  sample_value: ''
+- standard_name: hash_sha1
+  field_name: SHA1
   type: string
   description: SHA-1 of the file that the recorded action was applied to
-  sample value: ''
-- standard name: hash_md5
-  field name: MD5
+  sample_value: ''
+- standard_name: hash_md5
+  field_name: MD5
   type: string
   description: MD5 hash of the file that the recorded action was applied to
-  sample value: ''
-- standard name: user_domain
-  field name: InitiatingProcessAccountDomain
+  sample_value: ''
+- standard_name: user_domain
+  field_name: InitiatingProcessAccountDomain
   type: string
   description: Domain of the account that ran the process responsible for the event
-  sample value: ''
-- standard name: user_name
-  field name: InitiatingProcessAccountName
+  sample_value: ''
+- standard_name: user_name
+  field_name: InitiatingProcessAccountName
   type: string
   description: User name of the account that ran the process responsible for the event
-  sample value: ''
-- standard name: user_sid
-  field name: InitiatingProcessAccountSid
+  sample_value: ''
+- standard_name: user_sid
+  field_name: InitiatingProcessAccountSid
   type: string
   description: Security Identifier (SID) of the account that ran the process responsible
     for the event
-  sample value: ''
-- standard name: process_integrity_level
-  field name: InitiatingProcessIntegrityLevel
+  sample_value: ''
+- standard_name: process_integrity_level
+  field_name: InitiatingProcessIntegrityLevel
   type: string
   description: Integrity level of the process that initiated the event. Windows assigns
     integrity levels to processes based on certain characteristics, such as if they
     were launched from an internet download. These integrity levels influence permissions
     to resources.
-  sample value: ''
-- standard name: process_token_elevation
-  field name: InitiatingProcessTokenElevation
+  sample_value: ''
+- standard_name: process_token_elevation
+  field_name: InitiatingProcessTokenElevation
   type: string
   description: Token type indicating the presence or absence of User Access Control
     (UAC) privilege elevation applied to the process that initiated the event
-  sample value: ''
-- standard name: process_hash_sha1
-  field name: InitiatingProcessSHA1
+  sample_value: ''
+- standard_name: process_hash_sha1
+  field_name: InitiatingProcessSHA1
   type: string
   description: SHA-1 of the process (image file) that initiated the event
-  sample value: ''
-- standard name: process_hash_md5
-  field name: InitiatingProcessMD5
+  sample_value: ''
+- standard_name: process_hash_md5
+  field_name: InitiatingProcessMD5
   type: string
   description: MD5 hash of the process (image file) that initiated the event
-  sample value: ''
-- standard name: process_name
-  field name: InitiatingProcessFileName
+  sample_value: ''
+- standard_name: process_name
+  field_name: InitiatingProcessFileName
   type: string
   description: Name of the process that initiated the event
-  sample value: ''
-- standard name: process_id
-  field name: InitiatingProcessId
+  sample_value: ''
+- standard_name: process_id
+  field_name: InitiatingProcessId
   type: int
   description: Process ID (PID) of the process that initiated the event
-  sample value: ''
-- standard name: process_command_line
-  field name: InitiatingProcessCommandLine
+  sample_value: ''
+- standard_name: process_command_line
+  field_name: InitiatingProcessCommandLine
   type: string
   description: Command line used to run the process that initiated the event
-  sample value: ''
-- standard name: process_creation_time
-  field name: InitiatingProcessCreationTime
+  sample_value: ''
+- standard_name: process_creation_time
+  field_name: InitiatingProcessCreationTime
   type: date
   description: Date and time when the process that initiated the event was started
-  sample value: ''
-- standard name: process_path
-  field name: InitiatingProcessFolderPath
+  sample_value: ''
+- standard_name: process_path
+  field_name: InitiatingProcessFolderPath
   type: string
   description: Folder containing the process (image file) that initiated the eventz
-  sample value: ''
-- standard name: process_parent_id
-  field name: InitiatingProcessParentId
+  sample_value: ''
+- standard_name: process_parent_id
+  field_name: InitiatingProcessParentId
   type: int
   description: Process ID (PID) of the parent process that spawned the process responsible
     for the event
-  sample value: ''
-- standard name: process_parent_name
-  field name: InitiatingProcessParentFileName
+  sample_value: ''
+- standard_name: process_parent_name
+  field_name: InitiatingProcessParentFileName
   type: string
   description: Name of the parent process that spawned the process responsible for
     the event
-  sample value: ''
-- standard name: process_parent_creation_time
-  field name: InitiatingProcessParentCreationTime
+  sample_value: ''
+- standard_name: process_parent_creation_time
+  field_name: InitiatingProcessParentCreationTime
   type: date
   description: Date and time when the parent of the process responsible for the event
     was started
-  sample value: ''
-- standard name: report_id
-  field name: ReportId
+  sample_value: ''
+- standard_name: report_id
+  field_name: ReportId
   type: long
   description: Event identifier based on a repeating counter. To identify unique events,
     this column must be used in conjunction with the ComputerName and EventTime columns.
-  sample value: ''
-- standard name: app_guard_container_id
-  field name: AppGuardContainerId
+  sample_value: ''
+- standard_name: app_guard_container_id
+  field_name: AppGuardContainerId
   type: string
   description: Identifier for the virtualized container used by Application Guard
     to isolate browser activity
-  sample value: ''
+  sample_value: ''
 resources: []
-tags: null
+tags: []

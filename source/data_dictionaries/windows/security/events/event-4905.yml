@@ -1,54 +1,54 @@
 title: 'Event ID 4905: An attempt was made to unregister a security event source.'
-operating system: windows
-data channel: security
+operating_system: windows
+data_channel: security
 description: This event generates every time a security event source.
-data fields:
-- standard name: user_sid
-  field name: SubjectUserSid
+data_fields:
+- standard_name: user_sid
+  field_name: SubjectUserSid
   type: string
   description: SID of account that made an attempt to unregister a security event
     source.
-  sample value: S-1-5-18
-- standard name: user_name
-  field name: SubjectUserName
+  sample_value: S-1-5-18
+- standard_name: user_name
+  field_name: SubjectUserName
   type: string
   description: the name of the account that made an attempt to unregister a security
     event source.
-  sample value: DC01$
-- standard name: user_domain
-  field name: SubjectDomainName
+  sample_value: DC01$
+- standard_name: user_domain
+  field_name: SubjectDomainName
   type: string
   description: subject's domain or computer name.
-  sample value: CONTOSO
-- standard name: user_logon_id
-  field name: SubjectLogonId
+  sample_value: CONTOSO
+- standard_name: user_logon_id
+  field_name: SubjectLogonId
   type: integer
   description: 'hexadecimal value that can help you correlate this event with recent
     events that might contain the same Logon ID, for example, "4624: An account was
     successfully logged on."'
-  sample value: '0x3e7'
-- standard name: event_source_name
-  field name: AuditSourceName
+  sample_value: '0x3e7'
+- standard_name: event_source_name
+  field_name: AuditSourceName
   type: string
   description: 'the name of unregistered security event source. You can see all registered
     security event source names in this registry path: "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\EventLog\Security".'
-  sample value: IIS-METABASE
-- standard name: event_source_id
-  field name: EventSourceId
+  sample_value: IIS-METABASE
+- standard_name: event_source_id
+  field_name: EventSourceId
   type: integer
   description: the unique hexadecimal identifier of unregistered security event source.
-  sample value: '0x20c15f'
-- standard name: process_id
-  field name: ProcessId
+  sample_value: '0x20c15f'
+- standard_name: process_id
+  field_name: ProcessId
   type: integer
   description: hexadecimal Process ID of the process that attempted to unregister
     the security event source.
-  sample value: '0xd90'
-- standard name: process_path
-  field name: ProcessName
+  sample_value: '0xd90'
+- standard_name: process_path
+  field_name: ProcessName
   type: string
   description: full path and the name of the executable for the process.
-  sample value: '-'
+  sample_value: '-'
 resources:
 - text: MS Source
   link: https://github.com/MicrosoftDocs/windows-itpro-docs/blob/public/windows/security/threat-protection/auditing/event-4905.md

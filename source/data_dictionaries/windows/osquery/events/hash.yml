@@ -1,34 +1,33 @@
 title: Hash Table
-operating system: windows
-data channel: osquery
+operating_system: windows
+data_channel: osquery
 description: Filesystem hash data.
-data fields:
-- standard name: file_path
-  field name: path
+data_fields:
+- standard_name: file_path
+  field_name: path
   type: TEXT
   description: Must provide a path or directory
-  sample value: ''
-- standard name: file_directory
-  field name: directory
+  sample_value: ''
+- standard_name: file_directory
+  field_name: directory
   type: TEXT
   description: Must provide a path or directory
-  sample value: ''
-- standard name: hash_md5
-  field name: md5
+  sample_value: ''
+- standard_name: hash_md5
+  field_name: md5
   type: TEXT
   description: MD5 hash of provided filesystem data
-  sample value: ''
-- standard name: hash_sha1
-  field name: sha1
+  sample_value: ''
+- standard_name: hash_sha1
+  field_name: sha1
   type: TEXT
   description: SHA1 hash of provided filesystem data
-  sample value: ''
-- standard name: hadh_sha256
-  field name: sha256
+  sample_value: ''
+- standard_name: hadh_sha256
+  field_name: sha256
   type: TEXT
   description: SHA256 hash of provided filesystem data
-  sample value: ''
 resources:
 - text: osquery GitHub
   link: https://github.com/facebook/osquery/blob/master/specs/hash.table
-tags: null
+tags: []

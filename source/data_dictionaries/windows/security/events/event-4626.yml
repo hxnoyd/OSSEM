@@ -1,83 +1,83 @@
 title: 'Event ID 4626: User/Device claims information'
-operating system: windows
-data channel: security
+operating_system: windows
+data_channel: security
 description: This event generates for new account logons and contains user/device
   claims which were associated with a new logon session.
-data fields:
-- standard name: user_reporter_sid
-  field name: SubjectUserSid
+data_fields:
+- standard_name: user_reporter_sid
+  field_name: SubjectUserSid
   type: string
   description: SID of account that reported information about claims.
-  sample value: S-1-0-0
-- standard name: user_reporter_name
-  field name: SubjectUserName
+  sample_value: S-1-0-0
+- standard_name: user_reporter_name
+  field_name: SubjectUserName
   type: string
   description: the name of the account that reported information about claims.
-  sample value: '-'
-- standard name: user_reporter_domain
-  field name: SubjectDomainName
+  sample_value: '-'
+- standard_name: user_reporter_domain
+  field_name: SubjectDomainName
   type: string
   description: subject's domain or computer name
-  sample value: '-'
-- standard name: user_reporter_id
-  field name: SubjectLogonId
+  sample_value: '-'
+- standard_name: user_reporter_id
+  field_name: SubjectLogonId
   type: integer
   description: hexadecimal value that can help you correlate this event with recent
     events that might contain the same Logon ID
-  sample value: '0x0'
-- standard name: user_sid
-  field name: TargetUserSid
+  sample_value: '0x0'
+- standard_name: user_sid
+  field_name: TargetUserSid
   type: string
   description: SID of account for which logon was performed.
-  sample value: S-1-5-21-3457937927-2839227994-823803824-1104
-- standard name: user_name
-  field name: TargetUserName
+  sample_value: S-1-5-21-3457937927-2839227994-823803824-1104
+- standard_name: user_name
+  field_name: TargetUserName
   type: string
   description: the name of the account for which logon was performed
-  sample value: dadmin
-- standard name: user_domain
-  field name: TargetDomainName
+  sample_value: dadmin
+- standard_name: user_domain
+  field_name: TargetDomainName
   type: string
   description: subject's domain or computer name.
-  sample value: CONTOSO
-- standard name: user_logon_id
-  field name: TargetLogonId
+  sample_value: CONTOSO
+- standard_name: user_logon_id
+  field_name: TargetLogonId
   type: integer
   description: hexadecimal value that can help you correlate this event with recent
     events that might contain the same Logon ID
-  sample value: '0x136f7b'
-- standard name: logon_type
-  field name: LogonType
+  sample_value: '0x136f7b'
+- standard_name: logon_type
+  field_name: LogonType
   type: integer
   description: the type of logon which was performed.
-  sample value: '3'
-- standard name: event_sequence_id
-  field name: EventIdx
+  sample_value: '3'
+- standard_name: event_sequence_id
+  field_name: EventIdx
   type: integer
   description: If is there is not enough space in one event to put all claims, you
     will see "1 of N" in this field and additional events will be generated. Typically
     this field has "1 of 1" value.
-  sample value: '1'
-- standard name: event_count_total
-  field name: EventCountTotal
+  sample_value: '1'
+- standard_name: event_count_total
+  field_name: EventCountTotal
   type: integer
   description: The name of the authentication package which was used for the logon
     authentication process. Default packages loaded on LSA startup are located in
     "HKLM\SYSTEM\CurrentControlSet\Control\Lsa\OSConfig" registry key.
-  sample value: '1'
-- standard name: logon_user_claims
-  field name: UserClaims
+  sample_value: '1'
+- standard_name: logon_user_claims
+  field_name: UserClaims
   type: string
   description: list of user claims for new logon session. This field contains user
     claims if user account was logged in and device claims if computer account was
     logged in
-  sample value: 'ad://ext/cn:88d2b96fdb2b4c49 <%%1818> : "dadmin" ad://ext/Department:88d16a8edaa8c66b
+  sample_value: 'ad://ext/cn:88d2b96fdb2b4c49 <%%1818> : "dadmin" ad://ext/Department:88d16a8edaa8c66b
     <%%1818> : "IT"'
-- standard name: logon_device_claims
-  field name: DeviceClaims
+- standard_name: logon_device_claims
+  field_name: DeviceClaims
   type: string
   description: list of device claims for new logon session
-  sample value: '-'
+  sample_value: '-'
 resources:
 - text: MS Source
   link: https://github.com/MicrosoftDocs/windows-itpro-docs/blob/master/windows/security/threat-protection/auditing/event-4626.md

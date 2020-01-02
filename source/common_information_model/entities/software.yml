@@ -1,9 +1,10 @@
 title: Software Schema
-description: null
-data fields:
-- standard name: FieldNamePlaceholderTODO:REPLACEME
+description: None
+data_fields:
+- standard_name: FieldNamePlaceholderTODO:REPLACEME
+  field_name: ''
   type: ValuePlaceHolder
   description: DescriptionPlaceHolder
-  sample value: '``'
+  sample_value: '``'
 resources: []
-tags: null
+tags: []

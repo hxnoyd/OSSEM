@@ -1,66 +1,66 @@
 title: 'Event ID 6423: The installation of this device is forbidden by system policy.'
-operating system: windows
-data channel: security
+operating_system: windows
+data_channel: security
 description: This event generates every time installation of this device is forbidden
   by system policy.
-data fields:
-- standard name: user_sid
-  field name: SubjectUserSid
+data_fields:
+- standard_name: user_sid
+  field_name: SubjectUserSid
   type: string
   description: SID of account that forbids the device installation.
-  sample value: S-1-5-18
-- standard name: user_name
-  field name: SubjectUserName
+  sample_value: S-1-5-18
+- standard_name: user_name
+  field_name: SubjectUserName
   type: string
   description: the name of the account that forbids the device installation.
-  sample value: DESKTOP-NFC0HVN$
-- standard name: user_domain
-  field name: SubjectDomainName
+  sample_value: DESKTOP-NFC0HVN$
+- standard_name: user_domain
+  field_name: SubjectDomainName
   type: string
   description: subject's domain or computer name.
-  sample value: WORKGROUP
-- standard name: user_logon_id
-  field name: SubjectLogonId
+  sample_value: WORKGROUP
+- standard_name: user_logon_id
+  field_name: SubjectLogonId
   type: integer
   description: 'hexadecimal value that can help you correlate this event with recent
     events that might contain the same Logon ID, for example, "4624: An account was
     successfully logged on."'
-  sample value: '0x3e7'
-- standard name: device_id
-  field name: DeviceId
+  sample_value: '0x3e7'
+- standard_name: device_id
+  field_name: DeviceId
   type: string
   description: '"Device instance path" attribute of device.'
-  sample value: USB\VID_04F3&PID_012D\7&1E3A8971&0&2
-- standard name: device_description
-  field name: DeviceDescription
+  sample_value: USB\VID_04F3&PID_012D\7&1E3A8971&0&2
+- standard_name: device_description
+  field_name: DeviceDescription
   type: string
   description: '"Device description" attribute of device.'
-  sample value: Touchscreen
-- standard name: class_id
-  field name: ClassId
+  sample_value: Touchscreen
+- standard_name: class_id
+  field_name: ClassId
   type: string
   description: '"Class Guid" attribute of device.'
-  sample value: '{00000000-0000-0000-0000-000000000000}'
-- standard name: class_name
-  field name: ClassName
+  sample_value: '{00000000-0000-0000-0000-000000000000}'
+- standard_name: class_name
+  field_name: ClassName
   type: string
   description: '"Class" attribute of device.'
-  sample value: None
-- standard name: hardware_ids
-  field name: HardwareIds
+  sample_value: None
+- standard_name: hardware_ids
+  field_name: HardwareIds
   type: string
   description: '"Hardware Ids" attribute of device.'
-  sample value: USB\VID_04F3&PID_012D&REV_0013 USB\VID_04F3&PID_012D
-- standard name: compatible_ids
-  field name: CompatibleIds
+  sample_value: USB\VID_04F3&PID_012D&REV_0013 USB\VID_04F3&PID_012D
+- standard_name: compatible_ids
+  field_name: CompatibleIds
   type: string
   description: '"Compatible Ids" attribute of device.'
-  sample value: USB\Class_03&SubClass_00&Prot_00 USB\Class_03&SubClass_00 USB\Class_03
-- standard name: location_information
-  field name: LocationInformation
+  sample_value: USB\Class_03&SubClass_00&Prot_00 USB\Class_03&SubClass_00 USB\Class_03
+- standard_name: location_information
+  field_name: LocationInformation
   type: string
   description: '"Location information" attribute of device.'
-  sample value: Port_#0002.Hub_#0004
+  sample_value: Port#0002.Hub#0004
 resources:
 - text: MS Source
   link: https://github.com/MicrosoftDocs/windows-itpro-docs/blob/public/windows/security/threat-protection/auditing/event-6423.md

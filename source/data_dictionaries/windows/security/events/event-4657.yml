@@ -1,83 +1,83 @@
 title: Event ID 4657 A registry value was modified
-operating system: windows
-data channel: security
+operating_system: windows
+data_channel: security
 description: This event generates when a registry key value was modified. It doesn't
   generate when a registry key was modified. This event generates only if "Set Value"
   auditing is set in registry key's SACL.
-data fields:
-- standard name: ''
-  field name: HandleId
+data_fields:
+- standard_name: ''
+  field_name: HandleId
   type: integer
   description: hexadecimal value of a handle to Object Name.
-  sample value: '0x54'
-- standard name: user_sid
-  field name: SubjectUserSid
+  sample_value: '0x54'
+- standard_name: user_sid
+  field_name: SubjectUserSid
   type: string
   description: SID of account that requested the "modify registry value" operation.
-  sample value: THEDOMAIN\TheUser
-- standard name: user_name
-  field name: SubjectUserName
+  sample_value: THEDOMAIN\TheUser
+- standard_name: user_name
+  field_name: SubjectUserName
   type: string
   description: the name of the account that requested the "modify registry value"
     operation.
-  sample value: TheUser
-- standard name: user_domain
-  field name: SubjectDomainName
+  sample_value: TheUser
+- standard_name: user_domain
+  field_name: SubjectDomainName
   type: string
   description: subject's domain or computer name.
-  sample value: THEDOMAIN
-- standard name: user_logon_id
-  field name: SubjectLogonId
+  sample_value: THEDOMAIN
+- standard_name: user_logon_id
+  field_name: SubjectLogonId
   type: integer
   description: hexadecimal value that can help you correlate this event with recent
     events that might contain the same Logon ID
-  sample value: '0x364ef'
-- standard name: registry_key_value_data
-  field name: NewValue
+  sample_value: '0x364ef'
+- standard_name: registry_key_value_data
+  field_name: NewValue
   type: string
   description: new value for changed registry key value.
-  sample value: Andreas
-- standard name: registry_key_value_type
-  field name: NewValueType
+  sample_value: Andreas
+- standard_name: registry_key_value_type
+  field_name: NewValueType
   type: string
   description: new type of changed registry key value.
-  sample value: REG_SZ
-- standard name: process_id
-  field name: ProcessId
+  sample_value: REG_SZ
+- standard_name: process_id
+  field_name: ProcessId
   type: integer
   description: hexadecimal Process ID of the process through which the registry key
     value was modified.
-  sample value: '0xec43'
-- standard name: process_path
-  field name: ProcessName
+  sample_value: '0xec43'
+- standard_name: process_path
+  field_name: ProcessName
   type: string
   description: full path and the name of the executable for the process.
-  sample value: C:\Windows\regedit.exe
-- standard name: registry_key_path
-  field name: ObjectName
+  sample_value: C:\Windows\regedit.exe
+- standard_name: registry_key_path
+  field_name: ObjectName
   type: string
   description: full path and name of the registry key which value was modified.
-  sample value: \REGISTRY\MACHINE
-- standard name: registry_key_value_name
-  field name: ObjectValueName
+  sample_value: \REGISTRY\MACHINE
+- standard_name: registry_key_value_name
+  field_name: ObjectValueName
   type: string
   description: the name of modified registry key value.
-  sample value: New_Name
-- standard name: registry_value_old_data
-  field name: OldValue
+  sample_value: New_Name
+- standard_name: registry_value_old_data
+  field_name: OldValue
   type: string
   description: old value for changed registry key value.
-  sample value: ''
-- standard name: ''
-  field name: OldValueType
+  sample_value: ''
+- standard_name: ''
+  field_name: OldValueType
   type: string
   description: old type of changed registry key value.
-  sample value: REG_SZ
-- standard name: ''
-  field name: OperationType
+  sample_value: REG_SZ
+- standard_name: ''
+  field_name: OperationType
   type: string
   description: the type of performed operation with registry key value.
-  sample value: Existing registry value modified
+  sample_value: Existing registry value modified
 resources:
 - text: MS Source
   link: https://github.com/MicrosoftDocs/windows-itpro-docs/blob/master/windows/security/threat-protection/auditing/event-4657.md

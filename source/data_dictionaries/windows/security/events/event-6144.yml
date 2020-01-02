@@ -1,22 +1,22 @@
 title: 'Event ID 6144: Security policy in the group policy objects has been applied
   successfully.'
-operating system: windows
-data channel: security
+operating_system: windows
+data_channel: security
 description: This event generates every time settings from the "Security Settings"
   section in the group policy object are applied successfully to a computer, without
   any errors.
-data fields:
-- standard name: error_code
-  field name: ErrorCode
+data_fields:
+- standard_name: error_code
+  field_name: ErrorCode
   type: integer
   description: always has "0" value for this event.
-  sample value: '0'
-- standard name: gpo_list
-  field name: GPOList
+  sample_value: '0'
+- standard_name: gpo_list
+  field_name: GPOList
   type: string
   description: the list of Group Policy Objects that include "Security Settings" policies,
     and that were applied to the computer.
-  sample value: '{8AB9311A-E5FB-4A5A-8FB7-027D1B877D6D} DC Main Policy'
+  sample_value: '{8AB9311A-E5FB-4A5A-8FB7-027D1B877D6D} DC Main Policy'
 resources:
 - text: MS Source
   link: https://github.com/MicrosoftDocs/windows-itpro-docs/blob/public/windows/security/threat-protection/auditing/event-6144.md

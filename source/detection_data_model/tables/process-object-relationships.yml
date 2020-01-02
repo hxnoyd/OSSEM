@@ -1,137 +1,137 @@
-title: null
+title: Process Object Relationships
 description: null
-data fields:
-- att&ck data source: Process monitoring
-  sub data source: process creation
-  source data object: process
+data_fields:
+- att&ck_data_source: Process monitoring
+  sub_data_source: process creation
+  source_data_object: process
   relationship: created
-  destination data object: process
+  destination_data_object: process
   eventid: '4688'
-- att&ck data source: Process monitoring
-  sub data source: process creation
-  source data object: process
+- att&ck_data_source: Process monitoring
+  sub_data_source: process creation
+  source_data_object: process
   relationship: created
-  destination data object: process
+  destination_data_object: process
   eventid: '1'
-- att&ck data source: Process monitoring
-  sub data source: process termination
-  source data object: process
+- att&ck_data_source: Process monitoring
+  sub_data_source: process termination
+  source_data_object: process
   relationship: terminated
-  destination data object: ''
+  destination_data_object: ''
   eventid: '4689'
-- att&ck data source: Process monitoring
-  sub data source: process termination
-  source data object: process
+- att&ck_data_source: Process monitoring
+  sub_data_source: process termination
+  source_data_object: process
   relationship: terminated
-  destination data object: ''
+  destination_data_object: ''
   eventid: '5'
-- att&ck data source: Process monitoring
-  sub data source: process write to process
-  source data object: process
+- att&ck_data_source: Process monitoring
+  sub_data_source: process write to process
+  source_data_object: process
   relationship: wrote_to
-  destination data object: process
+  destination_data_object: process
   eventid: '8'
-- att&ck data source: Process monitoring
-  sub data source: process access
-  source data object: process
+- att&ck_data_source: Process monitoring
+  sub_data_source: process access
+  source_data_object: process
   relationship: opened
-  destination data object: process
+  destination_data_object: process
   eventid: '10'
-- att&ck data source: Loaded DLLs
-  sub data source: module load
-  source data object: process
+- att&ck_data_source: Loaded DLLs
+  sub_data_source: module load
+  source_data_object: process
   relationship: loaded
-  destination data object: module
+  destination_data_object: module
   eventid: '7'
-- att&ck data source: File monitoring
-  sub data source: file creation
-  source data object: process
+- att&ck_data_source: File monitoring
+  sub_data_source: file creation
+  source_data_object: process
   relationship: created
-  destination data object: file
+  destination_data_object: file
   eventid: '11'
-- att&ck data source: File monitoring
-  sub data source: file modification
-  source data object: process
+- att&ck_data_source: File monitoring
+  sub_data_source: file modification
+  source_data_object: process
   relationship: modified
-  destination data object: file
+  destination_data_object: file
   eventid: '11'
-- att&ck data source: File monitoring
-  sub data source: file download
-  source data object: process
+- att&ck_data_source: File monitoring
+  sub_data_source: file download
+  source_data_object: process
   relationship: downloaded
-  destination data object: file
+  destination_data_object: file
   eventid: '11'
-- att&ck data source: Windows Registry
-  sub data source: win registry key creation
-  source data object: process
+- att&ck_data_source: Windows Registry
+  sub_data_source: win registry key creation
+  source_data_object: process
   relationship: created
-  destination data object: registry
+  destination_data_object: registry
   eventid: '12'
-- att&ck data source: Windows Registry
-  sub data source: win registry key deletion
-  source data object: process
+- att&ck_data_source: Windows Registry
+  sub_data_source: win registry key deletion
+  source_data_object: process
   relationship: deleted
-  destination data object: registry
+  destination_data_object: registry
   eventid: '12'
-- att&ck data source: Windows Registry
-  sub data source: win registry key modification
-  source data object: process
+- att&ck_data_source: Windows Registry
+  sub_data_source: win registry key modification
+  source_data_object: process
   relationship: modified
-  destination data object: registry
+  destination_data_object: registry
   eventid: '14'
-- att&ck data source: Windows Registry
-  sub data source: win registry key modification
-  source data object: process
+- att&ck_data_source: Windows Registry
+  sub_data_source: win registry key modification
+  source_data_object: process
   relationship: modified
-  destination data object: registry
+  destination_data_object: registry
   eventid: '13'
-- att&ck data source: Named Pipes
-  sub data source: win pipe creation
-  source data object: process
+- att&ck_data_source: Named Pipes
+  sub_data_source: win pipe creation
+  source_data_object: process
   relationship: created
-  destination data object: pipe
+  destination_data_object: pipe
   eventid: '17'
-- att&ck data source: Named Pipes
-  sub data source: win pipe connection
-  source data object: process
+- att&ck_data_source: Named Pipes
+  sub_data_source: win pipe connection
+  source_data_object: process
   relationship: connected_to
-  destination data object: pipe
+  destination_data_object: pipe
   eventid: '18'
-- att&ck data source: Process use of network
-  sub data source: process network connection allow
-  source data object: process
+- att&ck_data_source: Process use of network
+  sub_data_source: process network connection allow
+  source_data_object: process
   relationship: connected_to
-  destination data object: ip
+  destination_data_object: ip
   eventid: '3'
-- att&ck data source: Process use of network
-  sub data source: process network connection allow
-  source data object: process
+- att&ck_data_source: Process use of network
+  sub_data_source: process network connection allow
+  source_data_object: process
   relationship: connected_from
-  destination data object: ip
+  destination_data_object: ip
   eventid: '5156'
-- att&ck data source: Process use of network
-  sub data source: process network connection allow
-  source data object: process
+- att&ck_data_source: Process use of network
+  sub_data_source: process network connection allow
+  source_data_object: process
   relationship: connected_to
-  destination data object: ip
+  destination_data_object: ip
   eventid: '5156'
-- att&ck data source: Process use of network
-  sub data source: process network local port bind allow
-  source data object: process
+- att&ck_data_source: Process use of network
+  sub_data_source: process network local port bind allow
+  source_data_object: process
   relationship: bound _to
-  destination data object: port
+  destination_data_object: port
   eventid: '5158'
-- att&ck data source: Windows event logs
-  sub data source: win registry key value modification
-  source data object: process
+- att&ck_data_source: Windows event logs
+  sub_data_source: win registry key value modification
+  source_data_object: process
   relationship: modified
-  destination data object: registry
+  destination_data_object: registry
   eventid: '4657'
-- att&ck data source: Windows event logs
-  sub data source: sensitive privileged service operation
-  source data object: process
+- att&ck_data_source: Windows event logs
+  sub_data_source: sensitive privileged service operation
+  source_data_object: process
   relationship: called
-  destination data object: privileged service
+  destination_data_object: privileged service
   eventid: '4673'
 resources: []
-tags: null
+tags: []

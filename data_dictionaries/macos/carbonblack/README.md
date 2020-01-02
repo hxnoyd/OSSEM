@@ -3,7 +3,6 @@
 ## Description
 Carbon Black data schema as defined by the Carbon Black Developer Resources.
 
-
 ## Data model
 ![Data model](/resources/images/CarbonBlackDataModel.png)
 

@@ -1,14 +1,14 @@
 title: 'Event ID 4622: A security package has been loaded by the Local Security Authority.'
-operating system: windows
-data channel: security
+operating_system: windows
+data_channel: security
 description: This event generates every time Security Package.
-data fields:
-- standard name: logon_security_package_name
-  field name: SecurityPackageName
+data_fields:
+- standard_name: logon_security_package_name
+  field_name: SecurityPackageName
   type: string
   description: 'the name of loaded Security Package. The format is: DLL_PATH_AND_NAME:
     SECURITY_PACKAGE_NAME.'
-  sample value: 'C:\Windows\system32\kerberos.DLL : Kerberos'
+  sample_value: 'C:\Windows\system32\kerberos.DLL : Kerberos'
 resources:
 - text: MS SOURCE
   link: https://github.com/MicrosoftDocs/windows-itpro-docs/blob/public/windows/security/threat-protection/auditing/event-4622.md

@@ -1,103 +1,103 @@
 title: 'Event ID 4826: Boot Configuration Data loaded.'
-operating system: windows
-data channel: security
+operating_system: windows
+data_channel: security
 description: This event generates every time system starts and load current Boot Configuration
   Data.
-data fields:
-- standard name: user_sid
-  field name: SubjectUserSid
+data_fields:
+- standard_name: user_sid
+  field_name: SubjectUserSid
   type: string
   description: SID of account that reported this event.
-  sample value: S-1-5-18
-- standard name: user_name
-  field name: SubjectUserName
+  sample_value: S-1-5-18
+- standard_name: user_name
+  field_name: SubjectUserName
   type: string
   description: the name of the account that reported this event. Always "-" for this
     event.
-  sample value: '-'
-- standard name: user_domain
-  field name: SubjectDomainName
+  sample_value: '-'
+- standard_name: user_domain
+  field_name: SubjectDomainName
   type: string
   description: subject's domain or computer name. Always "-" for this event.
-  sample value: '-'
-- standard name: user_logon_id
-  field name: SubjectLogonId
+  sample_value: '-'
+- standard_name: user_logon_id
+  field_name: SubjectLogonId
   type: integer
   description: 'hexadecimal value that can help you correlate this event with recent
     events that might contain the same Logon ID, for example, "4624: An account was
     successfully logged on."'
-  sample value: '0x3e7'
-- standard name: load_options
-  field name: LoadOptions
+  sample_value: '0x3e7'
+- standard_name: load_options
+  field_name: LoadOptions
   type: string
   description: there is no information about this field in this document.
-  sample value: '-'
-- standard name: advanced_options
-  field name: AdvancedOptions
+  sample_value: '-'
+- standard_name: advanced_options
+  field_name: AdvancedOptions
   type: string
   description: shows whether Windows is configured for system boot to the legacy menu
     (F8 menu) on the next boot (Yes or No). You can enable advanced boot using "bcdedit
     /set onetimeadvancedoptions yes" command.
-  sample value: '%%1843'
-- standard name: config_access_policy
-  field name: ConfigAccessPolicy
+  sample_value: '%%1843'
+- standard_name: config_access_policy
+  field_name: ConfigAccessPolicy
   type: string
   description: there is no information about this field in this document.
-  sample value: '%%1846'
-- standard name: remote_event_logging
-  field name: RemoteEventLogging
+  sample_value: '%%1846'
+- standard_name: remote_event_logging
+  field_name: RemoteEventLogging
   type: string
   description: there is no information about this field in this document.
-  sample value: '%%1843'
-- standard name: kernel_debug
-  field name: KernelDebug
+  sample_value: '%%1843'
+- standard_name: kernel_debug
+  field_name: KernelDebug
   type: string
   description: shows whether Windows kernel debugging is enabled or not (Yes or No).
     You can enable kernel debugging using "bcdedit /debug on" command.
-  sample value: '%%1843'
-- standard name: vsm_launch_type
-  field name: VsmLaunchType
+  sample_value: '%%1843'
+- standard_name: vsm_launch_type
+  field_name: VsmLaunchType
   type: string
   description: there is no information about this field in this document.
-  sample value: '%%1848'
-- standard name: test_signing
-  field name: TestSigning
+  sample_value: '%%1848'
+- standard_name: test_signing
+  field_name: TestSigning
   type: string
   description: shows whether Windows test signing is enabled or not (Yes or No). You
     can disable test signing using "bcdedit /set testsigning off" command.
-  sample value: '%%1843'
-- standard name: flight_signing
-  field name: FlightSigning
+  sample_value: '%%1843'
+- standard_name: flight_signing
+  field_name: FlightSigning
   type: string
   description: shows whether Windows flight signing (which allows flight-signed code
     signing certificates) is enabled or not (Yes or No). You can disable flight signing
     using "bcdedit /set flightsigning off" command.
-  sample value: '%%1843'
-- standard name: disable_integrity_checks
-  field name: DisableIntegrityChecks
+  sample_value: '%%1843'
+- standard_name: disable_integrity_checks
+  field_name: DisableIntegrityChecks
   type: string
   description: shows whether Windows integrity check is disabled or not (Yes or No).
     You can disable integrity checks using "bcdedit /set nointegritychecks on" command.
-  sample value: '%%1843'
-- standard name: hypervisor_load_options
-  field name: HypervisorLoadOptions
+  sample_value: '%%1843'
+- standard_name: hypervisor_load_options
+  field_name: HypervisorLoadOptions
   type: string
   description: shows hypervisor loadoptions.
-  sample value: '-'
-- standard name: hypervisor_launch_type
-  field name: HypervisorLaunchType
+  sample_value: '-'
+- standard_name: hypervisor_launch_type
+  field_name: HypervisorLaunchType
   type: string
   description: shows the hypervisor launch options (Off or Auto). If you are setting
     up a debugger to debug Hyper-V on a target computer, set this option to Auto on
     the target computer.
-  sample value: '%%1848'
-- standard name: hypervisor_debug
-  field name: HypervisorDebug
+  sample_value: '%%1848'
+- standard_name: hypervisor_debug
+  field_name: HypervisorDebug
   type: string
   description: shows the hypervisor launch options (Off or Auto). If you are setting
     up a debugger to debug Hyper-V on a target computer, set this option to Auto on
     the target computer.
-  sample value: '%%1843'
+  sample_value: '%%1843'
 resources:
 - text: MS Source
   link: https://github.com/MicrosoftDocs/windows-itpro-docs/blob/public/windows/security/threat-protection/auditing/event-4826.md

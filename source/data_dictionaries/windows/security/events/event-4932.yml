@@ -1,43 +1,43 @@
 title: 'Event ID 4932: Synchronization of a replica of an Active Directory naming
   context has begun'
-operating system: windows
-data channel: security
+operating_system: windows
+data_channel: security
 description: This event generates every time synchronization of a replica of an Active
   Directory naming context has begun.
-data fields:
-- standard name: destination_dra
-  field name: DestinationDRA
+data_fields:
+- standard_name: destination_dra
+  field_name: DestinationDRA
   type: string
   description: destination directory replication agent distinguished name.
-  sample value: CN=NTDS Settings,CN=DC01,CN=Servers,CN=Default-First-Site-Name,CN=Sites,CN=Configuration,DC=contoso,DC=local
-- standard name: source_dra
-  field name: SourceDRA
+  sample_value: CN=NTDS Settings,CN=DC01,CN=Servers,CN=Default-First-Site-Name,CN=Sites,CN=Configuration,DC=contoso,DC=local
+- standard_name: source_dra
+  field_name: SourceDRA
   type: string
   description: source directory replication agent distinguished name.
-  sample value: CN=NTDS Settings,CN=WIN2012R2,CN=Servers,CN=Default-First-Site-Name,CN=Sites,CN=Configuration,DC=contoso,DC=local
-- standard name: naming_context
-  field name: NamingContext
+  sample_value: CN=NTDS Settings,CN=WIN2012R2,CN=Servers,CN=Default-First-Site-Name,CN=Sites,CN=Configuration,DC=contoso,DC=local
+- standard_name: naming_context
+  field_name: NamingContext
   type: string
   description: naming context to replicate.
-  sample value: CN=Schema,CN=Configuration,DC=contoso,DC=local
-- standard name: options
-  field name: Options
+  sample_value: CN=Schema,CN=Configuration,DC=contoso,DC=local
+- standard_name: options
+  field_name: Options
   type: integer
   description: decimal value of DRS Options.
-  sample value: '2147483733'
-- standard name: session_id
-  field name: SessionID
+  sample_value: '2147483733'
+- standard_name: session_id
+  field_name: SessionID
   type: integer
   description: 'unique identifier of replication session. Using this field you can
     find "4932: Synchronization of a replica of an Active Directory naming context
     has begun." and "4933: Synchronization of a replica of an Active Directory naming
     context has ended." events for the same session.'
-  sample value: '48'
-- standard name: start_usn
-  field name: StartUSN
+  sample_value: '48'
+- standard_name: start_usn
+  field_name: StartUSN
   type: integer
   description: Naming Context's USN number before replication begins.
-  sample value: '20869'
+  sample_value: '20869'
 resources:
 - text: MS Source
   link: https://github.com/MicrosoftDocs/windows-itpro-docs/blob/master/windows/security/threat-protection/auditing/event-4932.md

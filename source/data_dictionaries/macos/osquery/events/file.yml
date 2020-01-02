@@ -1,94 +1,93 @@
 title: File Table
-operating system: macos
-data channel: osquery
+operating_system: macos
+data_channel: osquery
 description: Interactive filesystem attributes and metadata.
-data fields:
-- standard name: file _path
-  field name: path
+data_fields:
+- standard_name: file _path
+  field_name: path
   type: TEXT
   description: Absolute file path
-  sample value: ''
-- standard name: file_directory
-  field name: directory
+  sample_value: ''
+- standard_name: file_directory
+  field_name: directory
   type: TEXT
   description: Directory of file(s)
-  sample value: ''
-- standard name: file_name
-  field name: filename
+  sample_value: ''
+- standard_name: file_name
+  field_name: filename
   type: TEXT
   description: Name portion of file path
-  sample value: ''
-- standard name: file_inode
-  field name: inode
+  sample_value: ''
+- standard_name: file_inode
+  field_name: inode
   type: BIGINT
   description: Filesystem inode number
-  sample value: ''
-- standard name: user_uid
-  field name: uid
+  sample_value: ''
+- standard_name: user_uid
+  field_name: uid
   type: BIGINT
   description: Owning user ID
-  sample value: ''
-- standard name: user_gid
-  field name: gid
+  sample_value: ''
+- standard_name: user_gid
+  field_name: gid
   type: BIGINT
   description: Owning group ID
-  sample value: ''
-- standard name: user_permissions
-  field name: mode
+  sample_value: ''
+- standard_name: user_permissions
+  field_name: mode
   type: TEXT
   description: Permission bits
-  sample value: ''
-- standard name: device_id
-  field name: device
+  sample_value: ''
+- standard_name: device_id
+  field_name: device
   type: BIGINT
   description: Device ID (optional)
-  sample value: ''
-- standard name: file_size
-  field name: size
+  sample_value: ''
+- standard_name: file_size
+  field_name: size
   type: BIGINT
   description: Size of file in bytes
-  sample value: ''
-- standard name: file_block_size
-  field name: block_size
+  sample_value: ''
+- standard_name: file_block_size
+  field_name: block_size
   type: INTEGER
   description: Block size of filesystem
-  sample value: ''
-- standard name: date_last_access
-  field name: atime
+  sample_value: ''
+- standard_name: date_last_access
+  field_name: atime
   type: BIGINT
   description: Last access time
-  sample value: ''
-- standard name: date_last_modification
-  field name: mtime
+  sample_value: ''
+- standard_name: date_last_modification
+  field_name: mtime
   type: BIGINT
   description: Last modification time
-  sample value: ''
-- standard name: date_last_status_change
-  field name: ctime
+  sample_value: ''
+- standard_name: date_last_status_change
+  field_name: ctime
   type: BIGINT
   description: Last status change time
-  sample value: ''
-- standard name: date_creation_time
-  field name: btime
+  sample_value: ''
+- standard_name: date_creation_time
+  field_name: btime
   type: BIGINT
   description: (B)irth or (cr)eate time
-  sample value: ''
-- standard name: file_hard_links
-  field name: hard_links
+  sample_value: ''
+- standard_name: file_hard_links
+  field_name: hard_links
   type: INTEGER
   description: Number of hard links
-  sample value: ''
-- standard name: file_symlink
-  field name: symlink
+  sample_value: ''
+- standard_name: file_symlink
+  field_name: symlink
   type: INTEGER
   description: 1 if the path is a symlink, otherwise 0
-  sample value: ''
-- standard name: file_type
-  field name: type
+  sample_value: ''
+- standard_name: file_type
+  field_name: type
   type: TEXT
   description: File status
-  sample value: ''
 resources:
 - text: osquery GitHub
   link: https://github.com/facebook/osquery/blob/master/specs/utility/file.table
-tags: null
+tags: []

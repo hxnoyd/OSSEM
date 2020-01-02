@@ -4,6 +4,6 @@ description: 'Event fields used to define metadata about the User-Agent header i
   can also be seen in SIP and SMTP.
 
   Work in progress...'
-data fields: []
+data_fields: []
 resources: []
-tags: null
+tags: []

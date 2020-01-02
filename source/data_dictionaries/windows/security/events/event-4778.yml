@@ -1,42 +1,42 @@
 title: 'Event ID 4778: A session was reconnected to a Window Station'
-operating system: windows
-data channel: security
+operating_system: windows
+data_channel: security
 description: This event is generated when a user reconnects to an existing Terminal
   Services session, or when a user switches to an existing desktop using Fast User
   Switching.
-data fields:
-- standard name: user_name
-  field name: AccountName
+data_fields:
+- standard_name: user_name
+  field_name: AccountName
   type: string
   description: the name of the account for which the session was reconnected
-  sample value: ladmin
-- standard name: user_domain
-  field name: AccountDomain
+  sample_value: ladmin
+- standard_name: user_domain
+  field_name: AccountDomain
   type: string
   description: subject's domain or computer name
-  sample value: CONTOSO
-- standard name: user_logon_id
-  field name: LogonID
+  sample_value: CONTOSO
+- standard_name: user_logon_id
+  field_name: LogonID
   type: integer
   description: hexadecimal value that can help you correlate this event with recent
     events that might contain the same Logon ID
-  sample value: '0x1e01f6'
-- standard name: session_name
-  field name: SessionName
+  sample_value: '0x1e01f6'
+- standard_name: session_name
+  field_name: SessionName
   type: string
   description: the name of the session to which the user was reconnected
-  sample value: RDP-Tcp#6
-- standard name: src_host_name
-  field name: ClientName
+  sample_value: RDP-Tcp#6
+- standard_name: src_host_name
+  field_name: ClientName
   type: string
   description: computer name from which the user was reconnected. Has "Unknown" value
     for console session.
-  sample value: WIN81
-- standard name: src_ip
-  field name: ClientAddress
+  sample_value: WIN81
+- standard_name: src_ip
+  field_name: ClientAddress
   type: ip
   description: IP address of the computer from which the user was reconnected
-  sample value: 10.0.0.100
+  sample_value: 10.0.0.100
 resources:
 - text: MS Source
   link: https://github.com/MicrosoftDocs/windows-itpro-docs/blob/master/windows/security/threat-protection/auditing/event-4778.md

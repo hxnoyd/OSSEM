@@ -1,34 +1,34 @@
 title: 'Event ID 4634: An account was logged off'
-operating system: windows
-data channel: security
+operating_system: windows
+data_channel: security
 description: This event shows that logon session was terminated and no longer exists.
-data fields:
-- standard name: user_sid
-  field name: TargetUserSid
+data_fields:
+- standard_name: user_sid
+  field_name: TargetUserSid
   type: string
   description: SID of account that was logged off.
-  sample value: S-1-5-90-1
-- standard name: user_name
-  field name: TargetUserName
+  sample_value: S-1-5-90-1
+- standard_name: user_name
+  field_name: TargetUserName
   type: string
   description: the name of the account that was logged off
-  sample value: DQM-1
-- standard name: user_domain
-  field name: TargetDomainName
+  sample_value: DQM-1
+- standard_name: user_domain
+  field_name: TargetDomainName
   type: string
   description: subject's domain or computer name.
-  sample value: Window Manager
-- standard name: user_logon_id
-  field name: TargetLogonId
+  sample_value: Window Manager
+- standard_name: user_logon_id
+  field_name: TargetLogonId
   type: integer
   description: hexadecimal value that can help you correlate this event with recent
     events that might contain the same Logon ID
-  sample value: '0x1a0992'
-- standard name: logon_type
-  field name: LogonType
+  sample_value: '0x1a0992'
+- standard_name: logon_type
+  field_name: LogonType
   type: integer
   description: the type of logon which was performed.
-  sample value: '2'
+  sample_value: '2'
 resources:
 - text: MS Source
   link: https://github.com/MicrosoftDocs/windows-itpro-docs/blob/master/windows/security/threat-protection/auditing/event-4634.md

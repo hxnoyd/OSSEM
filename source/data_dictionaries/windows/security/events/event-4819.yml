@@ -1,66 +1,66 @@
 title: 'Event ID 4819: Central Access Policies on the machine have been changed.'
-operating system: windows
-data channel: security
+operating_system: windows
+data_channel: security
 description: This event generates when Central Access Policy on the machine have been
   changed.
-data fields:
-- standard name: user_sid
-  field name: SubjectUserSid
+data_fields:
+- standard_name: user_sid
+  field_name: SubjectUserSid
   type: string
   description: SID of account that changed the Central Access Policies on the machine.
-  sample value: S-1-5-18
-- standard name: user_name
-  field name: SubjectUserName
+  sample_value: S-1-5-18
+- standard_name: user_name
+  field_name: SubjectUserName
   type: string
   description: the name of the account that changed the Central Access Policies on
     the machine.
-  sample value: DC01$
-- standard name: user_domain
-  field name: SubjectDomainName
+  sample_value: DC01$
+- standard_name: user_domain
+  field_name: SubjectDomainName
   type: string
   description: subject's domain or computer name.
-  sample value: CONTOSO
-- standard name: user_logon_id
-  field name: SubjectLogonId
+  sample_value: CONTOSO
+- standard_name: user_logon_id
+  field_name: SubjectLogonId
   type: integer
   description: 'hexadecimal value that can help you correlate this event with recent
     events that might contain the same Logon ID, for example, "4624: An account was
     successfully logged on."'
-  sample value: '0x3e7'
-- standard name: object_server
-  field name: ObjectServer
+  sample_value: '0x3e7'
+- standard_name: object_server
+  field_name: ObjectServer
   type: string
   description: has "LSA" value for this event.
-  sample value: LSA
-- standard name: object_type
-  field name: ObjectType
+  sample_value: LSA
+- standard_name: object_type
+  field_name: ObjectType
   type: string
   description: The type of an object to which this event applies. Always "Central
     Access Policies" for this event.
-  sample value: Central Access Policies
-- standard name: cap_added
-  field name: AddedCAPs
+  sample_value: Central Access Policies
+- standard_name: cap_added
+  field_name: AddedCAPs
   type: string
   description: the list of added Central Access Policies. Empty if no Central Access
     Policies were added.
-  sample value: Main POlicy
-- standard name: cap_deleted
-  field name: DeletedCAPs
+  sample_value: Main POlicy
+- standard_name: cap_deleted
+  field_name: DeletedCAPs
   type: string
   description: the list of deleted Central Access Policies. Empty if no Central Access
     Policies were deleted.
-  sample value: None
-- standard name: cap_modified
-  field name: ModifiedCAPs
+  sample_value: None
+- standard_name: cap_modified
+  field_name: ModifiedCAPs
   type: string
   description: the list of modified Central Access Policies. Empty if no Central Access
     Policies were modified.
-  sample value: None
-- standard name: cap_unmodified
-  field name: AsIsCAPs
+  sample_value: None
+- standard_name: cap_unmodified
+  field_name: AsIsCAPs
   type: string
   description: the list of non-modified Central Access Policies.
-  sample value: None
+  sample_value: None
 resources:
 - text: MS Source
   link: https://github.com/MicrosoftDocs/windows-itpro-docs/blob/public/windows/security/threat-protection/auditing/event-4819.md

@@ -1,52 +1,42 @@
 title: 'Event ID 4699: A scheduled task was deleted'
-operating system: windows
-data channel: security
+operating_system: windows
+data_channel: security
 description: This event generates every time a scheduled task was deleted.
-data fields:
-- standard name: user_sid
-  field name: SubjectUserSid
+data_fields:
+- standard_name: user_sid
+  field_name: SubjectUserSid
   type: string
   description: "SID of account that requested the \"delete scheduled task\" operation.\_"
-  sample value: ORG\UserA
-- standard name: user_name
-  field name: SubjectUserName
+  sample_value: ORG\UserA
+- standard_name: user_name
+  field_name: SubjectUserName
   type: string
   description: the name of the account that requested the "delete scheduled task"
     operation.
-  sample value: UserA
-- standard name: user_domain
-  field name: SubjectDomainName
+  sample_value: UserA
+- standard_name: user_domain
+  field_name: SubjectDomainName
   type: string
   description: subject's domain or computer name.
-  sample value: ORG
-- standard name: user_logon_id
-  field name: SubjectLogonId
+  sample_value: ORG
+- standard_name: user_logon_id
+  field_name: SubjectLogonId
   type: integer
   description: hexadecimal value that can help you correlate this event with recent
     events that might
-  sample value: contain
-- standard name: ''
-  field name: TaskContent
+  sample_value: contain
+- standard_name: ''
+  field_name: TaskContent
   type: string
   description: "the\_XML\_of the deleted task."
-  sample value: <?xml version="1.0" encoding="UTF-16"?> <Task version="1.2" xmlns="http://schemas.microsoft.com/windows/2004/02/mit/task">
-    <RegistrationInfo> <Date>2015-08-25T13:56:10.5315552</Date> <Author>CONTOSO\\dadmin</Author>
-    </RegistrationInfo> <Triggers /> <Principals> <Principal id="Author"> <RunLevel>LeastPrivilege</RunLevel>
-    <UserId>CONTOSO\\dadmin</UserId> <LogonType>Password</LogonType> </Principal>
-    </Principals> <Settings> <MultipleInstancesPolicy>IgnoreNew</MultipleInstancesPolicy>
-    <DisallowStartIfOnBatteries>false</DisallowStartIfOnBatteries> <StopIfGoingOnBatteries>true</StopIfGoingOnBatteries>
-    <AllowHardTerminate>false</AllowHardTerminate> <StartWhenAvailable>false</StartWhenAvailable>
-    <RunOnlyIfNetworkAvailable>false</RunOnlyIfNetworkAvailable> <IdleSettings> <StopOnIdleEnd>true</StopOnIdleEnd>
-    <RestartOnIdle>false</RestartOnIdle> </IdleSettings> <AllowStartOnDemand>true</AllowStartOnDemand>
-    <Enabled>true</Enabled> <Hidden>false</Hidden> <RunOnlyIfIdle>false</RunOnlyIfIdle>
-    <WakeToRun>false</WakeToRun> <ExecutionTimeLimit>PT0S</ExecutionTimeLimit> <Priority>7</Priority>
-    </Settings> <Actions Context="Author"> <Exec> <Command>C:\\Windows\\notepad.exe</Command>
-    </Exec> </Actions> </Task></Data>
-- standard name: ''
-  field name: TaskName
+  sample_value: <?xml version="1.0" encoding="UTF-16"?>   2015-08-25T13:56:10.5315552
+    CONTOSO\\dadmin     LeastPrivilege CONTOSO\\dadmin Password    IgnoreNew false
+    true false false false  true false  true true false false false PT0S 7    C:\\Windows\\notepad.exe   </Data>
+- standard_name: ''
+  field_name: TaskName
   type: string
   description: deleted scheduled task name.
-  sample value: \task_path\task_name
+  sample_value: \task_path\task_name
 resources:
 - text: MS Source
   link: https://github.com/MicrosoftDocs/windows-itpro-docs/blob/master/windows/security/threat-protection/auditing/event-4699.md

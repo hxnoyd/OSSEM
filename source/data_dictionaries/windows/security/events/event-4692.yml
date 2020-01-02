@@ -1,52 +1,52 @@
 title: 'Event ID 4692: Backup of data protection master key was attempted.'
-operating system: windows
-data channel: security
+operating_system: windows
+data_channel: security
 description: This event generates every time that a backup is attempted for the DPAPI
   Master Key.
-data fields:
-- standard name: user_sid
-  field name: SubjectUserSid
+data_fields:
+- standard_name: user_sid
+  field_name: SubjectUserSid
   type: string
   description: SID of account that requested backup operation.
-  sample value: S-1-5-21-3457937927-2839227994-823803824-500
-- standard name: user_name
-  field name: SubjectUserName
+  sample_value: S-1-5-21-3457937927-2839227994-823803824-500
+- standard_name: user_name
+  field_name: SubjectUserName
   type: string
   description: the name of the account that requested backup operation.
-  sample value: ladmin
-- standard name: user_domain
-  field name: SubjectDomainName
+  sample_value: ladmin
+- standard_name: user_domain
+  field_name: SubjectDomainName
   type: string
   description: subject's domain or computer name.
-  sample value: CONTOSO
-- standard name: user_logon_id
-  field name: SubjectLogonId
+  sample_value: CONTOSO
+- standard_name: user_logon_id
+  field_name: SubjectLogonId
   type: integer
   description: 'hexadecimal value that can help you correlate this event with recent
     events that might contain the same Logon ID, for example, "4624: An account was
     successfully logged on."'
-  sample value: '0x30c08'
-- standard name: master_key_id
-  field name: MasterKeyId
+  sample_value: '0x30c08'
+- standard_name: master_key_id
+  field_name: MasterKeyId
   type: string
   description: unique identifier of a master key which backup was created.
-  sample value: 16cfaea0-dbe3-4d92-9523-d494edb546bc
-- standard name: recovery_key_hostname
-  field name: RecoveryServer
+  sample_value: 16cfaea0-dbe3-4d92-9523-d494edb546bc
+- standard_name: recovery_key_hostname
+  field_name: RecoveryServer
   type: string
   description: the name (typically - DNS name) of the computer that you contacted
     to back up your Master Key.
-  sample value: None
-- standard name: recovery_key_id
-  field name: RecoveryKeyId
+  sample_value: None
+- standard_name: recovery_key_id
+  field_name: RecoveryKeyId
   type: string
   description: unique identifier of a recovery key.
-  sample value: 806a0350-aeb1-4c56-91f9-ef16cf759291
-- standard name: event_failure_reason
-  field name: FailureReason
+  sample_value: 806a0350-aeb1-4c56-91f9-ef16cf759291
+- standard_name: event_failure_reason
+  field_name: FailureReason
   type: integer
   description: hexadecimal unique status code of performed operation.
-  sample value: '0x0'
+  sample_value: '0x0'
 resources:
 - text: MS SOURCE
   link: https://github.com/MicrosoftDocs/windows-itpro-docs/blob/public/windows/security/threat-protection/auditing/event-4692.md

@@ -1,57 +1,57 @@
 title: 'Event ID 4697: A service was installed in the system'
-operating system: windows
-data channel: security
+operating_system: windows
+data_channel: security
 description: This event generates when new service was installed in the system.
-data fields:
-- standard name: user_sid
-  field name: SubjectUserSid
+data_fields:
+- standard_name: user_sid
+  field_name: SubjectUserSid
   type: string
   description: SID of account that was used to install the service.
-  sample value: S-1-5-18
-- standard name: user_name
-  field name: SubjectUserName
+  sample_value: S-1-5-18
+- standard_name: user_name
+  field_name: SubjectUserName
   type: string
   description: the name of the account that was used to install the service.
-  sample value: WIN-GG82ULGC9GO$
-- standard name: user_domain
-  field name: SubjectDomainName
+  sample_value: WIN-GG82ULGC9GO$
+- standard_name: user_domain
+  field_name: SubjectDomainName
   type: string
   description: subject's domain or computer name.
-  sample value: DOMAIN
-- standard name: user_logon_id
-  field name: SubjectLogonId
+  sample_value: DOMAIN
+- standard_name: user_logon_id
+  field_name: SubjectLogonId
   type: integer
   description: hexadecimal value that can help you correlate this event with recent
     events that might contain the same Logon ID
-  sample value: '0x3e7'
-- standard name: service_account
-  field name: ServiceAccount
+  sample_value: '0x3e7'
+- standard_name: service_account
+  field_name: ServiceAccount
   type: string
   description: The security context that the service will run as when started.
-  sample value: localSystem
-- standard name: service_path
-  field name: ServiceFileName
+  sample_value: localSystem
+- standard_name: service_path
+  field_name: ServiceFileName
   type: string
   description: This is the fully rooted path to the file that the Service Control
     Manager will execute to start the service.
-  sample value: '%windir%\system32\svchost.exe -k apphost'
-- standard name: service_name
-  field name: ServiceName
+  sample_value: '%windir%\system32\svchost.exe -k apphost'
+- standard_name: service_name
+  field_name: ServiceName
   type: string
   description: the name of installed service.
-  sample value: AppHostSvc
-- standard name: service_start_type
-  field name: ServiceStartType
+  sample_value: AppHostSvc
+- standard_name: service_start_type
+  field_name: ServiceStartType
   type: integer
   description: "The service start type can have one of the following values (see:\_\
     https://msdn.microsoft.com/library/windows/desktop/ms682450(v=vs.85).aspx)"
-  sample value: '2'
-- standard name: service_type
-  field name: ServiceType
+  sample_value: '2'
+- standard_name: service_type
+  field_name: ServiceType
   type: integer
   description: "Indicates the\_type\_of service that was registered with the Service\
     \ Control Manager."
-  sample value: '0x20'
+  sample_value: '0x20'
 resources:
 - text: MS Source
   link: https://github.com/MicrosoftDocs/windows-itpro-docs/blob/master/windows/security/threat-protection/auditing/event-4697.md

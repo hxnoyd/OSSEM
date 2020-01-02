@@ -1,89 +1,89 @@
 title: 'Source Type: Kerberos Ticket Granting Ticket'
-operating system: windows
-data channel: so-host-data
+operating_system: windows
+data_channel: so-host-data
 description: The Kerberos Ticket Granting Ticket (TGT) source type is derived by querying
   all active Logon Sessions for their TGT with the LsaCallAuthenticationPackage API.
-data fields:
-- standard name: source_type
-  field name: SourceType
+data_fields:
+- standard_name: source_type
+  field_name: SourceType
   type: TEXT
   description: Type of data represented
-  sample value: WinEvent-KerberosTicketGrantingTicket
-- standard name: id
-  field name: Id
+  sample_value: WinEvent-KerberosTicketGrantingTicket
+- standard_name: id
+  field_name: Id
   type: TEXT
   description: SO Host Data's unique identifier of this instance
-  sample value: 82E5CB03112897B20C6FF61BE5B9BF7D574B74E5176C51E738BCAB894C98A1E1
-- standard name: logon_session_key
-  field name: LogonSessionKey
+  sample_value: 82E5CB03112897B20C6FF61BE5B9BF7D574B74E5176C51E738BCAB894C98A1E1
+- standard_name: logon_session_key
+  field_name: LogonSessionKey
   type: TEXT
   description: SO Host Data's unique identifier of associated logon session
-  sample value: EC0AC744FFFBE3228F9E73EC60FA74F3BAB8330DFBCA51B269FC8A3B3B5DD7CD
-- standard name: service_name
-  field name: ServiceName
+  sample_value: EC0AC744FFFBE3228F9E73EC60FA74F3BAB8330DFBCA51B269FC8A3B3B5DD7CD
+- standard_name: service_name
+  field_name: ServiceName
   type: TEXT
   description: A multiple part, canonical, service name
-  sample value: krbtgt
-- standard name: client_name
-  field name: ClientName
+  sample_value: krbtgt
+- standard_name: client_name
+  field_name: ClientName
   type: TEXT
   description: The client name in the ticket
-  sample value: DarthVader
-- standard name: domain_name
-  field name: DomainName
+  sample_value: DarthVader
+- standard_name: domain_name
+  field_name: DomainName
   type: TEXT
   description: The domain that corresponds to the ServiceName
-  sample value: deathstar.empire.com
-- standard name: target_domain_name
-  field name: TargetDomainName
+  sample_value: deathstar.empire.com
+- standard_name: target_domain_name
+  field_name: TargetDomainName
   type: TEXT
   description: The name of the domain in which the ticket is valid
-  sample value: deathstar.empire.com
-- standard name: alt_target_domain_name
-  field name: AltTargetDomainName
+  sample_value: deathstar.empire.com
+- standard_name: alt_target_domain_name
+  field_name: AltTargetDomainName
   type: TEXT
   description: Synonym for the destination domain
-  sample value: deathstar.empire.com
-- standard name: session_key_type
-  field name: SessionKeyType
+  sample_value: deathstar.empire.com
+- standard_name: session_key_type
+  field_name: SessionKeyType
   type: TEXT
   description: The type of encryption used for the session key
-  sample value: rc4_hmac
-- standard name: session_key
-  field name: SessionKey
+  sample_value: rc4_hmac
+- standard_name: session_key
+  field_name: SessionKey
   type: TEXT
   description: The session key for the ticket
-  sample value: D55F31C27D4C4517D4B86D72BF8B7276
-- standard name: ticket_flags
-  field name: TicketFlags
+  sample_value: D55F31C27D4C4517D4B86D72BF8B7276
+- standard_name: ticket_flags
+  field_name: TicketFlags
   type: TEXT
   description: Ticket flags, as defined in Internet RFC 4120
-  sample value: pre_authent, initial, renewable, forwardable
-- standard name: key_expiration_time
-  field name: KeyExpirationTime
+  sample_value: pre_authent, initial, renewable, forwardable
+- standard_name: key_expiration_time
+  field_name: KeyExpirationTime
   type: DATE
   description: Time at which the key expires
-  sample value: 1/1/1601 1:00:00 AM
-- standard name: start_time
-  field name: StartTime
+  sample_value: 1/1/1601 1:00:00 AM
+- standard_name: start_time
+  field_name: StartTime
   type: DATE
   description: Time at which the ticket becomes valid
-  sample value: 2/21/2018 4:13:40 AM
-- standard name: end_time
-  field name: EndTime
+  sample_value: 2/21/2018 4:13:40 AM
+- standard_name: end_time
+  field_name: EndTime
   type: DATE
   description: Time at which the ticket expires
-  sample value: 2/19/2028 4:13:40 AM
-- standard name: renew_util
-  field name: RenewUntil
+  sample_value: 2/19/2028 4:13:40 AM
+- standard_name: renew_util
+  field_name: RenewUntil
   type: DATE
   description: The latest time a ticket can be renewed
-  sample value: 2/19/2028 4:13:40 AM
-- standard name: time_skew
-  field name: TimeSkew
+  sample_value: 2/19/2028 4:13:40 AM
+- standard_name: time_skew
+  field_name: TimeSkew
   type: LONG
   description: The measured time difference between the current time on the computer
     issuing the ticket and the computer where the ticket will be used
-  sample value: '0'
+  sample_value: '0'
 resources: []
-tags: null
+tags: []

@@ -10,7 +10,7 @@ This event generates every time a network share object is deleted.
 |user_name|SubjectUserName|string|the name of the account that requested the "delete network share object" operation.|dadmin|
 |user_domain|SubjectDomainName|string|subject's domain or computer name.|CONTOSO|
 |user_logon_id|SubjectLogonId|integer|hexadecimal value that can help you correlate this event with recent events that might contain the same Logon ID|0x38d12|
-|share_name|ShareName|string|the name of the deleted share object. The format is: \*\SHARE_NAME|\\*\Documents|
+|share_name|ShareName|string|the name of the deleted share object. The format is: *\SHARE_NAME|\*\Documents|
 |share_local_path|ShareLocalPath|string|the full system (NTFS) path for the deleted share object.|C:\Documents|
 
 ## Resources

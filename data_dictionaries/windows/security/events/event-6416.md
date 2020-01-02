@@ -14,7 +14,7 @@ This event generates every time a new external device is recognized by a system.
 |device_description|DeviceDescription|string|"Device description" attribute of device.|Seagate Expansion SCSI Disk Device|
 |class_id|ClassId|string|"Class Guid" attribute of device.|{4D36E967-E325-11CE-BFC1-08002BE10318}|
 |class_name|ClassName|string|"Class" attribute of device.|DiskDrive|
-|vendor_ids|VendorIds|string|"Hardware Ids" attribute of device.|SCSI\DiskSeagate_Expansion_______0636 SCSI\DiskSeagate_Expansion_______ SCSI\DiskSeagate_ SCSI\Seagate_Expansion_______0 Seagate_Expansion_______0 GenDisk|
+|vendor_ids|VendorIds|string|"Hardware Ids" attribute of device.|SCSI\DiskSeagate_Expansion___0636 SCSI\DiskSeagateExpansion__ SCSI\DiskSeagate_ SCSI\Seagate_Expansion___0 Seagate_Expansion___0 GenDisk|
 |compatible_ids|CompatibleIds|string|"Compatible Ids" attribute of device.|SCSI\Disk SCSI\RAW|
 |location_information|LocationInformation|string|"Location information" attribute of device.|Bus Number 0, Target Id 0, LUN 0|
 

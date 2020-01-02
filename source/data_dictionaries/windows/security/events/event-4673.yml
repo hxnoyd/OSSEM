@@ -1,57 +1,57 @@
 title: 'Event ID 4673: A privileged service was called'
-operating system: windows
-data channel: security
+operating_system: windows
+data_channel: security
 description: This event generates when an attempt was made to perform privileged system
   service operations. This event generates, for example, when SeSystemtimePrivilege,
   SeCreateGlobalPrivilege, or SeTcbPrivilege privilege was used.
-data fields:
-- standard name: user_sid
-  field name: SubjectUserSid
+data_fields:
+- standard_name: user_sid
+  field_name: SubjectUserSid
   type: string
   description: SID of account that requested privileged operation.
-  sample value: ORG\UserA
-- standard name: user_name
-  field name: SubjectUserName
+  sample_value: ORG\UserA
+- standard_name: user_name
+  field_name: SubjectUserName
   type: strin
   description: the name of the account that requested privileged operation.
-  sample value: UserA
-- standard name: user_domain
-  field name: SubjectDomainName
+  sample_value: UserA
+- standard_name: user_domain
+  field_name: SubjectDomainName
   type: string
   description: subject's domain or computer name.
-  sample value: ORG
-- standard name: user_logon_id
-  field name: SubjectLogonId
+  sample_value: ORG
+- standard_name: user_logon_id
+  field_name: SubjectLogonId
   type: integer
   description: hexadecimal value that can help you correlate this event with recent
     events that might contain the same Logon ID
-  sample value: '0x432344'
-- standard name: process_id
-  field name: ProcessId
+  sample_value: '0x432344'
+- standard_name: process_id
+  field_name: ProcessId
   type: integer
   description: hexadecimal Process ID of the process that attempted to call the privileged
     service.
-  sample value: '0x1f0'
-- standard name: process_path
-  field name: ProcessName
+  sample_value: '0x1f0'
+- standard_name: process_path
+  field_name: ProcessName
   type: string
   description: full path and the name of the executable for the process.
-  sample value: C:\Windows\System32\lsass.exe
-- standard name: object_server
-  field name: ObjectServer
+  sample_value: C:\Windows\System32\lsass.exe
+- standard_name: object_server
+  field_name: ObjectServer
   type: string
   description: contains the name of the Windows subsystem calling the routine.
-  sample value: NT Local Security Authority / Authentication Service
-- standard name: user_privilege_list
-  field name: PrivilegeList
+  sample_value: NT Local Security Authority / Authentication Service
+- standard_name: user_privilege_list
+  field_name: PrivilegeList
   type: string
   description: the list of user privileges which were requested.
-  sample value: SeCreateGlobalPrivilege
-- standard name: ''
-  field name: Service
+  sample_value: SeCreateGlobalPrivilege
+- standard_name: ''
+  field_name: Service
   type: string
   description: supplies a name of the privileged subsystem service or function.
-  sample value: LsaRegisterLogonProcess()
+  sample_value: LsaRegisterLogonProcess()
 resources:
 - text: MS Source
   link: https://github.com/MicrosoftDocs/windows-itpro-docs/blob/master/windows/security/threat-protection/auditing/event-4673.md

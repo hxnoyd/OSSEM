@@ -1,8 +1,8 @@
 title: 'Event ID 255: Error Report'
-operating system: windows
-data channel: sysmon
+operating_system: windows
+data_channel: sysmon
 description: <img src="https://github.com/Cyb3rWard0g/OSSEM/blob/master/resources/images/event-255.png"
   alt="Event 255 illustration" width="625" height="625">
-data fields: []
+data_fields: []
 resources: []
-tags: null
+tags: []

@@ -1,76 +1,76 @@
 title: 'Event ID 4674: An operation was attempted on a privileged object.'
-operating system: windows
-data channel: security
+operating_system: windows
+data_channel: security
 description: This event generates when an attempt is made to perform privileged operations
   on a protected subsystem object after the object is already opened.
-data fields:
-- standard name: user_sid
-  field name: SubjectUserSid
+data_fields:
+- standard_name: user_sid
+  field_name: SubjectUserSid
   type: string
   description: SID of account that requested privileged operation.
-  sample value: S-1-5-19
-- standard name: user_name
-  field name: SubjectUserName
+  sample_value: S-1-5-19
+- standard_name: user_name
+  field_name: SubjectUserName
   type: string
   description: the name of the account that requested privileged operation.
-  sample value: LOCAL SERVICE
-- standard name: user_domain
-  field name: SubjectDomainName
+  sample_value: LOCAL SERVICE
+- standard_name: user_domain
+  field_name: SubjectDomainName
   type: string
   description: subject's domain or computer name.
-  sample value: NT AUTHORITY
-- standard name: user_logon_id
-  field name: SubjectLogonId
+  sample_value: NT AUTHORITY
+- standard_name: user_logon_id
+  field_name: SubjectLogonId
   type: integer
   description: 'hexadecimal value that can help you correlate this event with recent
     events that might contain the same Logon ID, for example, "4624: An account was
     successfully logged on."'
-  sample value: '0x3e5'
-- standard name: object_server
-  field name: ObjectServer
+  sample_value: '0x3e5'
+- standard_name: object_server
+  field_name: ObjectServer
   type: string
   description: Contains the name of the Windows subsystem calling the routine.
-  sample value: LSA
-- standard name: object_type
-  field name: ObjectType
+  sample_value: LSA
+- standard_name: object_type
+  field_name: ObjectType
   type: string
   description: Contains the name of the Windows subsystem calling the routine.
-  sample value: '-'
-- standard name: object_name
-  field name: ObjectName
+  sample_value: '-'
+- standard_name: object_name
+  field_name: ObjectName
   type: string
   description: the name of the object that was accessed during the operation.
-  sample value: '-'
-- standard name: object_handle_id
-  field name: HandleId
+  sample_value: '-'
+- standard_name: object_handle_id
+  field_name: HandleId
   type: integer
   description: 'hexadecimal value of a handle to Object Name. This field can help
     you correlate this event with other events that might contain the same Handle
     ID, for example, "4656: A handle to an object was requested" event in appropriate/other
     subcategory.'
-  sample value: '0x0'
-- standard name: object_access_mask
-  field name: AccessMask
+  sample_value: '0x0'
+- standard_name: object_access_mask
+  field_name: AccessMask
   type: integer
   description: The desired access mask. This mask depends on Object Server and Object
     Type parameters values.
-  sample value: '16777216'
-- standard name: object_privilege_list
-  field name: PrivilegeList
+  sample_value: '16777216'
+- standard_name: object_privilege_list
+  field_name: PrivilegeList
   type: string
   description: the list of user privileges which were requested.
-  sample value: SeSecurityPrivilege
-- standard name: process_id
-  field name: ProcessId
+  sample_value: SeSecurityPrivilege
+- standard_name: process_id
+  field_name: ProcessId
   type: integer
   description: hexadecimal Process ID of the process that attempted the operation
     on the privileged object.
-  sample value: '0x1f0'
-- standard name: process_path
-  field name: ProcessName
+  sample_value: '0x1f0'
+- standard_name: process_path
+  field_name: ProcessName
   type: string
   description: full path and the name of the executable for the process.
-  sample value: C:\Windows\System32\lsass.exe
+  sample_value: C:\Windows\System32\lsass.exe
 resources:
 - text: MS SOURCE
   link: https://github.com/MicrosoftDocs/windows-itpro-docs/blob/public/windows/security/threat-protection/auditing/event-4674.md

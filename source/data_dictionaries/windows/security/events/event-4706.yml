@@ -1,60 +1,60 @@
 title: 'Event ID 4706: A new trust was created to a domain.'
-operating system: windows
-data channel: security
+operating_system: windows
+data_channel: security
 description: This event generates when a new trust was created to a domain.
-data fields:
-- standard name: trust_name
-  field name: DomainName
+data_fields:
+- standard_name: trust_name
+  field_name: DomainName
   type: string
   description: the name of new trusted domain.
-  sample value: corp.contoso.local
-- standard name: trust_sid
-  field name: DomainSid
+  sample_value: corp.contoso.local
+- standard_name: trust_sid
+  field_name: DomainSid
   type: string
   description: SID of new trusted domain.
-  sample value: S-1-5-21-2226861337-2836268956-2433141405
-- standard name: user_sid
-  field name: SubjectUserSid
+  sample_value: S-1-5-21-2226861337-2836268956-2433141405
+- standard_name: user_sid
+  field_name: SubjectUserSid
   type: string
   description: SID of account that requested the "create domain trust" operation.
-  sample value: S-1-5-21-3457937927-2839227994-823803824-1104
-- standard name: user_name
-  field name: SubjectUserName
+  sample_value: S-1-5-21-3457937927-2839227994-823803824-1104
+- standard_name: user_name
+  field_name: SubjectUserName
   type: string
   description: the name of the account that requested the "create domain trust" operation.
-  sample value: dadmin
-- standard name: user_domain
-  field name: SubjectDomainName
+  sample_value: dadmin
+- standard_name: user_domain
+  field_name: SubjectDomainName
   type: string
   description: subject's domain or computer name.
-  sample value: CONTOSO
-- standard name: user_logon_id
-  field name: SubjectLogonId
+  sample_value: CONTOSO
+- standard_name: user_logon_id
+  field_name: SubjectLogonId
   type: integer
   description: 'hexadecimal value that can help you correlate this event with recent
     events that might contain the same Logon ID, for example, "4624: An account was
     successfully logged on."'
-  sample value: '0x3e99d6'
-- standard name: trust_type
-  field name: TdoType
+  sample_value: '0x3e99d6'
+- standard_name: trust_type
+  field_name: TdoType
   type: integer
   description: the type of new trust.
-  sample value: '2'
-- standard name: trust_direction
-  field name: TdoDirection
+  sample_value: '2'
+- standard_name: trust_direction
+  field_name: TdoDirection
   type: integer
   description: the direction of new trust.
-  sample value: '3'
-- standard name: trust_attributes
-  field name: TdoAttributes
+  sample_value: '3'
+- standard_name: trust_attributes
+  field_name: TdoAttributes
   type: integer
   description: the decimal value of attributes for new trust.
-  sample value: '32'
-- standard name: trust_filtering
-  field name: SidFilteringEnabled
+  sample_value: '32'
+- standard_name: trust_filtering
+  field_name: SidFilteringEnabled
   type: string
   description: SID Filtering state for the new trust.
-  sample value: '%%1796'
+  sample_value: '%%1796'
 resources:
 - text: MS Source
   link: https://github.com/MicrosoftDocs/windows-itpro-docs/blob/public/windows/security/threat-protection/auditing/event-4706.md

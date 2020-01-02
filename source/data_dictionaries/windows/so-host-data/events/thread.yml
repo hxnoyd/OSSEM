@@ -1,96 +1,96 @@
 title: SO Host Data - Thread Table
-operating system: windows
-data channel: so-host-data
+operating_system: windows
+data_channel: so-host-data
 description: Get-SOHostData enumerates active threads as reported by PowerShell's
   Get-Process cmdlet. Every resulting Process instance has a Threads property which
   contains a list of Threads contained within that Process.
-data fields:
-- standard name: source_type
-  field name: SourceType
+data_fields:
+- standard_name: source_type
+  field_name: SourceType
   type: TEXT
   description: Type of data represented
-  sample value: WinEvent-Thread
-- standard name: id
-  field name: Id
+  sample_value: WinEvent-Thread
+- standard_name: id
+  field_name: Id
   type: TEXT
   description: SO Host Data's unique identifier of this instance
-  sample value: EB4D6E286995C97714EB6EBF8C44E252342E3BAB2B1BF10764FD2386FEBB08D7
-- standard name: memory_region_key
-  field name: MemoryRegionKey
+  sample_value: EB4D6E286995C97714EB6EBF8C44E252342E3BAB2B1BF10764FD2386FEBB08D7
+- standard_name: memory_region_key
+  field_name: MemoryRegionKey
   type: TEXT
   description: SO Host Data's unique identifier of associated memory region
-  sample value: 702B162209227ABEAB3980BA3B3252CF391233747B036B9F65DAF2E015579019
-- standard name: process_key
-  field name: ProcessKey
+  sample_value: 702B162209227ABEAB3980BA3B3252CF391233747B036B9F65DAF2E015579019
+- standard_name: process_key
+  field_name: ProcessKey
   type: TEXT
   description: SO Host Data's unique identifier of containing process
-  sample value: BBB8A0D8A8A3EF0148FE5E4DF188E7FC39741EE4554152B9E6513FE95F4E377B
-- standard name: token_key
-  field name: TokenKey
+  sample_value: BBB8A0D8A8A3EF0148FE5E4DF188E7FC39741EE4554152B9E6513FE95F4E377B
+- standard_name: token_key
+  field_name: TokenKey
   type: TEXT
   description: SO Host Data's unique identifier of associated access token
-  sample value: 8C3C0F18E053F361BF80D7BD126F67A5B7BE8241388802ABA430D751F60CD7D3
-- standard name: thread_id
-  field name: ThreadId
+  sample_value: 8C3C0F18E053F361BF80D7BD126F67A5B7BE8241388802ABA430D751F60CD7D3
+- standard_name: thread_id
+  field_name: ThreadId
   type: INTEGER
   description: Unique identifier of the thread
-  sample value: '4784'
-- standard name: start_time
-  field name: StartTime
+  sample_value: '4784'
+- standard_name: start_time
+  field_name: StartTime
   type: DATE
   description: Time the thread started
-  sample value: 2/20/2018 11:01:10 PM
-- standard name: thread_start_address
-  field name: ThreadStartAddress
+  sample_value: 2/20/2018 11:01:10 PM
+- standard_name: thread_start_address
+  field_name: ThreadStartAddress
   type: LONG
   description: The memory address of the function called to start the thread
-  sample value: '1896232255488'
-- standard name: base_priority
-  field name: BasePriority
+  sample_value: '1896232255488'
+- standard_name: base_priority
+  field_name: BasePriority
   type: INTEGER
   description: The base priority of the thread
-  sample value: '8'
-- standard name: current_priority
-  field name: CurrentPriority
+  sample_value: '8'
+- standard_name: current_priority
+  field_name: CurrentPriority
   type: INTEGER
   description: The current priority of the thread
-  sample value: '8'
-- standard name: priority_boost_enabled
-  field name: PriorityBoostEnabled
+  sample_value: '8'
+- standard_name: priority_boost_enabled
+  field_name: PriorityBoostEnabled
   type: BOOLEAN
   description: Indicates if the OS should boost the priority of the thread when the
     main window is active
-  sample value: 'True'
-- standard name: priority_level
-  field name: PriorityLevel
+  sample_value: 'True'
+- standard_name: priority_level
+  field_name: PriorityLevel
   type: TEXT
   description: The priority level of the thread
-  sample value: Normal
-- standard name: total_processor_time
-  field name: TotalProcessorTime
+  sample_value: Normal
+- standard_name: total_processor_time
+  field_name: TotalProcessorTime
   type: ''
   description: The total amount of time that the processor has spent on this thread
-  sample value: 00:00:00
-- standard name: privileged_processor_time
-  field name: PrivilegedProcessorTime
+  sample_value: 00:00:00
+- standard_name: privileged_processor_time
+  field_name: PrivilegedProcessorTime
   type: ''
   description: The amount of time the thread has spent in the operating system core
-  sample value: 00:00:00
-- standard name: user_processor_time
-  field name: UserProcessorTime
+  sample_value: 00:00:00
+- standard_name: user_processor_time
+  field_name: UserProcessorTime
   type: ''
   description: The amount of time that the thread has spent running code inside the
     application
-  sample value: 00:00:00
-- standard name: thread_state
-  field name: ThreadState
+  sample_value: 00:00:00
+- standard_name: thread_state
+  field_name: ThreadState
   type: TEXT
   description: The current state of the thread
-  sample value: Wait
-- standard name: wait_reason
-  field name: WaitReason
+  sample_value: Wait
+- standard_name: wait_reason
+  field_name: WaitReason
   type: TEXT
   description: The reason that the thread is waiting
-  sample value: Suspended
+  sample_value: Suspended
 resources: []
-tags: null
+tags: []

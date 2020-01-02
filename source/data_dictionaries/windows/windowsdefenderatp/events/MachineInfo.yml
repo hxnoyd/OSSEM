@@ -1,80 +1,80 @@
 title: MachineInfo
-operating system: windows
-data channel: windowsdefenderatp
+operating_system: windows
+data_channel: windowsdefenderatp
 description: Machine information, including OS information
-data fields:
-- standard name: event_date_creation
-  field name: EventTime
+data_fields:
+- standard_name: event_date_creation
+  field_name: EventTime
   type: date
   description: Date and time when the event was recorded
-  sample value: ''
-- standard name: machine_id
-  field name: MachineId
+  sample_value: ''
+- standard_name: machine_id
+  field_name: MachineId
   type: string
   description: Unique identifier for the machine in the service
-  sample value: ''
-- standard name: computer_name
-  field name: ComputerName
+  sample_value: ''
+- standard_name: computer_name
+  field_name: ComputerName
   type: string
   description: Fully qualified domain name (FQDN) of the machine
-  sample value: ''
-- standard name: client_version
-  field name: ClientVersion
+  sample_value: ''
+- standard_name: client_version
+  field_name: ClientVersion
   type: ''
   description: ''
-  sample value: ''
-- standard name: public_ip
-  field name: PublicIP
+  sample_value: ''
+- standard_name: public_ip
+  field_name: PublicIP
   type: string
   description: Public IP address used by the onboarded machine to connect to the Windows
     Defender ATP service. This could be the IP address of the machine itself, a NAT
     device, or a proxy.
-  sample value: ''
-- standard name: os_architecture
-  field name: OSArchitecture
+  sample_value: ''
+- standard_name: os_architecture
+  field_name: OSArchitecture
   type: string
   description: Architecture of the operating system running on the machine
-  sample value: ''
-- standard name: os_platform
-  field name: OSPlatform
+  sample_value: ''
+- standard_name: os_platform
+  field_name: OSPlatform
   type: string
   description: Platform of the operating system running on the machine. This indicates
     specific operating systems, including variations within the same family, such
     as Windows 10 and Windows 7.
-  sample value: ''
-- standard name: os_build
-  field name: OSBuild
+  sample_value: ''
+- standard_name: os_build
+  field_name: OSBuild
   type: string
   description: Build version of the operating system running on the machine
-  sample value: ''
-- standard name: is_azure_ad_joined
-  field name: ISAzureADJoined
+  sample_value: ''
+- standard_name: is_azure_ad_joined
+  field_name: ISAzureADJoined
   type: boolean
   description: Boolean indicator of whether machine is joined to the Azure Active
     Directory
-  sample value: ''
-- standard name: logged_on_users
-  field name: LoggedOnUsers
+  sample_value: ''
+- standard_name: logged_on_users
+  field_name: LoggedOnUsers
   type: string
   description: List of all users that are logged on the machine at the time of the
     event in JSON array format
-  sample value: ''
-- standard name: machine_group
-  field name: MachineGroup
+  sample_value: ''
+- standard_name: machine_group
+  field_name: MachineGroup
   type: string
   description: Machine group of the machine. This group is used by role-based access
     control to determine access to the machine.
-  sample value: ''
-- standard name: report_id
-  field name: ReportId
+  sample_value: ''
+- standard_name: report_id
+  field_name: ReportId
   type: long
   description: Event identifier based on a repeating counter. To identify unique events,
     this column must be used in conjunction with the ComputerName and EventTime columns.
-  sample value: ''
-- standard name: os_version
-  field name: OSVersion
+  sample_value: ''
+- standard_name: os_version
+  field_name: OSVersion
   type: ''
   description: ''
-  sample value: ''
+  sample_value: ''
 resources: []
-tags: null
+tags: []

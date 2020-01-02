@@ -1,54 +1,54 @@
 title: 'Event ID 4690: An attempt was made to duplicate a handle to an object.'
-operating system: windows
-data channel: security
+operating_system: windows
+data_channel: security
 description: This event generates if an attempt was made to duplicate a handle to
   an object.
-data fields:
-- standard name: user_sid
-  field name: SubjectUserSid
+data_fields:
+- standard_name: user_sid
+  field_name: SubjectUserSid
   type: string
   description: SID of account that made an attempt to duplicate a handle to an object.
-  sample value: S-1-5-18
-- standard name: user_name
-  field name: SubjectUserName
+  sample_value: S-1-5-18
+- standard_name: user_name
+  field_name: SubjectUserName
   type: string
   description: the name of the account that made an attempt to duplicate a handle
     to an object.
-  sample value: DC01$
-- standard name: user_domain
-  field name: SubjectDomainName
+  sample_value: DC01$
+- standard_name: user_domain
+  field_name: SubjectDomainName
   type: string
   description: subject's domain or computer name.
-  sample value: CONTOSO
-- standard name: user_logon_id
-  field name: SubjectLogonId
+  sample_value: CONTOSO
+- standard_name: user_logon_id
+  field_name: SubjectLogonId
   type: integer
   description: 'hexadecimal value that can help you correlate this event with recent
     events that might contain the same Logon ID, for example, "4624: An account was
     successfully logged on."'
-  sample value: '0x3e7'
-- standard name: object_handle_id
-  field name: SourceHandleId
+  sample_value: '0x3e7'
+- standard_name: object_handle_id
+  field_name: SourceHandleId
   type: integer
   description: hexadecimal value of a handle which was duplicated.
-  sample value: '0x438'
-- standard name: process_id
-  field name: SourceProcessId
+  sample_value: '0x438'
+- standard_name: process_id
+  field_name: SourceProcessId
   type: integer
   description: hexadecimal Process ID of the process which opened the Source Handle
     ID before it was duplicated.
-  sample value: '0x674'
-- standard name: target_object_handle_id
-  field name: TargetHandleId
+  sample_value: '0x674'
+- standard_name: target_object_handle_id
+  field_name: TargetHandleId
   type: integer
   description: hexadecimal value of the new handle (the copy of Source Handle ID).
-  sample value: '0xd9c'
-- standard name: target_process_id
-  field name: TargetProcessId
+  sample_value: '0xd9c'
+- standard_name: target_process_id
+  field_name: TargetProcessId
   type: integer
   description: hexadecimal Process ID of the process which opened the Target Handle
     ID.
-  sample value: '0x4'
+  sample_value: '0x4'
 resources:
 - text: MS SOURCE
   link: https://github.com/MicrosoftDocs/windows-itpro-docs/blob/public/windows/security/threat-protection/auditing/event-4690.md

@@ -1,78 +1,78 @@
 title: 'Event ID 5145: A network share object was checked to see whether client can
   be granted desired access.'
-operating system: windows
-data channel: security
+operating_system: windows
+data_channel: security
 description: This event generates every time network share object (file or folder)
   was accessed.
-data fields:
-- standard name: user_sid
-  field name: SubjectUserSid
+data_fields:
+- standard_name: user_sid
+  field_name: SubjectUserSid
   type: string
   description: SID of account that requested access to network share object.
-  sample value: S-1-5-21-3457937927-2839227994-823803824-1104
-- standard name: user_name
-  field name: SubjectUserName
+  sample_value: S-1-5-21-3457937927-2839227994-823803824-1104
+- standard_name: user_name
+  field_name: SubjectUserName
   type: string
   description: the name of the account that requested access to network share object.
-  sample value: dadmin
-- standard name: user_domain
-  field name: SubjectDomainName
+  sample_value: dadmin
+- standard_name: user_domain
+  field_name: SubjectDomainName
   type: string
   description: subject's domain or computer name
-  sample value: CONTOSO
-- standard name: user_logon_id
-  field name: SubjectLogonId
+  sample_value: CONTOSO
+- standard_name: user_logon_id
+  field_name: SubjectLogonId
   type: integer
   description: hexadecimal value that can help you correlate this event with recent
     events that might contain the same Logon ID
-  sample value: '0x541f35'
-- standard name: object_type
-  field name: ObjectType
+  sample_value: '0x541f35'
+- standard_name: object_type
+  field_name: ObjectType
   type: string
   description: The type of an object that was accessed during the operation. Always
     "File" for this event.
-  sample value: File
-- standard name: src_ip
-  field name: IpAddress
+  sample_value: File
+- standard_name: src_ip
+  field_name: IpAddress
   type: ip
   description: source IP address from which access was performed.
-  sample value: 10.0.0.100
-- standard name: src_port
-  field name: IpPort
+  sample_value: 10.0.0.100
+- standard_name: src_port
+  field_name: IpPort
   type: integer
   description: source TCP or UDP port which was used from remote or local machine
     to request the access.
-  sample value: '49212'
-- standard name: share_name
-  field name: ShareName
+  sample_value: '49212'
+- standard_name: share_name
+  field_name: ShareName
   type: string
   description: the name of accessed network share.
-  sample value: \\*\Documents
-- standard name: share_local_path
-  field name: ShareLocalPath
+  sample_value: \*\Documents
+- standard_name: share_local_path
+  field_name: ShareLocalPath
   type: string
   description: 'the full system (NTFS) path for accessed share. The format is: \??\PATH'
-  sample value: \??\C:\Documents
-- standard name: share_relative_target_name
-  field name: RelativeTargetName
+  sample_value: \??\C:\Documents
+- standard_name: share_relative_target_name
+  field_name: RelativeTargetName
   type: string
   description: relative name of the accessed target file or folder. This file-path
     is relative to the network share. If access was requested for the share itself,
     then this field appears as "\"
-  sample value: Bginfo.exe
-- standard name: share_access_mask
-  field name: AccessMask
+  sample_value: Bginfo.exe
+- standard_name: share_access_mask
+  field_name: AccessMask
   type: string
   description: the sum of hexadecimal values of requested access rights. See "Table
     13. File access codes."
-  sample value: '0x1'
-- standard name: user_access_list
-  field name: AccessList
+  sample_value: '0x1'
+- standard_name: user_access_list
+  field_name: AccessList
   type: string
   description: the list of access rights which were requested by Subject\Security
     ID. These access rights depend on Object Type. Has always "ReadData (or ListDirectory)"
     value for this event.
-  sample value: '%%4416'
+  sample_value: '%%4416'
 resources:
 - text: MS Source
   link: https://github.com/MicrosoftDocs/windows-itpro-docs/blob/master/windows/security/threat-protection/auditing/event-5145.md

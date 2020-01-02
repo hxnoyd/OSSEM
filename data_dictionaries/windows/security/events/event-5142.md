@@ -10,7 +10,7 @@ This event generates every time network share object was accessed.
 |user_name|SubjectUserName|string|the name of the account that requested the "add network share object" operation.|dadmin|
 |user_domain|SubjectDomainName|string|subject's domain or computer name.|CONTOSO|
 |user_logon_id|SubjectLogonId|integer|hexadecimal value that can help you correlate this event with recent events that might contain the same Logon ID|0x38d12|
-|share_name|ShareName|string|the name of the added share object. The format is: \*\SHARE_NAME|\\*\Documents|
+|share_name|ShareName|string|the name of the added share object. The format is: *\SHARE_NAME|\*\Documents|
 |share_local_path|ShareLocalPath|string|the full system (NTFS) path for the added share object. The format is: \??\PATH.|C:\Documents|
 
 ## Resources

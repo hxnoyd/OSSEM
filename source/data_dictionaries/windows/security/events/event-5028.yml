@@ -1,15 +1,15 @@
 title: 'Event ID 5028: The Windows Firewall Service was unable to parse the new security
   policy. The service will continue with currently enforced policy.'
-operating system: windows
-data channel: security
+operating_system: windows
+data_channel: security
 description: This error indicates one of two situations, low memory resources or Windows
   Firewall group policy registry corruption.
-data fields:
-- standard name: error_code
-  field name: ErrorCode
+data_fields:
+- standard_name: error_code
+  field_name: ErrorCode
   type: string
   description: unique error code.
-  sample value: '2147942413'
+  sample_value: '2147942413'
 resources:
 - text: MS Source
   link: https://github.com/MicrosoftDocs/windows-itpro-docs/blob/public/windows/security/threat-protection/auditing/event-5028.md

@@ -1,7 +1,7 @@
 title: Endgame Schema
-operating system: windows
-data channel: endgame
-description: null
-data fields: []
+operating_system: windows
+data_channel: endgame
+description: None
+data_fields: []
 resources: []
-tags: null
+tags: []

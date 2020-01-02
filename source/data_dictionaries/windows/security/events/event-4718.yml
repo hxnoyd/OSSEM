@@ -1,42 +1,42 @@
 title: 'Event ID 4718: System security access was removed from an account'
-operating system: windows
-data channel: security
+operating_system: windows
+data_channel: security
 description: This event generates every time local logon user right policy is changed
   and logon right was removed from an account. You will see unique event for every
   user if logon user rights were removed for multiple accounts.
-data fields:
-- standard name: ''
-  field name: AccessRemoved
+data_fields:
+- standard_name: ''
+  field_name: AccessRemoved
   type: string
   description: the name of removed logon right.
-  sample value: SeChangeNotifyPrivilege
-- standard name: user_sid
-  field name: SubjectUserSid
+  sample_value: SeChangeNotifyPrivilege
+- standard_name: user_sid
+  field_name: SubjectUserSid
   type: string
   description: SID of account that made a change to local logon right user policy.
-  sample value: SYSTEM
-- standard name: user_name
-  field name: SubjectUserName
+  sample_value: SYSTEM
+- standard_name: user_name
+  field_name: SubjectUserName
   type: string
   description: the name of the account that made a change to local logon right user
     policy.
-  sample value: DC01$
-- standard name: user_domain
-  field name: SubjectDomainName
+  sample_value: DC01$
+- standard_name: user_domain
+  field_name: SubjectDomainName
   type: string
   description: "\_subject's domain or computer name."
-  sample value: THEDOMAIN
-- standard name: user_logon_id
-  field name: SubjectLogonId
+  sample_value: THEDOMAIN
+- standard_name: user_logon_id
+  field_name: SubjectLogonId
   type: integer
   description: hexadecimal value that can help you correlate this event with recent
     events that might
-  sample value: ''
-- standard name: target_user_sid
-  field name: TargetSid
+  sample_value: ''
+- standard_name: target_user_sid
+  field_name: TargetSid
   type: string
   description: the SID of the security principal for which logon right was removed.
-  sample value: THEDOMAIN\AnotherUser
+  sample_value: THEDOMAIN\AnotherUser
 resources:
 - text: MS Source
   link: https://github.com/MicrosoftDocs/windows-itpro-docs/blob/master/windows/security/threat-protection/auditing/event-4718.md

@@ -1,74 +1,74 @@
 title: 'Event ID 5157: The Windows Filtering Platform has permitted a connection'
-operating system: windows
-data channel: security
+operating_system: windows
+data_channel: security
 description: This event generates when Windows Filtering Platform has blocked a connection.
-data fields:
-- standard name: process_id
-  field name: ProcessId
+data_fields:
+- standard_name: process_id
+  field_name: ProcessId
   type: integer
   description: Hexadecimal Process ID of the process that attempted to create the
     connection.
-  sample value: '4556'
-- standard name: process_path
-  field name: Application
+  sample_value: '4556'
+- standard_name: process_path
+  field_name: Application
   type: string
   description: Full path and the name of the executable for the process.
-  sample value: \device\harddiskvolume2\documents\listener.exe
-- standard name: ''
-  field name: Direction
+  sample_value: \device\harddiskvolume2\documents\listener.exe
+- standard_name: ''
+  field_name: Direction
   type: string
   description: Direction of blocked connection.
-  sample value: Inbound
-- standard name: src_ip_addr
-  field name: SourceAddress
+  sample_value: Inbound
+- standard_name: src_ip_addr
+  field_name: SourceAddress
   type: ip
   description: Local IP address on which application received the connection.
-  sample value: 10.0.0.10
-- standard name: src_port
-  field name: SourcePort
+  sample_value: 10.0.0.10
+- standard_name: src_port
+  field_name: SourcePort
   type: integer
   description: Port number on which application received the connection.
-  sample value: '3333'
-- standard name: dst_ip_addr
-  field name: DestAddress
+  sample_value: '3333'
+- standard_name: dst_ip_addr
+  field_name: DestAddress
   type: ip
   description: IP address from which connection was received or initiated.
-  sample value: 10.0.0.100
-- standard name: dst_port
-  field name: DestPort
+  sample_value: 10.0.0.100
+- standard_name: dst_port
+  field_name: DestPort
   type: integer
   description: Port number which was used from remote machine to initiate connection.
-  sample value: '49218'
-- standard name: network_protocol
-  field name: Protocol
+  sample_value: '49218'
+- standard_name: network_protocol
+  field_name: Protocol
   type: integer
   description: Protocol number.
-  sample value: '6'
-- standard name: ''
-  field name: FilterRTID
+  sample_value: '6'
+- standard_name: ''
+  field_name: FilterRTID
   type: integer
   description: Unique filter ID which blocked the connection.
-  sample value: '110398'
-- standard name: ''
-  field name: LayerName
+  sample_value: '110398'
+- standard_name: ''
+  field_name: LayerName
   type: string
   description: Application Layer Enforcement layer name.
-  sample value: '%%14610'
-- standard name: ''
-  field name: LayerRTID
+  sample_value: '%%14610'
+- standard_name: ''
+  field_name: LayerRTID
   type: integer
   description: Windows Filtering Platform layer identifier.
-  sample value: '44'
-- standard name: ''
-  field name: RemoteUserID
+  sample_value: '44'
+- standard_name: ''
+  field_name: RemoteUserID
   type: ''
   description: ''
-  sample value: S-1-0-0
-- standard name: ''
-  field name: RemoteMachineID
+  sample_value: S-1-0-0
+- standard_name: ''
+  field_name: RemoteMachineID
   type: ''
   description: ''
-  sample value: S-1-0-0
+  sample_value: S-1-0-0
 resources:
 - text: MS Source
   link: https://github.com/MicrosoftDocs/windows-itpro-docs/blob/master/windows/security/threat-protection/auditing/event-5157.md

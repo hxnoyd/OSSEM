@@ -1,51 +1,51 @@
 title: 'Event ID 4933: Synchronization of a replica of an Active Directory naming
   context has begun'
-operating system: windows
-data channel: security
+operating_system: windows
+data_channel: security
 description: This event generates every time synchronization of a replica of an Active
   Directory naming context has ended. Failure event occurs when synchronization of
   a replica of an Active Directory naming context failed.
-data fields:
-- standard name: destination_dra
-  field name: DestinationDRA
+data_fields:
+- standard_name: destination_dra
+  field_name: DestinationDRA
   type: string
   description: destination directory replication agent distinguished name.
-  sample value: CN=NTDS Settings,CN=DC01,CN=Servers,CN=Default-First-Site-Name,CN=Sites,CN=Configuration,DC=contoso,DC=local
-- standard name: source_dra
-  field name: SourceDRA
+  sample_value: CN=NTDS Settings,CN=DC01,CN=Servers,CN=Default-First-Site-Name,CN=Sites,CN=Configuration,DC=contoso,DC=local
+- standard_name: source_dra
+  field_name: SourceDRA
   type: string
   description: source directory replication agent distinguished name.
-  sample value: CN=NTDS Settings,CN=WIN2012R2,CN=Servers,CN=Default-First-Site-Name,CN=Sites,CN=Configuration,DC=contoso,DC=local
-- standard name: naming_context
-  field name: NamingContext
+  sample_value: CN=NTDS Settings,CN=WIN2012R2,CN=Servers,CN=Default-First-Site-Name,CN=Sites,CN=Configuration,DC=contoso,DC=local
+- standard_name: naming_context
+  field_name: NamingContext
   type: string
   description: naming context to replicate.
-  sample value: CN=Schema,CN=Configuration,DC=contoso,DC=local
-- standard name: options
-  field name: Options
+  sample_value: CN=Schema,CN=Configuration,DC=contoso,DC=local
+- standard_name: options
+  field_name: Options
   type: integer
   description: decimal value of DRS Options.
-  sample value: '2147483733'
-- standard name: session_id
-  field name: SessionID
+  sample_value: '2147483733'
+- standard_name: session_id
+  field_name: SessionID
   type: integer
   description: 'unique identifier of replication session. Using this field you can
     find "4932: Synchronization of a replica of an Active Directory naming context
     has begun." and "4933: Synchronization of a replica of an Active Directory naming
     context has ended." events for the same session.'
-  sample value: '40'
-- standard name: end_usn
-  field name: EndUSN
+  sample_value: '40'
+- standard_name: end_usn
+  field_name: EndUSN
   type: integer
   description: Naming Context's USN number after replication ends.
-  sample value: '20869'
-- standard name: status_code
-  field name: StatusCode
+  sample_value: '20869'
+- standard_name: status_code
+  field_name: StatusCode
   type: integer
   description: if there are no issues or errors, the status code will be "0". If an
     error happened, you will receive Failure event and Status Code will not be equal
     to "0".
-  sample value: '1722'
+  sample_value: '1722'
 resources:
 - text: MS Source
   link: https://github.com/MicrosoftDocs/windows-itpro-docs/blob/master/windows/security/threat-protection/auditing/event-4933.md

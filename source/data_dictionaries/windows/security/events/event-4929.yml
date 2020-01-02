@@ -1,39 +1,39 @@
 title: 'Event ID 4929: An Active Directory replica source naming context was removed.'
-operating system: windows
-data channel: security
+operating_system: windows
+data_channel: security
 description: This event generates every time Active Directory replica source naming
   context was removed.
-data fields:
-- standard name: destination_dra
-  field name: DestinationDRA
+data_fields:
+- standard_name: destination_dra
+  field_name: DestinationDRA
   type: string
   description: destination directory replication agent distinguished name.
-  sample value: CN=NTDS Settings,CN=DC01,CN=Servers,CN=Default-First-Site-Name,CN=Sites,CN=Configuration,DC=contoso,DC=local
-- standard name: source_dra
-  field name: SourceDRA
+  sample_value: CN=NTDS Settings,CN=DC01,CN=Servers,CN=Default-First-Site-Name,CN=Sites,CN=Configuration,DC=contoso,DC=local
+- standard_name: source_dra
+  field_name: SourceDRA
   type: string
   description: source directory replication agent distinguished name.
-  sample value: '-'
-- standard name: source_addr
-  field name: SourceAddr
+  sample_value: '-'
+- standard_name: source_addr
+  field_name: SourceAddr
   type: string
   description: DNS record of the server from which the "remove" request was received.
-  sample value: 2d361dd6-fc22-4d9d-b876-ec582b836458._msdcs.contoso.local
-- standard name: naming_context
-  field name: NamingContext
+  sample_value: 2d361dd6-fc22-4d9d-b876-ec582b836458._msdcs.contoso.local
+- standard_name: naming_context
+  field_name: NamingContext
   type: string
   description: naming context which was removed.
-  sample value: DC=contoso,DC=local
-- standard name: options
-  field name: Options
+  sample_value: DC=contoso,DC=local
+- standard_name: options
+  field_name: Options
   type: integer
   description: decimal value of DRS Options.
-  sample value: '16640'
-- standard name: status_code
-  field name: StatusCode
+  sample_value: '16640'
+- standard_name: status_code
+  field_name: StatusCode
   type: integer
   description: if there are no issues or errors, the status code will be 0.
-  sample value: '0'
+  sample_value: '0'
 resources:
 - text: MS Source
   link: https://github.com/MicrosoftDocs/windows-itpro-docs/blob/public/windows/security/threat-protection/auditing/event-4929.md

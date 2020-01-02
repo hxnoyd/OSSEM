@@ -1,77 +1,76 @@
 title: 'Event ID 4720: A user account was created'
-operating system: windows
-data channel: security
+operating_system: windows
+data_channel: security
 description: This event generates every time a new user object is created. This event
   generates on domain controllers, member servers, and workstations.
-data fields:
-- standard name: target_user_name
-  field name: TargetUserName
+data_fields:
+- standard_name: target_user_name
+  field_name: TargetUserName
   type: string
   description: the name of the user account that was created
-  sample value: ksmith
-- standard name: target_user_domain
-  field name: TargetDomainName
+  sample_value: ksmith
+- standard_name: target_user_domain
+  field_name: TargetDomainName
   type: string
   description: domain name of created user account
-  sample value: CONTOSO
-- standard name: target_user_sid
-  field name: TargetSid
+  sample_value: CONTOSO
+- standard_name: target_user_sid
+  field_name: TargetSid
   type: string
   description: SID of created user account. Event Viewer automatically tries to resolve
     SIDs and show the account name. If the SID cannot be resolved, you will see the
     source data in the event
-  sample value: S-1-5-21-3457937927-2839227994-823803824-6609
-- standard name: user_sid
-  field name: SubjectUserSid
+  sample_value: S-1-5-21-3457937927-2839227994-823803824-6609
+- standard_name: user_sid
+  field_name: SubjectUserSid
   type: string
   description: SID of account that requested the "create user account" operation.
     Event Viewer automatically tries to resolve SIDs and show the account name. If
     the SID cannot be resolved, you will see the source data in the event.
-  sample value: S-1-5-21-3457937927-2839227994-823803824-1104
-- standard name: user_name
-  field name: SubjectUserName
+  sample_value: S-1-5-21-3457937927-2839227994-823803824-1104
+- standard_name: user_name
+  field_name: SubjectUserName
   type: string
   description: the name of the account that requested the "create user account" operation
-  sample value: dadmin
-- standard name: user_domain
-  field name: SubjectDomainName
+  sample_value: dadmin
+- standard_name: user_domain
+  field_name: SubjectDomainName
   type: string
   description: subject's domain or computer name
-  sample value: CONTOSO
-- standard name: user_logon_id
-  field name: SubjectLogonId
+  sample_value: CONTOSO
+- standard_name: user_logon_id
+  field_name: SubjectLogonId
   type: string
   description: hexadecimal value that can help you correlate this event with recent
     events that might contain the same Logon ID
-  sample value: '0x30dc2'
-- standard name: user_privilege_list
-  field name: PrivilegeList
+  sample_value: '0x30dc2'
+- standard_name: user_privilege_list
+  field_name: PrivilegeList
   type: string
   description: the list of user privileges which were used during the operation, for
     example, SeBackupPrivilege. This parameter might not be captured in the event,
     and in that case appears as "-".
-  sample value: '-'
-- standard name: target_user_sam_name
-  field name: SamAccountName
+  sample_value: '-'
+- standard_name: target_user_sam_name
+  field_name: SamAccountName
   type: string
   description: 'logon name for account used to support clients and servers from previous
     versions of Windows (pre-Windows 2000 logon name). The value of sAMAccountName
     attribute of new user object. For example: ksmith. For local account this field
     contains the name of new user account.'
-  sample value: ksmith
-- standard name: target_user_display_name
-  field name: DisplayName
+  sample_value: ksmith
+- standard_name: target_user_display_name
+  field_name: DisplayName
   type: string
   description: the value of displayName attribute of new user object. It is a name
     displayed in the address book for a particular account .This is usually the combination
     of the user's first name, middle initial, and last name. For example, Ken Smith.
     You can change this attribute by using Active Directory Users and Computers, or
     through a script, for example. Local accounts contain Full Name attribute in this
-    field, but for new local accounts this field typically has value "\<value not
-    set>".
-  sample value: Ken Smith
-- standard name: target_user_principal_name
-  field name: UserPrincipalName
+    field, but for new local accounts this field typically has value "\".
+  sample_value: Ken Smith
+- standard_name: target_user_principal_name
+  field_name: UserPrincipalName
   type: string
   description: internet-style login name for the account, based on the Internet standard
     RFC 822. By convention this should map to the account's email name. This parameter
@@ -79,20 +78,20 @@ data fields:
     ksmith@contoso.local. For local users this field is not applicable and has value
     "-". You can change this attribute by using Active Directory Users and Computers,
     or through a script, for example.
-  sample value: ksmith@contoso.local
-- standard name: target_user_home_directory
-  field name: HomeDirectory
+  sample_value: ksmith@contoso.local
+- standard_name: target_user_home_directory
+  field_name: HomeDirectory
   type: string
   description: user's home directory. If homeDrive attribute is set and specifies
     a drive letter, homeDirectory should be a UNC path. The path must be a network
     UNC of the form \Server\Share\Directory. This parameter contains the value of
     homeDirectory attribute of new user object. For new local accounts this field
-    typically has value "\<value not set>". You can change this attribute by using
-    Active Directory Users and Computers, or through a script, for example. This parameter
-    might not be captured in the event, and in that case appears as "-".
-  sample value: '-'
-- standard name: target_user_home_path
-  field name: HomePath
+    typically has value "\". You can change this attribute by using Active Directory
+    Users and Computers, or through a script, for example. This parameter might not
+    be captured in the event, and in that case appears as "-".
+  sample_value: '-'
+- standard_name: target_user_home_path
+  field_name: HomePath
   type: string
   description: specifies the drive letter to which to map the UNC path specified by
     homeDirectory account's attribute. The drive letter must be specified in the form
@@ -100,29 +99,29 @@ data fields:
     attribute of new user object. You can change this attribute by using Active Directory
     Users and Computers, or through a script, for example. This parameter might not
     be captured in the event, and in that case appears as "-". For new local accounts
-    this field typically has value "\<value not set>".
-  sample value: '-'
-- standard name: target_user_script_path
-  field name: ScriptPath
+    this field typically has value "\".
+  sample_value: '-'
+- standard_name: target_user_script_path
+  field_name: ScriptPath
   type: string
   description: specifies the path of the account's logon script. This parameter contains
     the value of scriptPath attribute of new user object. You can change this attribute
     by using Active Directory Users and Computers, or through a script, for example.
     This parameter might not be captured in the event, and in that case appears as
-    "-". For new local accounts this field typically has value "\<value not set>".
-  sample value: '-'
-- standard name: target_user_profile_path
-  field name: ProfilePath
+    "-". For new local accounts this field typically has value "\".
+  sample_value: '-'
+- standard_name: target_user_profile_path
+  field_name: ProfilePath
   type: string
   description: specifies a path to the account's profile. This value can be a null
     string, a local absolute path, or a UNC path. This parameter contains the value
     of profilePath attribute of new user object. You can change this attribute by
     using Active Directory Users and Computers, or through a script, for example.
     This parameter might not be captured in the event, and in that case appears as
-    "-". For new local accounts this field typically has value "\<value not set>".
-  sample value: '-'
-- standard name: target_user_workstations
-  field name: UserWorkstations
+    "-". For new local accounts this field typically has value "\".
+  sample_value: '-'
+- standard_name: target_user_workstations
+  field_name: UserWorkstations
   type: string
   description: contains the list of NetBIOS or DNS names of the computers from which
     the user can logon. Each computer name is separated by a comma. The name of a
@@ -131,18 +130,18 @@ data fields:
     attribute by using Active Directory Users and Computers, or through a script,
     for example. This parameter might not be captured in the event, and in that case
     appears as "-". For local users this field is not applicable and typically has
-    value "\<value not set>".
-  sample value: '-'
-- standard name: target_user_password_last_set
-  field name: PasswordLastSet
+    value "\".
+  sample_value: '-'
+- standard_name: target_user_password_last_set
+  field_name: PasswordLastSet
   type: date
   description: last time the account's password was modified. For manually created
     user account, using Active Directory Users and Computers snap-in, this field typically
-    has value "\<never>". This parameter contains the value of pwdLastSet attribute
-    of new user object.
-  sample value: '%%1794'
-- standard name: target_user_account_expires
-  field name: AccountExpires
+    has value "\". This parameter contains the value of pwdLastSet attribute of new
+    user object.
+  sample_value: '%%1794'
+- standard_name: target_user_account_expires
+  field_name: AccountExpires
   type: date
   description: he date when the account expires. This parameter contains the value
     of accountExpires attribute of new user object. You can change this attribute
@@ -150,18 +149,18 @@ data fields:
     This parameter might not be captured in the event, and in that case appears as
     "-". For manually created local and domain user accounts this field typically
     has value "".
-  sample value: '%%1794'
-- standard name: target_user_primary_group_id
-  field name: PrimaryGroupId
+  sample_value: '%%1794'
+- standard_name: target_user_primary_group_id
+  field_name: PrimaryGroupId
   type: integer
   description: '"Relative Identifier (RID) of user''s object primary group. Typically,
     Primary Group field for new user accounts has the following values: 513 (Domain
     Users. For local accounts this RID means Users) - for domain and local users.
     See this article https://support.microsoft.com/en-us/kb/243330 for more information.
     This parameter contains the value of primaryGroupID attribute of new user object."'
-  sample value: '513'
-- standard name: target_user_allowed_to_delegate
-  field name: AllowedToDelegateTo
+  sample_value: '513'
+- standard_name: target_user_allowed_to_delegate
+  field_name: AllowedToDelegateTo
   type: string
   description: 'the list of SPNs to which this account can present delegated credentials.
     Can be changed using Active Directory Users and Computers management console in
@@ -171,24 +170,24 @@ data fields:
     value "-". For new domain user accounts it is typically has value "-". See description
     of AllowedToDelegateTo field for "4738(S): A user account was changed." event
     for more details.'
-  sample value: '-'
-- standard name: target_user_old_uac_value
-  field name: OldUacValue
+  sample_value: '-'
+- standard_name: target_user_old_uac_value
+  field_name: OldUacValue
   type: string
   description: specifies flags that control password, lockout, disable/enable, script,
     and other behavior for the user account. Old UAC value always "0x0" for new user
     accounts. This parameter contains the previous value of userAccountControl attribute
     of user object.
-  sample value: '0x0'
-- standard name: target_user_new_uac_value
-  field name: NewUacValue
+  sample_value: '0x0'
+- standard_name: target_user_new_uac_value
+  field_name: NewUacValue
   type: string
   description: specifies flags that control password, lockout, disable/enable, script,
     and other behavior for the user account. This parameter contains the value of
     userAccountControl attribute of new user object.
-  sample value: '0x15'
-- standard name: target_user_account_control
-  field name: UserAccountControl
+  sample_value: '0x15'
+- standard_name: target_user_account_control
+  field_name: UserAccountControl
   type: string
   description: shows the list of changes in userAccountControl attribute. You will
     see a line of text for each change. For new user accounts, when the object for
@@ -197,19 +196,18 @@ data fields:
     attribute. See possible values in the table below. In the "User Account Control
     field text" column, you can see the text that will be displayed in the User Account
     Control field in 4720 event.
-  sample value: '%%2080 %%2082 %%2084'
-- standard name: target_user_parameters
-  field name: UserParameters
+  sample_value: '%%2080 %%2082 %%2084'
+- standard_name: target_user_parameters
+  field_name: UserParameters
   type: string
   description: 'if you change any setting using Active Directory Users and Computers
     management console in Dial-in tab of user''s account properties, then you will
     see \<value changed, but not displayed> in this field in "4738: A user account
     was changed." This parameter might not be captured in the event, and in that case
-    appears as "-". For new local accounts this field typically has value "\<value
-    not set>".'
-  sample value: '-'
-- standard name: target_user_sid_history
-  field name: SidHistory
+    appears as "-". For new local accounts this field typically has value "\".'
+  sample_value: '-'
+- standard_name: target_user_sid_history
+  field_name: SidHistory
   type: string
   description: contains previous SIDs used for the object if the object was moved
     from another domain. Whenever an object is moved from one domain to another, a
@@ -217,17 +215,16 @@ data fields:
     sIDHistory property. This parameter contains the value of sIDHistory attribute
     of new user object. This parameter might not be captured in the event, and in
     that case appears as "-".
-  sample value: '-'
-- standard name: target_user_logon_hours
-  field name: LogonHours
+  sample_value: '-'
+- standard_name: target_user_logon_hours
+  field_name: LogonHours
   type: string
   description: hours that the account is allowed to logon to the domain. The value
     of logonHours attribute of new user object. You can change this attribute by using
     Active Directory Users and Computers, or through a script, for example. You will
-    typically see "\<value not set>" value for new manually created user accounts
-    in event 4720. For new local accounts this field is not applicable and typically
-    has value "All".
-  sample value: '%%1793'
+    typically see "\" value for new manually created user accounts in event 4720.
+    For new local accounts this field is not applicable and typically has value "All".
+  sample_value: '%%1793'
 resources:
 - text: MS Source
   link: https://github.com/MicrosoftDocs/windows-itpro-docs/blob/master/windows/security/threat-protection/auditing/event-4720.md

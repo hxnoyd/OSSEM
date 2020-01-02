@@ -1,41 +1,49 @@
 title: Port Schema
 description: Event fields used to define metadata about ports in a network connection.
-data fields:
-- standard name: src_port
+data_fields:
+- standard_name: src_port
+  field_name: ''
   type: integer
   description: Source port number used in a network connection
-  sample value: '138'
-- standard name: src_port_name
+  sample_value: '138'
+- standard_name: src_port_name
+  field_name: ''
   type: string
   description: Source port name used in a network connection. This is usually determined
     by IANA common port assignment. Therefore, this means its a guess and NOT actually
     what the application/ is what the actually
-  sample value: netbios-dgm
-- standard name: src_nat_port
+  sample_value: netbios-dgm
+- standard_name: src_nat_port
+  field_name: ''
   type: integer
   description: Source NAT port number used in a network connection
-  sample value: '138'
-- standard name: src_nat_port_name
+  sample_value: '138'
+- standard_name: src_nat_port_name
+  field_name: ''
   type: string
   description: Source NAT port name used in a network connection. This is usually
     determined by IANA common port assignment. Therefore, this means its a guess and
     NOT actually what the application/ is what the actually
-  sample value: netbios-dgm
-- standard name: dst_port
+  sample_value: netbios-dgm
+- standard_name: dst_port
+  field_name: ''
   type: integer
   description: Destination port number used in a network connection
-  sample value: '138'
-- standard name: dst_port_name
+  sample_value: '138'
+- standard_name: dst_port_name
+  field_name: ''
   type: string
   description: Destination port name used in a network connection
-  sample value: netbios-dgm
-- standard name: dst_nat_port
+  sample_value: netbios-dgm
+- standard_name: dst_nat_port
+  field_name: ''
   type: integer
   description: Destination NAT port number used in a network connection
-  sample value: '138'
-- standard name: dst_nat_port_name
+  sample_value: '138'
+- standard_name: dst_nat_port_name
+  field_name: ''
   type: string
   description: Destination NAT port name used in a network connection
-  sample value: netbios-dgm
+  sample_value: netbios-dgm
 resources: []
-tags: null
+tags: []

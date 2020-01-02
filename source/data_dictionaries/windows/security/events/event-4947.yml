@@ -1,24 +1,24 @@
 title: 'Event ID 4947: A change has been made to Windows Firewall exception list.
   A rule was modified.'
-operating system: windows
-data channel: security
+operating_system: windows
+data_channel: security
 description: This event generates when Windows Firewall rule was modified.
-data fields:
-- standard name: profile_changed
-  field name: ProfileChanged
+data_fields:
+- standard_name: profile_changed
+  field_name: ProfileChanged
   type: string
   description: the list of profiles to which changed rule is applied.
-  sample value: All
-- standard name: rule_id
-  field name: RuleId
+  sample_value: All
+- standard_name: rule_id
+  field_name: RuleId
   type: string
   description: the unique identifier for modified firewall rule.
-  sample value: '{F2649D59-1355-4E3C-B886-CDD08B683199}'
-- standard name: rule_name
-  field name: RuleName
+  sample_value: '{F2649D59-1355-4E3C-B886-CDD08B683199}'
+- standard_name: rule_name
+  field_name: RuleName
   type: string
   description: the name of the rule which was modified.
-  sample value: Allow All Rule
+  sample_value: Allow All Rule
 resources:
 - text: MS Source
   link: https://github.com/MicrosoftDocs/windows-itpro-docs/blob/public/windows/security/threat-protection/auditing/event-4947.md

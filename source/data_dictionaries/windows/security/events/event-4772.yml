@@ -1,9 +1,10 @@
 title: 'Event ID 4772: A Kerberos authentication ticket request failed'
-operating system: windows
-data channel: security
+operating_system: windows
+data_channel: security
 description: Currently this event doesn't generate. It is a defined event, but it
   is never invoked by the operating system. 4768 failure event is generated instead.
-data fields: []
+data_fields:
+- standard_name: ''
 resources:
 - text: MS Source
   link: https://github.com/MicrosoftDocs/windows-itpro-docs/blob/master/windows/security/threat-protection/auditing/event-4772.md

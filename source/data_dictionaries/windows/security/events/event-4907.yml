@@ -1,48 +1,48 @@
 title: 'Event ID 4907: Auditing settings on object were changed.'
-operating system: windows
-data channel: security
+operating_system: windows
+data_channel: security
 description: This event generates when the SACL.
-data fields:
-- standard name: user_sid
-  field name: SubjectUserSid
+data_fields:
+- standard_name: user_sid
+  field_name: SubjectUserSid
   type: string
   description: SID of account that made a change to object's auditing settings.
-  sample value: S-1-5-21-3457937927-2839227994-823803824-1104
-- standard name: user_name
-  field name: SubjectUserName
+  sample_value: S-1-5-21-3457937927-2839227994-823803824-1104
+- standard_name: user_name
+  field_name: SubjectUserName
   type: string
   description: the name of the account that made a change to object's auditing settings.
-  sample value: dadmin
-- standard name: user_domain
-  field name: SubjectDomainName
+  sample_value: dadmin
+- standard_name: user_domain
+  field_name: SubjectDomainName
   type: string
   description: subject's domain or computer name.
-  sample value: CONTOSO
-- standard name: user_logon_id
-  field name: SubjectLogonId
+  sample_value: CONTOSO
+- standard_name: user_logon_id
+  field_name: SubjectLogonId
   type: integer
   description: 'hexadecimal value that can help you correlate this event with recent
     events that might contain the same Logon ID, for example, "4624: An account was
     successfully logged on."'
-  sample value: '0x138eb0'
-- standard name: object_server
-  field name: ObjectServer
+  sample_value: '0x138eb0'
+- standard_name: object_server
+  field_name: ObjectServer
   type: string
   description: has "Security" value for this event.
-  sample value: Security
-- standard name: object_type
-  field name: ObjectType
+  sample_value: Security
+- standard_name: object_type
+  field_name: ObjectType
   type: string
   description: The type of an object that was accessed during the operation.
-  sample value: Key
-- standard name: object_name
-  field name: ObjectName
+  sample_value: Key
+- standard_name: object_name
+  field_name: ObjectName
   type: string
   description: full path and name of the object for which the SACL was modified.
-  sample value: \REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\EventLog\Internet
+  sample_value: \REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\EventLog\Internet
     Explorer
-- standard name: object_handle_id
-  field name: HandleId
+- standard_name: object_handle_id
+  field_name: HandleId
   type: integer
   description: 'hexadecimal value of a handle to Object Name. This field can help
     you correlate this event with other events that might contain the same Handle
@@ -50,30 +50,30 @@ data fields:
     keys or with Handle ID field in "4656(S, F): A handle to an object was requested."
     Event for file system objects. This parameter might not be captured in the event,
     and in that case appears as "0x0".'
-  sample value: '0x2f8'
-- standard name: object_old_sd
-  field name: OldSd
+  sample_value: '0x2f8'
+- standard_name: object_old_sd
+  field_name: OldSd
   type: string
   description: the old Security Descriptor Definition Language (SDDL) value for the
     object.
-  sample value: S:AI
-- standard name: object_new_sd
-  field name: NewSd
+  sample_value: S:AI
+- standard_name: object_new_sd
+  field_name: NewSd
   type: string
   description: the new Security Descriptor Definition Language (SDDL) value for the
     object.
-  sample value: S:ARAI(AU;CISA;KA;;;S-1-5-21-3457937927-2839227994-823803824-1104)
-- standard name: process_id
-  field name: ProcessId
+  sample_value: S:ARAI(AU;CISA;KA;;;S-1-5-21-3457937927-2839227994-823803824-1104)
+- standard_name: process_id
+  field_name: ProcessId
   type: integer
   description: hexadecimal Process ID of the process through which the object's SACL
     was changed.
-  sample value: '0x120c'
-- standard name: process_path
-  field name: ProcessName
+  sample_value: '0x120c'
+- standard_name: process_path
+  field_name: ProcessName
   type: string
   description: full path and the name of the executable for the process.
-  sample value: C:\Windows\regedit.exe
+  sample_value: C:\Windows\regedit.exe
 resources:
 - text: MS Source
   link: https://github.com/MicrosoftDocs/windows-itpro-docs/blob/public/windows/security/threat-protection/auditing/event-4907.md

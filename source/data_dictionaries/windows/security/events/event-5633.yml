@@ -1,55 +1,55 @@
 title: 'Event ID 5633: A request was made to authenticate to a wired network'
-operating system: windows
-data channel: security
+operating_system: windows
+data_channel: security
 description: This event generates when 802.1x authentication attempt was made for
   wired network.
-data fields:
-- standard name: host_interface_name
-  field name: InterfaceName
+data_fields:
+- standard_name: host_interface_name
+  field_name: InterfaceName
   type: string
   description: the name (description) of network interface which was used for authentication
     request. You can get the list of all available network adapters using "ipconfig
     /all" command.
-  sample value: Microsoft Hyper-V Network Adapter
-- standard name: user_identity
-  field name: Identity
+  sample_value: Microsoft Hyper-V Network Adapter
+- standard_name: user_identity
+  field_name: Identity
   type: string
   description: User Principal Name (UPN) of account for which 802.1x authentication
     request was made.
-  sample value: '-'
-- standard name: user_name
-  field name: SubjectUserName
+  sample_value: '-'
+- standard_name: user_name
+  field_name: SubjectUserName
   type: string
   description: the name of the account for which 802.1x authentication request was
     made
-  sample value: '-'
-- standard name: user_domain
-  field name: SubjectDomainName
+  sample_value: '-'
+- standard_name: user_domain
+  field_name: SubjectDomainName
   type: integer
   description: subject's domain or computer name
-  sample value: '-'
-- standard name: user_logon_id
-  field name: SubjectLogonId
+  sample_value: '-'
+- standard_name: user_logon_id
+  field_name: SubjectLogonId
   type: string
   description: hexadecimal value that can help you correlate this event with recent
     events that might contain the same Logon ID
-  sample value: '0x0'
-- standard name: event_reason_code
-  field name: ReasonCode
+  sample_value: '0x0'
+- standard_name: event_reason_code
+  field_name: ReasonCode
   type: string
   description: Reason Code for wired authentication results.
-  sample value: '0x70003'
-- standard name: event_reason_text
-  field name: ReasonText
+  sample_value: '0x70003'
+- standard_name: event_reason_text
+  field_name: ReasonText
   type: string
   description: contains Reason Text (explanation of Reason Code) and Reason Code for
     wired authentication results.
-  sample value: The network does not support authentication
-- standard name: event_error_code
-  field name: ErrorCode
+  sample_value: The network does not support authentication
+- standard_name: event_error_code
+  field_name: ErrorCode
   type: string
   description: Unique EAP error code
-  sample value: '0x0'
+  sample_value: '0x0'
 resources:
 - text: MS Source
   link: https://github.com/MicrosoftDocs/windows-itpro-docs/blob/master/windows/security/threat-protection/auditing/event-5633.md

@@ -1,29 +1,28 @@
 title: Pipes Table
-operating system: windows
-data channel: osquery
+operating_system: windows
+data_channel: osquery
 description: Internet Explorer browser extensions.
-data fields:
-- standard name: extension_name
-  field name: name
+data_fields:
+- standard_name: extension_name
+  field_name: name
   type: TEXT
   description: Extension display name
-  sample value: ''
-- standard name: registry_path
-  field name: registry_path
+  sample_value: ''
+- standard_name: registry_path
+  field_name: registry_path
   type: TEXT
   description: Extension identifier
-  sample value: ''
-- standard name: file_version
-  field name: version
+  sample_value: ''
+- standard_name: file_version
+  field_name: version
   type: TEXT
   description: Version of the executable
-  sample value: ''
-- standard name: process_path
-  field name: path
+  sample_value: ''
+- standard_name: process_path
+  field_name: path
   type: TEXT
   description: Path to executable
-  sample value: ''
 resources:
 - text: osquery GitHub
   link: https://github.com/facebook/osquery/blob/master/specs/windows/ie_extensions.table
-tags: null
+tags: []

@@ -1,34 +1,41 @@
 title: Alert Schema
 description: Alert fields that describe an indicator from a tool of a possible issue.
-data fields:
-- standard name: alert_id
+data_fields:
+- standard_name: alert_id
+  field_name: ''
   type: integer
   description: Alert ids might repeat across different data sources
-  sample value: '1234'
-- standard name: alert_signature
+  sample_value: '1234'
+- standard_name: alert_signature
+  field_name: ''
   type: string
   description: The name or title of an alert
-  sample value: EvilActor:CnCv2
-- standard name: alert_message
+  sample_value: EvilActor:CnCv2
+- standard_name: alert_message
+  field_name: ''
   type: string
   description: The message provided by the alert
-  sample value: A file exhibiting behaviour of the evilactor command and control framework
+  sample_value: A file exhibiting behaviour of the evilactor command and control framework
     2 was detected.
-- standard name: alert_description
+- standard_name: alert_description
+  field_name: ''
   type: string
   description: The expanded description of the event
-  sample value: '...'
-- standard name: alert_severity
+  sample_value: '...'
+- standard_name: alert_severity
+  field_name: ''
   type: string
   description: The severity of an alert
-  sample value: Priority 5
-- standard name: alert_category
+  sample_value: Priority 5
+- standard_name: alert_category
+  field_name: ''
   type: string
   description: The category of an alert
-  sample value: Malware
-- standard name: alert_version
+  sample_value: Malware
+- standard_name: alert_version
+  field_name: ''
   type: string
   description: A signature or alert version
-  sample value: '1.2'
+  sample_value: '1.2'
 resources: []
-tags: null
+tags: []

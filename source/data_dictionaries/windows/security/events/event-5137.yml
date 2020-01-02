@@ -1,66 +1,66 @@
 title: 'Event ID 5137: A directory service object was created'
-operating system: windows
-data channel: security
+operating_system: windows
+data_channel: security
 description: This event generates every time an Active Directory object is created.
-data fields:
-- standard name: ''
-  field name: AppCorrelationID
+data_fields:
+- standard_name: ''
+  field_name: AppCorrelationID
   type: string
   description: always has "-" value.
-  sample value: '-'
-- standard name: host_domain
-  field name: DSName
+  sample_value: '-'
+- standard_name: host_domain
+  field_name: DSName
   type: string
   description: the name of an Active Directory domain, where new object is created.
-  sample value: org.local
-- standard name: ''
-  field name: DSType
+  sample_value: org.local
+- standard_name: ''
+  field_name: DSType
   type: string
   description: has "Active Directory Domain Services" value for this event.
-  sample value: Active Directory Domain Services
-- standard name: ''
-  field name: ObjectClass
+  sample_value: Active Directory Domain Services
+- standard_name: ''
+  field_name: ObjectClass
   type: string
   description: class of the object that was created.
-  sample value: computer
-- standard name: ''
-  field name: ObjectDN
+  sample_value: computer
+- standard_name: ''
+  field_name: ObjectDN
   type: string
   description: distinguished name of the object that was created.
-  sample value: CN=Win2003,CN=Users,DC=org,DC=local
-- standard name: ''
-  field name: ObjectGUID
+  sample_value: CN=Win2003,CN=Users,DC=org,DC=local
+- standard_name: ''
+  field_name: ObjectGUID
   type: string
   description: each Active Directory object has globally unique identifier (GUID),
     which is a 128-bit value that is unique not only in the enterprise but also across
     the world.
-  sample value: CN=Win2003,CN=Users,DC=org,DC=local
-- standard name: user_sid
-  field name: SubjectUserSid
+  sample_value: CN=Win2003,CN=Users,DC=org,DC=local
+- standard_name: user_sid
+  field_name: SubjectUserSid
   type: string
   description: SID of account that requested the "create object" operation.
-  sample value: ORG\IserA
-- standard name: user_name
-  field name: SubjectUserName
+  sample_value: ORG\IserA
+- standard_name: user_name
+  field_name: SubjectUserName
   type: string
   description: the name of the account that requested the "create object" operation.
-  sample value: UserA
-- standard name: user_domain
-  field name: SubjectDomainName
+  sample_value: UserA
+- standard_name: user_domain
+  field_name: SubjectDomainName
   type: string
   description: subject's domain or computer name.
-  sample value: ORG
-- standard name: user_logon_id
-  field name: SubjectLogonId
+  sample_value: ORG
+- standard_name: user_logon_id
+  field_name: SubjectLogonId
   type: integer
   description: hexadecimal value that can help you correlate this event with recent
     events that might contain the same Logon ID
-  sample value: '0x432344'
-- standard name: ''
-  field name: OpCorrelationID
+  sample_value: '0x432344'
+- standard_name: ''
+  field_name: OpCorrelationID
   type: string
   description: multiple modifications are often executed as one operation via LDAP.
-  sample value: '{02647639-8626-43CE-AFE6-7AA1AD657739}'
+  sample_value: '{02647639-8626-43CE-AFE6-7AA1AD657739}'
 resources:
 - text: MS Source
   link: https://github.com/MicrosoftDocs/windows-itpro-docs/blob/master/windows/security/threat-protection/auditing/event-5137.md

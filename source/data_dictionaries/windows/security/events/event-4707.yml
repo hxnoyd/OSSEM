@@ -1,40 +1,40 @@
 title: 'Event ID 4707: A trust to a domain was removed.'
-operating system: windows
-data channel: security
+operating_system: windows
+data_channel: security
 description: This event generates when a domain trust was removed.
-data fields:
-- standard name: trust_domain
-  field name: DomainName
+data_fields:
+- standard_name: trust_domain
+  field_name: DomainName
   type: string
   description: the name of removed trusted domain.
-  sample value: FABRIKAM
-- standard name: trust_sid
-  field name: DomainSid
+  sample_value: FABRIKAM
+- standard_name: trust_sid
+  field_name: DomainSid
   type: string
   description: SID of removed trusted domain.
-  sample value: S-1-5-21-2226861337-2836268956-2433141405
-- standard name: user_sid
-  field name: SubjectUserSid
+  sample_value: S-1-5-21-2226861337-2836268956-2433141405
+- standard_name: user_sid
+  field_name: SubjectUserSid
   type: string
   description: SID of account that requested the "remove domain trust" operation.
-  sample value: S-1-5-21-3457937927-2839227994-823803824-1104
-- standard name: user_name
-  field name: SubjectUserName
+  sample_value: S-1-5-21-3457937927-2839227994-823803824-1104
+- standard_name: user_name
+  field_name: SubjectUserName
   type: string
   description: the name of the account that requested the "remove domain trust" operation.
-  sample value: dadmin
-- standard name: user_domain
-  field name: SubjectDomainName
+  sample_value: dadmin
+- standard_name: user_domain
+  field_name: SubjectDomainName
   type: string
   description: subject's domain or computer name.
-  sample value: CONTOSO
-- standard name: user_logon_id
-  field name: SubjectLogonId
+  sample_value: CONTOSO
+- standard_name: user_logon_id
+  field_name: SubjectLogonId
   type: integer
   description: 'hexadecimal value that can help you correlate this event with recent
     events that might contain the same Logon ID, for example, "4624: An account was
     successfully logged on."'
-  sample value: '0x3e99d6'
+  sample_value: '0x3e99d6'
 resources:
 - text: MS Source
   link: https://github.com/MicrosoftDocs/windows-itpro-docs/blob/public/windows/security/threat-protection/auditing/event-4707.md

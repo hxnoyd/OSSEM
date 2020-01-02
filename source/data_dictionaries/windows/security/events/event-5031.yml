@@ -1,23 +1,23 @@
 title: 'Event ID 5031: The Windows Firewall Service blocked an application from accepting
   incoming connections on the network'
-operating system: windows
-data channel: security
+operating_system: windows
+data_channel: security
 description: This event generates when an application was blocked from accepting incoming
   connections on the network by Windows Filtering Platform. If you don't have any
   firewall rules (Allow or Deny) in Windows Firewall for specific applications, you
   will get this event from Windows Filtering Platform layer, because by default this
   layer is denying any incoming connections.
-data fields:
-- standard name: ''
-  field name: Profiles
+data_fields:
+- standard_name: ''
+  field_name: Profiles
   type: string
   description: Network profile using which application was blocked.
-  sample value: Domain
-- standard name: process_path
-  field name: Application
+  sample_value: Domain
+- standard_name: process_path
+  field_name: Application
   type: string
   description: Full path and file name of executable file for blocked application.
-  sample value: C:\documents\listener.exe
+  sample_value: C:\documents\listener.exe
 resources:
 - text: MS Source
   link: https://github.com/MicrosoftDocs/windows-itpro-docs/blob/master/windows/security/threat-protection/auditing/event-5031.md

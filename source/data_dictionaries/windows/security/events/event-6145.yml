@@ -1,22 +1,22 @@
 title: 'Event ID 6145: One or more errors occurred while processing security policy
   in the group policy objects.'
-operating system: windows
-data channel: security
+operating_system: windows
+data_channel: security
 description: This event generates every time settings from the "Security Settings"
   section in the group policy object are applied to a computer with one or more errors.
-data fields:
-- standard name: error_code
-  field name: ErrorCode
+data_fields:
+- standard_name: error_code
+  field_name: ErrorCode
   type: integer
   description: specific error code which shows the error which happened during Group
     Policy processing.
-  sample value: '1332'
-- standard name: gpo_list
-  field name: GPOList
+  sample_value: '1332'
+- standard_name: gpo_list
+  field_name: GPOList
   type: string
   description: the list of Group Policy Objects that include "Security Settings" policies,
     and that were applied with errors to the computer.
-  sample value: '{6AC1786C-016F-11D2-945F-00C04fB984F9} Default Domain Controllers
+  sample_value: '{6AC1786C-016F-11D2-945F-00C04fB984F9} Default Domain Controllers
     Policy {31B2F340-016D-11D2-945F-00C04FB984F9} Default Domain Policy'
 resources:
 - text: MS Source

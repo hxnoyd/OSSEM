@@ -1,109 +1,109 @@
 title: 'Event ID 3: Network connection'
-operating system: windows
-data channel: sysmon
+operating_system: windows
+data_channel: sysmon
 description: The network connection event logs TCP/UDP connections on the machine.
   It is disabled by default. Each connection is linked to a process through the ProcessId
   and ProcessGUID fields. The event also contains the source and destination host
-  names IP addresses, port numbers and IPv6 status.https://docs.microsoft.com/en-us/sysinternals/downloads/sysmon#event-id-3-network-connection
-data fields:
-- standard name: tag
-  field name: RuleName
+  names IP addresses, port numbers and IPv6 status.<a href="https://docs.microsoft.com/en-us/sysinternals/downloads/sysmon#event-id-3-network-connection">https://docs.microsoft.com/en-us/sysinternals/downloads/sysmon#event-id-3-network-connection</a>
+data_fields:
+- standard_name: tag
+  field_name: RuleName
   type: string
   description: custom tag mapped to event. i.e ATT&CK technique ID
-  sample value: T1114
-- standard name: event_date_creation
-  field name: UtcTime
+  sample_value: T1114
+- standard_name: event_date_creation
+  field_name: UtcTime
   type: date
   description: Time in UTC when event was created
-  sample value: 4/11/18 5:29
-- standard name: process_guid
-  field name: ProcessGuid
+  sample_value: 4/11/18 5:29
+- standard_name: process_guid
+  field_name: ProcessGuid
   type: string
   description: Process Guid of the process that made the network connection
-  sample value: '{A98268C1-957F-5ACD-0000-0010EB030000}'
-- standard name: process_id
-  field name: ProcessId
+  sample_value: '{A98268C1-957F-5ACD-0000-0010EB030000}'
+- standard_name: process_id
+  field_name: ProcessId
   type: integer
   description: Process ID used by the os to identify the process that made the network
     connection
-  sample value: '4'
-- standard name: process_name
-  field name: Image
+  sample_value: '4'
+- standard_name: process_name
+  field_name: Image
   type: string
   description: File name of the process that made the network connection
-  sample value: System
-- standard name: process_path
-  field name: Image
+  sample_value: System
+- standard_name: process_path
+  field_name: Image
   type: string
   description: File path of the process that made the network connection
-  sample value: System
-- standard name: user_name
-  field name: User
+  sample_value: System
+- standard_name: user_name
+  field_name: User
   type: string
   description: Name of the account who made the network connection. It usually containes
     domain name and user name
-  sample value: NT AUTHORITY\SYSTEM
-- standard name: network_protocol
-  field name: Protocol
+  sample_value: NT AUTHORITY\SYSTEM
+- standard_name: network_protocol
+  field_name: Protocol
   type: string
   description: Protocol being used for the network connection
-  sample value: udp
-- standard name: network_connection_initiated
-  field name: Initiated
+  sample_value: udp
+- standard_name: network_connection_initiated
+  field_name: Initiated
   type: boolean
   description: Indicated process initiated tcp connection
-  sample value: 'FALSE'
-- standard name: src_is_ipv6
-  field name: SourceIsIpv6
+  sample_value: 'FALSE'
+- standard_name: src_is_ipv6
+  field_name: SourceIsIpv6
   type: boolean
   description: is the source ip an Ipv6
-  sample value: 'FALSE'
-- standard name: src_ip
-  field name: SourceIp
+  sample_value: 'FALSE'
+- standard_name: src_ip
+  field_name: SourceIp
   type: ip
   description: source ip address that made the network connection
-  sample value: 192.168.64.255
-- standard name: src_host_name
-  field name: SourceHostname
+  sample_value: 192.168.64.255
+- standard_name: src_host_name
+  field_name: SourceHostname
   type: string
   description: name of the host that made the network connection
-  sample value: computer_name or none for broadcast
-- standard name: src_port
-  field name: SourcePort
+  sample_value: computer_name or none for broadcast
+- standard_name: src_port
+  field_name: SourcePort
   type: integer
   description: source port number
-  sample value: '138'
-- standard name: src_port_name
-  field name: SourcePortName
+  sample_value: '138'
+- standard_name: src_port_name
+  field_name: SourcePortName
   type: string
   description: name of the source port being used (i.e. netbios-dgm)
-  sample value: netbios-dgm
-- standard name: dst_is_ipv6
-  field name: DestinationIsIpv6
+  sample_value: netbios-dgm
+- standard_name: dst_is_ipv6
+  field_name: DestinationIsIpv6
   type: boolean
   description: is the destination ip an Ipv6
-  sample value: C:\Windows\System32\cmd.exe
-- standard name: dst_ip
-  field name: DestinationIp
+  sample_value: C:\Windows\System32\cmd.exe
+- standard_name: dst_ip
+  field_name: DestinationIp
   type: ip
   description: ip address destination
-  sample value: 192.168.64.135
-- standard name: dst_host_name
-  field name: DestinationHostName
+  sample_value: 192.168.64.135
+- standard_name: dst_host_name
+  field_name: DestinationHostName
   type: string
   description: name of the host that received the network connection
-  sample value: DC-WD-001
-- standard name: dst_port
-  field name: DestinationPort
+  sample_value: DC-WD-001
+- standard_name: dst_port
+  field_name: DestinationPort
   type: integer
   description: destination port number
-  sample value: '138'
-- standard name: dst_port_name
-  field name: DestinationPortName
+  sample_value: '138'
+- standard_name: dst_port_name
+  field_name: DestinationPortName
   type: string
   description: name of the destination port
-  sample value: netbios-dgm
+  sample_value: netbios-dgm
 resources:
 - text: Sysmon Source
   link: https://docs.microsoft.com/en-us/sysinternals/downloads/sysmon#event-id-3-network-connection
-tags: null
+tags: []

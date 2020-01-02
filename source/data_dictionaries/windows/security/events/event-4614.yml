@@ -1,15 +1,15 @@
 title: 'Event ID 4614: A notification package has been loaded by the Security Account
   Manager.'
-operating system: windows
-data channel: security
+operating_system: windows
+data_channel: security
 description: This event generates every time a Notification Package has been loaded
   by the Security Account Manager.
-data fields:
-- standard name: logon_notification_package_name
-  field name: NotificationPackageName
+data_fields:
+- standard_name: logon_notification_package_name
+  field_name: NotificationPackageName
   type: string
   description: the name of loaded Notification Package.
-  sample value: WDIGEST
+  sample_value: WDIGEST
 resources:
 - text: MS SOURCE
   link: https://github.com/MicrosoftDocs/windows-itpro-docs/blob/public/windows/security/threat-protection/auditing/event-4614.md

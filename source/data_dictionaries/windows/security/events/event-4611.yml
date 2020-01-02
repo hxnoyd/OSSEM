@@ -1,37 +1,37 @@
 title: 'Event ID 4611: A trusted logon process has been registered with the Local
   Security Authority.'
-operating system: windows
-data channel: security
+operating_system: windows
+data_channel: security
 description: This event indicates that a logon process has registered with the Local
   Security Authority (LSA.
-data fields:
-- standard name: user_sid
-  field name: SubjectUserSid
+data_fields:
+- standard_name: user_sid
+  field_name: SubjectUserSid
   type: string
   description: SID of account that registered the trusted logon process.
-  sample value: S-1-5-18
-- standard name: user_name
-  field name: SubjectUserName
+  sample_value: S-1-5-18
+- standard_name: user_name
+  field_name: SubjectUserName
   type: string
   description: the name of the account that registered the trusted logon process.
-  sample value: DC01$
-- standard name: user_domain
-  field name: SubjectDomainName
+  sample_value: DC01$
+- standard_name: user_domain
+  field_name: SubjectDomainName
   type: string
   description: subject's domain or computer name.
-  sample value: CONTOSO
-- standard name: user_logon_id
-  field name: SubjectLogonId
+  sample_value: CONTOSO
+- standard_name: user_logon_id
+  field_name: SubjectLogonId
   type: integer
   description: 'hexadecimal value that can help you correlate this event with recent
     events that might contain the same Logon ID, for example, "4624: An account was
     successfully logged on."'
-  sample value: '0x3e7'
-- standard name: logon_process_name
-  field name: LogonProcessName
+  sample_value: '0x3e7'
+- standard_name: logon_process_name
+  field_name: LogonProcessName
   type: string
   description: the name of registered logon process.
-  sample value: Winlogon
+  sample_value: Winlogon
 resources:
 - text: MS SOURCE
   link: https://github.com/MicrosoftDocs/windows-itpro-docs/blob/public/windows/security/threat-protection/auditing/event-4611.md

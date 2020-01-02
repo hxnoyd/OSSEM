@@ -1,67 +1,67 @@
 title: 'Event ID 4733: A member was removed from a security-enabled local group'
-operating system: windows
-data channel: security
+operating_system: windows
+data_channel: security
 description: This event generates every time member was removed from security-enabled
   (security) local group.
-data fields:
-- standard name: target_user_name
-  field name: MemberName
+data_fields:
+- standard_name: target_user_name
+  field_name: MemberName
   type: string
   description: 'distinguished name of account that was removed from the group. For
     example: "CN=Auditor,CN=Users,DC=contoso,DC=local". For local groups this field
     typically has "-" value, even if removed member is a domain account.'
-  sample value: CN=Auditor,CN=Users,DC=contoso,DC=local
-- standard name: target_user_sid
-  field name: MemberSid
+  sample_value: CN=Auditor,CN=Users,DC=contoso,DC=local
+- standard_name: target_user_sid
+  field_name: MemberSid
   type: string
   description: SID of account that was removed from the group.
-  sample value: S-1-5-21-3457937927-2839227994-823803824-2104
-- standard name: target_group_name
-  field name: TargetUserName
+  sample_value: S-1-5-21-3457937927-2839227994-823803824-2104
+- standard_name: target_group_name
+  field_name: TargetUserName
   type: string
   description: 'The name of the group from which the member was removed. For example:
     ServiceDesk'
-  sample value: AccountOperators
-- standard name: target_group_domain
-  field name: TargetDomainName
+  sample_value: AccountOperators
+- standard_name: target_group_domain
+  field_name: TargetDomainName
   type: string
   description: domain or computer name of the group from which the member was removed.
-  sample value: CONTOSO
-- standard name: target_group_sid
-  field name: TargetSid
+  sample_value: CONTOSO
+- standard_name: target_group_sid
+  field_name: TargetSid
   type: string
   description: SID of the group from which the member was removed.
-  sample value: S-1-5-21-3457937927-2839227994-823803824-6605
-- standard name: user_sid
-  field name: SubjectUserSid
+  sample_value: S-1-5-21-3457937927-2839227994-823803824-6605
+- standard_name: user_sid
+  field_name: SubjectUserSid
   type: string
   description: SID of account that requested the "remove member from the group" operation.
-  sample value: S-1-5-21-3457937927-2839227994-823803824-1104
-- standard name: user_name
-  field name: SubjectUserName
+  sample_value: S-1-5-21-3457937927-2839227994-823803824-1104
+- standard_name: user_name
+  field_name: SubjectUserName
   type: string
   description: the name of the account that requested the "remove member from the
     group" operation.
-  sample value: dadmin
-- standard name: user_domain
-  field name: SubjectDomainName
+  sample_value: dadmin
+- standard_name: user_domain
+  field_name: SubjectDomainName
   type: string
   description: subject's domain or computer name.
-  sample value: CONTOSO
-- standard name: user_logon_id
-  field name: SubjectLogonId
+  sample_value: CONTOSO
+- standard_name: user_logon_id
+  field_name: SubjectLogonId
   type: integer
   description: 'hexadecimal value that can help you correlate this event with recent
     events that might contain the same Logon ID, for example, "4624: An account was
     successfully logged on."'
-  sample value: '0x35e38'
-- standard name: user_privilege_list
-  field name: PrivilegeList
+  sample_value: '0x35e38'
+- standard_name: user_privilege_list
+  field_name: PrivilegeList
   type: string
   description: the list of user privileges which were used during the operation, for
     example, SeBackupPrivilege. This parameter might not be captured in the event,
     and in that case appears as "-".
-  sample value: '-'
+  sample_value: '-'
 resources:
 - text: MS Source
   link: https://github.com/MicrosoftDocs/windows-itpro-docs/blob/master/windows/security/threat-protection/auditing/event-4733.md

@@ -1,35 +1,35 @@
 title: 'Event ID 4776: The computer attempted to validate the credentials for an account'
-operating system: windows
-data channel: security
+operating_system: windows
+data_channel: security
 description: This event generates every time that a credential validation occurs using
   NTLM authentication.This event occurs only on the computer that is authoritative
   for the provided credentials. For domain accounts, the domain controller is authoritative.
   For local accounts, the local computer is authoritative.
-data fields:
-- standard name: logon_authentication_package_name
-  field name: PackageName
+data_fields:
+- standard_name: logon_authentication_package_name
+  field_name: PackageName
   type: string
   description: The name of Authentication Package which was used for credential validation.
     It is always "MICROSOFT_AUTHENTICATION_PACKAGE_V1_0" for 4776 event.
-  sample value: MICROSOFT_AUTHENTICATION_PACKAGE_V1_0
-- standard name: user_name
-  field name: TargetUserName
+  sample_value: MICROSOFT_AUTHENTICATION_PACKAGE_V1_0
+- standard_name: user_name
+  field_name: TargetUserName
   type: string
   description: the name of the account that had its credentials validated by the Authentication
     Package. Can be user name, computer account name or well-known security principal
     account name.
-  sample value: dadmin
-- standard name: src_host_name
-  field name: Workstation
+  sample_value: dadmin
+- standard_name: src_host_name
+  field_name: Workstation
   type: string
   description: The name of the computer from which the logon attempt originated.
-  sample value: WIN81
-- standard name: event_status
-  field name: Status
+  sample_value: WIN81
+- standard_name: event_status
+  field_name: Status
   type: integer
   description: Contains error code for Failure events. For Success events this parameter
     has "0x0" value.
-  sample value: '0xc0000234'
+  sample_value: '0xc0000234'
 resources:
 - text: MS Source
   link: https://github.com/MicrosoftDocs/windows-itpro-docs/blob/master/windows/security/threat-protection/auditing/event-4776.md

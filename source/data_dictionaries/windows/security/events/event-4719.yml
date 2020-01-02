@@ -1,50 +1,50 @@
 title: 'Event ID 4719: System audit policy was changed.'
-operating system: windows
-data channel: security
+operating_system: windows
+data_channel: security
 description: This event generates when the computer's audit policy changes.
-data fields:
-- standard name: user_sid
-  field name: SubjectUserSid
+data_fields:
+- standard_name: user_sid
+  field_name: SubjectUserSid
   type: string
   description: SID of account that made a change to local audit policy.
-  sample value: S-1-5-18
-- standard name: user_name
-  field name: SubjectUserName
+  sample_value: S-1-5-18
+- standard_name: user_name
+  field_name: SubjectUserName
   type: string
   description: he name of the account that made a change to local audit policy.
-  sample value: DC01$
-- standard name: user_domain
-  field name: SubjectDomainName
+  sample_value: DC01$
+- standard_name: user_domain
+  field_name: SubjectDomainName
   type: string
   description: subject's domain or computer name.
-  sample value: CONTOSO
-- standard name: user_logon_id
-  field name: SubjectLogonId
+  sample_value: CONTOSO
+- standard_name: user_logon_id
+  field_name: SubjectLogonId
   type: integer
   description: 'hexadecimal value that can help you correlate this event with recent
     events that might contain the same Logon ID, for example, "4624: An account was
     successfully logged on."'
-  sample value: '0x3e7'
-- standard name: category_id
-  field name: CategoryId
+  sample_value: '0x3e7'
+- standard_name: category_id
+  field_name: CategoryId
   type: integer
   description: the name of auditing Category which subcategory was changed.
-  sample value: '%%8274'
-- standard name: subcategory_id
-  field name: SubcategoryId
+  sample_value: '%%8274'
+- standard_name: subcategory_id
+  field_name: SubcategoryId
   type: integer
   description: the name of auditing Subcategory which was changed
-  sample value: '%%12807'
-- standard name: subcategory_guid
-  field name: SubcategoryGuid
+  sample_value: '%%12807'
+- standard_name: subcategory_guid
+  field_name: SubcategoryGuid
   type: string
   description: the unique subcategory GUID
-  sample value: '{0CCE9223-69AE-11D9-BED3-505054503030}'
-- standard name: subcategory_policy_changes
-  field name: AuditPolicyChanges
+  sample_value: '{0CCE9223-69AE-11D9-BED3-505054503030}'
+- standard_name: subcategory_policy_changes
+  field_name: AuditPolicyChanges
   type: integer
   description: changes which were made for "Subcategory"
-  sample value: '%%8448, %%8450'
+  sample_value: '%%8448, %%8450'
 resources:
 - text: MS Source
   link: https://github.com/MicrosoftDocs/windows-itpro-docs/blob/public/windows/security/threat-protection/auditing/event-4719.md

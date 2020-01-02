@@ -1,63 +1,63 @@
 title: 'Event ID 5059: Key migration operation.'
-operating system: windows
-data channel: security
+operating_system: windows
+data_channel: security
 description: This event generates when a cryptographic key is exported or imported
   using a Key Storage Provider.
-data fields:
-- standard name: user_sid
-  field name: SubjectUserSid
+data_fields:
+- standard_name: user_sid
+  field_name: SubjectUserSid
   type: string
   description: SID of account that requested key migration operation.
-  sample value: S-1-5-21-3457937927-2839227994-823803824-1104
-- standard name: user_name
-  field name: SubjectUserName
+  sample_value: S-1-5-21-3457937927-2839227994-823803824-1104
+- standard_name: user_name
+  field_name: SubjectUserName
   type: string
   description: the name of the account that requested key migration operation.
-  sample value: dadmin
-- standard name: user_domain
-  field name: SubjectDomainName
+  sample_value: dadmin
+- standard_name: user_domain
+  field_name: SubjectDomainName
   type: string
   description: subject's domain or computer name.
-  sample value: CONTOSO
-- standard name: user_logon_id
-  field name: SubjectLogonId
+  sample_value: CONTOSO
+- standard_name: user_logon_id
+  field_name: SubjectLogonId
   type: string
   description: 'hexadecimal value that can help you correlate this event with recent
     events that might contain the same Logon ID, for example, "4624: An account was
     successfully logged on."'
-  sample value: '0x38e2d'
-- standard name: provider_name
-  field name: ProviderName
+  sample_value: '0x38e2d'
+- standard_name: provider_name
+  field_name: ProviderName
   type: string
   description: the name of KSP through which the operation was performed.
-  sample value: Microsoft Software Key Storage Provider
-- standard name: algorithm_name
-  field name: AlgorithmName
+  sample_value: Microsoft Software Key Storage Provider
+- standard_name: algorithm_name
+  field_name: AlgorithmName
   type: string
   description: the name of cryptographic algorithm through which the key was used
     or accessed.
-  sample value: ECDH_P521
-- standard name: key_name
-  field name: KeyName
+  sample_value: ECDH_P521
+- standard_name: key_name
+  field_name: KeyName
   type: string
   description: the name of the key (key container) with which operation was performed.
-  sample value: le-SuperAdmin-795fd6c1-2fae-4bef-a6bc-4f4d464bc083
-- standard name: key_type
-  field name: KeyType
+  sample_value: le-SuperAdmin-795fd6c1-2fae-4bef-a6bc-4f4d464bc083
+- standard_name: key_type
+  field_name: KeyType
   type: string
   description: 'can have one of the following values: "User key." - user''s cryptographic
     key. "Machine key." - machine''s cryptographic key.'
-  sample value: '%%2500'
-- standard name: operation
-  field name: Operation
+  sample_value: '%%2500'
+- standard_name: operation
+  field_name: Operation
   type: string
   description: performed operation.
-  sample value: '%%2464'
-- standard name: return_code
-  field name: ReturnCode
+  sample_value: '%%2464'
+- standard_name: return_code
+  field_name: ReturnCode
   type: integer
   description: has "0x0" value for Success events.
-  sample value: '0x0'
+  sample_value: '0x0'
 resources:
 - text: MS Source
   link: https://github.com/MicrosoftDocs/windows-itpro-docs/blob/public/windows/security/threat-protection/auditing/event-5059.md

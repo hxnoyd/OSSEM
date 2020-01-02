@@ -1,78 +1,78 @@
 title: 'Event ID 4703: A user right was adjusted.'
-operating system: windows
-data channel: security
+operating_system: windows
+data_channel: security
 description: This event generates when token privileges.
-data fields:
-- standard name: user_sid
-  field name: SubjectUserSid
+data_fields:
+- standard_name: user_sid
+  field_name: SubjectUserSid
   type: string
   description: SID of account that requested the "enable" or "disable" operation for
     Target Account privileges.
-  sample value: S-1-5-18
-- standard name: user_name
-  field name: SubjectUserName
+  sample_value: S-1-5-18
+- standard_name: user_name
+  field_name: SubjectUserName
   type: string
   description: the name of the account that requested the "enable" or "disable" operation
     for Target Account privileges.
-  sample value: WIN-GG82ULGC9GO$
-- standard name: user_domain
-  field name: SubjectDomainName
+  sample_value: WIN-GG82ULGC9GO$
+- standard_name: user_domain
+  field_name: SubjectDomainName
   type: string
   description: subject's domain or computer name.
-  sample value: CONTOSO
-- standard name: user_logon_id
-  field name: SubjectLogonId
+  sample_value: CONTOSO
+- standard_name: user_logon_id
+  field_name: SubjectLogonId
   type: integer
   description: 'hexadecimal value that can help you correlate this event with recent
     events that might contain the same Logon ID, for example, "4624: An account was
     successfully logged on."'
-  sample value: '0x3e7'
-- standard name: target_user_sid
-  field name: TargetUserSid
+  sample_value: '0x3e7'
+- standard_name: target_user_sid
+  field_name: TargetUserSid
   type: string
   description: SID of account for which privileges were enabled or disabled.
-  sample value: S-1-5-18
-- standard name: target_user_name
-  field name: TargetUserName
+  sample_value: S-1-5-18
+- standard_name: target_user_name
+  field_name: TargetUserName
   type: string
   description: the name of the account for which privileges were enabled or disabled.
-  sample value: WIN-GG82ULGC9GO$
-- standard name: target_user_domain
-  field name: TargetDomainName
+  sample_value: WIN-GG82ULGC9GO$
+- standard_name: target_user_domain
+  field_name: TargetDomainName
   type: string
   description: subject's domain or computer name.
-  sample value: CONTOSO
-- standard name: target_user_logon_id
-  field name: TargetLogonId
+  sample_value: CONTOSO
+- standard_name: target_user_logon_id
+  field_name: TargetLogonId
   type: integer
   description: 'hexadecimal value that can help you correlate this event with recent
     events that might contain the same Logon ID, for example, "4624: An account was
     successfully logged on."'
-  sample value: '0x3e7'
-- standard name: process_path
-  field name: ProcessName
+  sample_value: '0x3e7'
+- standard_name: process_path
+  field_name: ProcessName
   type: string
   description: full path and the name of the executable for the process.
-  sample value: C:\Windows\System32\svchost.exe
-- standard name: process_id
-  field name: ProcessId
+  sample_value: C:\Windows\System32\svchost.exe
+- standard_name: process_id
+  field_name: ProcessId
   type: integer
   description: hexadecimal Process ID of the process that enabled or disabled token
     privileges.
-  sample value: '0x270'
-- standard name: user_enabled_privilege_list
-  field name: EnabledPrivilegeList
+  sample_value: '0x270'
+- standard_name: user_enabled_privilege_list
+  field_name: EnabledPrivilegeList
   type: string
   description: the list of enabled user rights.
-  sample value: SeAssignPrimaryTokenPrivilege SeIncreaseQuotaPrivilege SeSecurityPrivilege
+  sample_value: SeAssignPrimaryTokenPrivilege SeIncreaseQuotaPrivilege SeSecurityPrivilege
     SeTakeOwnershipPrivilege SeLoadDriverPrivilege SeSystemtimePrivilege SeBackupPrivilege
     SeRestorePrivilege SeShutdownPrivilege SeSystemEnvironmentPrivilege SeUndockPrivilege
     SeManageVolumePrivilege
-- standard name: user_disabled_privilege_list
-  field name: DisabledPrivilegeList
+- standard_name: user_disabled_privilege_list
+  field_name: DisabledPrivilegeList
   type: string
   description: the list of disabled user rights
-  sample value: '-'
+  sample_value: '-'
 resources:
 - text: MS Source
   link: https://github.com/MicrosoftDocs/windows-itpro-docs/blob/public/windows/security/threat-protection/auditing/event-4703.md

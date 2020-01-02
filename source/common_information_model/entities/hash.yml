@@ -1,21 +1,25 @@
 title: Hash Schema
 description: Event fields used to define metadata about hashes.
-data fields:
-- standard name: hash_md5
+data_fields:
+- standard_name: hash_md5
+  field_name: ''
   type: string
   description: MD5 hash of the image/binary/file
-  sample value: 6A255BEBF3DBCD13585538ED47DBAFD7
-- standard name: hash_sha1
+  sample_value: 6A255BEBF3DBCD13585538ED47DBAFD7
+- standard_name: hash_sha1
+  field_name: ''
   type: string
   description: SHA1 hash of the image/binary/file
-  sample value: B0BF5AC2E81BBF597FAD5F349FEEB32CAC449FA2
-- standard name: hash_sha256
+  sample_value: B0BF5AC2E81BBF597FAD5F349FEEB32CAC449FA2
+- standard_name: hash_sha256
+  field_name: ''
   type: string
   description: SHA256 hash of the image/binary/file
-  sample value: 4668BB2223FFB983A5F1273B9E3D9FA2C5CE4A0F1FB18CA5C1B285762020073C
-- standard name: hash_imphash
+  sample_value: 4668BB2223FFB983A5F1273B9E3D9FA2C5CE4A0F1FB18CA5C1B285762020073C
+- standard_name: hash_imphash
+  field_name: ''
   type: string
   description: IMPHASH hash of the image/binary/file
-  sample value: 2505BD03D7BD285E50CE89CEC02B333B
+  sample_value: 2505BD03D7BD285E50CE89CEC02B333B
 resources: []
-tags: null
+tags: []

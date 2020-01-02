@@ -1,46 +1,55 @@
 title: Source Schema
 description: Event fields used to define the source (client) in a network connection
   event.
-data fields:
-- standard name: src_bytes
+data_fields:
+- standard_name: src_bytes
+  field_name: ''
   type: integer
   description: network bytes sent by the src_ip_addr
-  sample value: '100'
-- standard name: src_host_name
+  sample_value: '100'
+- standard_name: src_host_name
+  field_name: ''
   type: string
   description: Source/Subject host name
-  sample value: WKHR001
-- standard name: src_ip_addr
+  sample_value: WKHR001
+- standard_name: src_ip_addr
+  field_name: ''
   type: ip
   description: Source IP address
-  sample value: 8.8.8.8
-- standard name: src_ip_bytes
+  sample_value: 8.8.8.8
+- standard_name: src_ip_bytes
+  field_name: ''
   type: integer
   description: network IP (header) bytes sent by the src_ip_addr
-  sample value: '100'
-- standard name: src_mac
+  sample_value: '100'
+- standard_name: src_mac
+  field_name: ''
   type: mac
   description: Source MAC address
-  sample value: a9:68:82:28:c4:6d
-- standard name: src_mime_type
+  sample_value: a9:68:82:28:c4:6d
+- standard_name: src_mime_type
+  field_name: ''
   type: string
   description: 'Source MIME type as seen in (layer 7) application layer details or
     as defined by a application scanner such as an anti-virus/EDR. For HTTP this is
     usually from the client''s "Content-Type" header. For some examples of MIME types,
     check out: https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Complete_list_of_MIME_types'
-  sample value: application/pdf
-- standard name: src_packets
+  sample_value: application/pdf
+- standard_name: src_packets
+  field_name: ''
   type: integer
   description: network packets sent by the src_ip_addr
-  sample value: '5'
-- standard name: src_port
+  sample_value: '5'
+- standard_name: src_port
+  field_name: ''
   type: integer
   description: Source port number
-  sample value: '41572'
-- standard name: src_port_name
+  sample_value: '41572'
+- standard_name: src_port_name
+  field_name: ''
   type: string
   description: Source port name. This is usually determined by IANA common port assignment.
     Therefore, this means its a guess and NOT the actual the application used
-  sample value: netbios-dgm
+  sample_value: netbios-dgm
 resources: []
-tags: null
+tags: []

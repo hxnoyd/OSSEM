@@ -1,13 +1,13 @@
 title: 'Event ID 4956: Windows Firewall has changed the active profile.'
-operating system: windows
-data channel: security
+operating_system: windows
+data_channel: security
 description: This event generates when Windows Firewall has changed the active profile.
-data fields:
-- standard name: active_profile
-  field name: ActiveProfile
+data_fields:
+- standard_name: active_profile
+  field_name: ActiveProfile
   type: string
   description: the name of the new active profile.
-  sample value: Domain
+  sample_value: Domain
 resources:
 - text: MS Source
   link: https://github.com/MicrosoftDocs/windows-itpro-docs/blob/public/windows/security/threat-protection/auditing/event-4956.md

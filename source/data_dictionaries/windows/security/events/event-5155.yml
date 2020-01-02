@@ -1,52 +1,52 @@
 title: 'Event ID 5155: The Windows Filtering Platform has blocked an application or
   service from listening on a port for incoming connections'
-operating system: windows
-data channel: security
+operating_system: windows
+data_channel: security
 description: This event generates every time the Windows Filtering Platform blocks
   an application or service from listening on a port for incoming connections.
-data fields:
-- standard name: process_id
-  field name: ProcessId
+data_fields:
+- standard_name: process_id
+  field_name: ProcessId
   type: integer
   description: Hexadecimal Process ID (PID) of the process which was permitted to
     bind to the local port.
-  sample value: '2628'
-- standard name: process_path
-  field name: Application
+  sample_value: '2628'
+- standard_name: process_path
+  field_name: Application
   type: string
   description: Full path and the name of the executable for the process.
-  sample value: \device\harddiskvolume2\users\test\desktop\netcat\nc.exe
-- standard name: src_ip_addr
-  field name: SourceAddress
+  sample_value: \device\harddiskvolume2\users\test\desktop\netcat\nc.exe
+- standard_name: src_ip_addr
+  field_name: SourceAddress
   type: ip
   description: The local IP address of the computer running the application.
-  sample value: 0.0.0.0
-- standard name: src_port
-  field name: SourcePort
+  sample_value: 0.0.0.0
+- standard_name: src_port
+  field_name: SourcePort
   type: integer
   description: The port number used by the application.
-  sample value: '5555'
-- standard name: network_protocol
-  field name: Protocol
+  sample_value: '5555'
+- standard_name: network_protocol
+  field_name: Protocol
   type: integer
   description: Protocol number.
-  sample value: '6'
-- standard name: ''
-  field name: FilterRTID
+  sample_value: '6'
+- standard_name: ''
+  field_name: FilterRTID
   type: integer
   description: A unique filter ID which blocks the application from binding to the
     port.
-  sample value: '84576'
-- standard name: ''
-  field name: LayerName
+  sample_value: '84576'
+- standard_name: ''
+  field_name: LayerName
   type: string
   description: Application Layer Enforcement layer name.
-  sample value: '%%14609'
-- standard name: ''
-  field name: LayerRTID
+  sample_value: '%%14609'
+- standard_name: ''
+  field_name: LayerRTID
   type: integer
   description: Windows Filtering Platform layer identifier.
-  sample value: '40'
+  sample_value: '40'
 resources:
 - text: MS Source
   link: https://github.com/MicrosoftDocs/windows-itpro-docs/blob/master/windows/security/threat-protection/auditing/event-5155.md

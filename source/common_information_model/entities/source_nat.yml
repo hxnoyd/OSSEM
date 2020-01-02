@@ -1,27 +1,31 @@
 title: Source NAT Schema
 description: Event fields used to define the source NAT (network address translation)
   in a network connection event.
-data fields:
-- standard name: src_nat_ip_addr
+data_fields:
+- standard_name: src_nat_ip_addr
+  field_name: ''
   type: ip
   description: the IP value that the original Source MAC was translated into during
     NAT
-  sample value: 8.8.8.8
-- standard name: src_nat_mac
+  sample_value: 8.8.8.8
+- standard_name: src_nat_mac
+  field_name: ''
   type: mac
   description: the MAC value that the original Source MAC was translated into during
     NAT
-  sample value: a9:68:82:28:c4:6d
-- standard name: src_nat_port
+  sample_value: a9:68:82:28:c4:6d
+- standard_name: src_nat_port
+  field_name: ''
   type: integer
   description: the port value that the original Source port was translated into during
     NAT
-  sample value: '43572'
-- standard name: src_nat_port_name
+  sample_value: '43572'
+- standard_name: src_nat_port_name
+  field_name: ''
   type: string
   description: Source NAT port name. This is usually determined by IANA common port
     assignment. Therefore, this means its a guess and NOT the actual the application
     used
-  sample value: netbios-dgm
+  sample_value: netbios-dgm
 resources: []
-tags: null
+tags: []

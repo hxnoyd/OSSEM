@@ -1,62 +1,62 @@
 title: 'Event ID 4798: A user''s local group membership was enumerated'
-operating system: windows
-data channel: security
+operating_system: windows
+data_channel: security
 description: This event generates when a process enumerates a user's security-enabled
   local groups on a computer or device.
-data fields:
-- standard name: target_user_name
-  field name: TargetUserName
+data_fields:
+- standard_name: target_user_name
+  field_name: TargetUserName
   type: string
   description: the name of the account whose groups were enumerated.
-  sample value: Administrator
-- standard name: target_user_domain
-  field name: TargetDomainName
+  sample_value: Administrator
+- standard_name: target_user_domain
+  field_name: TargetDomainName
   type: string
   description: group's domain or computer name.
-  sample value: WIN10-1
-- standard name: target_user_sid
-  field name: TargetSid
+  sample_value: WIN10-1
+- standard_name: target_user_sid
+  field_name: TargetSid
   type: string
   description: SID of the account whose groups were enumerated. Event Viewer automatically
     tries to resolve SIDs and show the account name. If the SID cannot be resolved,
     you will see the source data in the event.
-  sample value: S-1-5-21-1694160624-234216347-2203645164-500
-- standard name: user_logon_id
-  field name: SubjectUserSid
+  sample_value: S-1-5-21-1694160624-234216347-2203645164-500
+- standard_name: user_logon_id
+  field_name: SubjectUserSid
   type: string
   description: SID of account that requested the "enumerate user's security-enabled
     local groups" operation.
-  sample value: S-1-5-21-1377283216-344919071-3415362939-1104
-- standard name: user_name
-  field name: SubjectUserName
+  sample_value: S-1-5-21-1377283216-344919071-3415362939-1104
+- standard_name: user_name
+  field_name: SubjectUserName
   type: string
   description: the name of the account that requested the "enumerate user's security-enabled
     local groups" operation.
-  sample value: dadmin
-- standard name: user_domain
-  field name: SubjectDomainName
+  sample_value: dadmin
+- standard_name: user_domain
+  field_name: SubjectDomainName
   type: string
   description: subject's domain or computer name.
-  sample value: CONTOSO
-- standard name: user_logon_id
-  field name: SubjectLogonId
+  sample_value: CONTOSO
+- standard_name: user_logon_id
+  field_name: SubjectLogonId
   type: string
   description: 'hexadecimal value that can help you correlate this event with recent
     events that might contain the same Logon ID, for example, "4624: An account was
     successfully logged on."'
-  sample value: '0x72d9d'
-- standard name: process_id
-  field name: CallerProcessId
+  sample_value: '0x72d9d'
+- standard_name: process_id
+  field_name: CallerProcessId
   type: integer
   description: hexadecimal Process ID of the process that enumerated the members of
     the group. Process ID (PID) is a number used by the operating system to uniquely
     identify an active process.
-  sample value: '0xc80'
-- standard name: process_name
-  field name: CallerProcessName
+  sample_value: '0xc80'
+- standard_name: process_name
+  field_name: CallerProcessName
   type: string
   description: full path and the name of the executable for the process.
-  sample value: C:\Windows\System32\mmc.exe
+  sample_value: C:\Windows\System32\mmc.exe
 resources:
 - text: MS Source
   link: https://github.com/MicrosoftDocs/windows-itpro-docs/blob/master/windows/security/threat-protection/auditing/event-4798.md

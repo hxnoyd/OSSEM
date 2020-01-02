@@ -1,18 +1,18 @@
 title: 'Event ID 4935: Replication failure begins.'
-operating system: windows
-data channel: security
+operating_system: windows
+data_channel: security
 description: This event generates when Active Directory replication failure begins.
-data fields:
-- standard name: replication_event
-  field name: ReplicationEvent
+data_fields:
+- standard_name: replication_event
+  field_name: ReplicationEvent
   type: integer
   description: there is no detailed information about this field in this document.
-  sample value: '1'
-- standard name: audit_status_code
-  field name: AuditStatusCode
+  sample_value: '1'
+- standard_name: audit_status_code
+  field_name: AuditStatusCode
   type: integer
   description: there is no detailed information about this field in this document.
-  sample value: '8419'
+  sample_value: '8419'
 resources:
 - text: MS Source
   link: https://github.com/MicrosoftDocs/windows-itpro-docs/blob/public/windows/security/threat-protection/auditing/event-4935.md

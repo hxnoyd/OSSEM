@@ -11,31 +11,37 @@ description: 'Added fields that are derived from an event''s data/fields after i
   then was acquired by Cloudflare in 2019. The Meta schema, is a way that can help
   aide an analyst to know the field they are looking at may be derived from a data
   source or calculation that could change over time.'
-data fields:
-- standard name: category
+data_fields:
+- standard_name: category
+  field_name: ''
   type: string
   description: 'Description to define a grouping of a value. Commonly used for URL/domain
     category (ie: Adult, Abuse, Parked, RFC-1918, etc)'
-  sample value: '``'
-- standard name: ttp
+  sample_value: '``'
+- standard_name: ttp
+  field_name: ''
   type: string
   description: Tactic, technique, and procedure
-  sample value: '``'
-- standard name: alert
+  sample_value: '``'
+- standard_name: alert
+  field_name: ''
   type: string
   description: Data describing an alert
-  sample value: '``'
-- standard name: geo location
+  sample_value: '``'
+- standard_name: geo location
+  field_name: ''
   type: geo_point
   description: Geo longitude and latitude point of a field
-  sample value: '``'
-- standard name: AS Number
+  sample_value: '``'
+- standard_name: AS Number
+  field_name: ''
   type: integer
   description: Autonomous System (AS) number (BGP AS Number)
-  sample value: '``'
-- standard name: AS Org
+  sample_value: '``'
+- standard_name: AS Org
+  field_name: ''
   type: string
   description: Autonomous System (AS) organization (BGP AS Name)
-  sample value: '``'
+  sample_value: '``'
 resources: []
-tags: null
+tags: []
